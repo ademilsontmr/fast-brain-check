@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, CreditCard, Lock, Shield } from "lucide-react";
+import { Brain, CreditCard, Lock, Shield, Star, TrendingUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { calculateIQ, getCelebrityComparison } from "@/types/quiz";
 
 const Payment = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    const savedScore = localStorage.getItem("quizScore");
+    if (!savedScore) {
+      navigate("/");
+      return;
+    }
+    setScore(parseInt(savedScore));
+  }, [navigate]);
+
+  const result = calculateIQ(score, 30);
+  const celebrity = getCelebrityComparison(result.iqScore);
 
   const handlePayment = () => {
     setIsProcessing(true);
@@ -41,12 +55,29 @@ const Payment = () => {
       <div className="container mx-auto px-4 py-12 max-w-2xl">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">
-            Desbloqueie Seu Resultado Completo
+            Você está a um passo de descobrir algo incrível
           </h1>
           <p className="text-xl text-muted-foreground">
-            Pagamento único de R$ 5,00
+            Seu QI pode ser maior do que você imagina
           </p>
         </div>
+
+        {/* Celebrity Comparison Teaser */}
+        <Card className="p-8 mb-6 shadow-elegant border-2 border-primary/20 bg-gradient-primary text-primary-foreground">
+          <div className="text-center">
+            <Star className="w-16 h-16 mx-auto mb-4" />
+            <h2 className="text-2xl font-bold mb-4">
+              Seu QI pode ser comparável ao de {celebrity}
+            </h2>
+            <p className="text-lg opacity-90 mb-4">
+              Pessoas com desempenho similar ao seu costumam ter QI entre {result.iqScore - 5} e {result.iqScore + 5}
+            </p>
+            <div className="flex items-center justify-center gap-2 text-sm opacity-90">
+              <TrendingUp className="w-4 h-4" />
+              <span>Você acertou {score} de 30 perguntas</span>
+            </div>
+          </div>
+        </Card>
 
         <Card className="p-8 mb-6 shadow-elegant">
           <div className="mb-8">

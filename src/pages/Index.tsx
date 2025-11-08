@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Brain, CheckCircle, Sparkles, TrendingUp, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroBrain from "@/assets/hero-brain.png";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -91,7 +92,7 @@ const Index = () => {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl font-bold text-primary">3</span>
             </div>
-            <h3 className="text-xl font-bold mb-2">Pague R$ 5 para desbloquear tudo</h3>
+            <h3 className="text-xl font-bold mb-2">Desbloqueie o resultado completo</h3>
             <p className="text-muted-foreground">
               QI exato, ranking, comparação com famosos e badge exclusivo
             </p>
@@ -103,7 +104,7 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16 bg-muted/30 rounded-3xl my-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            O que você desbloqueia ao pagar R$ 5
+            O que você desbloqueia no resultado completo
           </h2>
           <p className="text-xl text-muted-foreground">
             Se você é inteligente, prove.
@@ -228,12 +229,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border mt-16">
-        <div className="container mx-auto px-4 py-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 BomQI. Todos os direitos reservados.</p>
-          <p className="mt-2">bomqi.com.br</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
