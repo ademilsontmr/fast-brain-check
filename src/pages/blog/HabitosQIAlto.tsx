@@ -1,0 +1,217 @@
+import { Brain, ArrowRight, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
+
+const HabitosQIAlto = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <Link to="/" className="flex items-center gap-2">
+            <Brain className="w-8 h-8 text-primary" />
+            <span className="text-2xl font-bold">BomQI</span>
+          </Link>
+        </div>
+      </header>
+
+      {/* Article */}
+      <article className="container mx-auto px-4 py-12 max-w-4xl">
+        {/* Breadcrumb */}
+        <nav className="text-sm text-muted-foreground mb-6">
+          <Link to="/" className="hover:text-primary">Home</Link>
+          <span className="mx-2">/</span>
+          <Link to="/#blog" className="hover:text-primary">Blog</Link>
+          <span className="mx-2">/</span>
+          <span>Hábitos de QI Alto</span>
+        </nav>
+
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Pessoas com QI Alto Têm Estes 7 Hábitos em Comum
+        </h1>
+
+        {/* Meta */}
+        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
+          <time>Janeiro 2024</time>
+          <span>•</span>
+          <span>9 min de leitura</span>
+        </div>
+
+        {/* Featured Image */}
+        <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">
+          <Target className="w-24 h-24 text-primary" />
+        </div>
+
+        {/* Content */}
+        <div className="prose prose-lg max-w-none">
+          <p className="text-xl text-muted-foreground mb-8">
+            Estudos com pessoas de QI acima de 130 revelam padrões comportamentais consistentes. 
+            Não se trata apenas de genética — muitos desses hábitos podem ser cultivados por qualquer pessoa 
+            que queira maximizar seu potencial intelectual.
+          </p>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">1. Cultivam a Curiosidade Insaciável</h2>
+          <p className="mb-4">
+            Pessoas inteligentes fazem perguntas constantemente. Não apenas "o quê", mas "por quê", 
+            "como" e "e se". Elas tratam o mundo como um grande laboratório de aprendizado.
+          </p>
+          <div className="bg-muted/50 p-6 rounded-lg my-6">
+            <p className="font-semibold mb-2">Na prática:</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Questionam suposições em vez de aceitar informações passivamente</li>
+              <li>Exploram tópicos fora de sua área de expertise</li>
+              <li>Mantêm uma lista de coisas que querem aprender</li>
+            </ul>
+          </div>
+          <p className="mb-4">
+            <strong>Exemplo:</strong> Richard Feynman, físico com QI estimado em 125-145, 
+            era famoso por perguntar "por quê" repetidamente até entender conceitos profundamente.
+          </p>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">2. Abraçam a Incerteza e a Dúvida</h2>
+          <p className="mb-4">
+            Paradoxalmente, pessoas muito inteligentes estão mais confortáveis dizendo "não sei" 
+            do que a média das pessoas. Elas reconhecem que a certeza absoluta é rara.
+          </p>
+          <p className="mb-4">
+            Um estudo da Universidade de Waterloo mostrou que pessoas com maior capacidade cognitiva 
+            são mais propensas a revisar suas opiniões quando apresentadas a novas evidências.
+          </p>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">3. Praticam o Pensamento Sistêmico</h2>
+          <p className="mb-4">
+            Em vez de ver eventos isolados, pessoas de QI alto naturalmente pensam em sistemas, 
+            conexões e consequências de segunda e terceira ordem.
+          </p>
+          <div className="bg-muted/50 p-6 rounded-lg my-6">
+            <p className="font-semibold mb-2">Exemplo prático:</p>
+            <p>
+              Ao avaliar uma decisão de negócios, não pensam apenas no lucro imediato, mas em como 
+              isso afeta relacionamentos com clientes, moral da equipe, sustentabilidade de longo prazo, 
+              e reputação da marca.
+            </p>
+          </div>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">4. Têm Rotinas de Solitude Produtiva</h2>
+          <p className="mb-4">
+            Muitas pessoas altamente inteligentes dedicam tempo regular para estar sozinhas — 
+            não por solidão, mas para reflexão profunda.
+          </p>
+          <p className="mb-4">
+            Einstein fazia longas caminhadas sozinho. Bill Gates tem sua "semana de reflexão" anual. 
+            Susan Cain, autora de "O Poder dos Quietos", documentou como introversão e inteligência 
+            frequentemente andam juntas.
+          </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li>Meditação matinal</li>
+            <li>Caminhadas sem celular</li>
+            <li>Journaling diário</li>
+            <li>Tempo dedicado apenas para pensar</li>
+          </ul>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">5. Leem Obsessivamente</h2>
+          <p className="mb-4">
+            A correlação entre leitura frequente e QI alto é bem documentada. Warren Buffett 
+            lê 500 páginas por dia. Bill Gates lê 50 livros por ano.
+          </p>
+          <p className="mb-4">
+            Mas não leem apenas por entretenimento — leem estrategicamente:
+          </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li><strong>Diversidade:</strong> Ficção, não-ficção, ciência, filosofia, história</li>
+            <li><strong>Profundidade:</strong> Fazem anotações, questionam, conectam ideias</li>
+            <li><strong>Aplicação:</strong> Buscam implementar insights na vida real</li>
+          </ul>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">6. Buscam Feedback e Críticas</h2>
+          <p className="mb-4">
+            Ao contrário do estereótipo do gênio arrogante, pessoas realmente inteligentes 
+            <strong> ativamente buscam </strong> críticas e feedback.
+          </p>
+          <p className="mb-4">
+            Ray Dalio, fundador da Bridgewater Associates, institucionalizou isso através 
+            do conceito de "radical transparency" — onde todos são encorajados a desafiar 
+            ideias, independentemente de hierarquia.
+          </p>
+          <div className="bg-muted/50 p-6 rounded-lg my-6">
+            <p className="font-semibold mb-2">Por quê isso funciona:</p>
+            <p>
+              Feedback revela pontos cegos. Pessoas inteligentes sabem que seus próprios 
+              vieses cognitivos são seu maior inimigo, e usam outros como espelhos.
+            </p>
+          </div>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">7. Mantêm Ciclos de Aprendizado-Ensino</h2>
+          <p className="mb-4">
+            A técnica Feynman: aprenda algo, ensine para outra pessoa (ou simule ensinar), 
+            identifique lacunas, revise. Repita.
+          </p>
+          <p className="mb-4">
+            Pesquisas mostram que ensinar é uma das formas mais eficazes de consolidar 
+            conhecimento. Pessoas de QI alto intuitivamente sabem disso e:
+          </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li>Escrevem blogs ou fazem vídeos explicando conceitos</li>
+            <li>Mentoram outras pessoas</li>
+            <li>Participam de grupos de discussão</li>
+            <li>Explicam conceitos complexos para leigos (teste de verdadeira compreensão)</li>
+          </ul>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Bônus: Padrões Adicionais</h2>
+          <p className="mb-4">
+            Outros hábitos comuns em pessoas de QI alto incluem:
+          </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li><strong>Exercício regular:</strong> Especialmente exercícios aeróbicos</li>
+            <li><strong>Sono adequado:</strong> 7-9 horas, com rituais de higiene do sono</li>
+            <li><strong>Gerenciamento de energia:</strong> Trabalham em seus picos cognitivos</li>
+            <li><strong>Desafios cognitivos:</strong> Jogos estratégicos, puzzles, aprendizado de novas habilidades</li>
+          </ul>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Como Implementar</h2>
+          <p className="mb-4">
+            Você não precisa adotar todos esses hábitos de uma vez. Comece com um:
+          </p>
+          <ol className="list-decimal pl-6 mb-4 space-y-3">
+            <li><strong>Escolha um hábito</strong> que ressoa com você</li>
+            <li><strong>Comece pequeno</strong> (ex: 10 minutos de leitura por dia)</li>
+            <li><strong>Seja consistente</strong> por 30 dias</li>
+            <li><strong>Avalie resultados</strong> e ajuste</li>
+            <li><strong>Adicione outro hábito</strong> quando o primeiro estiver consolidado</li>
+          </ol>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
+          <p className="mb-4">
+            QI alto não é apenas genética — é também um conjunto de hábitos mentais que podem 
+            ser cultivados. A diferença entre uma pessoa de QI 100 e uma de QI 130 muitas vezes 
+            se resume a como elas estruturam seu aprendizado e pensamento diário.
+          </p>
+          <p className="mb-4">
+            Comece hoje. Seu cérebro vai agradecer.
+          </p>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
+          <h3 className="text-2xl font-bold mb-4">Descubra Seu Ponto de Partida</h3>
+          <p className="text-muted-foreground mb-6">
+            Quer saber onde você está agora? Faça nosso teste de QI e veja quais hábitos 
+            podem levar você ao próximo nível.
+          </p>
+          <Link to="/teste">
+            <Button size="lg" className="gap-2">
+              Testar Meu QI Agora
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </Link>
+        </div>
+      </article>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default HabitosQIAlto;

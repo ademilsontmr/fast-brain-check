@@ -5,19 +5,19 @@ const Footer = () => {
   const blogPosts = [
     {
       title: "Como aumentar seu QI: 10 dicas cientificamente comprovadas",
-      slug: "#"
+      slug: "/blog/como-aumentar-qi"
     },
     {
       title: "A diferença entre inteligência e sabedoria",
-      slug: "#"
+      slug: "/blog/inteligencia-vs-sabedoria"
     },
     {
       title: "Pessoas com QI alto têm estes 7 hábitos em comum",
-      slug: "#"
+      slug: "/blog/habitos-qi-alto"
     },
     {
       title: "Einstein, Musk e Jobs: o que os gênios têm em comum?",
-      slug: "#"
+      slug: "/blog/genios-em-comum"
     }
   ];
 
