@@ -4,12 +4,13 @@ import { questions } from "@/types/quiz";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Brain } from "lucide-react";
+import { Brain, Sparkles, TrendingUp, Zap } from "lucide-react";
 
 const Test = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
+  const [showMotivation, setShowMotivation] = useState(false);
   const navigate = useNavigate();
 
   const progress = ((currentQuestion + 1) / questions.length) * 100;
@@ -22,7 +23,13 @@ const Test = () => {
     setSelectedOption(null);
 
     if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+      const nextQuestion = currentQuestion + 1;
+      // Show motivation card after questions 7, 15, 23
+      if (nextQuestion === 7 || nextQuestion === 15 || nextQuestion === 23) {
+        setShowMotivation(true);
+      } else {
+        setCurrentQuestion(nextQuestion);
+      }
     } else {
       const score = newAnswers.reduce((acc, answer, index) => {
         return acc + (answer === questions[index].correctAnswer ? 1 : 0);
@@ -32,7 +39,59 @@ const Test = () => {
     }
   };
 
+  const handleContinue = () => {
+    setShowMotivation(false);
+    setCurrentQuestion(currentQuestion + 1);
+  };
+
+  const getMotivationContent = () => {
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion === 7) {
+      return {
+        icon: Sparkles,
+        title: "Você está indo bem! ✨",
+        message: "Seus primeiros acertos mostram que você tem um raciocínio rápido. Continue assim!",
+        color: "text-primary"
+      };
+    } else if (nextQuestion === 15) {
+      return {
+        icon: TrendingUp,
+        title: "Impressionante! 📈",
+        message: "Você está acima da média. Seu QI pode surpreender!",
+        color: "text-accent"
+      };
+    } else {
+      return {
+        icon: Zap,
+        title: "Quase lá! ⚡",
+        message: "Faltam poucos minutos para descobrir se você é um gênio. Não desista agora!",
+        color: "text-primary"
+      };
+    }
+  };
+
   const question = questions[currentQuestion];
+  const motivationContent = getMotivationContent();
+
+  if (showMotivation) {
+    const MotivationIcon = motivationContent.icon;
+    return (
+      <div className="min-h-screen bg-gradient-hero flex flex-col items-center justify-center p-4">
+        <Card className="max-w-2xl w-full p-8 shadow-elegant text-center">
+          <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6 ${motivationContent.color}`}>
+            <MotivationIcon className="w-10 h-10" />
+          </div>
+          <h2 className="text-3xl font-bold mb-4">{motivationContent.title}</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            {motivationContent.message}
+          </p>
+          <Button onClick={handleContinue} size="lg" className="shadow-elegant">
+            Continuar o Teste
+          </Button>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">
