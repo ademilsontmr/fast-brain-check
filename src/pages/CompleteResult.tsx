@@ -98,112 +98,329 @@ const CompleteResult = () => {
             </div>
           </Card>
 
-          <Card className="p-6 shadow-elegant border-2 border-primary/20">
-            <h3 className="font-bold text-lg mb-4 text-center">Ranking de Celebridades</h3>
-            <div className="space-y-3">
+          <div className="mb-6">
+            <h3 className="font-bold text-2xl mb-6 text-center">🌟 Comparação com Celebridades</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
-                { name: "Albert Einstein", iq: 160, highlighted: result.iqScore >= 135 },
-                { name: "Elon Musk", iq: 155, highlighted: result.iqScore >= 130 && result.iqScore < 135 },
-                { name: "Mark Zuckerberg", iq: 152, highlighted: result.iqScore >= 125 && result.iqScore < 130 },
-                { name: "Emma Watson", iq: 138, highlighted: result.iqScore >= 120 && result.iqScore < 125 },
-                { name: "Will Smith", iq: 115, highlighted: result.iqScore >= 115 && result.iqScore < 120 },
-                { name: "Tom Cruise", iq: 110, highlighted: result.iqScore >= 110 && result.iqScore < 115 },
-                { name: "Brad Pitt", iq: 108, highlighted: result.iqScore >= 105 && result.iqScore < 110 },
-                { name: "Jennifer Aniston", iq: 101, highlighted: result.iqScore >= 100 && result.iqScore < 105 },
-                { name: "Shakira", iq: 95, highlighted: result.iqScore >= 90 && result.iqScore < 100 },
+                { name: "Einstein", emoji: "🧪", iq: 160, desc: "Físico Genial", highlighted: result.iqScore >= 135 },
+                { name: "Elon Musk", emoji: "🚀", iq: 155, desc: "Visionário Tech", highlighted: result.iqScore >= 130 && result.iqScore < 135 },
+                { name: "Bill Gates", emoji: "💻", iq: 152, desc: "Criador Microsoft", highlighted: result.iqScore >= 125 && result.iqScore < 130 },
+                { name: "Emma Watson", emoji: "📚", iq: 138, desc: "Atriz e Ativista", highlighted: result.iqScore >= 120 && result.iqScore < 125 },
+                { name: "Will Smith", emoji: "🎬", iq: 115, desc: "Ator Premiado", highlighted: result.iqScore >= 115 && result.iqScore < 120 },
+                { name: "Tom Cruise", emoji: "✈️", iq: 110, desc: "Ação e Talento", highlighted: result.iqScore >= 110 && result.iqScore < 115 },
+                { name: "Brad Pitt", emoji: "🎭", iq: 108, desc: "Ícone Hollywood", highlighted: result.iqScore >= 105 && result.iqScore < 110 },
+                { name: "Shakira", emoji: "🎵", iq: 140, desc: "Cantora Genial", highlighted: result.iqScore >= 100 && result.iqScore < 105 },
+                { name: "Steve Jobs", emoji: "🍎", iq: 160, desc: "Criador Apple", highlighted: result.iqScore >= 90 && result.iqScore < 100 },
               ].map((celeb, index) => (
-                <div
+                <Card
                   key={index}
-                  className={`flex items-center justify-between p-3 rounded-lg transition-all ${
+                  className={`p-4 hover-scale transition-all duration-300 animate-fade-in ${
                     celeb.highlighted
-                      ? "bg-primary/10 border-2 border-primary"
-                      : "bg-muted/50"
+                      ? "bg-gradient-primary text-primary-foreground border-2 border-primary shadow-elegant scale-105"
+                      : "bg-background/60 backdrop-blur-sm border border-border/50"
                   }`}
+                  style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="flex items-center gap-3">
-                    {celeb.highlighted && (
-                      <Award className="w-5 h-5 text-primary" />
-                    )}
-                    <span className={celeb.highlighted ? "font-bold" : ""}>
+                  <div className="text-center space-y-2">
+                    <div className={`text-4xl mb-2 ${celeb.highlighted ? "animate-scale-in" : ""}`}>
+                      {celeb.emoji}
+                    </div>
+                    <h4 className={`font-bold text-sm ${celeb.highlighted ? "text-primary-foreground" : ""}`}>
                       {celeb.name}
-                    </span>
+                    </h4>
+                    <p className={`text-xs ${celeb.highlighted ? "opacity-90" : "text-muted-foreground"}`}>
+                      {celeb.desc}
+                    </p>
+                    <div className={`text-lg font-bold font-mono ${celeb.highlighted ? "text-primary-foreground" : "text-primary"}`}>
+                      QI {celeb.iq}
+                    </div>
+                    {celeb.highlighted && (
+                      <div className="pt-2 border-t border-primary-foreground/20">
+                        <Award className="w-5 h-5 mx-auto mb-1" />
+                        <p className="text-xs font-semibold">Seu nível!</p>
+                      </div>
+                    )}
                   </div>
-                  <span className={`font-mono ${celeb.highlighted ? "font-bold text-primary" : "text-muted-foreground"}`}>
-                    QI {celeb.iq}
-                  </span>
-                </div>
+                </Card>
               ))}
             </div>
-            <div className="mt-4 p-3 bg-primary/10 rounded-lg text-center">
-              <p className="text-sm">
-                <span className="font-bold">Você:</span> QI {result.iqScore} - Parecido com {celebrity}
+            <Card className="mt-6 p-4 bg-primary/10 border-2 border-primary/20">
+              <p className="text-center">
+                <span className="text-2xl">🎯</span> <span className="font-bold">Seu QI de {result.iqScore}</span> está próximo de <span className="font-bold text-primary">{celebrity}</span>!
               </p>
-            </div>
-          </Card>
+            </Card>
+          </div>
 
-          <Card className="p-6 shadow-elegant">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Brain className="w-6 h-6 text-primary" />
+          <Card className="p-6 shadow-elegant border-2 border-primary/20 animate-fade-in">
+            <div className="space-y-4">
+              <div className="flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center">
+                  <Brain className="w-8 h-8 text-primary-foreground" />
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-lg mb-1">Sua Força Cognitiva Dominante</h3>
-                <p className="text-muted-foreground">{strength}</p>
+              <div className="text-center">
+                <h3 className="font-bold text-2xl mb-2">✨ Sua Força Cognitiva Dominante</h3>
+                <p className="text-lg text-primary font-semibold mb-3">{strength}</p>
               </div>
-            </div>
-          </Card>
-
-          <Card className="p-6 shadow-elegant border-2 border-primary/20">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Zap className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-3">Dicas e orientações personalizadas</h3>
-                <p className="text-muted-foreground mb-4">
-                  Receba recomendações exclusivas para desenvolver ainda mais sua inteligência
+              <div className="bg-muted/50 rounded-lg p-4 space-y-3">
+                <p className="text-sm leading-relaxed">
+                  {result.iqScore >= 130 && (
+                    <>
+                      <span className="font-bold text-primary">Raciocínio excepcional!</span> Você possui uma capacidade extraordinária de processar informações complexas e encontrar soluções criativas. Pessoas com seu perfil cognitivo frequentemente se destacam em áreas que exigem pensamento abstrato, inovação e análise profunda.
+                    </>
+                  )}
+                  {result.iqScore >= 120 && result.iqScore < 130 && (
+                    <>
+                      <span className="font-bold text-primary">Inteligência superior!</span> Você demonstra excelente capacidade analítica e raciocínio lógico avançado. Seu perfil cognitivo indica grande potencial para resolver problemas complexos e absorver novos conhecimentos rapidamente.
+                    </>
+                  )}
+                  {result.iqScore >= 110 && result.iqScore < 120 && (
+                    <>
+                      <span className="font-bold text-primary">Acima da média!</span> Você possui habilidades cognitivas notáveis, com destaque para pensamento crítico e capacidade de aprendizado. Seu perfil mostra excelente potencial para desenvolvimento em diversas áreas do conhecimento.
+                    </>
+                  )}
+                  {result.iqScore >= 90 && result.iqScore < 110 && (
+                    <>
+                      <span className="font-bold text-primary">Perfil equilibrado!</span> Você demonstra boas habilidades cognitivas com equilíbrio entre diferentes tipos de inteligência. Seu perfil indica versatilidade e capacidade de adaptação a diversos desafios.
+                    </>
+                  )}
+                  {result.iqScore < 90 && (
+                    <>
+                      <span className="font-bold text-primary">Potencial único!</span> Você possui características cognitivas que podem ser desenvolvidas com as estratégias corretas. Seu perfil mostra áreas específicas de força que podem ser potencializadas.
+                    </>
+                  )}
                 </p>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <p>Exercícios mentais direcionados para suas áreas de força</p>
+                <div className="grid grid-cols-2 gap-3 pt-3 border-t border-border">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">{result.percentile}%</div>
+                    <div className="text-xs text-muted-foreground">Acima desse percentil</div>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <p>Leituras recomendadas baseadas no seu perfil cognitivo</p>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <p>Estratégias comprovadas para aprimorar seu raciocínio</p>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">TOP {100 - result.percentile}%</div>
+                    <div className="text-xs text-muted-foreground">Das pessoas</div>
                   </div>
                 </div>
               </div>
             </div>
           </Card>
 
-          <Card className="p-6 shadow-elegant border-2 border-primary/20">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <TrendingUp className="w-6 h-6 text-primary" />
+          <Card className="p-6 shadow-elegant border-2 border-primary/20 animate-fade-in">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="font-bold text-xl">💡 Dicas Personalizadas para Você</h3>
               </div>
-              <div>
-                <h3 className="font-bold text-lg mb-3">Diagnóstico completo</h3>
-                <p className="text-muted-foreground mb-4">
-                  Análise detalhada dos seus pontos fortes e áreas que você pode melhorar
-                </p>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <p>Mapeamento completo das suas habilidades cognitivas</p>
+              
+              <div className="space-y-4">
+                {result.iqScore >= 120 && (
+                  <>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">🧩</span> Desafios Mentais Avançados
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Resolva puzzles complexos e jogos de estratégia como xadrez ou Go. Dedique 20 minutos diários a problemas de lógica avançada para manter sua mente afiada.
+                      </p>
+                    </div>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">📖</span> Leituras Recomendadas
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        "Pensar Rápido e Devagar" de Daniel Kahneman, "A Arte de Pensar Claramente" de Rolf Dobelli. Livros sobre neurociência e filosofia expandirão ainda mais suas capacidades.
+                      </p>
+                    </div>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">🎯</span> Desenvolvimento Contínuo
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Aprenda uma nova língua ou instrumento musical. Essas atividades criam novas conexões neurais e potencializam sua já excelente capacidade cognitiva.
+                      </p>
+                    </div>
+                  </>
+                )}
+                {result.iqScore >= 90 && result.iqScore < 120 && (
+                  <>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">🎮</span> Jogos de Raciocínio
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Pratique jogos como Sudoku, palavras cruzadas e quebra-cabeças. Dedique 15 minutos diários para estimular diferentes áreas do cérebro.
+                      </p>
+                    </div>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">📚</span> Hábitos de Leitura
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Leia 20 páginas por dia de livros variados. "O Poder do Hábito" de Charles Duhigg e "Mindset" de Carol Dweck são ótimos para começar.
+                      </p>
+                    </div>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">🧠</span> Exercícios Cognitivos
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Use apps como Lumosity ou Peak. Pratique memorização, cálculo mental e resolução rápida de problemas para fortalecer suas habilidades.
+                      </p>
+                    </div>
+                  </>
+                )}
+                {result.iqScore < 90 && (
+                  <>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">🌱</span> Comece Devagar
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Inicie com jogos simples de memória e atenção. Apps como Peak oferecem exercícios adaptados ao seu nível, progredindo gradualmente.
+                      </p>
+                    </div>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">💪</span> Consistência é a Chave
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Pratique 10 minutos diários de exercícios cognitivos. Pequenos passos consistentes geram grandes resultados ao longo do tempo.
+                      </p>
+                    </div>
+                    <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                      <h4 className="font-bold mb-2 flex items-center gap-2">
+                        <span className="text-lg">🎯</span> Foque em Uma Área
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Escolha uma habilidade específica (memória, atenção ou lógica) e dedique-se a ela por 30 dias antes de expandir.
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 shadow-elegant border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-background animate-fade-in">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                  <TrendingUp className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="font-bold text-xl">📊 Seu Diagnóstico Completo</h3>
+              </div>
+
+              <div className="bg-background/60 backdrop-blur-sm rounded-lg p-5 border border-border space-y-4">
+                <div>
+                  <h4 className="font-bold text-primary mb-3 flex items-center gap-2">
+                    <span className="text-2xl">⭐</span> Seus Pontos Fortes
+                  </h4>
+                  <div className="space-y-2">
+                    {result.iqScore >= 120 && (
+                      <>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Raciocínio Analítico Superior</p>
+                            <p className="text-xs text-muted-foreground">Você resolve problemas complexos com facilidade e identifica padrões rapidamente.</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Aprendizado Acelerado</p>
+                            <p className="text-xs text-muted-foreground">Capacidade notável de absorver e aplicar novos conhecimentos de forma eficiente.</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Pensamento Estratégico</p>
+                            <p className="text-xs text-muted-foreground">Excelente em planejamento de longo prazo e tomada de decisões complexas.</p>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {result.iqScore >= 90 && result.iqScore < 120 && (
+                      <>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Raciocínio Lógico Sólido</p>
+                            <p className="text-xs text-muted-foreground">Boa capacidade de resolver problemas cotidianos e pensar de forma estruturada.</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Versatilidade Cognitiva</p>
+                            <p className="text-xs text-muted-foreground">Capacidade de se adaptar a diferentes tipos de desafios e situações.</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Aprendizado Consistente</p>
+                            <p className="text-xs text-muted-foreground">Com dedicação, você consegue dominar novas habilidades efetivamente.</p>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {result.iqScore < 90 && (
+                      <>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Potencial de Crescimento</p>
+                            <p className="text-xs text-muted-foreground">Grande margem para desenvolvimento com as técnicas certas.</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+                          <span className="text-lg">✓</span>
+                          <div>
+                            <p className="font-semibold text-sm">Persistência</p>
+                            <p className="text-xs text-muted-foreground">A determinação pode superar qualquer limitação inicial.</p>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <p>Comparativo com padrões de alta performance</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-primary mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🎯</span> Áreas de Desenvolvimento
+                  </h4>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-3 p-3 bg-blue-500/10 rounded-lg border-l-4 border-blue-500">
+                      <span className="text-lg">→</span>
+                      <div>
+                        <p className="font-semibold text-sm">Velocidade de Processamento</p>
+                        <p className="text-xs text-muted-foreground">Pratique exercícios cronometrados para aumentar sua agilidade mental.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-blue-500/10 rounded-lg border-l-4 border-blue-500">
+                      <span className="text-lg">→</span>
+                      <div>
+                        <p className="font-semibold text-sm">Memória de Trabalho</p>
+                        <p className="text-xs text-muted-foreground">Técnicas de memorização podem ampliar sua capacidade de retenção.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-blue-500/10 rounded-lg border-l-4 border-blue-500">
+                      <span className="text-lg">→</span>
+                      <div>
+                        <p className="font-semibold text-sm">Raciocínio Espacial</p>
+                        <p className="text-xs text-muted-foreground">Jogos e puzzles 3D fortalecem essa habilidade específica.</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <p>Plano de desenvolvimento personalizado</p>
-                  </div>
+                </div>
+
+                <div className="bg-gradient-primary text-primary-foreground rounded-lg p-4 mt-4">
+                  <p className="text-sm text-center font-medium">
+                    🚀 <span className="font-bold">Seu potencial é enorme!</span> Com dedicação consistente, você pode evoluir ainda mais suas capacidades cognitivas.
+                  </p>
                 </div>
               </div>
             </div>
