@@ -152,6 +152,62 @@ const CompleteResult = () => {
               </div>
             </div>
           </Card>
+
+          <Card className="p-6 shadow-elegant border-2 border-primary/20">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Zap className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg mb-3">Dicas e orientações personalizadas</h3>
+                <p className="text-muted-foreground mb-4">
+                  Receba recomendações exclusivas para desenvolver ainda mais sua inteligência
+                </p>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <p>Exercícios mentais direcionados para suas áreas de força</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <p>Leituras recomendadas baseadas no seu perfil cognitivo</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <p>Estratégias comprovadas para aprimorar seu raciocínio</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 shadow-elegant border-2 border-primary/20">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg mb-3">Diagnóstico completo</h3>
+                <p className="text-muted-foreground mb-4">
+                  Análise detalhada dos seus pontos fortes e áreas que você pode melhorar
+                </p>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <p>Mapeamento completo das suas habilidades cognitivas</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <p>Comparativo com padrões de alta performance</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <p>Plano de desenvolvimento personalizado</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* Challenge Section - Destaque */}
@@ -159,35 +215,39 @@ const CompleteResult = () => {
           <div className="text-center">
             <Zap className="w-16 h-16 mx-auto mb-4" />
             <h2 className="text-3xl font-bold mb-4">
-              Desafie Seus Amigos!
+              🔥 Desafie Seus Amigos!
             </h2>
-            <p className="text-lg opacity-90 mb-6">
-              Você está no top {100 - result.percentile}% das pessoas mais inteligentes. Será que seus amigos conseguem te superar?
+            <p className="text-lg opacity-90 mb-2">
+              Você está no <span className="font-bold text-2xl">TOP {100 - result.percentile}%</span> das pessoas mais inteligentes!
             </p>
-            <div className="bg-primary-foreground/10 rounded-lg p-6 mb-6">
+            <p className="text-base opacity-90 mb-6">
+              Será que seus amigos conseguem te superar? 🏆
+            </p>
+            <div className="bg-primary-foreground/10 rounded-lg p-6 mb-6 backdrop-blur-sm border-2 border-primary-foreground/20">
               <div className="text-primary-foreground">
                 <Trophy className="w-12 h-12 mx-auto mb-2" />
-                <p className="text-sm mb-1">Meu QI</p>
-                <p className="text-5xl font-bold">{result.iqScore}</p>
-                <p className="text-sm mt-1">Top {100 - result.percentile}%</p>
+                <p className="text-sm mb-1 opacity-90">Meu QI</p>
+                <p className="text-6xl font-bold mb-1">{result.iqScore}</p>
+                <p className="text-lg font-semibold">Top {100 - result.percentile}%</p>
+                <p className="text-sm opacity-75 mt-2">🧠 {getIQDescription(result.iqScore)}</p>
               </div>
             </div>
             <Button
               onClick={shareOnWhatsApp}
               size="lg"
               variant="secondary"
-              className="w-full text-lg shadow-elegant"
+              className="w-full text-lg shadow-elegant font-bold"
             >
               <Share2 className="w-5 h-5 mr-2" />
-              Compartilhar no WhatsApp e Desafiar
+              Compartilhar no WhatsApp e Desafiar 🚀
             </Button>
+            <p className="text-sm opacity-75 mt-4">
+              Mostre seu resultado e desafie seus amigos a fazerem melhor!
+            </p>
           </div>
         </Card>
 
         <div className="text-center space-y-4">
-          <p className="text-muted-foreground">
-            Você acertou {score} de 30 perguntas
-          </p>
           <Button
             onClick={() => {
               localStorage.clear();

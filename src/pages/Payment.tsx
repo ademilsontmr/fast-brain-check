@@ -69,13 +69,9 @@ const Payment = () => {
             <h2 className="text-2xl font-bold mb-4">
               Seu QI pode ser comparável ao de {celebrity}
             </h2>
-            <p className="text-lg opacity-90 mb-4">
+            <p className="text-lg opacity-90">
               Pessoas com desempenho similar ao seu costumam ter QI entre {result.iqScore - 5} e {result.iqScore + 5}
             </p>
-            <div className="flex items-center justify-center gap-2 text-sm opacity-90">
-              <TrendingUp className="w-4 h-4" />
-              <span>Você acertou {score} de 30 perguntas</span>
-            </div>
           </div>
         </Card>
 
