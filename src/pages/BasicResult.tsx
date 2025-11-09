@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, Lock, TrendingUp } from "lucide-react";
+import { Brain, Lock, TrendingUp, Star, Lightbulb, Target } from "lucide-react";
 import { calculateIQ } from "@/types/quiz";
 
 const BasicResult = () => {
@@ -37,10 +37,10 @@ const BasicResult = () => {
             <TrendingUp className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-4xl font-bold mb-4">
-            Seu desempenho foi acima da média 👀
+            Parabéns! Você completou o teste 🎯
           </h1>
           <p className="text-xl text-muted-foreground">
-            Você acertou {score} de 30 perguntas
+            Desbloqueie seu resultado completo e descubra insights poderosos sobre sua inteligência
           </p>
         </div>
 
@@ -56,9 +56,42 @@ const BasicResult = () => {
             <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
               <Lock className="w-5 h-5 text-muted-foreground" />
               <div className="flex-1">
-                <p className="font-medium">Seu QI exato</p>
+                <p className="font-medium">Seu QI exato e percentil</p>
                 <p className="text-sm text-muted-foreground">
-                  Com análise detalhada
+                  Descubra sua pontuação precisa e acima de quantas pessoas você está
+                </p>
+              </div>
+              <div className="text-primary font-bold">Bloqueado</div>
+            </div>
+
+            <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
+              <Star className="w-5 h-5 text-muted-foreground" />
+              <div className="flex-1">
+                <p className="font-medium">Comparação com QI de famosos</p>
+                <p className="text-sm text-muted-foreground">
+                  Veja se seu QI é comparável ao de Einstein, Elon Musk, Bill Gates e outros gênios
+                </p>
+              </div>
+              <div className="text-primary font-bold">Bloqueado</div>
+            </div>
+
+            <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
+              <Lightbulb className="w-5 h-5 text-muted-foreground" />
+              <div className="flex-1">
+                <p className="font-medium">Dicas e orientações personalizadas</p>
+                <p className="text-sm text-muted-foreground">
+                  Receba recomendações exclusivas para desenvolver ainda mais sua inteligência
+                </p>
+              </div>
+              <div className="text-primary font-bold">Bloqueado</div>
+            </div>
+
+            <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
+              <Target className="w-5 h-5 text-muted-foreground" />
+              <div className="flex-1">
+                <p className="font-medium">Diagnóstico completo</p>
+                <p className="text-sm text-muted-foreground">
+                  Análise detalhada dos seus pontos fortes e áreas que você pode melhorar
                 </p>
               </div>
               <div className="text-primary font-bold">Bloqueado</div>
@@ -67,42 +100,9 @@ const BasicResult = () => {
             <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
               <Lock className="w-5 h-5 text-muted-foreground" />
               <div className="flex-1">
-                <p className="font-medium">Seu percentil</p>
+                <p className="font-medium">Badge exclusivo para compartilhar</p>
                 <p className="text-sm text-muted-foreground">
-                  Acima de quantas pessoas você está
-                </p>
-              </div>
-              <div className="text-primary font-bold">Bloqueado</div>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
-              <Lock className="w-5 h-5 text-muted-foreground" />
-              <div className="flex-1">
-                <p className="font-medium">Comparação com celebridades</p>
-                <p className="text-sm text-muted-foreground">
-                  Descubra quem tem QI parecido com o seu
-                </p>
-              </div>
-              <div className="text-primary font-bold">Bloqueado</div>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
-              <Lock className="w-5 h-5 text-muted-foreground" />
-              <div className="flex-1">
-                <p className="font-medium">Sua força cognitiva dominante</p>
-                <p className="text-sm text-muted-foreground">
-                  O que seu cérebro faz melhor
-                </p>
-              </div>
-              <div className="text-primary font-bold">Bloqueado</div>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
-              <Lock className="w-5 h-5 text-muted-foreground" />
-              <div className="flex-1">
-                <p className="font-medium">Badge de vitória</p>
-                <p className="text-sm text-muted-foreground">
-                  Para compartilhar no WhatsApp
+                  Mostre seu resultado e desafie seus amigos no WhatsApp
                 </p>
               </div>
               <div className="text-primary font-bold">Bloqueado</div>
