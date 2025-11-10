@@ -63,17 +63,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/como-funciona" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Como Funciona
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/perguntas-frequentes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Perguntas Frequentes
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/sobre-o-teste" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Sobre o Teste
                 </Link>
               </li>

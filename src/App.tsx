@@ -13,6 +13,9 @@ import ComoAumentarQI from "./pages/blog/ComoAumentarQI";
 import InteligenciaVsSabedoria from "./pages/blog/InteligenciaVsSabedoria";
 import HabitosQIAlto from "./pages/blog/HabitosQIAlto";
 import GeniosEmComum from "./pages/blog/GeniosEmComum";
+import ComoFunciona from "./pages/ComoFunciona";
+import PerguntasFrequentes from "./pages/PerguntasFrequentes";
+import SobreOTeste from "./pages/SobreOTeste";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/blog/inteligencia-vs-sabedoria" element={<InteligenciaVsSabedoria />} />
           <Route path="/blog/habitos-qi-alto" element={<HabitosQIAlto />} />
           <Route path="/blog/genios-em-comum" element={<GeniosEmComum />} />
+          <Route path="/como-funciona" element={<ComoFunciona />} />
+          <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
+          <Route path="/sobre-o-teste" element={<SobreOTeste />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
