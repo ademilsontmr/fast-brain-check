@@ -45,7 +45,10 @@ const Payment = () => {
     <div className="min-h-screen bg-gradient-hero">
       <header className="border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-2">
+          <div 
+            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+            onClick={() => navigate("/")}
+          >
             <Brain className="w-8 h-8 text-primary" />
             <h1 className="text-2xl font-bold">BomQI</h1>
           </div>
