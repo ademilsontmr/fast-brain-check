@@ -29,34 +29,93 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+      <section className="container mx-auto px-4 py-16 md:py-24 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="animate-fade-in">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6 animate-scale-in">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-sm font-semibold">Teste de QI Científico</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               Descubra Seu QI em 3 Minutos
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               Você é mais inteligente que seus amigos? Só existe um jeito de saber.
             </p>
-            <Button
-              onClick={() => navigate("/teste")}
-              size="lg"
-              className="shadow-elegant text-lg px-8"
-            >
-              Começar o Teste
-              <Sparkles className="ml-2 w-5 h-5" />
-            </Button>
-            <div className="flex items-center gap-2 mt-6 text-sm text-muted-foreground">
-              <Users className="w-4 h-4" />
-              <span>Mais de 50.000 pessoas já fizeram o teste</span>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button
+                onClick={() => navigate("/teste")}
+                size="lg"
+                className="shadow-elegant text-lg px-8 hover-scale group"
+              >
+                Começar o Teste
+                <Sparkles className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
+              </Button>
+              
+              <Button
+                onClick={() => navigate("/sobre-o-teste")}
+                size="lg"
+                variant="outline"
+                className="text-lg px-8"
+              >
+                Como Funciona
+              </Button>
+            </div>
+            
+            <div className="flex items-center gap-6 pt-4 border-t border-border/50">
+              <div className="flex items-center gap-2 text-sm">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background" />
+                  <div className="w-8 h-8 rounded-full bg-accent/20 border-2 border-background" />
+                  <div className="w-8 h-8 rounded-full bg-primary/30 border-2 border-background" />
+                </div>
+                <span className="text-muted-foreground">
+                  <span className="font-bold text-foreground">50.000+</span> pessoas já testaram
+                </span>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center">
-            <img
-              src={heroBrain}
-              alt="Cérebro estilizado representando inteligência"
-              className="w-full max-w-md rounded-2xl shadow-elegant"
-            />
+          
+          <div className="flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl animate-pulse" />
+              
+              <img
+                src={heroBrain}
+                alt="Cérebro estilizado representando inteligência"
+                className="w-full max-w-md rounded-2xl shadow-elegant relative z-10 hover-scale"
+              />
+              
+              {/* Floating stats */}
+              <div className="absolute -top-4 -right-4 bg-background border border-border rounded-2xl p-4 shadow-elegant animate-scale-in z-20" style={{ animationDelay: '0.4s' }}>
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                  <div>
+                    <div className="text-2xl font-bold">98%</div>
+                    <div className="text-xs text-muted-foreground">Precisão</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-4 bg-background border border-border rounded-2xl p-4 shadow-elegant animate-scale-in z-20" style={{ animationDelay: '0.6s' }}>
+                <div className="flex items-center gap-2">
+                  <Brain className="w-5 h-5 text-accent" />
+                  <div>
+                    <div className="text-2xl font-bold">3 min</div>
+                    <div className="text-xs text-muted-foreground">Duração</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
