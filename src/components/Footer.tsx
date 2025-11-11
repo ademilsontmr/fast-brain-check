@@ -85,17 +85,17 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/politica-privacidade" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Política de Privacidade
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/termos-uso" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Termos de Uso
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contato" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Contato
                 </Link>
               </li>

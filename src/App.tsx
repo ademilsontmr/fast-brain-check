@@ -16,6 +16,9 @@ import GeniosEmComum from "./pages/blog/GeniosEmComum";
 import ComoFunciona from "./pages/ComoFunciona";
 import PerguntasFrequentes from "./pages/PerguntasFrequentes";
 import SobreOTeste from "./pages/SobreOTeste";
+import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
+import TermosUso from "./pages/TermosUso";
+import Contato from "./pages/Contato";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/como-funciona" element={<ComoFunciona />} />
           <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
           <Route path="/sobre-o-teste" element={<SobreOTeste />} />
+          <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="/termos-uso" element={<TermosUso />} />
+          <Route path="/contato" element={<Contato />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
