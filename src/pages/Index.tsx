@@ -21,7 +21,7 @@ const Index = () => {
               <Brain className="w-8 h-8 text-primary" />
               <h1 className="text-2xl font-bold">BomQI</h1>
             </div>
-            <Button onClick={() => navigate("/teste")} variant="outline">
+            <Button onClick={() => navigate("/teste")}>
               Fazer o Teste
             </Button>
           </div>
