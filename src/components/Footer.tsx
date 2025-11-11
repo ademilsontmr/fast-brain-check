@@ -92,8 +92,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">© 2026 BomQI. Todos os direitos reservados.</p>
-          <p className="text-sm text-muted-foreground mt-2">bomqi.com.br
-Este teste é lúdico e não substitui avaliações clínicas ou profissionais.</p>
+          
         </div>
       </div>
     </footer>;
