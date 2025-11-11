@@ -3,19 +3,13 @@ import { Brain, Clock, Target, Trophy, Sparkles, CheckCircle } from "lucide-reac
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-
 const ComoFunciona = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen bg-gradient-hero flex flex-col">
+  return <div className="min-h-screen bg-gradient-hero flex flex-col">
       <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div 
-              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-              onClick={() => navigate("/")}
-            >
+            <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/")}>
               <Brain className="w-8 h-8 text-primary" />
               <h1 className="text-2xl font-bold">BomQI</h1>
             </div>
@@ -55,7 +49,9 @@ const ComoFunciona = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-elegant animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <Card className="p-8 shadow-elegant animate-fade-in" style={{
+          animationDelay: "0.1s"
+        }}>
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Target className="w-8 h-8 text-primary" />
@@ -79,7 +75,9 @@ const ComoFunciona = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-elegant animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <Card className="p-8 shadow-elegant animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Sparkles className="w-8 h-8 text-primary" />
@@ -98,30 +96,21 @@ const ComoFunciona = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-elegant animate-fade-in border-2 border-primary/20" style={{ animationDelay: "0.3s" }}>
+          <Card className="p-8 shadow-elegant animate-fade-in border-2 border-primary/20" style={{
+          animationDelay: "0.3s"
+        }}>
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
                 <Trophy className="w-8 h-8 text-primary-foreground" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold mb-3">4. Desbloqueie o Resultado Completo</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Por apenas R$ 5,00, você desbloqueia uma análise completa e detalhada:
-                </p>
+                
                 <div className="space-y-2">
-                  {[
-                    "Seu QI exato e percentil",
-                    "Comparação com celebridades e gênios",
-                    "Sua força cognitiva dominante",
-                    "Dicas personalizadas para desenvolver sua inteligência",
-                    "Diagnóstico completo com pontos fortes e áreas de melhoria",
-                    "Badge exclusivo para compartilhar no WhatsApp"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 p-2 bg-primary/5 rounded-lg">
+                  {["Seu QI exato e percentil", "Comparação com celebridades e gênios", "Sua força cognitiva dominante", "Dicas personalizadas para desenvolver sua inteligência", "Diagnóstico completo com pontos fortes e áreas de melhoria", "Badge exclusivo para compartilhar no WhatsApp"].map((item, index) => <div key={index} className="flex items-center gap-3 p-2 bg-primary/5 rounded-lg">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                       <span className="text-sm">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
@@ -144,8 +133,6 @@ const ComoFunciona = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ComoFunciona;
