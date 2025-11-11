@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, CheckCircle, Sparkles, TrendingUp, Users } from "lucide-react";
+import { Brain, CheckCircle, Sparkles, TrendingUp, Users, Zap, UserX, Clock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroBrain from "@/assets/hero-brain.png";
 import Footer from "@/components/Footer";
@@ -49,6 +49,28 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               Você é mais inteligente que seus amigos? Só existe um jeito de saber.
             </p>
+            
+            {/* Badges sutis */}
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                  <UserX className="w-4 h-4 text-primary" />
+                </div>
+                <span>Sem cadastro</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Clock className="w-4 h-4 text-primary" />
+                </div>
+                <span>3 minutos</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-primary" />
+                </div>
+                <span>Super simples</span>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button
