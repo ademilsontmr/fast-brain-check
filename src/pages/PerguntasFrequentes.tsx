@@ -22,7 +22,7 @@ const PerguntasFrequentes = () => {
       answer: "O teste completo leva em média de 3 a 5 minutos. São 30 questões no total, e você pode responder no seu próprio ritmo. Não há limite de tempo, mas recomendamos responder de forma natural sem passar muito tempo em cada questão para obter o resultado mais preciso."
     },
     {
-      question: "O que está incluído no resultado completo de R$ 5,00?",
+      question: "O que está incluído no resultado completo?",
       answer: "Com o resultado completo, você recebe: seu QI exato com análise detalhada, seu percentil (posição comparada à população), comparação com QI de celebridades e gênios, análise da sua força cognitiva dominante, dicas personalizadas para desenvolver sua inteligência, diagnóstico completo com pontos fortes e áreas de melhoria, e um badge exclusivo para compartilhar no WhatsApp."
     },
     {
@@ -38,8 +38,8 @@ const PerguntasFrequentes = () => {
       answer: "Completamente! Não solicitamos nenhuma informação pessoal identificável durante o teste. Suas respostas são processadas de forma anônima e usadas apenas para calcular seu resultado individual. Você tem total controle sobre compartilhar ou não seu resultado."
     },
     {
-      question: "Como funciona o pagamento de R$ 5,00?",
-      answer: "O pagamento é único, seguro e processado de forma criptografada. Após completar o teste gratuito, você verá a opção de desbloquear o resultado completo por R$ 5,00. Aceitamos as principais formas de pagamento e você recebe acesso instantâneo ao seu resultado detalhado assim que o pagamento é confirmado."
+      question: "Como funciona o pagamento?",
+      answer: "O pagamento é único, seguro e processado de forma criptografada. Após completar o teste gratuito, você verá a opção de desbloquear o resultado completo. Aceitamos as principais formas de pagamento e você recebe acesso instantâneo ao seu resultado detalhado assim que o pagamento é confirmado."
     },
     {
       question: "Posso compartilhar meu resultado?",
