@@ -1,28 +1,20 @@
 import { Brain } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
-  const blogPosts = [
-    {
-      title: "Como aumentar seu QI: 10 dicas cientificamente comprovadas",
-      slug: "/blog/como-aumentar-qi"
-    },
-    {
-      title: "A diferença entre inteligência e sabedoria",
-      slug: "/blog/inteligencia-vs-sabedoria"
-    },
-    {
-      title: "Pessoas com QI alto têm estes 7 hábitos em comum",
-      slug: "/blog/habitos-qi-alto"
-    },
-    {
-      title: "Einstein, Musk e Jobs: o que os gênios têm em comum?",
-      slug: "/blog/genios-em-comum"
-    }
-  ];
-
-  return (
-    <footer className="border-t border-border bg-background/80 backdrop-blur-sm mt-16">
+  const blogPosts = [{
+    title: "Como aumentar seu QI: 10 dicas cientificamente comprovadas",
+    slug: "/blog/como-aumentar-qi"
+  }, {
+    title: "A diferença entre inteligência e sabedoria",
+    slug: "/blog/inteligencia-vs-sabedoria"
+  }, {
+    title: "Pessoas com QI alto têm estes 7 hábitos em comum",
+    slug: "/blog/habitos-qi-alto"
+  }, {
+    title: "Einstein, Musk e Jobs: o que os gênios têm em comum?",
+    slug: "/blog/genios-em-comum"
+  }];
+  return <footer className="border-t border-border bg-background/80 backdrop-blur-sm mt-16">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -40,16 +32,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Blog</h4>
             <ul className="space-y-2">
-              {blogPosts.map((post, index) => (
-                <li key={index}>
-                  <Link
-                    to={post.slug}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+              {blogPosts.map((post, index) => <li key={index}>
+                  <Link to={post.slug} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {post.title}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -104,16 +91,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2024 BomQI. Todos os direitos reservados.
-          </p>
+          <p className="text-sm text-muted-foreground">© 2026 BomQI. Todos os direitos reservados.</p>
           <p className="text-sm text-muted-foreground mt-2">
             bomqi.com.br
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
