@@ -5,13 +5,13 @@ import { Card } from "@/components/ui/card";
 import { Brain, CreditCard, Lock, Shield, Star, TrendingUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { calculateIQ, getCelebrityComparison } from "@/types/quiz";
-
 const Payment = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
   const [score, setScore] = useState(0);
-
   useEffect(() => {
     const savedScore = localStorage.getItem("quizScore");
     if (!savedScore) {
@@ -20,35 +20,27 @@ const Payment = () => {
     }
     setScore(parseInt(savedScore));
   }, [navigate]);
-
   const result = calculateIQ(score, 30);
   const celebrity = getCelebrityComparison(result.iqScore);
-
   const handlePayment = () => {
     setIsProcessing(true);
-    
+
     // Simula processamento de pagamento
     setTimeout(() => {
       localStorage.setItem("isPaid", "true");
       toast({
         title: "Pagamento confirmado!",
-        description: "Acessando seu resultado completo...",
+        description: "Acessando seu resultado completo..."
       });
-      
       setTimeout(() => {
         navigate("/resultado-completo");
       }, 1000);
     }, 2000);
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-hero">
+  return <div className="min-h-screen bg-gradient-hero">
       <header className="border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
-          <div 
-            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-            onClick={() => navigate("/")}
-          >
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/")}>
             <Brain className="w-8 h-8 text-primary" />
             <h1 className="text-2xl font-bold">BomQI</h1>
           </div>
@@ -149,17 +141,10 @@ const Payment = () => {
               <span className="text-lg font-medium">Total</span>
               <span className="text-3xl font-bold text-primary">R$ 5,00</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Pagamento único • Sem mensalidades • Acesso imediato
-            </p>
+            <p className="text-sm text-muted-foreground">Pagamento único • Sem cadastros • Acesso imediato</p>
           </div>
 
-          <Button
-            onClick={handlePayment}
-            disabled={isProcessing}
-            size="lg"
-            className="w-full shadow-elegant text-lg"
-          >
+          <Button onClick={handlePayment} disabled={isProcessing} size="lg" className="w-full shadow-elegant text-lg">
             <CreditCard className="w-5 h-5 mr-2" />
             {isProcessing ? "Processando..." : "Pagar com Cartão"}
           </Button>
@@ -180,8 +165,6 @@ const Payment = () => {
           <p>Mais de 50.000 pessoas já descobriram seu QI completo</p>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Payment;
