@@ -118,10 +118,10 @@ const BasicResult = () => {
               size="lg"
               className="w-full shadow-elegant text-lg"
             >
-              Ver Meu QI Completo (R$ 5,00)
+              Ver Meu QI Completo
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
-              Pagamento único • Resultado instantâneo • 100% seguro
+              Sem cadastro • Resultado instantâneo • 100% seguro
             </p>
           </div>
         </Card>
