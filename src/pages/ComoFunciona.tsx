@@ -11,7 +11,7 @@ const ComoFunciona = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/")}>
               <Brain className="w-8 h-8 text-primary" />
-              <h1 className="text-2xl font-bold">BomQI</h1>
+              <div className="text-2xl font-bold">BomQI</div>
             </div>
             <Button onClick={() => navigate("/teste")} size="lg">
               Fazer o Teste

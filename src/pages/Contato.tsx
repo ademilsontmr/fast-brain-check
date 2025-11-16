@@ -54,7 +54,7 @@ const Contato = () => {
               onClick={() => navigate("/")}
             >
               <Brain className="w-8 h-8 text-primary" />
-              <h1 className="text-2xl font-bold">BomQI</h1>
+              <div className="text-2xl font-bold">BomQI</div>
             </div>
             <Button onClick={() => navigate("/teste")}>
               Fazer o Teste

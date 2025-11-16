@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
+import useStructuredData from "@/hooks/use-structured-data";
 
 const PerguntasFrequentes = () => {
   const navigate = useNavigate();
@@ -63,6 +64,22 @@ const PerguntasFrequentes = () => {
     }
   ];
 
+  // Structured Data para FAQPage (Rich Results)
+  useStructuredData([
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    }
+  ]);
+
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">
       <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
@@ -73,7 +90,7 @@ const PerguntasFrequentes = () => {
               onClick={() => navigate("/")}
             >
               <Brain className="w-8 h-8 text-primary" />
-              <h1 className="text-2xl font-bold">BomQI</h1>
+              <div className="text-2xl font-bold">BomQI</div>
             </div>
             <Button onClick={() => navigate("/teste")} size="lg">
               Fazer o Teste

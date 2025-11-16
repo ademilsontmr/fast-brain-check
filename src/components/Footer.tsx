@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Brain className="w-8 h-8 text-primary" />
-              <h3 className="text-xl font-bold">BomQI</h3>
+              <p className="text-xl font-bold">BomQI</p>
             </div>
             <p className="text-sm text-muted-foreground">
               O teste de QI mais rápido e divertido do Brasil. Descubra sua inteligência em 3 minutos.
@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Blog */}
           <div>
-            <h4 className="font-bold mb-4">Blog</h4>
+            <p className="font-bold mb-4">Blog</p>
             <ul className="space-y-2">
               {blogPosts.map((post, index) => <li key={index}>
                   <Link to={post.slug} className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -42,7 +42,7 @@ const Footer = () => {
 
           {/* Links Rápidos */}
           <div>
-            <h4 className="font-bold mb-4">Links Rápidos</h4>
+            <p className="font-bold mb-4">Links Rápidos</p>
             <ul className="space-y-2">
               <li>
                 <Link to="/teste" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h4 className="font-bold mb-4">Legal</h4>
+            <p className="font-bold mb-4">Legal</p>
             <ul className="space-y-2">
               <li>
                 <Link to="/politica-privacidade" className="text-sm text-muted-foreground hover:text-primary transition-colors">

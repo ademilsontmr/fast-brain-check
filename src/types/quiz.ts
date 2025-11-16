@@ -3,6 +3,8 @@ export interface Question {
   question: string;
   options: string[];
   correctAnswer: number;
+  difficulty: 'easy' | 'medium' | 'hard'; // Para balanceamento futuro
+  category: 'logic' | 'math' | 'pattern' | 'verbal' | 'spatial'; // Categorias
 }
 
 export interface QuizResult {
@@ -12,251 +14,406 @@ export interface QuizResult {
   percentile: number;
 }
 
+// Perguntas otimizadas e balanceadas para um teste de QI realista mas motivador
 export const questions: Question[] = [
+  // Fáceis (1-10) - Base sólida, todos podem acertar
   {
     id: 1,
-    question: "Qual número completa a sequência? 3, 6, 12, 24, 48, ___",
-    options: ["56", "72", "96", "108"],
-    correctAnswer: 2
+    question: "Qual número completa a sequência? 2, 4, 6, 8, ___",
+    options: ["9", "10", "11", "12"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'pattern'
   },
   {
     id: 2,
-    question: "Quadrado → 4 lados | Triângulo → 3 lados | Hexágono → ___ lados",
-    options: ["5", "6", "8", "7"],
-    correctAnswer: 1
+    question: "Quadrado tem 4 lados. Triângulo tem 3 lados. Hexágono tem quantos lados?",
+    options: ["5", "6", "7", "8"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'spatial'
   },
   {
     id: 3,
-    question: "Se CASA=40 e MESA=38, então PESO=?",
-    options: ["40", "55", "31", "48"],
-    correctAnswer: 1
+    question: "Se A=1, B=2, C=3, então D+E+F é igual a:",
+    options: ["12", "15", "18", "21"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'math'
   },
   {
     id: 4,
-    question: "Se todos os Blex são Koras e alguns Koras são Vins:",
-    options: [
-      "Todos Vins são Blex",
-      "Alguns Blex podem ser Vins",
-      "Nenhum Blex é Vin",
-      "Todos Koras são Vins"
-    ],
-    correctAnswer: 1
+    question: "Qual é a média de 5, 10 e 15?",
+    options: ["8", "10", "12", "15"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'math'
   },
   {
     id: 5,
-    question: "7→49, 5→25, 9→81, 8→___",
-    options: ["16", "64", "72", "88"],
-    correctAnswer: 1
+    question: "Se hoje é segunda-feira, que dia será daqui a 3 dias?",
+    options: ["Terça", "Quarta", "Quinta", "Sexta"],
+    correctAnswer: 2,
+    difficulty: 'easy',
+    category: 'logic'
   },
   {
     id: 6,
-    question: "Se João é 2 anos mais novo que Ana, Ana tem 5 a mais que Paulo. Quem é o mais velho?",
-    options: ["João", "Ana", "Paulo", "Impossível determinar"],
-    correctAnswer: 1
+    question: "Qual é o oposto de 'profundo'?",
+    options: ["Alto", "Raso", "Largo", "Estreito"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'verbal'
   },
   {
     id: 7,
-    question: "15, 14, 12, 9, 5, ___",
-    options: ["0", "1", "2", "3"],
-    correctAnswer: 3
+    question: "Se 3×4 = 12, então 4×3 = ?",
+    options: ["12", "15", "16", "18"],
+    correctAnswer: 0,
+    difficulty: 'easy',
+    category: 'math'
   },
   {
     id: 8,
-    question: "⬜ ◼️ ⬜ ◼️ ⬜ ___",
-    options: ["◼️", "⬜", "⬛", "◻️"],
-    correctAnswer: 0
+    question: "Qual número completa? 5, 10, 15, 20, ___",
+    options: ["22", "25", "30", "35"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'pattern'
   },
   {
     id: 9,
-    question: "2 gatos caçam 2 ratos em 2 minutos. Quantos gatos são necessários para caçar 20 ratos em 20 minutos?",
-    options: ["2", "10", "20", "4"],
-    correctAnswer: 0
+    question: "Se todo gato é um animal, e Fluffy é um gato, então:",
+    options: ["Fluffy não é animal", "Fluffy é um animal", "Alguns gatos não são animais", "Impossível determinar"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'logic'
   },
   {
     id: 10,
-    question: "Se A=1, B=2, C=3... D+E+F = ?",
-    options: ["12", "13", "15", "18"],
-    correctAnswer: 2
+    question: "Quantos lados tem um pentágono?",
+    options: ["4", "5", "6", "7"],
+    correctAnswer: 1,
+    difficulty: 'easy',
+    category: 'spatial'
   },
+  
+  // Médias (11-20) - Desafio moderado
   {
     id: 11,
-    question: "2, 5, 11, 23, 47, ___",
-    options: ["94", "95", "96", "97"],
-    correctAnswer: 0
+    question: "Qual número completa a sequência? 3, 6, 12, 24, 48, ___",
+    options: ["72", "84", "96", "108"],
+    correctAnswer: 2,
+    difficulty: 'medium',
+    category: 'pattern'
   },
   {
     id: 12,
-    question: "Se ontem fosse amanhã, hoje seria:",
-    options: ["Ontem", "Amanhã", "Hoje", "Uma contradição lógica"],
-    correctAnswer: 3
+    question: "Se João tem 5 anos a mais que Maria, e Maria tem 8 anos, quantos anos tem João?",
+    options: ["10", "13", "15", "18"],
+    correctAnswer: 1,
+    difficulty: 'medium',
+    category: 'math'
   },
   {
     id: 13,
-    question: "RELÓGIO : TEMPO :: TERMÔMETRO : ___",
-    options: ["Calor", "Frio", "Temperatura", "Graus"],
-    correctAnswer: 2
+    question: "Se 2x + 5 = 15, então x = ?",
+    options: ["3", "5", "7", "10"],
+    correctAnswer: 1,
+    difficulty: 'medium',
+    category: 'math'
   },
   {
     id: 14,
-    question: "Qual é a média de 2, 7, 10?",
-    options: ["5", "6", "7", "8"],
-    correctAnswer: 1
+    question: "Sequência de Fibonacci: 1, 1, 2, 3, 5, 8, ___",
+    options: ["11", "13", "15", "16"],
+    correctAnswer: 1,
+    difficulty: 'medium',
+    category: 'pattern'
   },
   {
     id: 15,
-    question: "100 dividido por 0 é igual a:",
-    options: ["0", "100", "Infinito", "Indefinido"],
-    correctAnswer: 3
+    question: "Se todos os pássaros voam e o pinguim é um pássaro, então:",
+    options: ["Pinguim voa", "Nem todos os pássaros voam", "Pinguim não é pássaro", "A informação é contraditória"],
+    correctAnswer: 1,
+    difficulty: 'medium',
+    category: 'logic'
   },
   {
     id: 16,
-    question: "Se todo peixe nada e o tubarão é um peixe, então:",
-    options: [
-      "Nem todo peixe nada",
-      "Tubarão não nada",
-      "Tubarão nada",
-      "Impossível determinar"
-    ],
-    correctAnswer: 2
+    question: "Qual número completa? 4, 9, 16, 25, ___",
+    options: ["30", "36", "40", "49"],
+    correctAnswer: 1,
+    difficulty: 'medium',
+    category: 'pattern'
   },
   {
     id: 17,
-    question: "4, 9, 16, 25, ___",
-    options: ["30", "36", "40", "49"],
-    correctAnswer: 1
+    question: "Se um produto custa R$ 100 e tem 20% de desconto, qual o preço final?",
+    options: ["R$ 70", "R$ 80", "R$ 85", "R$ 90"],
+    correctAnswer: 1,
+    difficulty: 'medium',
+    category: 'math'
   },
   {
     id: 18,
-    question: "Qual é o oposto lógico de 'Todos estão felizes'?",
-    options: [
-      "Ninguém está feliz",
-      "Todos estão tristes",
-      "Alguns não estão felizes",
-      "Nenhuma das anteriores"
-    ],
-    correctAnswer: 2
+    question: "RELÓGIO : TEMPO :: TERMÔMETRO : ___",
+    options: ["Calor", "Frio", "Temperatura", "Graus"],
+    correctAnswer: 2,
+    difficulty: 'medium',
+    category: 'verbal'
   },
   {
     id: 19,
-    question: "(3+5)×2 = ?",
-    options: ["10", "13", "16", "20"],
-    correctAnswer: 2
+    question: "2, 5, 11, 23, 47, ___",
+    options: ["94", "95", "96", "97"],
+    correctAnswer: 0,
+    difficulty: 'medium',
+    category: 'pattern'
   },
   {
     id: 20,
-    question: "Se hoje é sexta-feira, que dia será daqui a 100 dias?",
-    options: ["Sexta", "Quinta", "Domingo", "Sábado"],
-    correctAnswer: 3
+    question: "Se hoje é quinta-feira, que dia será daqui a 100 dias? (Considere que 100 ÷ 7 = 14 semanas e 2 dias)",
+    options: ["Quinta", "Sexta", "Sábado", "Domingo"],
+    correctAnswer: 2,
+    difficulty: 'medium',
+    category: 'logic'
   },
+  
+  // Difíceis (21-30) - Desafio real
   {
     id: 21,
-    question: "Sequência de Fibonacci: 1, 1, 2, 3, 5, 8, ___",
-    options: ["13", "11", "10", "15"],
-    correctAnswer: 0
+    question: "Se todos os A são B, e alguns B são C, então:",
+    options: [
+      "Todos A são C",
+      "Alguns A podem ser C",
+      "Nenhum A é C",
+      "Todos C são A"
+    ],
+    correctAnswer: 1,
+    difficulty: 'hard',
+    category: 'logic'
   },
   {
     id: 22,
-    question: "Um produto custa R$ 200. Com 10% de desconto, paga-se R$ 20 a menos. Quanto sobra?",
-    options: ["R$ 190", "R$ 200", "R$ 170", "R$ 180"],
-    correctAnswer: 3
+    question: "Um carro viaja a 60 km/h. Quantos quilômetros percorre em 45 minutos?",
+    options: ["40 km", "45 km", "50 km", "55 km"],
+    correctAnswer: 1,
+    difficulty: 'hard',
+    category: 'math'
   },
   {
     id: 23,
-    question: "Qual é o intruso? Lápis, Caneta, Caderno, Giz",
-    options: ["Lápis", "Caneta", "Caderno", "Giz"],
-    correctAnswer: 2
+    question: "Qual número completa? 1, 4, 9, 16, 25, 36, ___",
+    options: ["42", "49", "56", "64"],
+    correctAnswer: 1,
+    difficulty: 'hard',
+    category: 'pattern'
   },
   {
     id: 24,
-    question: "Um carro viaja a 60 km/h. Em 30 minutos, percorre:",
-    options: ["60 km", "20 km", "30 km", "40 km"],
-    correctAnswer: 2
+    question: "Se 5 gatos caçam 5 ratos em 5 minutos, quantos gatos são necessários para caçar 20 ratos em 20 minutos?",
+    options: ["5", "10", "15", "20"],
+    correctAnswer: 0,
+    difficulty: 'hard',
+    category: 'logic'
   },
   {
     id: 25,
-    question: "Verde, Azul, Vermelho, Maçã. Qual não pertence?",
-    options: ["Verde", "Azul", "Vermelho", "Maçã"],
-    correctAnswer: 3
+    question: "Qual é o próximo número? 1, 3, 7, 15, 31, ___",
+    options: ["47", "55", "63", "71"],
+    correctAnswer: 2,
+    difficulty: 'hard',
+    category: 'pattern'
   },
   {
     id: 26,
-    question: "Se 5x = 45, então x = ?",
-    options: ["5", "8", "10", "9"],
-    correctAnswer: 3
+    question: "Se CASA = 40 e MESA = 38, então PESO = ? (Considere que cada letra tem um valor: A=1, B=2, C=3...)",
+    options: ["40", "55", "60", "65"],
+    correctAnswer: 1,
+    difficulty: 'hard',
+    category: 'math'
   },
   {
     id: 27,
-    question: "10, 7, 4, 1, ___",
-    options: ["0", "-1", "-2", "-3"],
-    correctAnswer: 2
+    question: "Qual é o oposto lógico de 'Todos estão presentes'?",
+    options: [
+      "Ninguém está presente",
+      "Todos estão ausentes",
+      "Alguns não estão presentes",
+      "Nenhuma das anteriores"
+    ],
+    correctAnswer: 2,
+    difficulty: 'hard',
+    category: 'logic'
   },
   {
     id: 28,
-    question: "Quantos vértices tem um cubo?",
-    options: ["6", "8", "10", "12"],
-    correctAnswer: 1
+    question: "Se um número é multiplicado por 3 e depois somado 5, o resultado é 26. Qual é o número?",
+    options: ["5", "6", "7", "8"],
+    correctAnswer: 2,
+    difficulty: 'hard',
+    category: 'math'
   },
   {
     id: 29,
-    question: "Qual é a metade de 0,5?",
-    options: ["0,5", "0,25", "0,1", "1"],
-    correctAnswer: 1
+    question: "Qual número completa? 2, 6, 12, 20, 30, ___",
+    options: ["38", "42", "48", "56"],
+    correctAnswer: 1,
+    difficulty: 'hard',
+    category: 'pattern'
   },
   {
     id: 30,
-    question: "Qual é o contrário de profundo?",
-    options: ["Alto", "Baixo", "Raso", "Largo"],
-    correctAnswer: 2
+    question: "Se ontem fosse amanhã, hoje seria sexta-feira. Que dia é hoje?",
+    options: ["Quarta", "Quinta", "Sexta", "Sábado"],
+    correctAnswer: 1,
+    difficulty: 'hard',
+    category: 'logic'
   }
 ];
 
-export const calculateIQ = (score: number, totalQuestions: number): QuizResult => {
+/**
+ * Calcula o QI de forma otimista mas realista
+ * Sistema baseado em distribuição normal ajustada para ser motivador
+ * QI médio: 100, desvio padrão: 15
+ * Ajustado para ser sempre positivo e encorajador
+ * Incorpora tempo de resposta: respostas rápidas aumentam o QI, lentas diminuem
+ */
+export const calculateIQ = (score: number, totalQuestions: number, averageAnswerTime?: number): QuizResult => {
+  const percentage = (score / totalQuestions) * 100;
+  
+  // Sistema otimista: QI mínimo de 85 (acima da média baixa)
+  // QI máximo de 145 (genialidade)
+  // Distribuição ajustada para ser sempre positiva
+  
   let iqScore: number;
   let percentile: number;
-
-  if (score <= 6) {
-    iqScore = 70 + Math.floor((score / 6) * 15);
-    percentile = 5 + Math.floor((score / 6) * 15);
-  } else if (score <= 12) {
-    iqScore = 86 + Math.floor(((score - 7) / 6) * 12);
-    percentile = 20 + Math.floor(((score - 7) / 6) * 20);
-  } else if (score <= 20) {
-    iqScore = 99 + Math.floor(((score - 13) / 8) * 9);
-    percentile = 40 + Math.floor(((score - 13) / 8) * 25);
-  } else if (score <= 25) {
-    iqScore = 109 + Math.floor(((score - 21) / 5) * 9);
-    percentile = 65 + Math.floor(((score - 21) / 5) * 20);
+  
+  // Cálculo otimista baseado em percentual de acertos
+  // Mesmo com 0 acertos, QI mínimo de 85 (sempre positivo)
+  // Com 100% de acertos, QI de 145 (genialidade)
+  
+  if (percentage >= 90) {
+    // 90-100%: QI Superior a Excepcional (130-145)
+    iqScore = 130 + Math.floor(((percentage - 90) / 10) * 15);
+    percentile = 95 + Math.floor(((percentage - 90) / 10) * 4);
+  } else if (percentage >= 80) {
+    // 80-89%: QI Superior (120-129)
+    iqScore = 120 + Math.floor(((percentage - 80) / 10) * 10);
+    percentile = 90 + Math.floor(((percentage - 80) / 10) * 5);
+  } else if (percentage >= 70) {
+    // 70-79%: QI Acima da Média (110-119)
+    iqScore = 110 + Math.floor(((percentage - 70) / 10) * 10);
+    percentile = 75 + Math.floor(((percentage - 70) / 10) * 15);
+  } else if (percentage >= 60) {
+    // 60-69%: QI Médio-Alto (100-109)
+    iqScore = 100 + Math.floor(((percentage - 60) / 10) * 10);
+    percentile = 50 + Math.floor(((percentage - 60) / 10) * 25);
+  } else if (percentage >= 50) {
+    // 50-59%: QI Médio (95-99)
+    iqScore = 95 + Math.floor(((percentage - 50) / 10) * 5);
+    percentile = 40 + Math.floor(((percentage - 50) / 10) * 10);
+  } else if (percentage >= 40) {
+    // 40-49%: QI Médio-Baixo (90-94)
+    iqScore = 90 + Math.floor(((percentage - 40) / 10) * 5);
+    percentile = 30 + Math.floor(((percentage - 40) / 10) * 10);
   } else {
-    iqScore = 119 + Math.floor(((score - 26) / 5) * 21);
-    percentile = 85 + Math.floor(((score - 26) / 5) * 14);
+    // 0-39%: QI Acima da Média Baixa (85-89) - Sempre otimista!
+    iqScore = 85 + Math.floor((percentage / 40) * 5);
+    percentile = 15 + Math.floor((percentage / 40) * 15);
   }
-
+  
+  // Ajuste baseado no tempo de resposta (se fornecido)
+  // Tempo ideal: ~20 segundos por questão (600s / 30 questões)
+  if (averageAnswerTime !== undefined && averageAnswerTime > 0) {
+    let timeAdjustment = 0;
+    
+    if (averageAnswerTime < 10) {
+      // Muito rápido (< 10s): indica conhecimento sólido ou raciocínio muito rápido
+      // Bônus de até +5 pontos
+      timeAdjustment = Math.min(5, (10 - averageAnswerTime) * 0.5);
+    } else if (averageAnswerTime < 20) {
+      // Rápido (10-20s): bom tempo de resposta
+      // Bônus de até +3 pontos
+      timeAdjustment = Math.min(3, (20 - averageAnswerTime) * 0.3);
+    } else if (averageAnswerTime < 30) {
+      // Normal (20-30s): tempo adequado, sem ajuste
+      timeAdjustment = 0;
+    } else if (averageAnswerTime < 40) {
+      // Lento (30-40s): pode indicar dificuldade ou reflexão excessiva
+      // Penalidade de até -2 pontos
+      timeAdjustment = -Math.min(2, (averageAnswerTime - 30) * 0.2);
+    } else {
+      // Muito lento (> 40s): indica dificuldade significativa
+      // Penalidade de até -5 pontos
+      timeAdjustment = -Math.min(5, 2 + (averageAnswerTime - 40) * 0.3);
+    }
+    
+    // Aplicar ajuste ao QI
+    iqScore = Math.round(iqScore + timeAdjustment);
+  }
+  
+  // Garantir limites razoáveis
+  iqScore = Math.max(85, Math.min(145, iqScore));
+  percentile = Math.max(15, Math.min(99, percentile));
+  
   return {
     score,
     totalQuestions,
     iqScore,
-    percentile: Math.min(percentile, 99)
+    percentile
   };
 };
 
+/**
+ * Comparação com celebridades - sempre positiva e motivadora
+ */
 export const getCelebrityComparison = (iqScore: number): string => {
-  if (iqScore >= 135) return "Albert Einstein";
+  if (iqScore >= 140) return "Albert Einstein";
+  if (iqScore >= 135) return "Stephen Hawking";
   if (iqScore >= 130) return "Elon Musk";
-  if (iqScore >= 125) return "Mark Zuckerberg";
+  if (iqScore >= 125) return "Bill Gates";
   if (iqScore >= 120) return "Emma Watson";
   if (iqScore >= 115) return "Will Smith";
   if (iqScore >= 110) return "Tom Cruise";
   if (iqScore >= 105) return "Brad Pitt";
   if (iqScore >= 100) return "Jennifer Aniston";
   if (iqScore >= 95) return "Shakira";
-  return "pessoa média";
+  if (iqScore >= 90) return "pessoas bem-sucedidas";
+  return "pessoas determinadas"; // Sempre positivo!
 };
 
+/**
+ * Força cognitiva dominante - sempre destacando pontos positivos
+ */
 export const getCognitiveStrength = (iqScore: number): string => {
-  if (iqScore >= 130) return "Raciocínio Lógico Excepcional";
-  if (iqScore >= 120) return "Pensamento Analítico Avançado";
-  if (iqScore >= 110) return "Resolução de Problemas Complexos";
-  if (iqScore >= 100) return "Compreensão Verbal e Numérica";
-  if (iqScore >= 90) return "Raciocínio Prático";
-  return "Pensamento Cotidiano";
+  if (iqScore >= 130) return "Raciocínio Lógico Excepcional e Pensamento Estratégico";
+  if (iqScore >= 120) return "Pensamento Analítico Avançado e Resolução Criativa de Problemas";
+  if (iqScore >= 110) return "Resolução de Problemas Complexos e Pensamento Crítico";
+  if (iqScore >= 100) return "Compreensão Verbal e Numérica com Boa Capacidade Analítica";
+  if (iqScore >= 90) return "Raciocínio Prático e Versatilidade Cognitiva";
+  return "Pensamento Estruturado com Grande Potencial de Desenvolvimento"; // Sempre positivo!
+};
+
+/**
+ * Mensagem motivacional personalizada baseada no QI
+ */
+export const getMotivationalMessage = (iqScore: number): string => {
+  if (iqScore >= 130) {
+    return "Você possui uma inteligência excepcional! Sua capacidade de raciocínio está entre as mais altas da população. Continue desafiando sua mente!";
+  }
+  if (iqScore >= 120) {
+    return "Parabéns! Você está acima da média com uma inteligência superior. Suas habilidades cognitivas são notáveis e podem levá-lo longe!";
+  }
+  if (iqScore >= 110) {
+    return "Excelente resultado! Você demonstra inteligência acima da média com grande potencial. Continue desenvolvendo suas habilidades!";
+  }
+  if (iqScore >= 100) {
+    return "Ótimo desempenho! Você está na média ou acima, o que é um excelente resultado. Com dedicação, pode alcançar ainda mais!";
+  }
+  if (iqScore >= 90) {
+    return "Bom resultado! Você tem uma base sólida e muito potencial para crescimento. Com prática e dedicação, pode melhorar significativamente!";
+  }
+  return "Você tem um potencial único! A inteligência pode ser desenvolvida, e com as estratégias certas, você pode alcançar resultados incríveis. Continue praticando!";
 };

@@ -8,6 +8,7 @@ import { calculateIQ } from "@/types/quiz";
 const BasicResult = () => {
   const navigate = useNavigate();
   const [score, setScore] = useState(0);
+  const [averageAnswerTime, setAverageAnswerTime] = useState<number | undefined>(undefined);
 
   useEffect(() => {
     const savedScore = localStorage.getItem("quizScore");
@@ -16,9 +17,15 @@ const BasicResult = () => {
       return;
     }
     setScore(parseInt(savedScore));
+    
+    // Obter tempo médio de resposta do localStorage
+    const savedAverageTime = localStorage.getItem("quizAverageAnswerTime");
+    if (savedAverageTime) {
+      setAverageAnswerTime(parseFloat(savedAverageTime));
+    }
   }, [navigate]);
 
-  const result = calculateIQ(score, 30);
+  const result = calculateIQ(score, 30, averageAnswerTime);
 
   return (
     <div className="min-h-screen bg-gradient-hero">
@@ -29,7 +36,7 @@ const BasicResult = () => {
             onClick={() => navigate("/")}
           >
             <Brain className="w-8 h-8 text-primary" />
-            <h1 className="text-2xl font-bold">BomQI</h1>
+            <div className="text-2xl font-bold">BomQI</div>
           </div>
         </div>
       </header>

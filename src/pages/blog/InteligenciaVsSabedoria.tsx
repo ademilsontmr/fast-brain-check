@@ -1,18 +1,51 @@
-import { Brain, ArrowRight, GraduationCap } from "lucide-react";
+import { Brain, ArrowRight, GraduationCap, BookOpen, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Card } from "@/components/ui/card";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import useSEO from "@/hooks/use-seo";
+import { getRelatedArticles } from "@/utils/blogArticles";
+import SocialProofCarousel from "@/components/SocialProofCarousel";
+import useStructuredData from "@/hooks/use-structured-data";
+import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 
 const InteligenciaVsSabedoria = () => {
+  const navigate = useNavigate();
+  
+    const articleUrl = "https://bomqi.com.br/blog/inteligencia-vs-sabedoria";
+  const articleTitle = "Inteligência vs Sabedoria: Qual a Diferença?";
+  const articleDescription = "Descubra as diferenças entre inteligência e sabedoria, exemplos práticos e como desenvolver as duas habilidades na vida real.";
+  
+  useSEO({
+    title: articleTitle,
+    description: articleDescription,
+    url: articleUrl,
+  });
+
+  useStructuredData(
+    generateArticleStructuredData({
+      title: articleTitle,
+      description: articleDescription,
+      url: articleUrl,
+      slug: "inteligencia-vs-sabedoria",
+      publishDate: "2024-01-01",
+    })
+  );
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <Link to="/" className="flex items-center gap-2">
-            <Brain className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-bold">BomQI</span>
-          </Link>
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <Brain className="w-8 h-8 text-primary" />
+              <span className="text-2xl font-bold">BomQI</span>
+            </Link>
+            <Button onClick={() => navigate("/teste")} size="lg">
+              Fazer o Teste
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -22,7 +55,7 @@ const InteligenciaVsSabedoria = () => {
         <nav className="text-sm text-muted-foreground mb-6">
           <Link to="/" className="hover:text-primary">Home</Link>
           <span className="mx-2">/</span>
-          <Link to="/#blog" className="hover:text-primary">Blog</Link>
+          <Link to="/blog" className="hover:text-primary">Blog</Link>
           <span className="mx-2">/</span>
           <span>Inteligência vs Sabedoria</span>
         </nav>
@@ -35,8 +68,7 @@ const InteligenciaVsSabedoria = () => {
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
           <time>Janeiro 2024</time>
-          <span>•</span>
-          <span>7 min de leitura</span>
+          
         </div>
 
         {/* Featured Image */}
@@ -169,6 +201,48 @@ const InteligenciaVsSabedoria = () => {
             </Button>
           </Link>
         </div>
+
+        {/* Artigos Relacionados */}
+        <div className="mt-16">
+          <div className="flex items-center gap-3 mb-6">
+            <BookOpen className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl md:text-3xl font-bold">Continue Lendo</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {getRelatedArticles("inteligencia-vs-sabedoria", 3).map((article) => (
+              <Card
+                key={article.slug}
+                className="p-6 hover:shadow-lg transition-all duration-300 border-2 border-primary/20 hover:border-primary/40 group cursor-pointer"
+              >
+                <Link to={`/blog/${article.slug}`} className="block">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      {article.category}
+                    </span>
+                    
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                    {article.description}
+                  </p>
+                  <div className="flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
+                    Ler artigo
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              </Card>
+            ))}
+          </div>
+        </div>
+        {/* Social Proof Carousel */}
+        <section className="mt-16">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">O que as pessoas estão dizendo</h2>
+          </div>
+          <SocialProofCarousel />
+        </section>
       </article>
 
       <Footer />

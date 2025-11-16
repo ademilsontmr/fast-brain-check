@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="240.000000pt" height="235.000000pt" viewBox="0 0 90.000000 88.000000"
+ preserveAspectRatio="xMidYMid meet">
+  
+  <defs>
+    <!-- Gradiente vibrante para o cérebro -->
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a5b4fc;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fundo circular branco para contraste -->
+  <circle cx="45" cy="44" r="42" fill="#ffffff"/>
+  
+  <g transform="translate(0.000000,88.000000) scale(0.100000,-0.100000)"
+  fill="url(#brainGradient)" stroke="none">
+  <path d="M329 715 c-14 -8 -32 -28 -39 -45 -7 -17 -21 -35 -32 -41 -31 -17
+  -58 -70 -58 -116 0 -23 -7 -58 -16 -77 -21 -42 -13 -90 21 -136 14 -19 25 -42
+  25 -51 0 -25 44 -74 80 -89 37 -15 89 -6 124 21 l26 20 26 -20 c35 -27 87 -36
+  124 -21 36 15 80 64 80 89 0 9 11 32 25 51 34 46 42 94 21 136 -9 19 -16 54
+  -16 77 0 46 -27 99 -58 116 -11 6 -25 24 -32 41 -22 54 -85 74 -140 45 -27
+  -14 -33 -14 -60 0 -36 19 -67 19 -101 0z m97 -60 c13 -20 16 -40 11 -93 -7
+  -85 -13 -99 -48 -118 -29 -14 -38 -37 -19 -49 5 -3 23 1 40 10 l30 16 0 -76
+  c0 -112 -21 -145 -95 -145 -25 0 -39 7 -55 27 l-22 28 26 3 c38 5 35 38 -4 45
+  -72 15 -95 95 -42 150 26 27 26 29 8 42 -20 15 -18 45 7 79 14 19 16 19 32 3
+  23 -24 38 -11 31 26 -14 68 63 108 100 52z m159 2 c10 -15 13 -35 9 -54 -7
+  -37 8 -50 31 -26 16 16 18 16 32 -3 25 -34 27 -64 7 -79 -18 -13 -18 -15 9
+  -42 52 -55 29 -135 -43 -150 -39 -7 -42 -40 -4 -45 l26 -3 -22 -27 c-16 -21
+  -30 -28 -55 -28 -74 0 -95 33 -95 145 l0 76 30 -16 c17 -9 35 -13 40 -10 19
+  12 10 35 -19 49 -35 19 -41 33 -48 118 -5 53 -2 73 11 93 22 33 69 34 91 2z"/>
+  </g>
+</svg>
