@@ -378,6 +378,54 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Como Ficar Rico Usando a Internet e o QI: Estratégias Digitais",
     description: "Como ficar rico usando a internet e o QI? Descubra estratégias digitais para ganhar dinheiro online usando inteligência. Guia completo. Teste seu QI rapidamente!",
     category: "Riqueza"
+  },
+  {
+    slug: "como-maes-melhoram-qi",
+    title: "Como Mães Melhoram o QI: Estratégias Cientificamente Comprovadas",
+    description: "Descubra como mães podem melhorar o QI através de atividades, hábitos e práticas baseadas em ciência. Guia completo para desenvolvimento cognitivo materno.",
+    category: "Desenvolvimento"
+  },
+  {
+    slug: "como-mercado-financeiro-melhora-qi",
+    title: "Como o Mercado Financeiro Melhora o QI: Desenvolvimento Cognitivo Profissional",
+    description: "Descubra como trabalhar no mercado financeiro pode melhorar o QI através de desafios cognitivos, análise complexa e desenvolvimento de habilidades mentais avançadas.",
+    category: "Carreira"
+  },
+  {
+    slug: "como-pais-melhoram-qi",
+    title: "Como Pais Melhoram o QI: Desenvolvimento Cognitivo na Paternidade",
+    description: "Descubra como a paternidade pode melhorar o QI através de mudanças cerebrais, desafios cognitivos e desenvolvimento de habilidades mentais. Guia completo para pais.",
+    category: "Desenvolvimento"
+  },
+  {
+    slug: "como-seguranca-trabalho-melhora-qi",
+    title: "Como a Segurança no Trabalho Melhora o QI: Desenvolvimento Cognitivo Profissional",
+    description: "Descubra como trabalhar com segurança no trabalho pode melhorar o QI através de análise de riscos, planejamento estratégico e desenvolvimento de habilidades cognitivas avançadas.",
+    category: "Carreira"
+  },
+  {
+    slug: "como-trabalhadores-melhoram-qi",
+    title: "Como Trabalhadores Melhoram o QI: Desenvolvimento Cognitivo no Ambiente de Trabalho",
+    description: "Descubra como diferentes tipos de trabalho podem melhorar o QI através de desafios cognitivos, aprendizado contínuo e desenvolvimento de habilidades mentais. Guia completo.",
+    category: "Carreira"
+  },
+  {
+    slug: "qi-e-exercicio-fisico",
+    title: "QI e Exercício Físico: Como Atividade Física Melhora a Inteligência",
+    description: "Descubra a relação científica entre QI e exercício físico. Como atividade física melhora função cognitiva, memória, raciocínio e desenvolvimento cerebral.",
+    category: "Ciência"
+  },
+  {
+    slug: "qi-medio-adolescentes",
+    title: "QI Médio de Adolescentes: Dados Científicos e Desenvolvimento Cognitivo",
+    description: "Descubra o QI médio de adolescentes, como a inteligência se desenvolve na adolescência, fatores que influenciam e como otimizar o desenvolvimento cognitivo nessa fase.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-corredores",
+    title: "QI Médio de Corredores: A Relação Entre Corrida e Inteligência",
+    description: "Descubra o QI médio de corredores, como a corrida melhora a função cognitiva, e a relação científica entre exercício aeróbico e desenvolvimento da inteligência.",
+    category: "Dados"
   }
 ];
 

@@ -78,6 +78,14 @@ const ComoManterMenteAfiada = lazy(() => import("./pages/blog/ComoManterMenteAfi
 const ReduzindoDemenciaTreinamentoCerebral = lazy(() => import("./pages/blog/ReduzindoDemenciaTreinamentoCerebral"));
 const SuaPontuacaoQIPodeMudar = lazy(() => import("./pages/blog/SuaPontuacaoQIPodeMudar"));
 const PessoasMaisInteligentesQueVoceNuncaOuviuFalar = lazy(() => import("./pages/blog/PessoasMaisInteligentesQueVoceNuncaOuviuFalar"));
+const ComoMaesMelhoramQI = lazy(() => import("./pages/blog/ComoMaesMelhoramQI"));
+const ComoMercadoFinanceiroMelhoraQI = lazy(() => import("./pages/blog/ComoMercadoFinanceiroMelhoraQI"));
+const ComoPaisMelhoramQI = lazy(() => import("./pages/blog/ComoPaisMelhoramQI"));
+const ComoSegurancaTrabalhoMelhoraQI = lazy(() => import("./pages/blog/ComoSegurancaTrabalhoMelhoraQI"));
+const ComoTrabalhadoresMelhoramQI = lazy(() => import("./pages/blog/ComoTrabalhadoresMelhoramQI"));
+const QIEExercicioFisico = lazy(() => import("./pages/blog/QIEExercicioFisico"));
+const QIMedioAdolescentes = lazy(() => import("./pages/blog/QIMedioAdolescentes"));
+const QIMedioCorredores = lazy(() => import("./pages/blog/QIMedioCorredores"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -634,6 +642,70 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <PessoasMaisInteligentesQueVoceNuncaOuviuFalar />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/como-maes-melhoram-qi" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoMaesMelhoramQI />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/como-mercado-financeiro-melhora-qi" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoMercadoFinanceiroMelhoraQI />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/como-pais-melhoram-qi" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoPaisMelhoramQI />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/como-seguranca-trabalho-melhora-qi" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoSegurancaTrabalhoMelhoraQI />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/como-trabalhadores-melhoram-qi" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoTrabalhadoresMelhoramQI />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/qi-e-exercicio-fisico" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIEExercicioFisico />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/qi-medio-adolescentes" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioAdolescentes />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/blog/qi-medio-corredores" 
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioCorredores />
               </Suspense>
             } 
           />
