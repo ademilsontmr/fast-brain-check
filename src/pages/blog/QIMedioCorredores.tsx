@@ -1,4 +1,4 @@
-import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Running } from "lucide-react";
+import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -106,7 +106,7 @@ const QIMedioCorredores = () => {
         </div>
 
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">
-          <Running className="w-24 h-24 text-primary" />
+          <Activity className="w-24 h-24 text-primary" />
         </div>
 
         <div className="prose prose-lg max-w-none">
