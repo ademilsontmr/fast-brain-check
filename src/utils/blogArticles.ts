@@ -426,6 +426,120 @@ export const allBlogArticles: BlogArticle[] = [
     title: "QI Médio de Corredores: A Relação Entre Corrida e Inteligência",
     description: "Descubra o QI médio de corredores, como a corrida melhora a função cognitiva, e a relação científica entre exercício aeróbico e desenvolvimento da inteligência.",
     category: "Dados"
+  },
+  {
+    slug: "qi-medio-bombeiros",
+    title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
+    description: "Descubra o QI médio de bombeiros, as habilidades cognitivas necessárias para a profissão e como a inteligência se relaciona com o trabalho de salvamento e combate a incêndios.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-professores",
+    title: "QI Médio de Professores: Inteligência na Educação",
+    description: "Descubra o QI médio de professores, as habilidades cognitivas necessárias para ensinar e como a inteligência se relaciona com o sucesso na educação.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-seguranca-trabalho",
+    title: "QI Médio de Profissionais de Segurança do Trabalho",
+    description: "Descubra o QI médio de profissionais de segurança do trabalho, as habilidades cognitivas necessárias e como a inteligência impacta a prevenção de acidentes.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-engenheiros",
+    title: "QI Médio de Engenheiros: Inteligência Técnica e Criativa",
+    description: "Descubra o QI médio de engenheiros, as habilidades cognitivas necessárias e como a engenharia desenvolve inteligência técnica e criatividade.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-medicos",
+    title: "QI Médio de Médicos: Inteligência na Medicina",
+    description: "Descubra o QI médio de médicos, as habilidades cognitivas necessárias para a medicina e como a profissão desenvolve inteligência clínica.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-profissionais-saude",
+    title: "QI Médio de Profissionais de Saúde: Inteligência no Cuidado",
+    description: "Descubra o QI médio de profissionais de saúde, as habilidades cognitivas necessárias e como o cuidado com pacientes desenvolve inteligência.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-estudantes",
+    title: "QI Médio de Estudantes: Inteligência Acadêmica",
+    description: "Descubra o QI médio de estudantes por nível educacional, fatores que influenciam e como otimizar o desenvolvimento cognitivo durante os estudos.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-jovens",
+    title: "QI Médio de Jovens: Desenvolvimento Cognitivo na Juventude",
+    description: "Descubra o QI médio de jovens, como a inteligência se desenvolve nessa fase e estratégias para otimizar o potencial cognitivo.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-idosos",
+    title: "QI Médio de Idosos: Inteligência na Terceira Idade",
+    description: "Descubra o QI médio de idosos, como a inteligência muda com a idade e estratégias para manter a mente afiada na terceira idade.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-netos",
+    title: "QI Médio de Netos: Inteligência das Novas Gerações",
+    description: "Descubra o QI médio das novas gerações, como crianças e adolescentes estão se desenvolvendo cognitivamente e o papel dos avós.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-cavaleiros",
+    title: "QI Médio de Cavaleiros: Inteligência Equestre",
+    description: "Descubra o QI médio de praticantes de equitação, as habilidades cognitivas desenvolvidas no esporte equestre e a relação entre cavalos e inteligência.",
+    category: "Dados"
+  },
+  {
+    slug: "como-correr-melhora-qi",
+    title: "Como Correr Melhora o QI: Ciência do Exercício Aeróbico",
+    description: "Descubra como a corrida melhora o QI através de neurogênese, fluxo sanguíneo cerebral e produção de BDNF. Guia científico completo.",
+    category: "Desenvolvimento"
+  },
+  {
+    slug: "como-melhorar-qi-30-dias",
+    title: "Como Melhorar o QI em 30 Dias: Plano Científico Completo",
+    description: "Descubra como melhorar seu QI em 30 dias com um plano baseado em ciência. Exercícios diários, nutrição e hábitos para desenvolvimento cognitivo.",
+    category: "Guia"
+  },
+  {
+    slug: "como-engenheiros-melhoram-qi",
+    title: "Como Engenheiros Melhoram o QI: Desenvolvimento Cognitivo Técnico",
+    description: "Descubra como a engenharia melhora o QI através de resolução de problemas, pensamento sistêmico e desafios técnicos complexos.",
+    category: "Carreira"
+  },
+  {
+    slug: "sinais-qi-alto",
+    title: "Sinais de QI Alto: 15 Características de Pessoas Inteligentes",
+    description: "Descubra os sinais mais comuns de QI alto. Características comportamentais, cognitivas e emocionais que indicam inteligência acima da média.",
+    category: "Conceitos"
+  },
+  {
+    slug: "qi-normal",
+    title: "QI Normal: O Que É e O Que Significa",
+    description: "Descubra o que é considerado QI normal, a faixa de pontuação, o que significa ter QI médio e como interpretar resultados.",
+    category: "Conceitos"
+  },
+  {
+    slug: "qi-e-tdah",
+    title: "QI e TDAH: Relação Entre Inteligência e Déficit de Atenção",
+    description: "Descubra a relação entre QI e TDAH, como o déficit de atenção afeta testes de inteligência e estratégias para otimizar o potencial cognitivo.",
+    category: "Ciência"
+  },
+  {
+    slug: "qi-e-memoria",
+    title: "QI e Memória: Relação Científica Entre Inteligência e Memória",
+    description: "Descubra a relação entre QI e memória, como diferentes tipos de memória afetam a inteligência e estratégias para melhorar ambos.",
+    category: "Ciência"
+  },
+  {
+    slug: "qi-e-sono",
+    title: "QI e Sono: Como o Sono Afeta a Inteligência",
+    description: "Descubra como o sono afeta o QI, a importância do sono para função cognitiva e estratégias para otimizar o descanso cerebral.",
+    category: "Ciência"
   }
 ];
 

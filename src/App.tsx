@@ -86,6 +86,25 @@ const ComoTrabalhadoresMelhoramQI = lazy(() => import("./pages/blog/ComoTrabalha
 const QIEExercicioFisico = lazy(() => import("./pages/blog/QIEExercicioFisico"));
 const QIMedioAdolescentes = lazy(() => import("./pages/blog/QIMedioAdolescentes"));
 const QIMedioCorredores = lazy(() => import("./pages/blog/QIMedioCorredores"));
+const QIMedioBombeiros = lazy(() => import("./pages/blog/QIMedioBombeiros"));
+const QIMedioProfessores = lazy(() => import("./pages/blog/QIMedioProfessores"));
+const QIMedioSegurancaTrabalho = lazy(() => import("./pages/blog/QIMedioSegurancaTrabalho"));
+const QIMedioEngenheiros = lazy(() => import("./pages/blog/QIMedioEngenheiros"));
+const QIMedioMedicos = lazy(() => import("./pages/blog/QIMedioMedicos"));
+const QIMedioProfissionaisSaude = lazy(() => import("./pages/blog/QIMedioProfissionaisSaude"));
+const QIMedioEstudantes = lazy(() => import("./pages/blog/QIMedioEstudantes"));
+const QIMedioJovens = lazy(() => import("./pages/blog/QIMedioJovens"));
+const QIMedioIdosos = lazy(() => import("./pages/blog/QIMedioIdosos"));
+const QIMedioNetos = lazy(() => import("./pages/blog/QIMedioNetos"));
+const QIMedioCavaleiros = lazy(() => import("./pages/blog/QIMedioCavaleiros"));
+const ComoCorrerMelhoraQI = lazy(() => import("./pages/blog/ComoCorrerMelhoraQI"));
+const ComoMelhorarQI30Dias = lazy(() => import("./pages/blog/ComoMelhorarQI30Dias"));
+const ComoEngenheirosMelhoramQI = lazy(() => import("./pages/blog/ComoEngenheirosMelhoramQI"));
+const SinaisQIAlto = lazy(() => import("./pages/blog/SinaisQIAlto"));
+const QINormal = lazy(() => import("./pages/blog/QINormal"));
+const QIeTDAH = lazy(() => import("./pages/blog/QIeTDAH"));
+const QIeMemoria = lazy(() => import("./pages/blog/QIeMemoria"));
+const QIeSono = lazy(() => import("./pages/blog/QIeSono"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -125,589 +144,741 @@ const App = () => (
           <Route path="/pagamento" element={<Payment />} />
           <Route path="/resultado-completo" element={<CompleteResult />} />
           <Route path="/blog" element={<Blog />} />
-          <Route 
-            path="/blog/melhor-teste-qi-2026" 
+          <Route
+            path="/blog/melhor-teste-qi-2026"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <MelhorTesteQI2026 />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-sucesso-profissional" 
+          <Route
+            path="/blog/qi-sucesso-profissional"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QISucessoProfissional />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/teste-qi-online-guia-completo" 
+          <Route
+            path="/blog/teste-qi-online-guia-completo"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <TesteQIOnlineGuiaCompleto />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-se-preparar-teste-qi" 
+          <Route
+            path="/blog/como-se-preparar-teste-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoSePrepararTesteQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/melhores-testes-qi-online-2025" 
+          <Route
+            path="/blog/melhores-testes-qi-online-2025"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <MelhoresTestesQIOnline2025 />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/neuroplasticidade-cerebro-evolui" 
+          <Route
+            path="/blog/neuroplasticidade-cerebro-evolui"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <NeuroplasticidadeCerebroEvolui />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/media-qi-brasil" 
+          <Route
+            path="/blog/media-qi-brasil"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <MediaQIBrasil />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-processos-seletivos" 
+          <Route
+            path="/blog/qi-processos-seletivos"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIProcessosSeletivos />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/top-15-jogos-apps-treinar-cerebro" 
+          <Route
+            path="/blog/top-15-jogos-apps-treinar-cerebro"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <Top15JogosAppsTreinarCerebro />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/diferenca-qi-qe-qg" 
+          <Route
+            path="/blog/diferenca-qi-qe-qg"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <DiferencaQIQEQG />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/ia-testes-cognitivos" 
+          <Route
+            path="/blog/ia-testes-cognitivos"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <IATestesCognitivos />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-aumentar-qi" 
+          <Route
+            path="/blog/como-aumentar-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoAumentarQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/inteligencia-vs-sabedoria" 
+          <Route
+            path="/blog/inteligencia-vs-sabedoria"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <InteligenciaVsSabedoria />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/habitos-qi-alto" 
+          <Route
+            path="/blog/habitos-qi-alto"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <HabitosQIAlto />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/genios-em-comum" 
+          <Route
+            path="/blog/genios-em-comum"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <GeniosEmComum />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/genetica-vs-ambiente-qi" 
+          <Route
+            path="/blog/genetica-vs-ambiente-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <GeneticaVsAmbienteQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-criatividade" 
+          <Route
+            path="/blog/qi-criatividade"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QICriatividade />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-ao-longo-vida" 
+          <Route
+            path="/blog/qi-ao-longo-vida"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIAoLongoVida />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-medio-por-pais" 
+          <Route
+            path="/blog/qi-medio-por-pais"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioPorPais />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-medio-por-idade" 
+          <Route
+            path="/blog/qi-medio-por-idade"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioPorIdade />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-medio-por-profissao" 
+          <Route
+            path="/blog/qi-medio-por-profissao"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioPorProfissao />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-brasileiro-vs-outros-paises" 
+          <Route
+            path="/blog/qi-brasileiro-vs-outros-paises"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIBrasileiroVsOutrosPaises />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-aumentar-inteligencia" 
+          <Route
+            path="/blog/como-aumentar-inteligencia"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoAumentarInteligencia />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-melhorar-cerebro" 
+          <Route
+            path="/blog/como-melhorar-cerebro"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoMelhorarCerebro />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/atividades-que-aumentam-qi" 
+          <Route
+            path="/blog/atividades-que-aumentam-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <AtividadesQueAumentamQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/suplementos-que-melhoram-qi" 
+          <Route
+            path="/blog/suplementos-que-melhoram-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <SuplementosQueMelhoramQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/o-que-e-considerado-qi-alto" 
+          <Route
+            path="/blog/o-que-e-considerado-qi-alto"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <OQueEConsideradoQIAlto />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/diferenca-qi-inteligencia-emocional" 
+          <Route
+            path="/blog/diferenca-qi-inteligencia-emocional"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <DiferencaQIEInteligenciaEmocional />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/pessoas-famosas-com-qi-alto" 
+          <Route
+            path="/blog/pessoas-famosas-com-qi-alto"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <PessoasFamosasComQIAlto />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-saber-meu-qi-sem-pagar" 
+          <Route
+            path="/blog/como-saber-meu-qi-sem-pagar"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoSaberMeuQISemPagar />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/criancas-superdotadas-sinais-caracteristicas" 
+          <Route
+            path="/blog/criancas-superdotadas-sinais-caracteristicas"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <CriancasSuperdotadasSinaisCaracteristicas />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/impacto-nutricao-dieta-funcao-cognitiva-qi" 
+          <Route
+            path="/blog/impacto-nutricao-dieta-funcao-cognitiva-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ImpactoNutricaoDietaFuncaoCognitivaQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/conexao-qi-desempenho-academico" 
+          <Route
+            path="/blog/conexao-qi-desempenho-academico"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ConexaoQIDesempenhoAcademico />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/nature-vs-nurture-genetica-ambiente-qi" 
+          <Route
+            path="/blog/nature-vs-nurture-genetica-ambiente-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <NatureVsNurtureGeneticaAmbienteQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-e-sucesso-carreira" 
+          <Route
+            path="/blog/qi-e-sucesso-carreira"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIeSucessoCarreira />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/quanto-inteligencia-e-herdada" 
+          <Route
+            path="/blog/quanto-inteligencia-e-herdada"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QuantoInteligenciaEHerdada />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/diferencas-qi-e-inteligencia" 
+          <Route
+            path="/blog/diferencas-qi-e-inteligencia"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <DiferencasQIEInteligencia />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/desenvolvimento-cognitivo-conexao-qi" 
+          <Route
+            path="/blog/desenvolvimento-cognitivo-conexao-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <DesenvolvimentoCognitivoConexaoQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/o-que-causa-qi-alto" 
+          <Route
+            path="/blog/o-que-causa-qi-alto"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <OQueCausaQIAlto />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/o-que-e-teste-qi" 
+          <Route
+            path="/blog/o-que-e-teste-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <OQueETesteQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/o-que-e-qi" 
+          <Route
+            path="/blog/o-que-e-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <OQueEQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-qi-e-calculado" 
+          <Route
+            path="/blog/como-qi-e-calculado"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoQIECalculado />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-medio-mundial" 
+          <Route
+            path="/blog/qi-medio-mundial"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioMundial />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-medio-brasil" 
+          <Route
+            path="/blog/qi-medio-brasil"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioBrasil />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-alto-caracteristicas" 
+          <Route
+            path="/blog/qi-alto-caracteristicas"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIAltoCaracteristicas />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/o-que-e-qi-baixo" 
+          <Route
+            path="/blog/o-que-e-qi-baixo"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <OQueEQIBaixo />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-interpretar-resultado-qi" 
+          <Route
+            path="/blog/como-interpretar-resultado-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoInterpretarResultadoQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-pode-mudar-ao-longo-vida" 
+          <Route
+            path="/blog/qi-pode-mudar-ao-longo-vida"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIPodeMudarAoLongoVida />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-criancas-vs-adultos" 
+          <Route
+            path="/blog/qi-criancas-vs-adultos"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QICriancasVsAdultos />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-aumentar-qi-rapidamente" 
+          <Route
+            path="/blog/como-aumentar-qi-rapidamente"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoAumentarQIRapidamente />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-aumentar-inteligencia-forma-natural" 
+          <Route
+            path="/blog/como-aumentar-inteligencia-forma-natural"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoAumentarInteligenciaFormaNatural />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/o-que-reduz-qi-sem-perceber" 
+          <Route
+            path="/blog/o-que-reduz-qi-sem-perceber"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <OQueReduzQISemPerceber />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-ativar-modo-foco-profundo" 
+          <Route
+            path="/blog/como-ativar-modo-foco-profundo"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoAtivarModoFocoProfundo />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-pode-aumentar-ao-longo-vida" 
+          <Route
+            path="/blog/qi-pode-aumentar-ao-longo-vida"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIPodeAumentarAoLongoVida />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-criancas-sinais-superdotacao" 
+          <Route
+            path="/blog/qi-criancas-sinais-superdotacao"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QICriancasSinaisSuperdotacao />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-aprender-mais-rapido-neurociencia" 
+          <Route
+            path="/blog/como-aprender-mais-rapido-neurociencia"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoAprenderMaisRapidoNeurociencia />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-e-genetica-quanto-nasce-aprende" 
+          <Route
+            path="/blog/qi-e-genetica-quanto-nasce-aprende"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIEGeneticaQuantoNasceAprende />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-ficar-mais-inteligente" 
+          <Route
+            path="/blog/como-ficar-mais-inteligente"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoFicarMaisInteligente />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-ficar-rico-relacao-qi" 
+          <Route
+            path="/blog/como-ficar-rico-relacao-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoFicarRicoRelacaoQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-ficar-rico-internet-qi" 
+          <Route
+            path="/blog/como-ficar-rico-internet-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoFicarRicoInternetQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/escala-inteligencia-wechsler-wais" 
+          <Route
+            path="/blog/escala-inteligencia-wechsler-wais"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <EscalaInteligenciaWechslerWAIS />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-manter-mente-afiada" 
+          <Route
+            path="/blog/como-manter-mente-afiada"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoManterMenteAfiada />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/reduzindo-demencia-treinamento-cerebral" 
+          <Route
+            path="/blog/reduzindo-demencia-treinamento-cerebral"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ReduzindoDemenciaTreinamentoCerebral />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/sua-pontuacao-qi-pode-mudar" 
+          <Route
+            path="/blog/sua-pontuacao-qi-pode-mudar"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <SuaPontuacaoQIPodeMudar />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/pessoas-mais-inteligentes-que-voce-nunca-ouviu-falar" 
+          <Route
+            path="/blog/pessoas-mais-inteligentes-que-voce-nunca-ouviu-falar"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <PessoasMaisInteligentesQueVoceNuncaOuviuFalar />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-maes-melhoram-qi" 
+          <Route
+            path="/blog/como-maes-melhoram-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoMaesMelhoramQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-mercado-financeiro-melhora-qi" 
+          <Route
+            path="/blog/como-mercado-financeiro-melhora-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoMercadoFinanceiroMelhoraQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-pais-melhoram-qi" 
+          <Route
+            path="/blog/como-pais-melhoram-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoPaisMelhoramQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-seguranca-trabalho-melhora-qi" 
+          <Route
+            path="/blog/como-seguranca-trabalho-melhora-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoSegurancaTrabalhoMelhoraQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/como-trabalhadores-melhoram-qi" 
+          <Route
+            path="/blog/como-trabalhadores-melhoram-qi"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoTrabalhadoresMelhoramQI />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-e-exercicio-fisico" 
+          <Route
+            path="/blog/qi-e-exercicio-fisico"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIEExercicioFisico />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-medio-adolescentes" 
+          <Route
+            path="/blog/qi-medio-adolescentes"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioAdolescentes />
               </Suspense>
-            } 
+            }
           />
-          <Route 
-            path="/blog/qi-medio-corredores" 
+          <Route
+            path="/blog/qi-medio-corredores"
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioCorredores />
               </Suspense>
-            } 
+            }
+          />
+          <Route
+            path="/blog/qi-medio-bombeiros"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioBombeiros />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-professores"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioProfessores />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-seguranca-trabalho"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioSegurancaTrabalho />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-engenheiros"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioEngenheiros />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-medicos"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioMedicos />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-profissionais-saude"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioProfissionaisSaude />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-estudantes"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioEstudantes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-jovens"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioJovens />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-idosos"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioIdosos />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-netos"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioNetos />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-cavaleiros"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioCavaleiros />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-correr-melhora-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoCorrerMelhoraQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-melhorar-qi-30-dias"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoMelhorarQI30Dias />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-engenheiros-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoEngenheirosMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/sinais-qi-alto"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <SinaisQIAlto />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-normal"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QINormal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-e-tdah"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIeTDAH />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-e-memoria"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIeMemoria />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-e-sono"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIeSono />
+              </Suspense>
+            }
           />
           <Route path="/como-funciona" element={<ComoFunciona />} />
           <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
