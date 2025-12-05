@@ -1,15 +1,6 @@
-name = "api-bomqi"
+name = "bomqi"
+pages_build_output_dir = "dist"
 compatibility_date = "2024-01-01"
-main = "worker/index.ts"
 
-# Rotas do Worker (configuradas no dashboard do Cloudflare)
-# Descomente para usar via CLI, ou configure via dashboard
-routes = [
-  { pattern = "bomqi.com.br/api/*", zone_name = "bomqi.com.br" }
-]
-
-# Configuração do KV
-[[kv_namespaces]]
-binding = "USER_DATA"
-id = "5646217ce47d4122aa9c0d28d6425b0a"
-preview_id = "cca2fb63cb4a406fb35a672616b1ff02"
+[build]
+command = "npm run build"
