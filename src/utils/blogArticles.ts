@@ -540,6 +540,54 @@ export const allBlogArticles: BlogArticle[] = [
     title: "QI e Sono: Como o Sono Afeta a Inteligência",
     description: "Descubra como o sono afeta o QI, a importância do sono para função cognitiva e estratégias para otimizar o descanso cerebral.",
     category: "Ciência"
+  },
+  {
+    slug: "como-melhorar-qi-adolescentes",
+    title: "Como Melhorar o QI de Adolescentes: Guia Completo e Científico",
+    description: "Descubra estratégias científicas para melhorar o QI de adolescentes. Métodos comprovados para desenvolvimento cognitivo, memória, raciocínio e inteligência na adolescência.",
+    category: "Desenvolvimento"
+  },
+  {
+    slug: "teste-qi-confiavel",
+    title: "Teste de QI Confiável: Como Identificar e Escolher o Melhor",
+    description: "Descubra como identificar um teste de QI confiável. Critérios científicos, validação, precisão, e como escolher o melhor teste de QI para você.",
+    category: "Guia"
+  },
+  {
+    slug: "como-religiosidade-influencia-qi",
+    title: "Como a Religiosidade Influencia o QI: Análise Científica Completa",
+    description: "Descubra como religiosidade e QI se relacionam. Análise científica sobre correlação, fatores que influenciam, diferenças entre religiões, e impacto no desenvolvimento cognitivo.",
+    category: "Ciência"
+  },
+  {
+    slug: "qi-medio-pais",
+    title: "QI Médio de Pais: Inteligência na Paternidade",
+    description: "Descubra o QI médio de pais, como a paternidade influencia o desenvolvimento cognitivo, e a relação entre inteligência paterna e desenvolvimento dos filhos.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-advogados",
+    title: "QI Médio de Advogados: Inteligência na Advocacia",
+    description: "Descubra o QI médio de advogados, as habilidades cognitivas necessárias para a advocacia, e como a inteligência se relaciona com sucesso na profissão jurídica.",
+    category: "Dados"
+  },
+  {
+    slug: "qi-medio-por-genero",
+    title: "QI Médio por Gênero: Diferenças e Semelhanças",
+    description: "Descubra o QI médio por gênero, diferenças e semelhanças entre homens e mulheres, e análise científica sobre inteligência e gênero.",
+    category: "Dados"
+  },
+  {
+    slug: "como-netos-melhoram-qi",
+    title: "Como Netos Melhoram o QI: Desenvolvimento Cognitivo Intergeracional",
+    description: "Descubra como netos podem melhorar o QI através de interação com avós, desenvolvimento cognitivo intergeracional, e benefícios mútuos dessa relação especial.",
+    category: "Desenvolvimento"
+  },
+  {
+    slug: "como-profissionais-saude-melhoram-qi",
+    title: "Como Profissionais de Saúde Melhoram o QI: Desenvolvimento Cognitivo no Cuidado",
+    description: "Descubra como profissionais de saúde melhoram o QI através de desafios cognitivos, aprendizado contínuo, e desenvolvimento de habilidades mentais avançadas no cuidado com pacientes.",
+    category: "Carreira"
   }
 ];
 
