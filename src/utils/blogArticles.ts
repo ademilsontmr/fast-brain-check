@@ -588,6 +588,18 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Como Profissionais de Saúde Melhoram o QI: Desenvolvimento Cognitivo no Cuidado",
     description: "Descubra como profissionais de saúde melhoram o QI através de desafios cognitivos, aprendizado contínuo, e desenvolvimento de habilidades mentais avançadas no cuidado com pacientes.",
     category: "Carreira"
+  },
+  {
+    slug: "qi-baixo",
+    title: "QI Baixo: O Que É, Causas e Como Melhorar",
+    description: "Descubra o que é QI baixo, suas causas, sinais, e estratégias para melhorar. Entenda o que significa ter QI abaixo da média e como desenvolver habilidades cognitivas.",
+    category: "Conceitos"
+  },
+  {
+    slug: "qi-medio-trabalhadores",
+    title: "QI Médio de Trabalhadores: Inteligência no Ambiente de Trabalho",
+    description: "Descubra o QI médio de trabalhadores, como diferentes tipos de trabalho influenciam a inteligência, e a relação entre QI e desempenho profissional.",
+    category: "Dados"
   }
 ];
 

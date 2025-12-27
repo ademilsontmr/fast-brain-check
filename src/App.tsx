@@ -113,6 +113,8 @@ const QIMedioAdvogados = lazy(() => import("./pages/blog/QIMedioAdvogados"));
 const QIMedioPorGenero = lazy(() => import("./pages/blog/QIMedioPorGenero"));
 const ComoNetosMelhoramQI = lazy(() => import("./pages/blog/ComoNetosMelhoramQI"));
 const ComoProfissionaisSaudeMelhoramQI = lazy(() => import("./pages/blog/ComoProfissionaisSaudeMelhoramQI"));
+const QIBaixo = lazy(() => import("./pages/blog/QIBaixo"));
+const QIMedioTrabalhadores = lazy(() => import("./pages/blog/QIMedioTrabalhadores"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -949,6 +951,22 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoProfissionaisSaudeMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-baixo"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIBaixo />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-trabalhadores"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioTrabalhadores />
               </Suspense>
             }
           />
