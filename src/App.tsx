@@ -117,6 +117,22 @@ const QIMedioPorGenero = lazy(() => import("./pages/blog/QIMedioPorGenero"));
 const ComoNetosMelhoramQI = lazy(() => import("./pages/blog/ComoNetosMelhoramQI"));
 const ComoProfissionaisSaudeMelhoramQI = lazy(() => import("./pages/blog/ComoProfissionaisSaudeMelhoramQI"));
 const QIMedioTrabalhadores = lazy(() => import("./pages/blog/QIMedioTrabalhadores"));
+const QIMedioFilhos = lazy(() => import("./pages/blog/QIMedioFilhos"));
+const QIMedioMaes = lazy(() => import("./pages/blog/QIMedioMaes"));
+const QIMedioMercadoFinanceiro = lazy(() => import("./pages/blog/QIMedioMercadoFinanceiro"));
+const QIMedioCiclistas = lazy(() => import("./pages/blog/QIMedioCiclistas"));
+const QIeAutismo = lazy(() => import("./pages/blog/QIeAutismo"));
+const ReligiosidadeEQI = lazy(() => import("./pages/blog/ReligiosidadeEQI"));
+const ComoMelhorarQIEstudantes = lazy(() => import("./pages/blog/ComoMelhorarQIEstudantes"));
+const ComoAdvogadosMelhoramQI = lazy(() => import("./pages/blog/ComoAdvogadosMelhoramQI"));
+const ComoJovensMelhoramQI = lazy(() => import("./pages/blog/ComoJovensMelhoramQI"));
+const ComoPedalMelhoraQI = lazy(() => import("./pages/blog/ComoPedalMelhoraQI"));
+const ComoProfessoresMelhoramQI = lazy(() => import("./pages/blog/ComoProfessoresMelhoramQI"));
+const ComoIdososMelhoramQI = lazy(() => import("./pages/blog/ComoIdososMelhoramQI"));
+const ComoBombeirosMelhoramQI = lazy(() => import("./pages/blog/ComoBombeirosMelhoramQI"));
+const ComoFilhosMelhoramQI = lazy(() => import("./pages/blog/ComoFilhosMelhoramQI"));
+const ComoAndarCavaloMelhoraQI = lazy(() => import("./pages/blog/ComoAndarCavaloMelhoraQI"));
+const ComoMedicosMelhoramQI = lazy(() => import("./pages/blog/ComoMedicosMelhoramQI"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -985,6 +1001,134 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QIMedioTrabalhadores />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-filhos"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioFilhos />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-maes"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioMaes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-mercado-financeiro"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioMercadoFinanceiro />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-medio-ciclistas"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMedioCiclistas />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-e-autismo"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIeAutismo />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/religiosidade-e-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ReligiosidadeEQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-melhorar-qi-estudantes"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoMelhorarQIEstudantes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-advogados-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoAdvogadosMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-jovens-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoJovensMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-pedal-melhora-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoPedalMelhoraQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-professores-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoProfessoresMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-idosos-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoIdososMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-bombeiros-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoBombeirosMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-filhos-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoFilhosMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-andar-cavalo-melhora-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoAndarCavaloMelhoraQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-medicos-melhoram-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoMedicosMelhoramQI />
               </Suspense>
             }
           />
