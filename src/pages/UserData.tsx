@@ -10,10 +10,19 @@ import { saveUserData } from "@/services/api";
 import { calculateIQ } from "@/types/quiz";
 import Footer from "@/components/Footer";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
+import { useSEO } from "@/hooks/use-seo";
 
 const UserData = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  // SEO: noIndex para página de dados do usuário (não deve ser indexada)
+  useSEO({
+    title: "Seus Dados",
+    description: "Preencha seus dados para receber o resultado do teste de QI.",
+    noIndex: true,
+  });
+
   const [name, setName] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);

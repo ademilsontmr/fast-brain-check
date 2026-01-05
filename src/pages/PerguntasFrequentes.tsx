@@ -9,9 +9,16 @@ import {
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 import useStructuredData from "@/hooks/use-structured-data";
+import { useSEO } from "@/hooks/use-seo";
 
 const PerguntasFrequentes = () => {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Perguntas Frequentes sobre Teste de QI",
+    description: "Tire suas dúvidas sobre o teste de QI online do BomQI. Saiba como funciona, quanto tempo leva e o que está incluído no resultado.",
+    url: "https://bomqi.com.br/perguntas-frequentes",
+  });
 
   const faqs = [
     {

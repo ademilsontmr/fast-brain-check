@@ -3,9 +3,16 @@ import { Brain, Award, Users, Shield, Target, Sparkles, TrendingUp } from "lucid
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/use-seo";
 
 const SobreOTeste = () => {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Sobre o Teste de QI BomQI",
+    description: "Conheça a história, metodologia e ciência por trás do teste de QI do BomQI. Entenda como medimos a inteligência de forma precisa.",
+    url: "https://bomqi.com.br/sobre-o-teste",
+  });
 
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">

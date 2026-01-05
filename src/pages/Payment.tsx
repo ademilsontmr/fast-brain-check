@@ -8,6 +8,7 @@ import { calculateIQ, getCelebrityComparison } from "@/types/quiz";
 import { createCheckoutSession } from "@/services/api";
 import Footer from "@/components/Footer";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
+import { useSEO } from "@/hooks/use-seo";
 
 // Price ID do produto no Stripe (Produção)
 const STRIPE_PRICE_ID = import.meta.env.VITE_STRIPE_PRICE_ID || 'price_1STUfDG0HYZrAR0LAzL3Syub';
@@ -17,6 +18,14 @@ const Payment = () => {
   const {
     toast
   } = useToast();
+
+  // SEO: noIndex para página de pagamento (não deve ser indexada)
+  useSEO({
+    title: "Pagamento - Resultado Completo",
+    description: "Desbloqueie seu resultado completo do teste de QI.",
+    noIndex: true,
+  });
+
   const [score, setScore] = useState(0);
   const [userName, setUserName] = useState("");
   const [averageAnswerTime, setAverageAnswerTime] = useState<number | undefined>(undefined);

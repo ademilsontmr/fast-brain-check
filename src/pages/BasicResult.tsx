@@ -4,11 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, Lock, TrendingUp, Star, Lightbulb, Target } from "lucide-react";
 import { calculateIQ } from "@/types/quiz";
+import { useSEO } from "@/hooks/use-seo";
 
 const BasicResult = () => {
   const navigate = useNavigate();
   const [score, setScore] = useState(0);
   const [averageAnswerTime, setAverageAnswerTime] = useState<number | undefined>(undefined);
+
+  // SEO: noIndex para página de resultado básico (não deve ser indexada)
+  useSEO({
+    title: "Resultado do Teste de QI",
+    description: "Veja seu resultado do teste de QI.",
+    noIndex: true,
+  });
 
   useEffect(() => {
     const savedScore = localStorage.getItem("quizScore");

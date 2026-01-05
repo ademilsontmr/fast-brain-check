@@ -5,11 +5,20 @@ import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 // saveResult removido - dados ficam apenas no localStorage
 import { calculateIQ as calcIQ, getCelebrityComparison as getCelebrity, getCognitiveStrength as getStrength } from "@/types/quiz";
+import { useSEO } from "@/hooks/use-seo";
 
 const PaymentSuccess = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
+
+  // SEO: noIndex para página de sucesso de pagamento (não deve ser indexada)
+  useSEO({
+    title: "Pagamento Confirmado",
+    description: "Seu pagamento foi confirmado com sucesso.",
+    noIndex: true,
+  });
+
   const [isVerifying, setIsVerifying] = useState(true);
   const [isVerified, setIsVerified] = useState(false);
   const [error, setError] = useState<string | null>(null);

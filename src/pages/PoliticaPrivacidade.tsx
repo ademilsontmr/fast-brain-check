@@ -2,9 +2,16 @@ import { Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/use-seo";
 
 const PoliticaPrivacidade = () => {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Política de Privacidade",
+    description: "Política de privacidade do BomQI. Saiba como coletamos, usamos e protegemos suas informações.",
+    url: "https://bomqi.com.br/politica-privacidade",
+  });
 
   return (
     <div className="min-h-screen bg-background">

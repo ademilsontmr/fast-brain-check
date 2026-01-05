@@ -3,8 +3,17 @@ import { Brain, Clock, Target, Trophy, Sparkles, CheckCircle } from "lucide-reac
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/use-seo";
+
 const ComoFunciona = () => {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Como Funciona o Teste de QI",
+    description: "Entenda cada etapa do nosso teste de QI e como calculamos seu quociente de inteligência de forma científica.",
+    url: "https://bomqi.com.br/como-funciona",
+  });
+
   return <div className="min-h-screen bg-gradient-hero flex flex-col">
       <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">

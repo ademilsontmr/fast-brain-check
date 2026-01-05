@@ -3,9 +3,17 @@ import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { XCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useSEO } from "@/hooks/use-seo";
 
 const PaymentError = () => {
   const navigate = useNavigate();
+
+  // SEO: noIndex para página de erro de pagamento (não deve ser indexada)
+  useSEO({
+    title: "Erro no Pagamento",
+    description: "Ocorreu um erro ao processar seu pagamento.",
+    noIndex: true,
+  });
 
   return (
     <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">

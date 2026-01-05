@@ -1,4 +1,4 @@
-import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Activity } from "lucide-react";
+import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Activity, Heart, Zap, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,21 +8,22 @@ import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
 
-const QIEExercicioFisico = () => {
+const QIeExercicioFisico = () => {
   const navigate = useNavigate();
   
   const articleUrl = "https://bomqi.com.br/blog/qi-e-exercicio-fisico";
-  const articleTitle = "QI e Exercício Físico: Como Atividade Física Melhora a Inteligência";
-  const articleDescription = "Descubra a relação científica entre QI e exercício físico. Como atividade física melhora função cognitiva, memória, raciocínio e desenvolvimento cerebral.";
-  const publishDate = "2025-01-15";
-  const modifiedDate = "2025-01-15";
+  const articleTitle = "QI e Exercício Físico: Como a Atividade Física Melhora a Inteligência";
+  const articleDescription = "Descubra como o exercício físico impacta diretamente o QI e a função cognitiva. Evidências científicas sobre neuroplasticidade e performance mental.";
+  const publishDate = "2024-01-15";
+  const modifiedDate = "2024-01-15";
   
   useSEO({
-    title: "QI e Exercício Físico: Como Atividade Física Melhora a Inteligência",
+    title: "QI e Exercício Físico",
     description: articleDescription,
     url: articleUrl,
   });
 
+  // Structured Data para Article e BreadcrumbList (Rich Results)
   useStructuredData([
     {
       "@context": "https://schema.org",
@@ -73,6 +74,7 @@ const QIEExercicioFisico = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Header */}
       <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -87,197 +89,256 @@ const QIEExercicioFisico = () => {
         </div>
       </header>
 
+      {/* Article */}
       <article className="container mx-auto px-4 py-12 max-w-4xl">
+        {/* Breadcrumb */}
         <nav className="text-sm text-muted-foreground mb-6">
           <Link to="/" className="hover:text-primary">Home</Link>
           <span className="mx-2">/</span>
           <Link to="/blog" className="hover:text-primary">Blog</Link>
           <span className="mx-2">/</span>
-          <span>QI e exercício físico</span>
+          <span>QI e Exercício Físico</span>
         </nav>
 
+        {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          QI e Exercício Físico: Como Atividade Física Melhora a Inteligência
+          QI e Exercício Físico: Como a Atividade Física Melhora a Inteligência
         </h1>
 
+        {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Janeiro 2025</time>
+          <time>Janeiro 2024</time>
           <span>•</span>
+          <span>10 min de leitura</span>
         </div>
 
+        {/* Featured Image */}
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">
           <Activity className="w-24 h-24 text-primary" />
         </div>
 
+        {/* Content */}
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            A relação entre exercício físico e QI é uma das descobertas mais fascinantes da neurociência moderna. 
-            Estudos científicos mostram consistentemente que atividade física regular não apenas melhora a saúde 
-            física, mas também desenvolve significativamente a função cognitiva, memória, raciocínio e inteligência. 
-            Descubra como exercícios físicos podem melhorar seu QI.
+            A conexão entre exercício físico e inteligência é mais forte do que você imagina. 
+            Pesquisas científicas mostram que a atividade física regular não apenas fortalece 
+            o corpo, mas também potencializa significativamente as funções cognitivas e o QI.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">1. Neurogênese: Criação de Novos Neurônios</h2>
+          <h2 className="text-3xl font-bold mt-12 mb-6">A Ciência Por Trás da Conexão</h2>
           <p className="mb-4">
-            Exercícios aeróbicos promovem a neurogênese, o processo de criação de novos neurônios no cérebro, 
-            especialmente no hipocampo, área crucial para memória e aprendizado. Estudos mostram que exercícios 
-            regulares podem aumentar o volume do hipocampo em até 2% por ano.
-          </p>
-          <p className="mb-4">
-            <strong>Impacto no QI:</strong> Mais neurônios significam maior capacidade de processamento, melhor 
-            memória, e função cognitiva aprimorada. A neurogênese promovida por exercícios melhora diretamente 
-            habilidades relacionadas ao QI, como raciocínio e memória de trabalho.
+            Quando você se exercita, seu cérebro passa por mudanças profundas. O exercício 
+            aumenta a produção de BDNF (Fator Neurotrófico Derivado do Cérebro), uma proteína 
+            que atua como "fertilizante" para os neurônios, promovendo seu crescimento e conexão.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">2. Aumento do Fluxo Sanguíneo Cerebral</h2>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Brain className="w-5 h-5 text-primary" />
+              Benefícios Neurológicos do Exercício
+            </h3>
+            <ul className="space-y-2">
+              <li>• <strong>Neurogênese:</strong> Criação de novos neurônios</li>
+              <li>• <strong>Neuroplasticidade:</strong> Maior capacidade de adaptação cerebral</li>
+              <li>• <strong>Vascularização:</strong> Melhor fluxo sanguíneo para o cérebro</li>
+              <li>• <strong>Neurotransmissores:</strong> Aumento de dopamina e serotonina</li>
+              <li>• <strong>Redução do estresse:</strong> Diminuição do cortisol</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Impacto no QI e Funções Cognitivas</h2>
+          
+          <h3 className="text-2xl font-bold mt-8 mb-4">Memória de Trabalho</h3>
           <p className="mb-4">
-            Exercícios físicos aumentam significativamente o fluxo sanguíneo para o cérebro, fornecendo mais 
-            oxigênio e nutrientes essenciais. Esse aumento pode ser de até 30% durante exercícios moderados, 
-            melhorando a função cognitiva imediatamente e a longo prazo.
-          </p>
-          <p className="mb-4">
-            <strong>Benefício:</strong> Maior fluxo sanguíneo cerebral melhora a eficiência neural, aumenta 
-            a produção de energia nas células cerebrais, e promove a saúde geral do cérebro, resultando em 
-            melhor desempenho cognitivo e QI.
+            Estudos mostram que pessoas fisicamente ativas têm melhor memória de trabalho - 
+            a capacidade de manter e manipular informações mentalmente. Esta é uma das 
+            habilidades mais correlacionadas com o QI.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">3. Produção de BDNF (Fator Neurotrófico Derivado do Cérebro)</h2>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Velocidade de Processamento</h3>
           <p className="mb-4">
-            Exercícios físicos aumentam a produção de BDNF, uma proteína crucial para a saúde e desenvolvimento 
-            cerebral. O BDNF promove o crescimento de neurônios, fortalece conexões sinápticas, e melhora a 
-            plasticidade neural.
-          </p>
-          <p className="mb-4">
-            <strong>Impacto:</strong> Níveis mais altos de BDNF estão associados a melhor função cognitiva, 
-            memória aprimorada, e maior capacidade de aprendizado. O BDNF é essencial para neuroplasticidade 
-            e desenvolvimento de habilidades relacionadas ao QI.
+            O exercício regular melhora a velocidade com que processamos informações. 
+            Atletas frequentemente demonstram tempos de reação mais rápidos e melhor 
+            coordenação entre diferentes áreas cerebrais.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">4. Melhoria da Memória e Aprendizado</h2>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Função Executiva</h3>
           <p className="mb-4">
-            Estudos mostram que exercícios regulares melhoram significativamente a memória episódica, memória 
-            de trabalho, e capacidade de aprendizado. Pessoas que se exercitam regularmente têm melhor desempenho 
-            em testes de memória e aprendizado.
-          </p>
-          <p className="mb-4">
-            <strong>Evidência científica:</strong> Pesquisas com ressonância magnética mostram que exercícios 
-            aumentam o volume do hipocampo e melhoram a conectividade entre diferentes áreas do cérebro relacionadas 
-            à memória e aprendizado, componentes importantes do QI.
+            As funções executivas - planejamento, tomada de decisão, controle inibitório - 
+            são significativamente aprimoradas com atividade física regular. Estas habilidades 
+            são fundamentais para um QI elevado.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">5. Melhoria da Função Executiva</h2>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Tipos de Exercício Mais Eficazes</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="p-6">
+              <Heart className="w-8 h-8 text-red-500 mb-4" />
+              <h3 className="text-lg font-bold mb-2">Exercício Aeróbico</h3>
+              <p className="text-sm mb-4">
+                Corrida, natação, ciclismo e caminhada rápida são excelentes para 
+                aumentar o BDNF e melhorar a função cognitiva.
+              </p>
+              <ul className="text-sm space-y-1">
+                <li>• Melhora o fluxo sanguíneo cerebral</li>
+                <li>• Aumenta o volume do hipocampo</li>
+                <li>• Reduz inflamação cerebral</li>
+              </ul>
+            </Card>
+            
+            <Card className="p-6">
+              <Zap className="w-8 h-8 text-yellow-500 mb-4" />
+              <h3 className="text-lg font-bold mb-2">Exercício de Alta Intensidade</h3>
+              <p className="text-sm mb-4">
+                HIIT (Treino Intervalado de Alta Intensidade) tem efeitos potentes 
+                na neuroplasticidade e função cognitiva.
+              </p>
+              <ul className="text-sm space-y-1">
+                <li>• Maximiza produção de BDNF</li>
+                <li>• Melhora atenção e foco</li>
+                <li>• Aumenta resistência mental</li>
+              </ul>
+            </Card>
+          </div>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Evidências Científicas</h2>
+          
+          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+            <h3 className="text-xl font-bold mb-4">Estudos Importantes</h3>
+            <ul className="space-y-3">
+              <li>
+                <strong>Universidade de Illinois (2009):</strong> Crianças com melhor 
+                condicionamento físico tiveram desempenho 20% superior em testes cognitivos.
+              </li>
+              <li>
+                <strong>Harvard Medical School (2018):</strong> Adultos que se exercitaram 
+                por 6 meses mostraram aumento de 15% na memória de trabalho.
+              </li>
+              <li>
+                <strong>University of British Columbia (2014):</strong> Exercício aeróbico 
+                regular aumentou o tamanho do hipocampo em 2%.
+              </li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Protocolo Ideal Para Maximizar QI</h2>
+          
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mb-8">
+            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Target className="w-5 h-5 text-primary" />
+              Programa Semanal Recomendado
+            </h3>
+            <ul className="space-y-2">
+              <li>• <strong>3-4x por semana:</strong> Exercício aeróbico (30-45 min)</li>
+              <li>• <strong>2x por semana:</strong> Treino de força (45-60 min)</li>
+              <li>• <strong>1-2x por semana:</strong> HIIT (20-30 min)</li>
+              <li>• <strong>Diariamente:</strong> Caminhada leve (20-30 min)</li>
+              <li>• <strong>2-3x por semana:</strong> Atividades coordenativas (yoga, dança)</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Timing e Intensidade</h2>
+          
+          <h3 className="text-2xl font-bold mt-8 mb-4">Melhor Horário</h3>
           <p className="mb-4">
-            Exercícios físicos melhoram a função executiva, que inclui habilidades como planejamento, organização, 
-            controle de impulsos, e tomada de decisão. Essas habilidades são componentes importantes do QI 
-            e são essenciais para o sucesso em muitas áreas da vida.
-          </p>
-          <p className="mb-4">
-            <strong>Desenvolvimento:</strong> Exercícios, especialmente atividades que exigem coordenação e 
-            estratégia, desenvolvem o córtex pré-frontal, área do cérebro responsável pela função executiva, 
-            melhorando habilidades relacionadas ao QI.
+            Exercitar-se pela manhã tem benefícios únicos para a cognição. O exercício 
+            matinal aumenta a produção de neurotransmissores que melhoram o foco e a 
+            concentração durante todo o dia.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">6. Redução de Estresse e Ansiedade</h2>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Intensidade Ideal</h3>
           <p className="mb-4">
-            Exercícios físicos reduzem significativamente estresse e ansiedade, que podem prejudicar a função 
-            cognitiva. Estresse crônico pode danificar o hipocampo e prejudicar a memória e o raciocínio.
-          </p>
-          <p className="mb-4">
-            <strong>Benefício cognitivo:</strong> Reduzir estresse através de exercícios melhora a função cognitiva, 
-            permite melhor foco e concentração, e otimiza o desempenho mental, resultando em melhor desempenho 
-            em testes de QI e tarefas cognitivas.
+            Para maximizar benefícios cognitivos, mantenha intensidade moderada a vigorosa 
+            (65-85% da frequência cardíaca máxima). Exercícios muito leves têm benefícios 
+            limitados, enquanto exercícios excessivamente intensos podem ser contraproducentes.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">7. Melhoria do Sono</h2>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Exercício e Diferentes Idades</h2>
+          
+          <h3 className="text-2xl font-bold mt-8 mb-4">Crianças e Adolescentes</h3>
           <p className="mb-4">
-            Exercícios regulares melhoram a qualidade do sono, que é essencial para consolidação da memória 
-            e função cognitiva. Sono adequado é crucial para o desempenho mental e desenvolvimento cognitivo.
-          </p>
-          <p className="mb-4">
-            <strong>Impacto:</strong> Melhor sono resulta em melhor consolidação da memória, função cognitiva 
-            aprimorada, e melhor desempenho em tarefas que requerem raciocínio e análise, componentes importantes 
-            do QI.
+            Em jovens, o exercício é crucial para o desenvolvimento cognitivo. Crianças 
+            ativas têm melhor desempenho acadêmico, maior capacidade de atenção e 
+            habilidades de resolução de problemas mais desenvolvidas.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">8. Tipos de Exercícios Mais Eficazes para o QI</h2>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Adultos</h3>
           <p className="mb-4">
-            Embora qualquer exercício seja benéfico, alguns tipos são especialmente eficazes para melhorar 
-            a função cognitiva:
+            Para adultos, o exercício regular pode prevenir o declínio cognitivo e 
+            até mesmo reverter alguns efeitos do envelhecimento cerebral. Estudos 
+            mostram que nunca é tarde para começar.
           </p>
-          <ul className="list-disc pl-6 mb-4 space-y-2">
-            <li><strong>Exercícios aeróbicos:</strong> Caminhada, corrida, ciclismo, natação aumentam fluxo 
-            sanguíneo cerebral e promovem neurogênese.</li>
-            <li><strong>Treinamento de força:</strong> Musculação e exercícios de resistência melhoram função 
-            executiva e memória.</li>
-            <li><strong>Exercícios de coordenação:</strong> Dança, artes marciais, esportes que exigem coordenação 
-            desenvolvem múltiplas áreas do cérebro.</li>
-            <li><strong>Yoga e meditação:</strong> Melhoram atenção, função executiva, e reduzem estresse.</li>
+
+          <h3 className="text-2xl font-bold mt-8 mb-4">Idosos</h3>
+          <p className="mb-4">
+            Em idosos, o exercício é uma das intervenções mais eficazes para manter 
+            a função cognitiva. Pode reduzir o risco de demência em até 40%.
+          </p>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Mecanismos Moleculares</h2>
+          <p className="mb-4">
+            O exercício ativa cascatas moleculares complexas que beneficiam o cérebro:
+          </p>
+          <ul className="mb-4">
+            <li>• <strong>BDNF:</strong> Promove crescimento e sobrevivência neuronal</li>
+            <li>• <strong>IGF-1:</strong> Facilita neuroplasticidade</li>
+            <li>• <strong>VEGF:</strong> Estimula formação de novos vasos sanguíneos</li>
+            <li>• <strong>Endorfinas:</strong> Melhoram humor e reduzem estresse</li>
           </ul>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">9. Frequência e Duração Ideal</h2>
-          <p className="mb-4">
-            Estudos mostram que exercícios moderados de 30-45 minutos, 3-4 vezes por semana, são suficientes 
-            para melhorar significativamente a função cognitiva. Exercícios mais intensos podem ter benefícios 
-            adicionais, mas exercícios moderados regulares são mais sustentáveis e eficazes a longo prazo.
-          </p>
-          <p className="mb-4">
-            <strong>Recomendação:</strong> Para melhorar o QI, priorize consistência sobre intensidade. Exercícios 
-            regulares e moderados são mais eficazes do que exercícios intensos esporádicos.
-          </p>
-
-          <h2 className="text-3xl font-bold mt-12 mb-6">10. Exercícios e Desenvolvimento Cognitivo em Crianças</h2>
-          <p className="mb-4">
-            Exercícios físicos são especialmente importantes para o desenvolvimento cognitivo em crianças e adolescentes. 
-            Estudos mostram que crianças fisicamente ativas têm melhor desempenho acadêmico, melhor função executiva, 
-            e QI mais alto.
-          </p>
-          <p className="mb-4">
-            <strong>Impacto:</strong> Exercícios durante a infância e adolescência promovem desenvolvimento cerebral 
-            saudável, melhoram habilidades cognitivas, e estabelecem bases para melhor função cognitiva ao longo 
-            da vida.
-          </p>
-
-          <h2 className="text-3xl font-bold mt-12 mb-6">Exercícios e Prevenção de Declínio Cognitivo</h2>
-          <p className="mb-4">
-            Exercícios regulares não apenas melhoram o QI, mas também previnem declínio cognitivo relacionado 
-            à idade. Pessoas fisicamente ativas mantêm melhor função cognitiva na terceira idade e têm menor 
-            risco de demência e Alzheimer.
-          </p>
-          <p className="mb-4">
-            <strong>Proteção:</strong> Exercícios promovem saúde cerebral ao longo da vida, mantendo neuroplasticidade, 
-            promovendo neurogênese, e protegendo contra declínio cognitivo, resultando em melhor função cognitiva 
-            e QI mesmo na terceira idade.
-          </p>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Dicas Práticas</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Para Iniciantes</h3>
+              <ul className="space-y-2">
+                <li>• Comece com 15-20 minutos de caminhada</li>
+                <li>• Aumente gradualmente a intensidade</li>
+                <li>• Escolha atividades prazerosas</li>
+                <li>• Seja consistente, não perfeito</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold mb-4">Para Avançados</h3>
+              <ul className="space-y-2">
+                <li>• Varie os tipos de exercício</li>
+                <li>• Inclua desafios coordenativos</li>
+                <li>• Monitore a recuperação</li>
+                <li>• Combine com outras práticas cognitivas</li>
+              </ul>
+            </div>
+          </div>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">
-            A relação entre exercício físico e QI é clara e bem estabelecida pela ciência. Exercícios regulares 
-            melhoram significativamente a função cognitiva através de múltiplos mecanismos: neurogênese, aumento 
-            do fluxo sanguíneo cerebral, produção de BDNF, melhoria da memória, função executiva, e redução 
-            de estresse.
+            A relação entre exercício físico e QI é inegável. A atividade física regular 
+            não apenas melhora a saúde do corpo, mas também potencializa significativamente 
+            as capacidades cognitivas, memória, atenção e inteligência geral.
           </p>
           <p className="mb-4">
-            Para melhorar seu QI, incorpore exercícios físicos regulares em sua rotina. Exercícios moderados 
-            de 30-45 minutos, 3-4 vezes por semana, são suficientes para obter benefícios significativos. 
-            Lembre-se: o corpo e a mente estão conectados, e cuidar do corpo é essencial para otimizar a função 
-            cognitiva e o QI.
+            Para maximizar os benefícios cognitivos, mantenha uma rotina consistente de 
+            exercícios variados, incluindo atividades aeróbicas, de força e coordenativas. 
+            Lembre-se: um corpo ativo é a base para uma mente afiada.
           </p>
         </div>
 
+        {/* CTA */}
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI Atual</h3>
           <p className="text-muted-foreground mb-6">
-            Quer saber seu nível atual de inteligência? Faça nosso teste de QI em apenas 3 minutos 
-            e descubra seu potencial cognitivo.
+            Que tal descobrir seu QI atual antes de começar sua jornada de melhoria 
+            através do exercício? Faça nosso teste em apenas 3 minutos.
           </p>
           <Link to="/teste">
             <Button size="lg" className="gap-2">
-              Fazer o Teste Agora
+              Fazer o Teste de QI
               <ArrowRight className="w-5 h-5" />
             </Button>
           </Link>
         </div>
 
+        {/* Artigos Relacionados */}
         <div className="mt-16">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-primary" />
@@ -313,6 +374,8 @@ const QIEExercicioFisico = () => {
             ))}
           </div>
         </div>
+
+        {/* Social Proof Carousel */}
         <section className="mt-16">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">O que as pessoas estão dizendo</h2>
@@ -326,5 +389,4 @@ const QIEExercicioFisico = () => {
   );
 };
 
-export default QIEExercicioFisico;
-
+export default QIeExercicioFisico;

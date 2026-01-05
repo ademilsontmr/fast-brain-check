@@ -3,10 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useSEO } from "@/hooks/use-seo";
 
 const PaymentPending = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  // SEO: noIndex para página de pagamento pendente (não deve ser indexada)
+  useSEO({
+    title: "Pagamento Pendente",
+    description: "Seu pagamento está sendo processado.",
+    noIndex: true,
+  });
 
   useEffect(() => {
     const userId = localStorage.getItem("userId");

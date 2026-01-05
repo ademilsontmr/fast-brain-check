@@ -7,9 +7,18 @@ import Footer from "@/components/Footer";
 import { getCountryFlag } from "@/utils/countryFlags";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
+import { useSEO } from "@/hooks/use-seo";
 
 const Index = () => {
   const navigate = useNavigate();
+
+  // SEO para a página inicial
+  useSEO({
+    title: "Descubra Seu QI em 3 Minutos | Teste de QI Online Científico",
+    description: "Faça o teste de QI mais rápido e preciso do Brasil. Descubra seu resultado completo em apenas 3 minutos com análise científica detalhada.",
+    url: "https://bomqi.com.br/",
+    type: "website",
+  });
 
   // Structured Data para SEO e Rich Results
   useStructuredData([

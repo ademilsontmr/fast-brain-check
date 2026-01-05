@@ -6,12 +6,21 @@ import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Brain, Sparkles, TrendingUp, Zap, User, Calendar } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useSEO } from "@/hooks/use-seo";
 
 type TestStep = 'gender' | 'age' | 'questions';
 
 const Test = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  // SEO: noIndex para página de teste (não deve ser indexada)
+  useSEO({
+    title: "Teste de QI Online",
+    description: "Faça o teste de QI científico e descubra seu quociente de inteligência.",
+    noIndex: true,
+  });
+
   const [testStep, setTestStep] = useState<TestStep>('gender');
   const [gender, setGender] = useState<'homem' | 'mulher' | null>(null);
   const [ageRange, setAgeRange] = useState<string | null>(null);

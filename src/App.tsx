@@ -84,6 +84,9 @@ const ComoPaisMelhoramQI = lazy(() => import("./pages/blog/ComoPaisMelhoramQI"))
 const ComoSegurancaTrabalhoMelhoraQI = lazy(() => import("./pages/blog/ComoSegurancaTrabalhoMelhoraQI"));
 const ComoTrabalhadoresMelhoramQI = lazy(() => import("./pages/blog/ComoTrabalhadoresMelhoramQI"));
 const QIEExercicioFisico = lazy(() => import("./pages/blog/QIEExercicioFisico"));
+const QIeAnsiedade = lazy(() => import("./pages/blog/QIeAnsiedade"));
+const TesteQIGratis = lazy(() => import("./pages/blog/TesteQIGratis"));
+const QIBaixoCompleto = lazy(() => import("./pages/blog/QIBaixoCompleto"));
 const QIMedioAdolescentes = lazy(() => import("./pages/blog/QIMedioAdolescentes"));
 const QIMedioCorredores = lazy(() => import("./pages/blog/QIMedioCorredores"));
 const QIMedioBombeiros = lazy(() => import("./pages/blog/QIMedioBombeiros"));
@@ -113,7 +116,6 @@ const QIMedioAdvogados = lazy(() => import("./pages/blog/QIMedioAdvogados"));
 const QIMedioPorGenero = lazy(() => import("./pages/blog/QIMedioPorGenero"));
 const ComoNetosMelhoramQI = lazy(() => import("./pages/blog/ComoNetosMelhoramQI"));
 const ComoProfissionaisSaudeMelhoramQI = lazy(() => import("./pages/blog/ComoProfissionaisSaudeMelhoramQI"));
-const QIBaixo = lazy(() => import("./pages/blog/QIBaixo"));
 const QIMedioTrabalhadores = lazy(() => import("./pages/blog/QIMedioTrabalhadores"));
 
 // Páginas estáticas (não precisam de lazy loading)
@@ -723,6 +725,30 @@ const App = () => (
             }
           />
           <Route
+            path="/blog/qi-e-ansiedade"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIeAnsiedade />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-qi-gratis"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteQIGratis />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-baixo"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIBaixoCompleto />
+              </Suspense>
+            }
+          />
+          <Route
             path="/blog/qi-medio-adolescentes"
             element={
               <Suspense fallback={<ArticleLoading />}>
@@ -951,14 +977,6 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoProfissionaisSaudeMelhoramQI />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/blog/qi-baixo"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <QIBaixo />
               </Suspense>
             }
           />

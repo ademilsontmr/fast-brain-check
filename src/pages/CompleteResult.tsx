@@ -6,6 +6,7 @@ import { Brain, Share2, Trophy, TrendingUp, Award, Zap, Sparkles, Clock, Users, 
 import { calculateIQ, getCelebrityComparison, getCognitiveStrength } from "@/types/quiz";
 import { useToast } from "@/hooks/use-toast";
 import { getRank, getResultByToken } from "@/services/api";
+import { useSEO } from "@/hooks/use-seo";
 
 // Função para gerar um número fixo baseado em uma string (token/userId)
 const generateFixedShareCount = (seed: string): number => {
@@ -23,6 +24,14 @@ const CompleteResult = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
+
+  // SEO: noIndex para página de resultado completo (não deve ser indexada)
+  useSEO({
+    title: "Resultado Completo do Teste de QI",
+    description: "Seu resultado completo do teste de QI com análise detalhada.",
+    noIndex: true,
+  });
+
   const [score, setScore] = useState(0);
   const [userName, setUserName] = useState("");
   const [showCelebration, setShowCelebration] = useState(true);

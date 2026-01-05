@@ -39,17 +39,23 @@ const removeMetaTag = (attr: MetaTagAttribute, key: string) => {
 const setCanonicalLink = (href?: string) => {
   const existing = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
   if (href) {
+    // Normalizar URL: remover trailing slash (exceto para root) e garantir formato correto
+    const normalizedHref = href.endsWith('/') && href !== 'https://bomqi.com.br/' 
+      ? href.slice(0, -1) 
+      : href;
+    
     if (existing) {
-      existing.setAttribute("href", href);
+      existing.setAttribute("href", normalizedHref);
     } else {
       const link = document.createElement("link");
       link.setAttribute("rel", "canonical");
-      link.setAttribute("href", href);
+      link.setAttribute("href", normalizedHref);
       document.head.appendChild(link);
     }
     return;
   }
 
+  // Se não houver href e existir canonical, remover (para páginas noIndex)
   if (existing) {
     document.head.removeChild(existing);
   }
@@ -74,8 +80,13 @@ export const useSEO = ({
 
     if (noIndex) {
       setMetaTag("name", "robots", "noindex, nofollow");
+      // Remover canonical para páginas noIndex
+      setCanonicalLink(undefined);
     } else {
-      removeMetaTag("name", "robots");
+      // Restaurar robots para index, follow
+      setMetaTag("name", "robots", "index, follow");
+      // Definir canonical apenas para páginas indexáveis
+      setCanonicalLink(canonical ?? url);
     }
 
     setMetaTag("property", "og:title", fullTitle);
@@ -98,8 +109,6 @@ export const useSEO = ({
     if (description) {
       setMetaTag("name", "twitter:description", description);
     }
-
-    setCanonicalLink(canonical ?? url);
 
     return () => {
       // Evitar remover título/metas à medida que a próxima página irá substituí-los.

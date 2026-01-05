@@ -2,9 +2,16 @@ import { Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/use-seo";
 
 const TermosUso = () => {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Termos de Uso",
+    description: "Termos de uso do BomQI. Leia os termos e condições para utilizar nosso teste de QI online.",
+    url: "https://bomqi.com.br/termos-uso",
+  });
 
   return (
     <div className="min-h-screen bg-background">

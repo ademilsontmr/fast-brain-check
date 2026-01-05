@@ -7,10 +7,18 @@ import { useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useSEO } from "@/hooks/use-seo";
 
 const Contato = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  useSEO({
+    title: "Contato",
+    description: "Entre em contato com o BomQI. Tire suas dúvidas, envie sugestões ou reporte problemas.",
+    url: "https://bomqi.com.br/contato",
+  });
+
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
