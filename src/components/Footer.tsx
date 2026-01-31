@@ -1,67 +1,61 @@
 import { Brain } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
-  const blogPosts = [{
-    title: "Como aumentar seu QI: 10 dicas cientificamente comprovadas",
-    slug: "/blog/como-aumentar-qi"
-  }, {
-    title: "A diferença entre inteligência e sabedoria",
-    slug: "/blog/inteligencia-vs-sabedoria"
-  }, {
-    title: "Pessoas com QI alto têm estes 7 hábitos em comum",
-    slug: "/blog/habitos-qi-alto"
-  }, {
-    title: "Einstein, Musk e Jobs: o que os gênios têm em comum?",
-    slug: "/blog/genios-em-comum"
-  }];
-  return <footer className="border-t border-border bg-background/80 backdrop-blur-sm mt-16">
+  return (
+    <footer className="bg-slate-50 border-t border-slate-200 mt-16">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
+          <div className="col-span-2 md:col-span-1">
+            <Link to="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
               <Brain className="w-8 h-8 text-primary" />
-              <p className="text-xl font-bold">BomQI</p>
-            </div>
-            <p className="text-sm text-muted-foreground">
+              <span className="text-xl font-bold text-slate-900">BomQI</span>
+            </Link>
+            <p className="text-sm text-slate-500 leading-relaxed">
               O teste de QI mais rápido e divertido do Brasil. Descubra sua inteligência em 3 minutos.
             </p>
           </div>
 
-          {/* Blog */}
+          {/* Teste */}
           <div>
-            <p className="font-bold mb-4">Blog</p>
-            <ul className="space-y-2">
-              {blogPosts.map((post, index) => <li key={index}>
-                  <Link to={post.slug} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {post.title}
-                  </Link>
-                </li>)}
-            </ul>
-          </div>
-
-          {/* Links Rápidos */}
-          <div>
-            <p className="font-bold mb-4">Links Rápidos</p>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-4 text-slate-700">Teste</h3>
+            <ul className="space-y-3">
               <li>
-                <Link to="/teste" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/teste" className="text-sm text-slate-500 hover:text-primary transition-colors">
                   Fazer o Teste
                 </Link>
               </li>
               <li>
-                <Link to="/como-funciona" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/como-funciona" className="text-sm text-slate-500 hover:text-primary transition-colors">
                   Como Funciona
                 </Link>
               </li>
               <li>
-                <Link to="/perguntas-frequentes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Perguntas Frequentes
+                <Link to="/sobre-o-teste" className="text-sm text-slate-500 hover:text-primary transition-colors">
+                  Sobre o Teste
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Recursos */}
+          <div>
+            <h3 className="font-semibold mb-4 text-slate-700">Recursos</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/blog" className="text-sm text-slate-500 hover:text-primary transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link to="/sobre-o-teste" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Sobre o Teste
+                <Link to="/perguntas-frequentes" className="text-sm text-slate-500 hover:text-primary transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/contato" className="text-sm text-slate-500 hover:text-primary transition-colors">
+                  Contato
                 </Link>
               </li>
             </ul>
@@ -69,32 +63,36 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <p className="font-bold mb-4">Legal</p>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-4 text-slate-700">Legal</h3>
+            <ul className="space-y-3">
               <li>
-                <Link to="/politica-privacidade" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Política de Privacidade
+                <Link to="/politica-privacidade" className="text-sm text-slate-500 hover:text-primary transition-colors">
+                  Privacidade
                 </Link>
               </li>
               <li>
-                <Link to="/termos-uso" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/termos-uso" className="text-sm text-slate-500 hover:text-primary transition-colors">
                   Termos de Uso
-                </Link>
-              </li>
-              <li>
-                <Link to="/contato" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contato
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center">
-          <p className="text-sm text-muted-foreground">© 2026 BomQI. Todos os direitos reservados.</p>
-          
+        <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-slate-400">
+            © 2026 BomQI. Todos os direitos reservados.
+          </p>
+          <Link 
+            to="/teste" 
+            className="text-sm text-primary hover:text-primary/80 transition-colors font-medium"
+          >
+            Começar o Teste →
+          </Link>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
