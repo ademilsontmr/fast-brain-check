@@ -1,4 +1,4 @@
-import { Brain, ArrowRight, Gamepad2, BookOpen, Clock, Target, Zap } from "lucide-react";
+import { Brain, ArrowRight, Gamepad2, BookOpen, Clock, Target, Zap, Trophy, TrendingUp, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,11 +11,11 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 
 const AtividadesQueAumentamQI = () => {
   const navigate = useNavigate();
-  
-    const articleUrl = "https://bomqi.com.br/blog/atividades-que-aumentam-qi";
+
+  const articleUrl = "https://bomqi.com.br/blog/atividades-que-aumentam-qi";
   const articleTitle = "Atividades que Aumentam QI: Lista Completa de Exercícios Cognitivos";
   const articleDescription = "Descubra as melhores atividades que aumentam QI comprovadas pela ciência. Jogos, exercícios, hobbies e práticas que desenvolvem inteligência, memória e raciocínio.";
-  
+
   useSEO({
     title: articleTitle,
     description: articleDescription,
@@ -79,14 +79,95 @@ const AtividadesQueAumentamQI = () => {
         {/* Content */}
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            Existem atividades específicas que, quando praticadas regularmente, podem aumentar 
-            significativamente seu QI. Neste guia completo, listamos as melhores atividades 
-            comprovadas pela ciência para desenvolver inteligência, memória, raciocínio e 
+            Existem atividades específicas que, quando praticadas regularmente, podem aumentar
+            significativamente seu QI. Neste guia completo, listamos as melhores atividades
+            comprovadas pela ciência para desenvolver inteligência, memória, raciocínio e
             habilidades cognitivas.
           </p>
 
+          <div className="bg-muted/50 p-6 rounded-xl border border-border mb-8">
+            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-primary" />
+              Matriz de Eficiência: Esforço vs. Impacto no QI
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-left text-sm">
+                <thead>
+                  <tr className="bg-background border-b border-border">
+                    <th className="p-3 font-bold">Atividade</th>
+                    <th className="p-3 font-bold">Esforço Necessário</th>
+                    <th className="p-3 font-bold">Impacto no QI</th>
+                    <th className="p-3 font-bold">Custo-Benefício</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  <tr>
+                    <td className="p-3 font-medium">Dual N-Back</td>
+                    <td className="p-3 text-amber-600 font-medium">Alto (Exaustivo)</td>
+                    <td className="p-3 text-green-600 font-bold">Muito Alto (+7 pts)</td>
+                    <td className="p-3">⭐⭐⭐⭐⭐</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium">Exercício Aeróbico</td>
+                    <td className="p-3 text-blue-600 font-medium">Médio</td>
+                    <td className="p-3 text-green-600 font-bold">Alto (+4 pts)</td>
+                    <td className="p-3">⭐⭐⭐⭐⭐</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium">Aprender Idioma</td>
+                    <td className="p-3 text-amber-600 font-medium">Muito Alto (Longo Prazo)</td>
+                    <td className="p-3 text-green-600 font-bold">Médio (+3 pts)</td>
+                    <td className="p-3">⭐⭐⭐</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium">Meditação</td>
+                    <td className="p-3 text-green-600 font-medium">Baixo</td>
+                    <td className="p-3 text-blue-600 font-bold">Médio (+3 pts)</td>
+                    <td className="p-3">⭐⭐⭐⭐</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground mt-4">
+              *Estimativas baseadas em meta-análises de treinamento cognitivo. Resultados variam individualmente.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900/40 dark:to-orange-900/40 border border-amber-200 dark:border-amber-700 rounded-xl p-6 mb-12 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="bg-white dark:bg-amber-950 p-3 rounded-full shadow-sm">
+                <Trophy className="w-8 h-8 text-amber-500" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">
+                  Desafio da Semana: O Protocolo "Mente Afiada"
+                </h3>
+                <p className="text-amber-800 dark:text-amber-200 mb-4 text-sm">
+                  Quer começar agora? Aceite nosso desafio de 7 dias para reiniciar seu cérebro.
+                </p>
+                <div className="space-y-2 bg-white/50 dark:bg-black/20 p-4 rounded-lg">
+                  <div className="flex items-center gap-2 text-sm text-amber-900 dark:text-amber-100">
+                    <Zap className="w-4 h-4 text-amber-600" />
+                    <strong>Manhã:</strong> 15 min de N-Back (App gratuito)
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-amber-900 dark:text-amber-100">
+                    <Zap className="w-4 h-4 text-amber-600" />
+                    <strong>Tarde:</strong> 20 min de sesta ou meditação NSDR
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-amber-900 dark:text-amber-100">
+                    <Zap className="w-4 h-4 text-amber-600" />
+                    <strong>Noite:</strong> 0 telas 1h antes de dormir
+                  </div>
+                </div>
+                <div className="mt-4 text-xs text-amber-700 dark:text-amber-300 font-medium">
+                  🎯 Meta: Completar 5 dias consecutivos.
+                </div>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-3xl font-bold mt-12 mb-6">Atividades com Maior Evidência Científica</h2>
-          
+
           <h3 className="text-2xl font-bold mt-8 mb-4">1. Treino de Memória de Trabalho (N-back)</h3>
           <p className="mb-4">
             <strong>Evidência:</strong> Alta | <strong>Efeito no QI:</strong> +3-7 pontos
@@ -184,7 +265,7 @@ const AtividadesQueAumentamQI = () => {
           </ul>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Atividades com Evidência Moderada</h2>
-          
+
           <h3 className="text-2xl font-bold mt-8 mb-4">9. Sudoku e Puzzles Lógicos</h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Efeito:</strong> +1-3 pontos | Desenvolve raciocínio lógico, atenção</li>
@@ -235,7 +316,7 @@ const AtividadesQueAumentamQI = () => {
           </ul>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Atividades Complementares</h2>
-          
+
           <h3 className="text-2xl font-bold mt-8 mb-4">16. Ensinar Outros</h3>
           <p className="mb-4">
             Explicar conceitos desenvolve compreensão profunda:
@@ -262,7 +343,7 @@ const AtividadesQueAumentamQI = () => {
           </ul>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Como Maximizar os Benefícios</h2>
-          
+
           <h3 className="text-2xl font-bold mt-8 mb-4">1. Progressão de Dificuldade</h3>
           <p className="mb-4">
             O cérebro se adapta. Para continuar melhorando:
@@ -274,11 +355,11 @@ const AtividadesQueAumentamQI = () => {
           </ul>
 
           <h3 className="text-2xl font-bold mt-8 mb-4">2. Consistência é Chave</h3>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Melhor fazer pouco diariamente que muito esporadicamente</li>
-              <li>15-30 minutos diários &gt; 3 horas uma vez por semana</li>
-              <li>Construir hábito é mais importante que intensidade inicial</li>
-            </ul>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li>Melhor fazer pouco diariamente que muito esporadicamente</li>
+            <li>15-30 minutos diários &gt; 3 horas uma vez por semana</li>
+            <li>Construir hábito é mais importante que intensidade inicial</li>
+          </ul>
 
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Combinação de Atividades</h3>
           <p className="mb-4">
@@ -341,18 +422,18 @@ const AtividadesQueAumentamQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">
-            Existem muitas atividades comprovadas que podem aumentar QI. As mais eficazes são: 
-            treino de memória de trabalho (n-back), xadrez, aprendizado de idiomas, leitura profunda, 
+            Existem muitas atividades comprovadas que podem aumentar QI. As mais eficazes são:
+            treino de memória de trabalho (n-back), xadrez, aprendizado de idiomas, leitura profunda,
             programação, música, exercício físico e meditação.
           </p>
           <p className="mb-4">
-            A chave é combinar múltiplas atividades, manter consistência, e aumentar dificuldade 
-            gradualmente. Com dedicação e estratégia, você pode desenvolver significativamente 
+            A chave é combinar múltiplas atividades, manter consistência, e aumentar dificuldade
+            gradualmente. Com dedicação e estratégia, você pode desenvolver significativamente
             suas capacidades cognitivas.
           </p>
           <p className="mb-4">
-            Lembre-se: o objetivo não é apenas aumentar um número, mas desenvolver habilidades 
-            cognitivas que melhoram sua vida real - memória, raciocínio, criatividade e resolução 
+            Lembre-se: o objetivo não é apenas aumentar um número, mas desenvolver habilidades
+            cognitivas que melhoram sua vida real - memória, raciocínio, criatividade e resolução
             de problemas.
           </p>
         </div>
@@ -361,7 +442,7 @@ const AtividadesQueAumentamQI = () => {
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Meça Seu Progresso</h3>
           <p className="text-muted-foreground mb-6">
-            Comece medindo seu QI atual e acompanhe sua melhoria ao longo do tempo. Faça nosso 
+            Comece medindo seu QI atual e acompanhe sua melhoria ao longo do tempo. Faça nosso
             teste científico completo e estabeleça sua linha de base.
           </p>
           <Link to="/teste">

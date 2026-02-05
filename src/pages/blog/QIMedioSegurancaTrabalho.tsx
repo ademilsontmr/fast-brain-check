@@ -1,4 +1,4 @@
-import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Shield } from "lucide-react";
+import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Shield, AlertTriangle, CheckCircle, FileText, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +7,12 @@ import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const QIMedioSegurancaTrabalho = () => {
     const navigate = useNavigate();
@@ -209,6 +215,68 @@ const QIMedioSegurancaTrabalho = () => {
                         <strong>Integração de Conhecimentos:</strong> Aplicar conhecimentos de múltiplas disciplinas
                         desenvolve pensamento interdisciplinar.
                     </p>
+
+                    <h2 className="text-3xl font-bold mt-12 mb-6">Mapeamento de Habilidades Cognitivas na Segurança</h2>
+                    <div className="overflow-x-auto mb-12">
+                        <table className="w-full border-collapse text-left text-sm">
+                            <thead>
+                                <tr className="bg-muted/50 border-b border-border">
+                                    <th className="p-4 font-bold">Habilidade Cognitiva</th>
+                                    <th className="p-4 font-bold">Aplicação Prática na Segurança</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-border">
+                                <tr>
+                                    <td className="p-4 font-medium">Raciocínio Lógico-Dedutivo</td>
+                                    <td className="p-4">Investigação de acidentes (Árvore de Causas), identificação de falhas em processos.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-medium">Memória de Trabalho</td>
+                                    <td className="p-4">Monitoramento simultâneo de múltiplos indicadores de risco em tempo real.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-medium">Inteligência Espacial</td>
+                                    <td className="p-4">Visualização de layouts seguros, rotas de fuga e ergonomia.</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-medium">Inteligência Verbal</td>
+                                    <td className="p-4">Elaboração de laudos técnicos precisos e treinamentos persuasivos (DDS).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-6 mb-12">
+                        <h3 className="text-lg font-bold mb-2 flex items-center gap-2">
+                            <AlertTriangle className="w-5 h-5 text-amber-600" />
+                            Estudo de Caso: O viés da normalidade
+                        </h3>
+                        <p className="text-sm text-slate-700 dark:text-gray-300">
+                            Profissionais com alto QI de segurança conseguem superar o "viés da normalidade" — a tendência humana de subestimar a possibilidade de um desastre. Sua capacidade analítica permite ver anomalias estatísticas sutis que precedem grandes acidentes, atuando antes que a falha ocorra.
+                        </p>
+                    </div>
+
+                    <h2 className="text-3xl font-bold mt-12 mb-6">Perguntas Frequentes</h2>
+                    <Accordion type="single" collapsible className="w-full mb-12">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger>É necessário ter QI alto para ser Técnico de Segurança?</AccordionTrigger>
+                            <AccordionContent>
+                                Não é um requisito formal, mas a profissão exige média ou acima da média para lidar com a complexidade das normas e cálculos de risco. O mais importante é a dedicação ao estudo contínuo.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-2">
+                            <AccordionTrigger>Qual a parte mais difícil cognitivamente da profissão?</AccordionTrigger>
+                            <AccordionContent>
+                                A gestão de conflitos e a tomada de decisão sob pressão. Decidir parar uma produção por risco iminente exige análise rápida de consequências e firmeza intelectual.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-3">
+                            <AccordionTrigger>A profissão melhora o raciocínio?</AccordionTrigger>
+                            <AccordionContent>
+                                Sim. A necessidade constante de identificar perigos e resolver problemas torna o cérebro mais analítico e observador com o tempo.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
                     <p className="mb-4">

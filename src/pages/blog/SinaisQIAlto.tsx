@@ -1,4 +1,4 @@
-import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Zap, Activity } from "lucide-react";
+import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, Zap, Activity, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
+import { useState } from "react";
 
 const SinaisQIAlto = () => {
     const navigate = useNavigate();
@@ -71,6 +72,34 @@ const SinaisQIAlto = () => {
         }
     ]);
 
+    const [checkedItems, setCheckedItems] = useState<number[]>([]);
+
+    const handleCheck = (index: number) => {
+        if (checkedItems.includes(index)) {
+            setCheckedItems(checkedItems.filter(i => i !== index));
+        } else {
+            setCheckedItems([...checkedItems, index]);
+        }
+    };
+
+    const signs = [
+        "Curiosidade Insaciável",
+        "Adaptabilidade Rápida",
+        "Pensamento Abstrato",
+        "Autoconsciência Elevada",
+        "Preferência por Solidão",
+        "Senso de Humor Sofisticado",
+        "Aprendizado Rápido",
+        "Questionamento de Autoridade",
+        "Vocabulário Rico",
+        "Pensamento de Longo Prazo",
+        "Empatia Cognitiva",
+        "Perfeccionismo Seletivo",
+        "Padrões de Pensamento",
+        "Abertura a Novas Experiências",
+        "Procrastinação Criativa"
+    ];
+
     return (
         <div className="min-h-screen bg-background">
             <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
@@ -103,6 +132,10 @@ const SinaisQIAlto = () => {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
                     <time>Janeiro 2025</time>
                     <span>•</span>
+                    <span className="flex items-center gap-1">
+                        <Activity className="w-4 h-4" />
+                        Leitura de 8 min
+                    </span>
                 </div>
 
                 <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">
@@ -112,9 +145,52 @@ const SinaisQIAlto = () => {
                 <div className="prose prose-lg max-w-none">
                     <p className="text-xl text-muted-foreground mb-8">
                         Pessoas com QI alto frequentemente apresentam características comportamentais e cognitivas
-                        distintas. Embora cada indivíduo seja único, a ciência identificou padrões comuns que indicam
-                        inteligência acima da média. Descubra os sinais mais confiáveis de QI elevado.
+                        distintas. Embora cada indivíduo seja único, a ciência (psicometria e neurociência) identificou padrões comuns que indicam
+                        inteligência fluida e cristalizada acima da média.
                     </p>
+
+                    <div className="bg-muted/50 p-6 rounded-xl border border-border mb-12">
+                        <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                            <Activity className="w-5 h-5 text-primary" />
+                            Checklist Interativo: Quantos sinais você tem?
+                        </h3>
+                        <p className="text-sm text-muted-foreground mb-6">
+                            Marque as características que você identifica em si mesmo enquanto lê o artigo.
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-3 mb-6">
+                            {signs.map((sign, index) => (
+                                <div
+                                    key={index}
+                                    onClick={() => handleCheck(index)}
+                                    className={`
+                                        p-3 rounded-lg border cursor-pointer transition-all flex items-center gap-3
+                                        ${checkedItems.includes(index)
+                                            ? 'bg-primary/10 border-primary text-primary font-medium'
+                                            : 'bg-background border-border hover:border-primary/50'
+                                        }
+                                    `}
+                                >
+                                    <div className={`
+                                        w-5 h-5 rounded border flex items-center justify-center transition-colors
+                                        ${checkedItems.includes(index) ? 'bg-primary border-primary' : 'border-muted-foreground'}
+                                    `}>
+                                        {checkedItems.includes(index) && <Check className="w-3.5 h-3.5 text-white" />}
+                                    </div>
+                                    {sign}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="bg-background p-4 rounded-lg border border-border text-center">
+                            <span className="text-lg font-bold text-primary">
+                                Você identificou {checkedItems.length} de {signs.length} sinais
+                            </span>
+                            <p className="text-sm text-muted-foreground mt-1">
+                                {checkedItems.length > 10 ? "Impressionante! Você apresenta muitas características de alta aptidão cognitiva." :
+                                    checkedItems.length > 5 ? "Você tem vários traços comuns em pessoas inteligentes." :
+                                        "Continue lendo para entender melhor cada sinal."}
+                            </p>
+                        </div>
+                    </div>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">1. Curiosidade Insaciável</h2>
                     <p className="mb-4">
@@ -122,6 +198,11 @@ const SinaisQIAlto = () => {
                         buscam entender o "porquê" das coisas e têm sede de conhecimento em múltiplas áreas. Essa
                         curiosidade não é superficial - elas querem compreender mecanismos, causas e conexões.
                     </p>
+                    <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500 mb-6">
+                        <p className="text-sm m-0">
+                            <strong>O que diz a ciência:</strong> O traço de personalidade "Abertura à Experiência" é o que mais se correlaciona com o QI (r=0.30). Pessoas abertas busquem novelties cognitivas, o que alimenta o desenvolvimento intelectual contínuo.
+                        </p>
+                    </div>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">2. Adaptabilidade Rápida</h2>
                     <p className="mb-4">
@@ -137,30 +218,35 @@ const SinaisQIAlto = () => {
                         concreta e fazer conexões entre conceitos aparentemente não relacionados.
                     </p>
 
-                    <h2 className="text-3xl font-bold mt-12 mb-6">4. Autoconsciência Elevada</h2>
+                    <h2 className="text-3xl font-bold mt-12 mb-6">4. Autoconsciência Elevada (Metacognição)</h2>
                     <p className="mb-4">
                         Pessoas inteligentes tendem a ter alta metacognição - consciência sobre seus próprios
                         processos de pensamento. Reconhecem suas limitações, identificam lacunas no conhecimento
                         e são capazes de avaliar criticamente suas próprias ideias.
                     </p>
+                    <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border-l-4 border-amber-500 mb-6">
+                        <p className="text-sm m-0">
+                            <strong>Nota Interessante:</strong> Oposição ao <em>Efeito Dunning-Kruger</em>. Enquanto pessoas menos competentes tendem a superestimar suas habilidades, pessoas com alto QI frequentemente subestimam sua competência relativa, pois assumem que tarefas fáceis para elas também são fáceis para os outros.
+                        </p>
+                    </div>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">5. Preferência por Solidão</h2>
                     <p className="mb-4">
                         Estudos mostram que pessoas com QI alto frequentemente preferem passar tempo sozinhas.
                         Não por serem antissociais, mas porque valorizam tempo para reflexão profunda, leitura
-                        e desenvolvimento de ideias complexas.
+                        e desenvolvimento de ideias complexas. A "Teoria da Savana" da psicologia evolutiva sugere que pessoas mais inteligentes dependem menos da interação social para o bem-estar.
                     </p>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">6. Senso de Humor Sofisticado</h2>
                     <p className="mb-4">
                         Humor inteligente, que envolve ironia, sarcasmo sutil e referências culturais complexas,
                         está correlacionado com QI alto. A capacidade de criar e apreciar piadas que exigem
-                        múltiplas camadas de compreensão indica inteligência verbal elevada.
+                        múltiplas camadas de compreensão indica inteligência verbal e velocidade de processamento elevadas.
                     </p>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">7. Aprendizado Rápido</h2>
                     <p className="mb-4">
-                        A velocidade com que alguém domina novas habilidades é um indicador forte de inteligência.
+                        A velocidade com que alguém domina novas habilidades é um indicador forte de inteligência (fator *g*).
                         Pessoas com QI alto frequentemente aprendem conceitos complexos rapidamente, fazem conexões
                         entre informações novas e conhecimento prévio, e aplicam aprendizados em contextos diferentes.
                     </p>
@@ -174,7 +260,7 @@ const SinaisQIAlto = () => {
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">9. Vocabulário Rico</h2>
                     <p className="mb-4">
-                        Um vocabulário extenso e preciso é um dos sinais mais confiáveis de QI alto. Pessoas
+                        Um vocabulário extenso e preciso é um dos sinais mais confiáveis de QI alto cristalizado. Pessoas
                         inteligentes usam palavras específicas para expressar nuances de significado e apreciam
                         a precisão na comunicação.
                     </p>
@@ -190,19 +276,19 @@ const SinaisQIAlto = () => {
                     <p className="mb-4">
                         Embora inteligência emocional e QI sejam diferentes, pessoas com QI alto frequentemente
                         demonstram forte empatia cognitiva - a capacidade de entender perspectivas diferentes e
-                        antecipar como outros pensam.
+                        antecipar como outros pensam ("Teoria da Mente").
                     </p>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">12. Perfeccionismo Seletivo</h2>
                     <p className="mb-4">
                         Pessoas inteligentes tendem a ser perfeccionistas em áreas que valorizam, mas pragmáticas
-                        em outras. Reconhecem onde a excelência importa e onde "bom o suficiente" é adequado.
+                        em outras. Reconhecem onde a excelência importa e onde "bom o suficiente" é adequado, otimizando seus recursos mentais.
                     </p>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">13. Padrões de Pensamento</h2>
                     <p className="mb-4">
                         Facilidade em identificar padrões - sejam matemáticos, linguísticos ou sociais - é um
-                        sinal forte de inteligência. Pessoas com QI alto veem conexões que outros não percebem.
+                        sinal forte de inteligência fluida. Pessoas com QI alto veem conexões lógicas e causalidades que outros não percebem.
                     </p>
 
                     <h2 className="text-3xl font-bold mt-12 mb-6">14. Abertura a Novas Experiências</h2>
@@ -225,8 +311,8 @@ const SinaisQIAlto = () => {
                         é multifacetada e se manifesta de formas diferentes em cada indivíduo.
                     </p>
                     <p className="mb-4">
-                        Se você se identificou com vários desses sinais, pode ter QI acima da média. A melhor
-                        forma de confirmar é através de um teste de QI validado cientificamente.
+                        Se você se identificou com vários desses sinais, pode ter QI acima da média. A única
+                        forma de confirmar é através de um teste de QI validado com normas estatísticas robustas.
                     </p>
                 </div>
 

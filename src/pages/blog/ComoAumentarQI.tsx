@@ -1,4 +1,4 @@
-import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, TrendingUp, Target, Zap } from "lucide-react";
+import { Brain, ArrowRight, Lightbulb, BookOpen, Clock, TrendingUp, Target, Zap, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,16 +8,22 @@ import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
 import ArticleInterlinks from "@/components/ArticleInterlinks";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const ComoAumentarQI = () => {
   const navigate = useNavigate();
-  
+
   const articleUrl = "https://bomqi.com.br/blog/como-aumentar-qi";
   const articleTitle = "Como Aumentar Seu QI: 10 Dicas Cientificamente Comprovadas";
   const articleDescription = "Aprenda 10 estratégias cientificamente comprovadas para desenvolver inteligência, memória de trabalho e raciocínio.";
   const publishDate = "2024-01-15";
   const modifiedDate = "2024-01-15";
-  
+
   useSEO({
     title: "Como Aumentar Seu QI",
     description: articleDescription,
@@ -120,12 +126,12 @@ const ComoAumentarQI = () => {
         {/* Content */}
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            Muitas pessoas acreditam que o QI é algo fixo e imutável. A ciência moderna, no entanto, 
-            mostra que existem formas comprovadas de melhorar sua inteligência fluida e capacidade cognitiva. 
+            Muitas pessoas acreditam que o QI é algo fixo e imutável. A ciência moderna, no entanto,
+            mostra que existem formas comprovadas de melhorar sua inteligência fluida e capacidade cognitiva.
             Descubra as 10 estratégias mais eficazes para aumentar seu QI.
           </p>
 
-          <ArticleInterlinks 
+          <ArticleInterlinks
             title="📚 Artigos Relacionados"
             links={[
               {
@@ -152,27 +158,27 @@ const ComoAumentarQI = () => {
               O que a ciência diz
             </h3>
             <p className="text-slate-700 mb-3">
-              Um estudo publicado na revista <em>Nature</em> em 2011 demonstrou que o QI não é fixo. 
-              Pesquisadores da University College London acompanharam 33 adolescentes por 4 anos e 
+              Um estudo publicado na revista <em>Nature</em> em 2011 demonstrou que o QI não é fixo.
+              Pesquisadores da University College London acompanharam 33 adolescentes por 4 anos e
               descobriram que o QI pode variar até 20 pontos para cima ou para baixo.
             </p>
             <p className="text-slate-700">
-              <strong>Fonte:</strong> Ramsden et al. (2011). "Verbal and non-verbal intelligence changes 
+              <strong>Fonte:</strong> Ramsden et al. (2011). "Verbal and non-verbal intelligence changes
               in the teenage brain." Nature, 479(7371), 113-116.
             </p>
           </div>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">1. Pratique Exercícios de Memória de Trabalho</h2>
           <p className="mb-4">
-            A memória de trabalho é fundamental para o raciocínio e a resolução de problemas. Estudos 
-            mostram que treinar a memória de trabalho através de jogos específicos pode aumentar o QI 
+            A memória de trabalho é fundamental para o raciocínio e a resolução de problemas. Estudos
+            mostram que treinar a memória de trabalho através de jogos específicos pode aumentar o QI
             em até 4 pontos após apenas 8 semanas de prática regular.
           </p>
           <p className="mb-4">
-            <strong>Como praticar:</strong> Use aplicativos como Dual N-Back, jogue xadrez, ou pratique 
+            <strong>Como praticar:</strong> Use aplicativos como Dual N-Back, jogue xadrez, ou pratique
             malabarismo. Essas atividades exigem que você mantenha múltiplas informações em mente simultaneamente.
           </p>
-          
+
           <div className="bg-green-50 border border-green-200 rounded-lg p-5 my-6">
             <h4 className="font-bold mb-2 flex items-center gap-2">
               <Target className="w-4 h-4 text-green-600" />
@@ -186,22 +192,22 @@ const ComoAumentarQI = () => {
           </div>
 
           <p className="mb-4 text-sm text-slate-600 italic">
-            📊 Estudo de referência: Jaeggi et al. (2008) demonstraram que treino de memória de trabalho 
+            📊 Estudo de referência: Jaeggi et al. (2008) demonstraram que treino de memória de trabalho
             transfere para inteligência fluida. Publicado em PNAS, 105(19), 6829-6833.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">2. Aprenda um Novo Idioma</h2>
           <p className="mb-4">
-            Estudos de neuroimagem mostram que pessoas bilíngues têm maior densidade de massa cinzenta 
-            em áreas do cérebro relacionadas ao controle executivo e à atenção. Aprender um segundo idioma 
+            Estudos de neuroimagem mostram que pessoas bilíngues têm maior densidade de massa cinzenta
+            em áreas do cérebro relacionadas ao controle executivo e à atenção. Aprender um segundo idioma
             pode melhorar significativamente suas habilidades cognitivas gerais.
           </p>
-          
+
           <div className="bg-purple-50 border border-purple-200 rounded-lg p-5 my-6">
             <h4 className="font-bold mb-3 text-purple-900">💡 Caso Real: Maria, 34 anos</h4>
             <p className="text-sm text-slate-700 mb-2">
-              "Comecei a aprender alemão aos 32 anos. Após 18 meses de estudo diário (30 min), 
-              refiz um teste de QI e minha pontuação aumentou de 108 para 116. Além disso, percebi 
+              "Comecei a aprender alemão aos 32 anos. Após 18 meses de estudo diário (30 min),
+              refiz um teste de QI e minha pontuação aumentou de 108 para 116. Além disso, percebi
               melhora significativa na minha capacidade de concentração no trabalho."
             </p>
             <p className="text-xs text-slate-600 italic">
@@ -221,8 +227,8 @@ const ComoAumentarQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">3. Exercite-se Regularmente</h2>
           <p className="mb-4">
-            A atividade física aeróbica aumenta o fluxo sanguíneo para o cérebro e promove a neurogênese 
-            (formação de novos neurônios). Apenas 30 minutos de exercício moderado, 3-4 vezes por semana, 
+            A atividade física aeróbica aumenta o fluxo sanguíneo para o cérebro e promove a neurogênese
+            (formação de novos neurônios). Apenas 30 minutos de exercício moderado, 3-4 vezes por semana,
             pode melhorar a função cognitiva em até 20%.
           </p>
 
@@ -236,7 +242,7 @@ const ComoAumentarQI = () => {
                 Corrida, natação, ciclismo
               </p>
               <p className="text-xs text-slate-600">
-                <strong>Benefício:</strong> Aumenta BDNF (fator neurotrófico), essencial para 
+                <strong>Benefício:</strong> Aumenta BDNF (fator neurotrófico), essencial para
                 crescimento de novos neurônios
               </p>
             </Card>
@@ -255,7 +261,7 @@ const ComoAumentarQI = () => {
             </Card>
           </div>
 
-          <ArticleInterlinks 
+          <ArticleInterlinks
             links={[
               {
                 text: "QI e Exercício Físico: A Conexão Científica",
@@ -266,8 +272,8 @@ const ComoAumentarQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">4. Durma 7-9 Horas por Noite</h2>
           <p className="mb-4">
-            O sono é essencial para a consolidação da memória e a limpeza de toxinas cerebrais. 
-            Pessoas que dormem menos de 6 horas por noite apresentam desempenho cognitivo equivalente 
+            O sono é essencial para a consolidação da memória e a limpeza de toxinas cerebrais.
+            Pessoas que dormem menos de 6 horas por noite apresentam desempenho cognitivo equivalente
             a alguém com dois dias sem dormir.
           </p>
 
@@ -293,7 +299,7 @@ const ComoAumentarQI = () => {
             <li>• Evite cafeína após 14h</li>
           </ul>
 
-          <ArticleInterlinks 
+          <ArticleInterlinks
             links={[
               {
                 text: "QI e Sono: Como o descanso afeta sua inteligência",
@@ -304,52 +310,130 @@ const ComoAumentarQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">5. Medite Regularmente</h2>
           <p className="mb-4">
-            A meditação mindfulness aumenta a espessura cortical em áreas do cérebro associadas à 
-            atenção, introspecção e processamento sensorial. Apenas 20 minutos por dia podem fazer 
+            A meditação mindfulness aumenta a espessura cortical em áreas do cérebro associadas à
+            atenção, introspecção e processamento sensorial. Apenas 20 minutos por dia podem fazer
             diferença significativa em 8 semanas.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">6. Toque um Instrumento Musical</h2>
           <p className="mb-4">
-            Tocar música ativa praticamente todas as áreas do cérebro simultaneamente. Estudos mostram 
+            Tocar música ativa praticamente todas as áreas do cérebro simultaneamente. Estudos mostram
             que músicos têm melhor memória verbal, fluência verbal e raciocínio espacial comparados a não-músicos.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">7. Mantenha uma Dieta Rica em Ômega-3</h2>
           <p className="mb-4">
-            O DHA, um tipo de ômega-3, é crucial para a saúde cerebral. Alimentos como salmão, nozes 
+            O DHA, um tipo de ômega-3, é crucial para a saúde cerebral. Alimentos como salmão, nozes
             e sementes de chia podem melhorar a função cognitiva e proteger contra declínio mental.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">8. Desafie-se com Puzzles e Jogos de Lógica</h2>
           <p className="mb-4">
-            Quebra-cabeças, sudoku, e jogos de estratégia estimulam o raciocínio lógico e a resolução 
+            Quebra-cabeças, sudoku, e jogos de estratégia estimulam o raciocínio lógico e a resolução
             de problemas. O importante é variar os tipos de desafios para trabalhar diferentes áreas cognitivas.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">9. Leia Ativamente e Diversifique</h2>
           <p className="mb-4">
-            Ler não só expande seu vocabulário, mas também melhora a empatia, o pensamento crítico e 
+            Ler não só expande seu vocabulário, mas também melhora a empatia, o pensamento crítico e
             a compreensão. Leia ficção para melhorar a teoria da mente, e não-ficção para expandir conhecimento.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">10. Socialize e Tenha Conversas Profundas</h2>
           <p className="mb-4">
-            Interações sociais complexas estimulam o cérebro de formas únicas. Debates, discussões 
+            Interações sociais complexas estimulam o cérebro de formas únicas. Debates, discussões
             filosóficas e conversas desafiadoras mantêm a mente afiada e promovem neuroplasticidade.
           </p>
 
+          <h2 className="text-3xl font-bold mt-12 mb-6">Bônus: Rotina Diária para Otimização Cognitiva</h2>
+          <p className="mb-6">
+            Para obter resultados reais, a consistência é chave. Aqui está um exemplo de como estruturar seu dia
+            para máxima performance mental:
+          </p>
+
+          <div className="overflow-x-auto mb-12">
+            <table className="w-full border-collapse text-left text-sm">
+              <thead>
+                <tr className="bg-muted/50 border-b border-border">
+                  <th className="p-4 font-bold">Horário</th>
+                  <th className="p-4 font-bold">Atividade</th>
+                  <th className="p-4 font-bold">Benefício Cognitivo</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                <tr>
+                  <td className="p-4">07:00</td>
+                  <td className="p-4">Hidratação + 20min Meditação</td>
+                  <td className="p-4 text-muted-foreground">Prepara o córtex pré-frontal para foco</td>
+                </tr>
+                <tr>
+                  <td className="p-4">08:00</td>
+                  <td className="p-4">Trabalho Profundo (Deep Work)</td>
+                  <td className="p-4 text-muted-foreground">Aproveita o pico de cortiol matinal para tarefas complexas</td>
+                </tr>
+                <tr>
+                  <td className="p-4">12:00</td>
+                  <td className="p-4">Almoço rico em Ômega-3 + Caminhada</td>
+                  <td className="p-4 text-muted-foreground">Nutrição cerebral e oxigenação</td>
+                </tr>
+                <tr>
+                  <td className="p-4">18:00</td>
+                  <td className="p-4">Exercício Aeróbico</td>
+                  <td className="p-4 text-muted-foreground">Neurogênese e liberação de BDNF</td>
+                </tr>
+                <tr>
+                  <td className="p-4">20:00</td>
+                  <td className="p-4">Leitura ou Aprendizado de Idioma</td>
+                  <td className="p-4 text-muted-foreground">Neuroplasticidade e reserva cognitiva</td>
+                </tr>
+                <tr>
+                  <td className="p-4">22:00</td>
+                  <td className="p-4">Higiene do Sono (Sem telas)</td>
+                  <td className="p-4 text-muted-foreground">Consolidação da memória</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Perguntas Frequentes</h2>
+          <Accordion type="single" collapsible className="w-full mb-12">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>É realmente possível aumentar o QI depois de adulto?</AccordionTrigger>
+              <AccordionContent>
+                Sim. Embora a inteligência fluida tenda a estabilizar na idade adulta, estudos mostram que a neuroplasticidade permite melhorias na eficiência cognitiva através de treinamento consistente, especialmente em memória de trabalho e raciocínio lógico.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Quanto tempo demora para ver resultados?</AccordionTrigger>
+              <AccordionContent>
+                A maioria dos estudos indica que mudanças mensuráveis começam a aparecer entre 8 a 12 semanas de prática consistente (mínimo 20 minutos por dia). No entanto, benefícios subjetivos como maior foco e clareza mental podem ser percebidos já nas primeiras semanas.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Apps de "Brain Training" funcionam?</AccordionTrigger>
+              <AccordionContent>
+                Depende. Muitos são apenas entretenimento, mas aqueles baseados no protocolo "Dual N-Back" têm respaldo científico para melhoria da memória operacional, que é um componente chave do QI.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>O QI é genético?</AccordionTrigger>
+              <AccordionContent>
+                A genética desempenha um papel significativo (estimado entre 50-80%), mas o ambiente e o estilo de vida determinam se você atingirá seu potencial genético máximo. Fatores como nutrição, educação, sono e estímulos cognitivos são cruciais.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">
-            Aumentar seu QI é possível, mas requer consistência e variedade. Combine múltiplas estratégias 
-            desta lista para melhores resultados. Lembre-se: a inteligência não é apenas genética, 
+            Aumentar seu QI é possível, mas requer consistência e variedade. Combine múltiplas estratégias
+            desta lista para melhores resultados. Lembre-se: a inteligência não é apenas genética,
             ela também é treinável.
           </p>
 
           <div className="bg-gradient-to-r from-primary/10 to-purple-100 border border-primary/30 rounded-lg p-6 my-8">
             <h3 className="text-xl font-bold mb-3">📈 Resultados Esperados</h3>
             <p className="text-slate-700 mb-4">
-              Seguindo estas 10 estratégias de forma consistente por 6 meses, estudos sugerem 
+              Seguindo estas 10 estratégias de forma consistente por 6 meses, estudos sugerem
               que é possível aumentar o QI em:
             </p>
             <ul className="space-y-2 text-slate-700">
@@ -358,12 +442,12 @@ const ComoAumentarQI = () => {
               <li>• <strong>8-12 pontos:</strong> Com dedicação intensa (7+ estratégias)</li>
             </ul>
             <p className="text-sm text-slate-600 mt-4 italic">
-              *Resultados variam individualmente. Baseado em meta-análise de estudos sobre 
+              *Resultados variam individualmente. Baseado em meta-análise de estudos sobre
               neuroplasticidade e treinamento cognitivo.
             </p>
           </div>
 
-          <ArticleInterlinks 
+          <ArticleInterlinks
             title="🎯 Próximos Passos"
             links={[
               {
@@ -389,7 +473,7 @@ const ComoAumentarQI = () => {
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI Atual</h3>
           <p className="text-muted-foreground mb-6">
-            Antes de começar a melhorar, que tal descobrir seu ponto de partida? 
+            Antes de começar a melhorar, que tal descobrir seu ponto de partida?
             Faça nosso teste de QI em apenas 3 minutos.
           </p>
           <Link to="/teste">
