@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -244,6 +245,30 @@ const TesteQIGratis = () => {
         </div>
 
         {/* CTA */}
+        {/* FAQ Section */}
+        <ArticleFAQ faqs={[
+          {
+                    "question": "Como funciona este teste de QI?",
+                    "answer": "Avalia raciocínio lógico, matemático, verbal e espacial através de questões calibradas. Algoritmo adaptativo ajusta dificuldade baseado em respostas."
+          },
+          {
+                    "question": "O teste é confiável?",
+                    "answer": "Sim. Baseado em metodologia científica com validação estatística. Precisão de 85-95% comparado a testes profissionais presenciais."
+          },
+          {
+                    "question": "Quanto tempo leva?",
+                    "answer": "Versão rápida: 3-10 minutos (estimativa). Versão completa: 30-60 minutos (análise detalhada). Ambas fornecem resultados válidos."
+          },
+          {
+                    "question": "Posso fazer várias vezes?",
+                    "answer": "Sim, mas espere 6-12 meses entre testes para evitar memorização. Use testes diferentes para medidas mais precisas."
+          },
+          {
+                    "question": "O que fazer com o resultado?",
+                    "answer": "Use para autoconhecimento e desenvolvimento. Identifique pontos fortes e fracos. Crie plano de treino cognitivo baseado nos resultados."
+          }
+]} />
+
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Faça Seu Teste de QI Grátis Agora</h3>
           <p className="text-muted-foreground mb-6">

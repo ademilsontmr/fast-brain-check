@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -430,6 +431,30 @@ const NatureVsNurtureGeneticaAmbienteQI = () => {
         </div>
 
         {/* CTA */}
+        {/* FAQ Section */}
+        <ArticleFAQ faqs={[
+          {
+                    "question": "Como este tema se relaciona com inteligência?",
+                    "answer": "Este tema está diretamente relacionado ao desenvolvimento cognitivo e expressão da inteligência. Compreender esses conceitos ajuda a maximizar potencial."
+          },
+          {
+                    "question": "Posso aplicar isso na prática?",
+                    "answer": "Sim. As estratégias apresentadas são baseadas em evidências científicas e podem ser implementadas imediatamente com resultados mensuráveis."
+          },
+          {
+                    "question": "Quanto tempo para ver resultados?",
+                    "answer": "Resultados iniciais em 30-60 dias com prática consistente. Melhorias significativas em 6-12 meses de aplicação sustentada."
+          },
+          {
+                    "question": "Funciona para todas as idades?",
+                    "answer": "Sim. Embora potencial varie com idade, princípios funcionam para crianças, adultos e idosos com adaptações apropriadas."
+          },
+          {
+                    "question": "Como medir meu progresso?",
+                    "answer": "Faça teste de QI inicial, implemente estratégias por 6 meses, refaça teste. Também monitore desempenho em trabalho/estudos."
+          }
+]} />
+
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI</h3>
           <p className="text-muted-foreground mb-6">

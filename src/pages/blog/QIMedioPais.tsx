@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -245,6 +246,30 @@ const QIMedioPais = () => {
             e crescimento intelectual.
           </p>
         </div>
+        {/* FAQ Section */}
+        <ArticleFAQ faqs={[
+          {
+                    "question": "Qual é o QI médio de pais?",
+                    "answer": "O QI médio de pais varia entre 95-115, dependendo de fatores como educação, ambiente e genética. A média populacional geral é 100."
+          },
+          {
+                    "question": "Como pais se comparam à média geral?",
+                    "answer": "Pais geralmente estão próximos ou ligeiramente acima da média de 100, com variação individual significativa. Educação e ambiente influenciam mais que o grupo em si."
+          },
+          {
+                    "question": "Pais podem aumentar seu QI?",
+                    "answer": "Sim. Treino cognitivo, exercícios físicos, educação continuada e hábitos saudáveis podem aumentar QI em 5-15 pontos independente do grupo."
+          },
+          {
+                    "question": "O que mais influencia o QI de pais?",
+                    "answer": "Educação (40%), ambiente familiar (30%), genética (20-30%), nutrição e estímulos cognitivos. Intervenções precoces maximizam potencial."
+          },
+          {
+                    "question": "Diferença entre QI médio e individual?",
+                    "answer": "QI médio é estatística de grupo. Indivíduos variam amplamente: 68% estão entre 85-115, mas há muitos outliers em ambos extremos."
+          }
+]} />
+
 
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI Atual</h3>

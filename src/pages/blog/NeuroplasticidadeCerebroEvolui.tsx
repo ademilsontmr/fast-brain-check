@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -275,6 +276,30 @@ const NeuroplasticidadeCerebroEvolui = () => {
         </div>
 
         {/* CTA */}
+        {/* FAQ Section */}
+        <ArticleFAQ faqs={[
+          {
+                    "question": "Como a neurociência explica isso?",
+                    "answer": "Neuroplasticidade permite que cérebro crie novas conexões neurais. Treino cognitivo aumenta densidade de matéria cinzenta e mielinização de sinapses."
+          },
+          {
+                    "question": "Mudanças cerebrais são permanentes?",
+                    "answer": "Sim, com manutenção. Novas conexões neurais se fortalecem com uso repetido. Parar completamente pode causar poda sináptica em 6-12 meses."
+          },
+          {
+                    "question": "Quanto tempo para mudanças cerebrais?",
+                    "answer": "Primeiras mudanças estruturais em 4-6 semanas. Mudanças significativas em 3-6 meses. Consolidação completa em 12-24 meses de prática."
+          },
+          {
+                    "question": "Idade afeta plasticidade cerebral?",
+                    "answer": "Sim, mas não impede. Crianças têm maior plasticidade. Adultos e idosos mantêm capacidade significativa de mudança com estímulos adequados."
+          },
+          {
+                    "question": "Como maximizar neuroplasticidade?",
+                    "answer": "Exercício físico (aumenta BDNF), sono adequado (consolidação), desafios cognitivos novos, alimentação saudável e redução de estresse crônico."
+          }
+]} />
+
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Meça Seu Progresso</h3>
           <p className="text-muted-foreground mb-6">

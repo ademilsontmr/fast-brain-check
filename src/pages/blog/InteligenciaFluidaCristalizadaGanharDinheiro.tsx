@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -197,6 +198,30 @@ const InteligenciaFluidaCristalizadaGanharDinheiro = () => {
             uma análise completa de suas capacidades cognitivas.
           </p>
         </div>
+        {/* FAQ Section */}
+        <ArticleFAQ faqs={[
+          {
+                    "question": "QI alto garante sucesso financeiro?",
+                    "answer": "Não garante, mas aumenta chances. QI explica 20-30% da variação em renda. Outros fatores: inteligência emocional, networking, persistência e oportunidades."
+          },
+          {
+                    "question": "Qual QI é necessário para ficar rico?",
+                    "answer": "Não há mínimo. QI 115+ facilita, mas pessoas com QI médio (90-110) ficam ricas através de especialização, trabalho duro e decisões inteligentes."
+          },
+          {
+                    "question": "Como usar QI alto para ganhar dinheiro?",
+                    "answer": "Especialize-se em áreas complexas (tech, finanças, medicina), aprenda rápido, resolva problemas valiosos, tome decisões baseadas em dados e capitalize vantagens cognitivas."
+          },
+          {
+                    "question": "Pessoas ricas têm QI mais alto?",
+                    "answer": "Em média sim. Milionários têm QI médio de 120-125. Mas correlação não é causalidade - hábitos, educação e oportunidades também importam muito."
+          },
+          {
+                    "question": "Posso compensar QI médio?",
+                    "answer": "Absolutamente! Foque em: especialização profunda, networking estratégico, persistência, inteligência emocional e aproveitar oportunidades. Muitos milionários têm QI médio."
+          }
+]} />
+
 
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI</h3>

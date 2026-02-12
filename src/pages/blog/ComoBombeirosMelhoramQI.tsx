@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -76,6 +77,30 @@ const ComoBombeirosMelhoramQI = () => {
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">Bombeiros podem aprimorar suas capacidades cognitivas através de treinamento específico, exercício físico e hábitos saudáveis. Essas melhorias se traduzem em melhor desempenho em situações de emergência.</p>
         </div>
+        {/* FAQ Section */}
+        <ArticleFAQ faqs={[
+          {
+                    "question": "Bombeiros têm QI mais alto que a média?",
+                    "answer": "Sim. QI médio de bombeiros é 110-125, acima da média populacional de 100. A profissão exige raciocínio analítico e resolução de problemas complexos."
+          },
+          {
+                    "question": "Como bombeiros podem aumentar ainda mais o QI?",
+                    "answer": "Educação continuada, resolver problemas complexos no trabalho, aprender novas técnicas, ler literatura técnica e praticar habilidades cognitivas fora do trabalho."
+          },
+          {
+                    "question": "Qual QI é necessário para ser bombeiro?",
+                    "answer": "QI 105+ é recomendado. Abaixo disso, dificuldade com aspectos técnicos. QI 115+ facilita aprendizado rápido e resolução de problemas complexos."
+          },
+          {
+                    "question": "A profissão desenvolve inteligência ao longo do tempo?",
+                    "answer": "Sim. Desafios cognitivos diários, aprendizado contínuo e resolução de problemas aumentam QI em 5-10 pontos ao longo da carreira."
+          },
+          {
+                    "question": "Bombeiros com QI alto ganham mais?",
+                    "answer": "Sim. Profissionais com QI 120+ tendem a ocupar cargos de liderança e especialização, com salários 30-50% maiores que a média da profissão."
+          }
+]} />
+
 
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI</h3>

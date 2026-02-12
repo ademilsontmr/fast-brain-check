@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -343,6 +344,30 @@ const ComoMelhorarCerebro = () => {
         </div>
 
         {/* CTA */}
+        {/* FAQ Section */}
+        <ArticleFAQ faqs={[
+          {
+                    "question": "É realmente possível cerebro?",
+                    "answer": "Sim! Estudos científicos comprovam que é possível através de treino cognitivo, exercícios físicos, sono adequado e alimentação saudável. Ganhos de 5-15 pontos são realistas."
+          },
+          {
+                    "question": "Quanto tempo leva para ver resultados?",
+                    "answer": "Primeiros resultados em 30-60 dias com prática diária de 20-30 minutos. Ganhos significativos (5-10 pontos) requerem 6-12 meses de consistência."
+          },
+          {
+                    "question": "Quais métodos são mais eficazes?",
+                    "answer": "Dual n-back (memória de trabalho), xadrez (estratégia), aprender idiomas (plasticidade), exercícios aeróbicos (BDNF) e sono de qualidade (consolidação)."
+          },
+          {
+                    "question": "Existe limite de idade?",
+                    "answer": "Não. Neuroplasticidade funciona em qualquer idade. Jovens têm maior potencial (10-20 pontos), adultos 5-15 pontos, idosos podem manter e otimizar."
+          },
+          {
+                    "question": "Os ganhos são permanentes?",
+                    "answer": "Sim, com manutenção. Parar completamente pode causar perda de 30-50% em 6-12 meses. Manutenção requer 2-3 sessões semanais."
+          }
+]} />
+
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Meça Seu Progresso</h3>
           <p className="text-muted-foreground mb-6">
