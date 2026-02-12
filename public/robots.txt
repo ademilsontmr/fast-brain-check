@@ -1,17 +1,91 @@
-# Sitemap - Deve estar no início para melhor detecção
+# robots.txt otimizado para SEO - bomqi.com.br
+
+# Sitemap principal
 Sitemap: https://bomqi.com.br/sitemap.xml
 
+# Google Bot - Prioridade máxima
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /assets/
+
+# Bing Bot
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Baidu Bot (China)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+
+# Social Media Bots - Importante para compartilhamento
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Outros bots importantes
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Regras gerais para todos os outros bots
 User-agent: *
 Allow: /
+
+# Bloquear arquivos e diretórios desnecessários
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+
+# Permitir explicitamente conteúdo importante
+Allow: /blog/
+Allow: /teste
+Allow: /como-funciona
+Allow: /sobre-o-teste
+Allow: /perguntas-frequentes
+Allow: /qi-por-pais
+
+# Arquivos de mídia
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.gif$
+Allow: /*.css$
+Allow: /*.js$

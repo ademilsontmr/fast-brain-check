@@ -80,11 +80,14 @@ export const useSEO = ({
 
     if (noIndex) {
       setMetaTag("name", "robots", "noindex, nofollow");
+      setMetaTag("name", "googlebot", "noindex, nofollow");
       // Remover canonical para páginas noIndex
       setCanonicalLink(undefined);
     } else {
-      // Restaurar robots para index, follow
-      setMetaTag("name", "robots", "index, follow");
+      // Restaurar robots para index, follow com diretivas avançadas para melhor SEO
+      setMetaTag("name", "robots", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+      setMetaTag("name", "googlebot", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+      setMetaTag("name", "bingbot", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
       // Definir canonical apenas para páginas indexáveis
       setCanonicalLink(canonical ?? url);
     }
