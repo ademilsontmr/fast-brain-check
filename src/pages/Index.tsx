@@ -85,6 +85,22 @@ const Index = () => {
               <Brain className="w-8 h-8 text-primary" />
               <div className="text-2xl font-bold">BomQI</div>
             </div>
+            
+            <nav className="hidden md:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
+              <button
+                onClick={() => navigate("/blog")}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Blog
+              </button>
+              <button
+                onClick={() => navigate("/como-funciona")}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Como Funciona
+              </button>
+            </nav>
+            
             <Button onClick={() => navigate("/teste")}>
               Fazer o Teste
             </Button>

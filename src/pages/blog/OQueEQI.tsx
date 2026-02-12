@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import ArticleHeader from "@/components/ArticleHeader";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -37,19 +38,7 @@ const OQueEQI = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Brain className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold">BomQI</span>
-            </Link>
-            <Button onClick={() => navigate("/teste")} size="lg">
-              Fazer o Teste
-            </Button>
-          </div>
-        </div>
-      </header>
+      <ArticleHeader />
 
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <nav className="text-sm text-muted-foreground mb-6">
@@ -347,7 +336,7 @@ const OQueEQI = () => {
                 <div className="w-32 text-sm text-slate-600">Limítrofe</div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-24 text-right font-bold text-sm">&lt;70</div>
+                <div className="w-24 text-right font-bold text-sm">menor que 70</div>
                 <div className="flex-1 bg-red-300 h-8 rounded flex items-center px-3" style={{width: '2%'}}>
                   <span className="text-xs font-semibold">2%</span>
                 </div>

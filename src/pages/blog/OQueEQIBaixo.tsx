@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import ArticleHeader from "@/components/ArticleHeader";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -36,19 +37,7 @@ const OQueEQIBaixo = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Brain className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold">BomQI</span>
-            </Link>
-            <Button onClick={() => navigate("/teste")} size="lg">
-              Fazer o Teste
-            </Button>
-          </div>
-        </div>
-      </header>
+      <ArticleHeader />
 
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <nav className="text-sm text-muted-foreground mb-6">
@@ -91,10 +80,10 @@ const OQueEQIBaixo = () => {
                   <strong>QI abaixo da média: 70-85</strong> (14% da população)
                 </p>
                 <p className="text-blue-800 dark:text-blue-200 mb-2">
-                  <strong>QI muito abaixo da média: &lt;70</strong> (2% da população)
+                  <strong>QI muito abaixo da média: menor que 70</strong> (2% da população)
                 </p>
                 <p className="text-blue-800 dark:text-blue-200 text-sm">
-                  <strong>Deficiência intelectual:</strong> QI &lt;70 com limitações em funcionamento adaptativo
+                  <strong>Deficiência intelectual:</strong> QI menor que 70 com limitações em funcionamento adaptativo
                 </p>
               </div>
             </div>
@@ -157,7 +146,7 @@ const OQueEQIBaixo = () => {
           </p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>QI baixo:</strong> QI abaixo da média, mas pode não afetar funcionamento diário</li>
-            <li><strong>Deficiência intelectual:</strong> QI &lt;70 + limitações significativas em funcionamento adaptativo</li>
+            <li><strong>Deficiência intelectual:</strong> QI menor que 70 + limitações significativas em funcionamento adaptativo</li>
             <li><strong>Funcionamento adaptativo:</strong> habilidades práticas para vida diária</li>
             <li><strong>Diagnóstico:</strong> diagnóstico requer avaliação profissional completa</li>
           </ul>

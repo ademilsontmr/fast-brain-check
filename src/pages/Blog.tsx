@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Brain, ArrowRight, Lightbulb, GraduationCap, Target, Users, BookOpen, Award, Zap, BarChart3, Briefcase, Gamepad2, Sparkles, Cpu, Trophy, TrendingUp, Dna, Calculator, Globe, TrendingDown, FileText, Leaf, AlertTriangle, Star, DollarSign } from "lucide-react";
+import { useState, useEffect, useMemo } from "react";
+import { Brain, ArrowRight, Lightbulb, GraduationCap, Target, Users, BookOpen, Award, Zap, BarChart3, Briefcase, Gamepad2, Sparkles, Cpu, Trophy, TrendingUp, Dna, Calculator, Globe, TrendingDown, FileText, Leaf, AlertTriangle, Star, DollarSign, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -19,6 +19,9 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 
 const Blog = () => {
   const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const articlesPerPage = 12;
 
   useSEO({
     title: "Blog BomQI",
@@ -436,8 +439,126 @@ const Blog = () => {
       category: "Riqueza",
       gradient: "from-blue-500/20 to-cyan-500/20",
       borderColor: "border-blue-500/30"
+    },
+    {
+      id: 93,
+      title: "Neurociência da Riqueza: Como Pessoas Inteligentes Constroem Patrimônio",
+      slug: "neurociencia-riqueza-qi-patrimonio",
+      description: "Descubra como o cérebro de pessoas ricas funciona diferente. Estratégias neurocientíficas para construir riqueza usando inteligência.",
+      icon: Brain,
+      category: "Ciência",
+      gradient: "from-emerald-500/20 to-teal-500/20",
+      borderColor: "border-emerald-500/30"
+    },
+    {
+      id: 94,
+      title: "Inteligência Fluida vs Cristalizada: Como Usar Ambas Para Ganhar Dinheiro",
+      slug: "inteligencia-fluida-cristalizada-ganhar-dinheiro",
+      description: "Entenda os dois tipos de inteligência e como aplicá-los estrategicamente para aumentar sua renda e construir riqueza.",
+      icon: Sparkles,
+      category: "Ciência",
+      gradient: "from-violet-500/20 to-purple-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 95,
+      title: "Dopamina e Tomada de Decisão: A Química do Sucesso Financeiro",
+      slug: "dopamina-decisao-sucesso-financeiro",
+      description: "Como a dopamina influencia suas decisões financeiras. Aprenda a hackear seu cérebro para tomar decisões mais inteligentes e lucrativas.",
+      icon: Zap,
+      category: "Ciência",
+      gradient: "from-pink-500/20 to-rose-500/20",
+      borderColor: "border-pink-500/30"
+    },
+    {
+      id: 96,
+      title: "Inteligência Prática vs Teórica: Qual Gera Mais Dinheiro?",
+      slug: "inteligencia-pratica-teorica-dinheiro",
+      description: "Descubra a diferença entre inteligência prática e teórica e qual tipo gera mais renda. Estratégias para desenvolver ambas e maximizar ganhos.",
+      icon: Briefcase,
+      category: "Conceitos",
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 97,
+      title: "QI Empresarial vs QI Acadêmico: Qual Gera Mais Riqueza?",
+      slug: "qi-empresarial-vs-qi-academico",
+      description: "Descubra a diferença entre inteligência acadêmica e empresarial. Por que pessoas com QI alto nem sempre ficam ricas e como desenvolver inteligência para negócios.",
+      icon: Briefcase,
+      category: "Conceitos",
+      gradient: "from-amber-500/20 to-orange-500/20",
+      borderColor: "border-amber-500/30"
+    },
+    {
+      id: 98,
+      title: "Inteligência Social vs QI: O Que Importa Mais Para o Sucesso?",
+      slug: "inteligencia-social-vs-qi",
+      description: "Descubra por que inteligência social pode ser mais importante que QI para sucesso profissional e financeiro. Como desenvolver ambas para maximizar resultados.",
+      icon: Users,
+      category: "Conceitos",
+      gradient: "from-purple-500/20 to-pink-500/20",
+      borderColor: "border-purple-500/30"
+    },
+    {
+      id: 99,
+      title: "Pensamento Crítico vs QI: Qual é Mais Importante?",
+      slug: "pensamento-critico-vs-qi",
+      description: "Descubra por que pensamento crítico pode ser mais valioso que QI alto. Como desenvolver habilidade de análise e tomada de decisão para sucesso profissional.",
+      icon: Target,
+      category: "Conceitos",
+      gradient: "from-indigo-500/20 to-blue-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      id: 100,
+      title: "Inteligências Múltiplas: Como Identificar e Monetizar Seus Talentos",
+      slug: "inteligencias-multiplas-monetizar",
+      description: "Descubra suas inteligências dominantes e aprenda estratégias práticas para transformá-las em renda. Guia completo com exemplos reais de monetização.",
+      icon: Sparkles,
+      category: "Conceitos",
+      gradient: "from-violet-500/20 to-purple-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 101,
+      title: "Inteligência Emocional vs QI: Qual Determina Mais Sucesso?",
+      slug: "inteligencia-emocional-vs-qi",
+      description: "Descubra por que inteligência emocional pode ser mais importante que QI para sucesso. Dados, estudos e como desenvolver ambas habilidades.",
+      icon: Sparkles,
+      category: "Conceitos",
+      gradient: "from-rose-500/20 to-pink-500/20",
+      borderColor: "border-rose-500/30"
     }
   ];
+
+  // Extrair categorias únicas
+  const categories = useMemo(() => {
+    const cats = ["Todos", ...new Set(allArticles.map(a => a.category))];
+    return cats.sort();
+  }, []);
+
+  // Filtrar artigos por categoria
+  const filteredArticles = useMemo(() => {
+    if (selectedCategory === "Todos") return allArticles;
+    return allArticles.filter(a => a.category === selectedCategory);
+  }, [selectedCategory]);
+
+  // Calcular paginação
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const endIndex = startIndex + articlesPerPage;
+  const currentArticles = filteredArticles.slice(startIndex, endIndex);
+
+  // Reset para página 1 quando mudar categoria
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory]);
+
+  // Scroll to top ao mudar página
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
 
   // Embaralhar artigos dinamicamente toda vez que o componente é montado
   const [articles, setArticles] = useState(() => shuffleArray(allArticles));
@@ -457,6 +578,22 @@ const Blog = () => {
               <Brain className="w-8 h-8 text-primary" />
               <span className="text-2xl font-bold">BomQI</span>
             </Link>
+            
+            <nav className="hidden md:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
+              <button
+                onClick={() => navigate("/blog")}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Blog
+              </button>
+              <button
+                onClick={() => navigate("/como-funciona")}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Como Funciona
+              </button>
+            </nav>
+            
             <Button onClick={() => navigate("/teste")} size="lg">
               Fazer o Teste
             </Button>
@@ -479,9 +616,33 @@ const Blog = () => {
           </p>
         </div>
 
+        {/* Filtros por Categoria */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-5xl mx-auto">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                selectedCategory === category
+                  ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Contador de Artigos */}
+        <div className="text-center mb-6">
+          <p className="text-sm text-muted-foreground">
+            Mostrando {startIndex + 1}-{Math.min(endIndex, filteredArticles.length)} de {filteredArticles.length} artigos
+          </p>
+        </div>
+
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {articles.map((article, index) => {
+          {currentArticles.map((article, index) => {
             const Icon = article.icon;
             return (
               <Card
@@ -520,6 +681,60 @@ const Blog = () => {
             );
           })}
         </div>
+
+        {/* Paginação */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-12">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="disabled:opacity-50"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </Button>
+
+            <div className="flex gap-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                // Mostrar apenas páginas próximas
+                if (
+                  page === 1 ||
+                  page === totalPages ||
+                  (page >= currentPage - 1 && page <= currentPage + 1)
+                ) {
+                  return (
+                    <Button
+                      key={page}
+                      variant={currentPage === page ? "default" : "outline"}
+                      size="icon"
+                      onClick={() => setCurrentPage(page)}
+                      className={currentPage === page ? "shadow-lg" : ""}
+                    >
+                      {page}
+                    </Button>
+                  );
+                } else if (
+                  page === currentPage - 2 ||
+                  page === currentPage + 2
+                ) {
+                  return <span key={page} className="px-2 text-muted-foreground">...</span>;
+                }
+                return null;
+              })}
+            </div>
+
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="disabled:opacity-50"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </Button>
+          </div>
+        )}
 
         {/* CTA Section */}
         <div className="mt-16 text-center">

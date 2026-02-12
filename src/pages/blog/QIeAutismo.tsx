@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import ArticleHeader from "@/components/ArticleHeader";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -48,17 +49,7 @@ const QIeAutismo = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Brain className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold">BomQI</span>
-            </Link>
-            <Button onClick={() => navigate("/teste")} size="lg">Fazer o Teste</Button>
-          </div>
-        </div>
-      </header>
+      <ArticleHeader />
 
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         <nav className="text-sm text-muted-foreground mb-6">
@@ -101,7 +92,7 @@ const QIeAutismo = () => {
               Distribuição de QI no TEA
             </h3>
             <ul className="space-y-2">
-              <li>• <strong>~30%:</strong> Deficiência intelectual (QI &lt; 70)</li>
+              <li>• <strong>~30%:</strong> Deficiência intelectual (QI menor que  70)</li>
               <li>• <strong>~25%:</strong> Limítrofe (QI 70-84)</li>
               <li>• <strong>~30%:</strong> Média (QI 85-115)</li>
               <li>• <strong>~15%:</strong> Acima da média ou superdotação (QI &gt; 115)</li>

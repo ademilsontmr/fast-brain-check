@@ -73,6 +73,15 @@ const QIEGeneticaQuantoNasceAprende = lazy(() => import("./pages/blog/QIEGenetic
 const ComoFicarMaisInteligente = lazy(() => import("./pages/blog/ComoFicarMaisInteligente"));
 const ComoFicarRicoRelacaoQI = lazy(() => import("./pages/blog/ComoFicarRicoRelacaoQI"));
 const ComoFicarRicoInternetQI = lazy(() => import("./pages/blog/ComoFicarRicoInternetQI"));
+const NeurocienciaRiquezaQIPatrimonio = lazy(() => import("./pages/blog/NeurocienciaRiquezaQIPatrimonio"));
+const InteligenciaFluidaCristalizadaGanharDinheiro = lazy(() => import("./pages/blog/InteligenciaFluidaCristalizadaGanharDinheiro"));
+const DopaminaDecisaoSucessoFinanceiro = lazy(() => import("./pages/blog/DopaminaDecisaoSucessoFinanceiro"));
+const InteligenciaPraticaTeoricaDinheiro = lazy(() => import("./pages/blog/InteligenciaPraticaTeoricaDinheiro"));
+const QIEmpresarialVsQIAcademico = lazy(() => import("./pages/blog/QIEmpresarialVsQIAcademico"));
+const InteligenciaSocialVsQI = lazy(() => import("./pages/blog/InteligenciaSocialVsQI"));
+const PensamentoCriticoVsQI = lazy(() => import("./pages/blog/PensamentoCriticoVsQI"));
+const InteligenciasMultiplasMonetizar = lazy(() => import("./pages/blog/InteligenciasMultiplasMonetizar"));
+const InteligenciaEmocionalVsQI = lazy(() => import("./pages/blog/InteligenciaEmocionalVsQI"));
 const EscalaInteligenciaWechslerWAIS = lazy(() => import("./pages/blog/EscalaInteligenciaWechslerWAIS"));
 const ComoManterMenteAfiada = lazy(() => import("./pages/blog/ComoManterMenteAfiada"));
 const ReduzindoDemenciaTreinamentoCerebral = lazy(() => import("./pages/blog/ReduzindoDemenciaTreinamentoCerebral"));
@@ -649,6 +658,78 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoFicarRicoInternetQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/neurociencia-riqueza-qi-patrimonio"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <NeurocienciaRiquezaQIPatrimonio />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/inteligencia-fluida-cristalizada-ganhar-dinheiro"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <InteligenciaFluidaCristalizadaGanharDinheiro />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/dopamina-decisao-sucesso-financeiro"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <DopaminaDecisaoSucessoFinanceiro />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/inteligencia-pratica-teorica-dinheiro"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <InteligenciaPraticaTeoricaDinheiro />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-empresarial-vs-qi-academico"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIEmpresarialVsQIAcademico />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/inteligencia-social-vs-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <InteligenciaSocialVsQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/pensamento-critico-vs-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <PensamentoCriticoVsQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/inteligencias-multiplas-monetizar"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <InteligenciasMultiplasMonetizar />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/inteligencia-emocional-vs-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <InteligenciaEmocionalVsQI />
               </Suspense>
             }
           />
