@@ -22,6 +22,7 @@ const QIMedioMercadoFinanceiro = () => {
     title: "QI Médio no Mercado Financeiro",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio mercado financeiro, inteligência finanças, QI profissão trader, traders inteligentes, QI área financeira, inteligência investimentos, QI médio finanças, traders QI alto, profissão trader inteligência, QI carreira financeira",
   });
 
   useStructuredData([

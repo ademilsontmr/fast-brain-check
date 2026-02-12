@@ -22,7 +22,8 @@ const QIMedioProfessores = () => {
         title: "QI Médio de Professores: Inteligência na Educação",
         description: articleDescription,
         url: articleUrl,
-    });
+    keywords: "QI médio professores, inteligência docência, QI profissão professor, professores inteligentes, QI área educação, inteligência pedagógica, QI médio docência, professores QI alto, profissão professor inteligência, QI carreira docente",
+  });
 
     useStructuredData([
         {

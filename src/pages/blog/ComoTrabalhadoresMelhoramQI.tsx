@@ -22,6 +22,7 @@ const ComoTrabalhadoresMelhoramQI = () => {
     title: "Como Trabalhadores Melhoram o QI: Desenvolvimento Cognitivo no Ambiente de Trabalho",
     description: articleDescription,
     url: articleUrl,
+    keywords: "trabalhadores QI, profissionais inteligência, QI médio trabalhadores, melhorar QI trabalho, inteligência trabalhadores, cognição profissional, trabalhadores inteligentes, QI mercado trabalho, carreira QI, desenvolver QI profissional",
   });
 
   useStructuredData([

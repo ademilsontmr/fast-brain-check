@@ -21,6 +21,7 @@ const QIProcessosSeletivos = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "QIProcessosSeletivos, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

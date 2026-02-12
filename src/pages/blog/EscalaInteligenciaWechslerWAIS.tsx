@@ -21,6 +21,7 @@ const EscalaInteligenciaWechslerWAIS = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "EscalaInteligenciaWechslerWAIS, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

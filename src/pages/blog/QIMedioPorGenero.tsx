@@ -22,6 +22,7 @@ const QIMedioPorGenero = () => {
     title: "QI Médio por Gênero: Diferenças e Semelhanças",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio gênero, inteligência homens mulheres, QI por sexo, diferença QI gênero, QI masculino feminino, inteligência gênero, QI médio homens, QI médio mulheres, gênero inteligência, QI sexo",
   });
 
   useStructuredData([

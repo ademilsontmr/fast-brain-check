@@ -22,6 +22,7 @@ const QIMedioCorredores = () => {
     title: "QI Médio de Corredores: A Relação Entre Corrida e Inteligência",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio corredores, inteligência corrida, QI profissão running, corredores inteligentes, QI área atletismo, inteligência corrida, QI médio running, corredores QI alto, profissão corredor inteligência, QI carreira corrida",
   });
 
   useStructuredData([

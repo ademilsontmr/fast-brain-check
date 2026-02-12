@@ -22,6 +22,7 @@ const QIeAnsiedade = () => {
     title: "QI e Ansiedade",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI ansiedade, inteligência ansiedade, ansiedade cognição, QI transtorno ansiedade, ansiedade cérebro, QI estresse, ansiedade desenvolvimento cognitivo, inteligência ansioso, QI saúde mental, ansiedade mente",
   });
 
   // Structured Data para Article e BreadcrumbList (Rich Results)

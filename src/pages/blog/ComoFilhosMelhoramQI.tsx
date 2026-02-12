@@ -15,7 +15,7 @@ const ComoFilhosMelhoramQI = () => {
   const articleTitle = "Como Ajudar Seus Filhos a Melhorar o QI: Guia para Pais";
   const articleDescription = "Estratégias comprovadas para pais ajudarem seus filhos a desenvolver capacidades cognitivas, memória e inteligência desde cedo.";
   
-  useSEO({ title: "Como Filhos Melhoram QI", description: articleDescription, url: articleUrl });
+  useSEO({ title: "Como Filhos Melhoram QI", description: articleDescription, url: articleUrl, keywords: "filhos melhoram QI, ter filhos inteligência, paternidade QI, maternidade inteligência, filhos desenvolvimento cognitivo, pais inteligentes, criar filhos QI, parentalidade inteligência, filhos cérebro, QI pais" });
   useStructuredData([
     { "@context": "https://schema.org", "@type": "Article", "headline": articleTitle, "description": articleDescription, "image": "https://bomqi.com.br/favicon-brain-icon.png", "datePublished": "2024-01-15", "dateModified": "2024-01-15", "author": { "@type": "Organization", "name": "BomQI" }, "publisher": { "@type": "Organization", "name": "BomQI", "logo": { "@type": "ImageObject", "url": "https://bomqi.com.br/favicon-brain-icon.png" } } },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bomqi.com.br" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bomqi.com.br/blog" }, { "@type": "ListItem", "position": 3, "name": articleTitle, "item": articleUrl }] }

@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio netos, inteligência netos, QI netos, netos inteligentes, QI infantil netos, inteligência crianças netos, QI médio criança neto, netos QI alto, netos inteligência, QI desenvolvimento netos",
   });
 
   useStructuredData([

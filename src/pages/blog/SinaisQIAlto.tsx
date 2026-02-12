@@ -23,7 +23,8 @@ const SinaisQIAlto = () => {
         title: "Sinais de QI Alto: 15 Características de Pessoas Inteligentes",
         description: articleDescription,
         url: articleUrl,
-    });
+    keywords: "sinais QI alto, características QI alto, sintomas inteligência alta, indicadores QI alto, traços QI alto, sinais inteligência superior, características pessoas inteligentes, como saber QI alto, identificar QI alto, sinais inteligência",
+  });
 
     useStructuredData([
         {

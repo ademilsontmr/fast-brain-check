@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "correr melhora QI, corrida inteligência, exercício aeróbico cérebro, correr cognição, benefícios corrida mente, running QI, corrida desenvolvimento cognitivo, exercício físico inteligência, correr cérebro, cardio QI",
   });
 
   useStructuredData([

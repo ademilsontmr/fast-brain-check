@@ -22,6 +22,7 @@ const QIeExercicioFisico = () => {
     title: "QI e Exercício Físico",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI exercício físico, inteligência atividade física, exercício cognição, QI treino, exercício cérebro, QI fitness, exercício desenvolvimento cognitivo, inteligência exercício, QI atividade física, exercício mente",
   });
 
   // Structured Data para Article e BreadcrumbList (Rich Results)

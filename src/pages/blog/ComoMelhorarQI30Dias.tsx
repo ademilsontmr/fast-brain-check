@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "melhorar QI 30 dias, aumentar inteligência mês, QI em 30 dias, treino QI mensal, desenvolver QI rápido, programa 30 dias QI, desafio QI mês, melhorar inteligência 30 dias, treino intensivo QI, QI um mês",
   });
 
   useStructuredData([

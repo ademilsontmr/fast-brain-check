@@ -21,6 +21,7 @@ const QICriancasSinaisSuperdotacao = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "QICriancasSinaisSuperdotacao, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

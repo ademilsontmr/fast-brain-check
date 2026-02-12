@@ -18,7 +18,7 @@ const ComoAdvogadosMelhoramQI = () => {
   const publishDate = "2024-01-15";
   const modifiedDate = "2024-01-15";
   
-  useSEO({ title: "Como Advogados Melhoram QI", description: articleDescription, url: articleUrl });
+  useSEO({ title: "Como Advogados Melhoram QI", description: articleDescription, url: articleUrl, keywords: "advogados QI, profissão advogado inteligência, QI médio advogados, melhorar QI advocacia, inteligência jurídica, raciocínio lógico direito, advogados inteligentes, QI profissionais direito, carreira jurídica QI, desenvolver QI advogado" });
 
   useStructuredData([
     { "@context": "https://schema.org", "@type": "Article", "headline": articleTitle, "description": articleDescription, "image": "https://bomqi.com.br/favicon-brain-icon.png", "datePublished": publishDate, "dateModified": modifiedDate, "author": { "@type": "Organization", "name": "BomQI" }, "publisher": { "@type": "Organization", "name": "BomQI", "logo": { "@type": "ImageObject", "url": "https://bomqi.com.br/favicon-brain-icon.png" } } },

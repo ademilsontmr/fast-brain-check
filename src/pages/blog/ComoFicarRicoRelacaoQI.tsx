@@ -21,6 +21,7 @@ const ComoFicarRicoRelacaoQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "ficar rico QI, relação QI riqueza, inteligência gera dinheiro, QI e sucesso financeiro, inteligência financeira, QI milionários, riqueza inteligência, QI pessoas ricas, sucesso financeiro QI, inteligência patrimônio",
   });
 
   useStructuredData(

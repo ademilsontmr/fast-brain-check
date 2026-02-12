@@ -22,6 +22,7 @@ const ComoAprenderMaisRapidoNeurociencia = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "aprender mais rápido, neurociência aprendizado, técnicas aprendizado rápido, aprender rápido neurociência, métodos aprendizado eficaz, acelerar aprendizado, neurociência educação, aprendizado eficiente, técnicas estudo rápido, otimizar aprendizado",
   });
 
   useStructuredData(

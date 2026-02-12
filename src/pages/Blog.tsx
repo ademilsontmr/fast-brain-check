@@ -26,6 +26,7 @@ const Blog = () => {
   useSEO({
     title: "Blog BomQI",
     description: "Artigos sobre inteligência, QI, desenvolvimento cognitivo e hábitos baseados em ciência para quem quer evoluir.",
+    keywords: "blog QI, artigos inteligência, desenvolvimento cognitivo, aumentar QI, neurociência, inteligência emocional, teste QI, hábitos inteligentes, ciência inteligência, melhorar cérebro",
     url: "https://bomqi.com.br/blog",
     type: "website",
   });

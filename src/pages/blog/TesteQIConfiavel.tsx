@@ -22,6 +22,7 @@ const TesteQIConfiavel = () => {
     title: "Teste de QI Confiável: Como Identificar e Escolher o Melhor",
     description: articleDescription,
     url: articleUrl,
+    keywords: "teste QI confiável, teste inteligência confiável, QI teste válido, teste QI preciso, avaliação QI confiável, teste QI científico, teste inteligência válido, QI teste sério, teste QI legítimo, avaliação inteligência confiável",
   });
 
   useStructuredData([

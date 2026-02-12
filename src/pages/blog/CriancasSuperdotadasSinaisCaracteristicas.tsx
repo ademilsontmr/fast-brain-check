@@ -21,6 +21,7 @@ const CriancasSuperdotadasSinaisCaracteristicas = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "CriancasSuperdotadasSinaisCaracteristicas, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

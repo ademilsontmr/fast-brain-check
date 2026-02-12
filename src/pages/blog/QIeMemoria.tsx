@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI memória, inteligência memória, memória cognição, QI memorização, memória cérebro, QI capacidade memória, memória desenvolvimento cognitivo, inteligência memória, QI retenção, memória mente",
   });
 
   useStructuredData([

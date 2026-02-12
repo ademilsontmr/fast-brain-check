@@ -22,6 +22,7 @@ const QIMedioFilhos = () => {
     title: "QI Médio dos Filhos",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio filhos, inteligência crianças, QI filhos, crianças inteligentes, QI infantil, inteligência infância, QI médio criança, filhos QI alto, crianças inteligência, QI desenvolvimento infantil",
   });
 
   useStructuredData([

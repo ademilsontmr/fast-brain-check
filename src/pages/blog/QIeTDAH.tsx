@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI TDAH, inteligência TDAH, TDAH cognição, QI déficit atenção, TDAH cérebro, QI hiperatividade, TDAH desenvolvimento cognitivo, inteligência TDAH, QI transtorno atenção, TDAH mente",
   });
 
   useStructuredData([

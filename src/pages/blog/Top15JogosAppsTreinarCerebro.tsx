@@ -21,6 +21,7 @@ const Top15JogosAppsTreinarCerebro = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "Top15JogosAppsTreinarCerebro, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

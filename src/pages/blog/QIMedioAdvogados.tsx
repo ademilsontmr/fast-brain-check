@@ -22,6 +22,7 @@ const QIMedioAdvogados = () => {
     title: "QI Médio de Advogados: Inteligência na Advocacia",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio advogados, inteligência advogados, QI profissão direito, advogados inteligentes, QI área jurídica, inteligência jurídica, QI médio direito, advogados QI alto, profissão advogado inteligência, QI carreira jurídica",
   });
 
   useStructuredData([

@@ -15,7 +15,7 @@ const ComoJovensMelhoramQI = () => {
   const articleTitle = "Como Jovens Podem Melhorar o QI: Guia Completo";
   const articleDescription = "Estratégias comprovadas para jovens desenvolverem suas capacidades cognitivas, memória e inteligência durante a fase de maior plasticidade cerebral.";
   
-  useSEO({ title: "Como Jovens Melhoram QI", description: articleDescription, url: articleUrl });
+  useSEO({ title: "Como Jovens Melhoram QI", description: articleDescription, url: articleUrl, keywords: "jovens QI, adolescentes inteligência, melhorar QI jovem, juventude desenvolvimento cognitivo, jovens cérebro, QI adolescência, cognição jovens, desenvolver QI juventude, jovens inteligentes, QI na juventude" });
   useStructuredData([
     { "@context": "https://schema.org", "@type": "Article", "headline": articleTitle, "description": articleDescription, "image": "https://bomqi.com.br/favicon-brain-icon.png", "datePublished": "2024-01-15", "dateModified": "2024-01-15", "author": { "@type": "Organization", "name": "BomQI" }, "publisher": { "@type": "Organization", "name": "BomQI", "logo": { "@type": "ImageObject", "url": "https://bomqi.com.br/favicon-brain-icon.png" } } },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bomqi.com.br" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bomqi.com.br/blog" }, { "@type": "ListItem", "position": 3, "name": articleTitle, "item": articleUrl }] }

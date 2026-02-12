@@ -22,6 +22,7 @@ const QIMedioTrabalhadores = () => {
     title: "QI Médio de Trabalhadores: Inteligência no Ambiente de Trabalho",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio trabalhadores, inteligência profissionais, QI profissão trabalhador, trabalhadores inteligentes, QI mercado trabalho, inteligência profissional, QI médio profissionais, trabalhadores QI alto, profissão trabalhador inteligência, QI carreira profissional",
   });
 
   useStructuredData([

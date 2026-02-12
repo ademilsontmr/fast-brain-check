@@ -21,6 +21,7 @@ const ComoFicarMaisInteligente = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "como ficar mais inteligente, ser mais inteligente, desenvolver inteligência, melhorar capacidade mental, aumentar inteligência, treinar mente, ficar inteligente, desenvolver cérebro, potencializar mente, inteligência superior",
   });
 
   useStructuredData(

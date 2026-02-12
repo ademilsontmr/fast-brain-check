@@ -21,6 +21,7 @@ const QICriatividade = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "QICriatividade, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

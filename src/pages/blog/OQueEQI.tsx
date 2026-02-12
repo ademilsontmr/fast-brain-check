@@ -22,6 +22,7 @@ const OQueEQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "OQueEQI, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

@@ -22,6 +22,7 @@ const QIeAutismo = () => {
     title: "QI e Autismo",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI autismo, inteligência autista, autismo cognição, QI TEA, autismo cérebro, QI espectro autista, autismo desenvolvimento cognitivo, inteligência autismo, QI transtorno autista, autismo mente",
   });
 
   useStructuredData([

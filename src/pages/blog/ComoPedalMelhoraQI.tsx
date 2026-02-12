@@ -15,7 +15,7 @@ const ComoPedalMelhoraQI = () => {
   const articleTitle = "Como o Pedal Melhora o QI: Benefícios Cognitivos do Ciclismo";
   const articleDescription = "Descubra como pedalar regularmente pode melhorar sua inteligência, memória e função cognitiva através de mecanismos neurológicos comprovados.";
   
-  useSEO({ title: "Como Pedal Melhora QI", description: articleDescription, url: articleUrl });
+  useSEO({ title: "Como Pedal Melhora QI", description: articleDescription, url: articleUrl, keywords: "pedalar QI, ciclismo inteligência, bicicleta cérebro, pedalar cognição, benefícios ciclismo mente, bike QI, ciclismo desenvolvimento cognitivo, pedalar inteligência, bicicleta QI, cycling cérebro" });
   useStructuredData([
     { "@context": "https://schema.org", "@type": "Article", "headline": articleTitle, "description": articleDescription, "image": "https://bomqi.com.br/favicon-brain-icon.png", "datePublished": "2024-01-15", "dateModified": "2024-01-15", "author": { "@type": "Organization", "name": "BomQI" }, "publisher": { "@type": "Organization", "name": "BomQI", "logo": { "@type": "ImageObject", "url": "https://bomqi.com.br/favicon-brain-icon.png" } } },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bomqi.com.br" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bomqi.com.br/blog" }, { "@type": "ListItem", "position": 3, "name": articleTitle, "item": articleUrl }] }

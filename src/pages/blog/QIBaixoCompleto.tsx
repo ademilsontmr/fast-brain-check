@@ -22,6 +22,7 @@ const QIBaixoCompleto = () => {
     title: "QI Baixo",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI baixo, inteligência abaixo média, QI inferior, baixo QI características, QI reduzido, inteligência limitada, QI abaixo 90, déficit cognitivo, QI baixo causas, melhorar QI baixo",
   });
 
   // Structured Data para Article e BreadcrumbList (Rich Results)

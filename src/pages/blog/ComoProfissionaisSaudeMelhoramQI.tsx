@@ -22,6 +22,7 @@ const ComoProfissionaisSaudeMelhoramQI = () => {
     title: "Como Profissionais de Saúde Melhoram o QI: Desenvolvimento Cognitivo no Cuidado",
     description: articleDescription,
     url: articleUrl,
+    keywords: "profissionais saúde QI, área saúde inteligência, QI médio saúde, melhorar QI saúde, inteligência profissionais saúde, raciocínio clínico, profissionais saúde inteligentes, QI área médica, carreira saúde QI, desenvolver QI saúde",
   });
 
   useStructuredData([

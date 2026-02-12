@@ -21,6 +21,7 @@ const IATestesCognitivos = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "IATestesCognitivos, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

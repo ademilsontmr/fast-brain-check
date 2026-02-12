@@ -21,6 +21,7 @@ const ComoInterpretarResultadoQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "interpretar resultado QI, entender pontuação QI, resultado teste QI, análise QI, compreender QI, significado pontuação QI, avaliar resultado QI, interpretação teste inteligência, entender score QI, análise resultado QI",
   });
 
   useStructuredData(

@@ -16,6 +16,7 @@ const Index = () => {
   useSEO({
     title: "Descubra Seu QI em 3 Minutos | Teste de QI Online Científico",
     description: "Faça o teste de QI mais rápido e preciso do Brasil. Descubra seu resultado completo em apenas 3 minutos com análise científica detalhada.",
+    keywords: "teste de QI, teste de inteligência online, QI grátis, descobrir QI, quociente de inteligência, teste QI rápido, teste cognitivo, avaliação QI, medir inteligência, teste QI científico",
     url: "https://bomqi.com.br/",
     type: "website",
   });

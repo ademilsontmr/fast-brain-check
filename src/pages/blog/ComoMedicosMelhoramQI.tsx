@@ -15,7 +15,7 @@ const ComoMedicosMelhoramQI = () => {
   const articleTitle = "Como Médicos Podem Melhorar o QI: Cognição na Medicina";
   const articleDescription = "Estratégias para médicos aprimorarem capacidades cognitivas essenciais para diagnóstico, tomada de decisão e atualização profissional.";
   
-  useSEO({ title: "Como Médicos Melhoram QI", description: articleDescription, url: articleUrl });
+  useSEO({ title: "Como Médicos Melhoram QI", description: articleDescription, url: articleUrl, keywords: "médicos QI, profissão médico inteligência, QI médio médicos, melhorar QI medicina, inteligência médicos, raciocínio clínico, médicos inteligentes, QI profissionais saúde, carreira medicina QI, desenvolver QI médico" });
   useStructuredData([
     { "@context": "https://schema.org", "@type": "Article", "headline": articleTitle, "description": articleDescription, "image": "https://bomqi.com.br/favicon-brain-icon.png", "datePublished": "2024-01-15", "dateModified": "2024-01-15", "author": { "@type": "Organization", "name": "BomQI" }, "publisher": { "@type": "Organization", "name": "BomQI", "logo": { "@type": "ImageObject", "url": "https://bomqi.com.br/favicon-brain-icon.png" } } },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bomqi.com.br" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bomqi.com.br/blog" }, { "@type": "ListItem", "position": 3, "name": articleTitle, "item": articleUrl }] }

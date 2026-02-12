@@ -22,6 +22,7 @@ const QIMedioCiclistas = () => {
     title: "QI Médio dos Ciclistas",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio ciclistas, inteligência ciclismo, QI profissão bike, ciclistas inteligentes, QI área cycling, inteligência pedal, QI médio bicicleta, ciclistas QI alto, profissão ciclista inteligência, QI carreira ciclismo",
   });
 
   useStructuredData([

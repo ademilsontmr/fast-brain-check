@@ -21,6 +21,7 @@ const QISucessoProfissional = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "QISucessoProfissional, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

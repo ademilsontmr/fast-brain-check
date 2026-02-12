@@ -22,6 +22,7 @@ const QIMedioMaes = () => {
     title: "QI Médio das Mães",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio mães, inteligência maternidade, QI mães, mães inteligentes, QI materna, inteligência maternal, QI médio maternidade, mães QI alto, maternidade inteligência, QI mulheres mães",
   });
 
   useStructuredData([

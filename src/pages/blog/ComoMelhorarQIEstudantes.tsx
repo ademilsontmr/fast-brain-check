@@ -18,7 +18,7 @@ const ComoMelhorarQIEstudantes = () => {
   const publishDate = "2024-01-15";
   const modifiedDate = "2024-01-15";
   
-  useSEO({ title: "Como Melhorar QI - Estudantes", description: articleDescription, url: articleUrl });
+  useSEO({ title: "Como Melhorar QI - Estudantes", description: articleDescription, url: articleUrl, keywords: "melhorar QI estudantes, QI alunos, desenvolver inteligência estudantes, treinar QI escola, exercícios QI estudantes, estudantes inteligentes, aumentar QI acadêmico, cognição estudantes, QI escolar, inteligência estudantil" });
 
   useStructuredData([
     { "@context": "https://schema.org", "@type": "Article", "headline": articleTitle, "description": articleDescription, "image": "https://bomqi.com.br/favicon-brain-icon.png", "datePublished": publishDate, "dateModified": modifiedDate, "author": { "@type": "Organization", "name": "BomQI" }, "publisher": { "@type": "Organization", "name": "BomQI", "logo": { "@type": "ImageObject", "url": "https://bomqi.com.br/favicon-brain-icon.png" } } },

@@ -22,6 +22,7 @@ const ComoMercadoFinanceiroMelhoraQI = () => {
     title: "Como o Mercado Financeiro Melhora o QI: Desenvolvimento Cognitivo Profissional",
     description: articleDescription,
     url: articleUrl,
+    keywords: "mercado financeiro QI, investimentos inteligência, trading QI, finanças desenvolvimento cognitivo, investir inteligência, mercado financeiro cérebro, trader QI, investimentos cognição, bolsa valores QI, finanças inteligência",
   });
 
   useStructuredData([

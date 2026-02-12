@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI normal, inteligência média, QI médio, QI padrão, inteligência normal, QI 90-110, faixa QI normal, QI dentro média, inteligência média população, QI típico",
   });
 
   useStructuredData([

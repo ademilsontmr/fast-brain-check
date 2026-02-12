@@ -22,6 +22,7 @@ const ComoMaesMelhoramQI = () => {
     title: "Como Mães Melhoram o QI: Estratégias Cientificamente Comprovadas",
     description: articleDescription,
     url: articleUrl,
+    keywords: "mães QI, maternidade inteligência, melhorar QI mãe, mães desenvolvimento cognitivo, mães cérebro, QI maternidade, cognição mães, desenvolver QI maternidade, mães inteligentes, QI mulheres mães",
   });
 
   useStructuredData([

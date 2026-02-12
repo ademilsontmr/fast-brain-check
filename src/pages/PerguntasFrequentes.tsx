@@ -17,6 +17,7 @@ const PerguntasFrequentes = () => {
   useSEO({
     title: "Perguntas Frequentes sobre Teste de QI",
     description: "Tire suas dúvidas sobre o teste de QI online do BomQI. Saiba como funciona, quanto tempo leva e o que está incluído no resultado.",
+    keywords: "FAQ teste QI, dúvidas teste inteligência, perguntas teste QI, como funciona teste QI, teste QI grátis, resultado teste QI, tempo teste inteligência, teste QI online dúvidas, perguntas frequentes QI, teste QI confiável",
     url: "https://bomqi.com.br/perguntas-frequentes",
   });
 

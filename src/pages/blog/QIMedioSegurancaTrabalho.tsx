@@ -28,7 +28,8 @@ const QIMedioSegurancaTrabalho = () => {
         title: "QI Médio de Profissionais de Segurança do Trabalho",
         description: articleDescription,
         url: articleUrl,
-    });
+    keywords: "QI médio segurança trabalho, inteligência segurança, QI profissão segurança, profissionais segurança inteligentes, QI área segurança, inteligência preventiva, QI médio segurança, segurança QI alto, profissão segurança inteligência, QI carreira segurança",
+  });
 
     useStructuredData([
         {

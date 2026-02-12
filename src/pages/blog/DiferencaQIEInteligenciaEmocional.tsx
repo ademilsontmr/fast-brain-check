@@ -21,6 +21,7 @@ const DiferencaQIEInteligenciaEmocional = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "DiferencaQIEInteligenciaEmocional, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

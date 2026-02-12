@@ -22,6 +22,7 @@ const ComoNetosMelhoramQI = () => {
     title: "Como Netos Melhoram o QI: Desenvolvimento Cognitivo Intergeracional",
     description: articleDescription,
     url: articleUrl,
+    keywords: "netos QI, avós inteligência, convivência netos cérebro, netos desenvolvimento cognitivo, avós netos QI, relacionamento intergeracional inteligência, netos estimulam mente, avós cognição, netos cérebro avós, QI avós",
   });
 
   useStructuredData([

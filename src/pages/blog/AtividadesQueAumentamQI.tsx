@@ -21,6 +21,7 @@ const AtividadesQueAumentamQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "atividades aumentam QI, exercícios cognitivos, jogos inteligência, treinar cérebro, melhorar QI atividades, exercícios mentais, atividades cerebrais, desenvolver inteligência, práticas aumentar QI, hobbies inteligentes",
   });
 
   useStructuredData(

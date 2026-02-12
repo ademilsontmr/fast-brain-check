@@ -21,6 +21,7 @@ const ComoFicarRicoInternetQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "ficar rico internet QI, inteligência ganhar dinheiro online, QI negócios digitais, empreendedorismo digital inteligência, renda online QI, internet riqueza inteligência, negócios online QI, ganhar dinheiro internet inteligente, QI empreendedor digital, riqueza digital QI",
   });
 
   useStructuredData(

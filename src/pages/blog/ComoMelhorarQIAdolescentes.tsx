@@ -22,6 +22,7 @@ const ComoMelhorarQIAdolescentes = () => {
     title: "Como Melhorar o QI de Adolescentes: Guia Completo e Científico",
     description: articleDescription,
     url: articleUrl,
+    keywords: "melhorar QI adolescentes, QI adolescência, desenvolver inteligência jovens, treinar QI adolescente, exercícios QI jovens, adolescentes inteligentes, aumentar QI juventude, cognição adolescentes, QI teens, inteligência adolescência",
   });
 
   useStructuredData([

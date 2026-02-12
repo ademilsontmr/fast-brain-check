@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio cavaleiros, inteligência equitação, QI profissão cavalo, cavaleiros inteligentes, QI área equestre, inteligência hipismo, QI médio equitação, cavaleiros QI alto, profissão cavaleiro inteligência, QI carreira equestre",
   });
 
   useStructuredData([

@@ -19,6 +19,7 @@ const InteligenciaAdaptativaSeculo21 = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "InteligenciaAdaptativaSeculo21, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

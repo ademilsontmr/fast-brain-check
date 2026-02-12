@@ -21,6 +21,7 @@ const ComoAtivarModoFocoProfundo = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "modo foco profundo, ativar foco, concentração profunda, deep work, foco intenso, técnicas concentração, melhorar foco, estado flow, concentração máxima, produtividade foco",
   });
 
   useStructuredData(

@@ -29,6 +29,7 @@ const ComoAumentarQI = () => {
     title: "Como Aumentar Seu QI",
     description: articleDescription,
     url: articleUrl,
+    keywords: "como aumentar QI, aumentar inteligência, melhorar QI, desenvolver QI, treinar inteligência, exercícios QI, técnicas aumentar QI, métodos melhorar inteligência, elevar QI, potencializar inteligência",
   });
 
   // Structured Data para Article e BreadcrumbList (Rich Results)

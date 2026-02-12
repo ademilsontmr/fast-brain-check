@@ -22,6 +22,7 @@ const ReligiosidadeEQI = () => {
     title: "Religiosidade e QI",
     description: articleDescription,
     url: articleUrl,
+    keywords: "religiosidade QI, religião inteligência, fé cognição, espiritualidade QI, religião cérebro, religiosidade desenvolvimento cognitivo, fé inteligência, religião mente, espiritualidade cognição, QI religião",
   });
 
   useStructuredData([

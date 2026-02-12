@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI sono, inteligência sono, sono cognição, QI dormir, sono cérebro, QI qualidade sono, sono desenvolvimento cognitivo, inteligência sono, QI descanso, sono mente",
   });
 
   useStructuredData([

@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio profissionais saúde, inteligência área saúde, QI profissão saúde, profissionais saúde inteligentes, QI área médica, inteligência saúde, QI médio saúde, profissionais saúde QI alto, profissão saúde inteligência, QI carreira saúde",
   });
 
   useStructuredData([

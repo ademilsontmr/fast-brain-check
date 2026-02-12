@@ -21,6 +21,7 @@ const ComoAumentarQIRapidamente = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "aumentar QI rápido, melhorar inteligência rápido, QI rápido, técnicas rápidas QI, acelerar inteligência, métodos rápidos QI, desenvolver QI rápido, treino intensivo QI, boost inteligência, QI em pouco tempo",
   });
 
   useStructuredData(

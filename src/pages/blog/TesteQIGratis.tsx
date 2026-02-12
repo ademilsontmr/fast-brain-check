@@ -22,6 +22,7 @@ const TesteQIGratis = () => {
     title: "Teste de QI Grátis",
     description: articleDescription,
     url: articleUrl,
+    keywords: "teste QI grátis, teste inteligência gratuito, QI teste free, teste QI online grátis, avaliação QI grátis, teste QI sem pagar, teste inteligência free, QI teste gratuito, teste QI livre, avaliação inteligência grátis",
   });
 
   // Structured Data para Article e BreadcrumbList (Rich Results)

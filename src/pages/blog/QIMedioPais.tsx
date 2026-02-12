@@ -22,6 +22,7 @@ const QIMedioPais = () => {
     title: "QI Médio de Pais: Inteligência na Paternidade",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio pais, inteligência paternidade, QI pais, pais inteligentes, QI paterno, inteligência paternal, QI médio paternidade, pais QI alto, paternidade inteligência, QI homens pais",
   });
 
   useStructuredData([

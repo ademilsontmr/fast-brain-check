@@ -11,6 +11,7 @@ const SobreOTeste = () => {
   useSEO({
     title: "Sobre o Teste de QI BomQI",
     description: "Conheça a história, metodologia e ciência por trás do teste de QI do BomQI. Entenda como medimos a inteligência de forma precisa.",
+    keywords: "sobre teste QI, metodologia teste inteligência, ciência QI, validação teste QI, história teste inteligência, BomQI teste, teste QI confiável, psicometria, avaliação cognitiva científica, teste QI validado",
     url: "https://bomqi.com.br/sobre-o-teste",
   });
 

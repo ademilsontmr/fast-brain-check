@@ -21,6 +21,7 @@ const ComoManterMenteAfiada = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "ComoManterMenteAfiada, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

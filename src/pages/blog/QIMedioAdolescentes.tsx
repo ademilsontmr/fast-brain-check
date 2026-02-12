@@ -22,6 +22,7 @@ const QIMedioAdolescentes = () => {
     title: "QI Médio de Adolescentes: Dados Científicos e Desenvolvimento Cognitivo",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio adolescentes, inteligência adolescência, QI teens, adolescentes QI, QI juventude, inteligência jovens, QI médio jovens, adolescentes inteligentes, QI faixa etária adolescente, cognição adolescência",
   });
 
   useStructuredData([

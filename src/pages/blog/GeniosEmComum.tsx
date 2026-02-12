@@ -21,6 +21,7 @@ const GeniosEmComum = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "GeniosEmComum, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(

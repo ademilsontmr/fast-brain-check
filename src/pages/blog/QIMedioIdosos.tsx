@@ -22,6 +22,7 @@ const QIMedioBombeiros = () => {
     title: "QI Médio de Bombeiros: Inteligência e Coragem na Profissão",
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI médio idosos, inteligência terceira idade, QI idosos, idosos inteligentes, QI velhice, inteligência envelhecimento, QI médio terceira idade, idosos QI alto, terceira idade inteligência, QI envelhecimento",
   });
 
   useStructuredData([

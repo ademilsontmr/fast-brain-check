@@ -22,6 +22,7 @@ const ComoPaisMelhoramQI = () => {
     title: "Como Pais Melhoram o QI: Desenvolvimento Cognitivo na Paternidade",
     description: articleDescription,
     url: articleUrl,
+    keywords: "pais QI, paternidade inteligência, melhorar QI pai, pais desenvolvimento cognitivo, pais cérebro, QI paternidade, cognição pais, desenvolver QI paternidade, pais inteligentes, QI homens pais",
   });
 
   useStructuredData([

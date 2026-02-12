@@ -22,6 +22,7 @@ const ComoSegurancaTrabalhoMelhoraQI = () => {
     title: "Como a Segurança no Trabalho Melhora o QI: Desenvolvimento Cognitivo Profissional",
     description: articleDescription,
     url: articleUrl,
+    keywords: "segurança trabalho QI, profissão segurança inteligência, QI médio segurança, melhorar QI segurança, inteligência profissionais segurança, raciocínio preventivo, segurança inteligentes, QI área segurança, carreira segurança QI, desenvolver QI segurança",
   });
 
   useStructuredData([

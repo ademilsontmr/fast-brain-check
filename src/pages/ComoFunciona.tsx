@@ -11,6 +11,7 @@ const ComoFunciona = () => {
   useSEO({
     title: "Como Funciona o Teste de QI",
     description: "Entenda cada etapa do nosso teste de QI e como calculamos seu quociente de inteligência de forma científica.",
+    keywords: "como funciona teste QI, etapas teste inteligência, cálculo QI, metodologia teste QI, teste QI científico, avaliação cognitiva, processo teste inteligência, como é feito teste QI, teste QI online funciona, validação teste QI",
     url: "https://bomqi.com.br/como-funciona",
   });
 
