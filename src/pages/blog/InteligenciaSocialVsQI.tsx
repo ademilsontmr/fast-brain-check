@@ -19,6 +19,7 @@ const InteligenciaSocialVsQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "inteligência social vs QI, inteligência social sucesso, habilidades sociais, QI emocional, networking inteligência, relacionamentos profissionais, inteligência interpessoal, soft skills, inteligência social carreira, empatia vs QI",
   });
 
   useStructuredData(

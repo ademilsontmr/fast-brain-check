@@ -19,6 +19,7 @@ const NeurocienciaRiquezaQIPatrimonio = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "neurociência riqueza, QI milionários, cérebro rico, inteligência patrimônio, como ficar rico QI, neurociência sucesso financeiro, cérebro pessoas ricas, QI e dinheiro, inteligência financeira, neuroplasticidade riqueza",
   });
 
   useStructuredData(

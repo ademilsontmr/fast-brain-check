@@ -19,6 +19,7 @@ const QIEmpresarialVsQIAcademico = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "QI empresarial acadêmico, inteligência negócios, QI para empreender, inteligência empresarial, QI alto não fica rico, inteligência prática empresarial, habilidades empresariais, QI acadêmico vs negócios, empreendedorismo inteligência, sucesso empresarial QI",
   });
 
   useStructuredData(

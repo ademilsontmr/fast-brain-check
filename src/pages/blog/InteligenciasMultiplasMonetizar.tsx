@@ -19,6 +19,7 @@ const InteligenciasMultiplasMonetizar = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "inteligências múltiplas, monetizar talentos, tipos de inteligência, inteligência linguística, inteligência lógica matemática, inteligência musical, inteligência corporal, inteligência espacial, inteligência interpessoal, inteligência intrapessoal, ganhar dinheiro talentos",
   });
 
   useStructuredData(

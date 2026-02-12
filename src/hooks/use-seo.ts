@@ -5,6 +5,7 @@ type MetaTagAttribute = "name" | "property";
 type UseSEOOptions = {
   title?: string;
   description?: string;
+  keywords?: string;
   url?: string;
   image?: string;
   type?: "website" | "article";
@@ -64,6 +65,7 @@ const setCanonicalLink = (href?: string) => {
 export const useSEO = ({
   title,
   description,
+  keywords,
   url,
   image,
   type = "article",
@@ -76,6 +78,10 @@ export const useSEO = ({
 
     if (description) {
       setMetaTag("name", "description", description);
+    }
+
+    if (keywords) {
+      setMetaTag("name", "keywords", keywords);
     }
 
     if (noIndex) {
@@ -116,8 +122,7 @@ export const useSEO = ({
     return () => {
       // Evitar remover título/metas à medida que a próxima página irá substituí-los.
     };
-  }, [title, description, url, image, type, canonical, noIndex]);
+  }, [title, description, keywords, url, image, type, canonical, noIndex]);
 };
 
 export default useSEO;
-

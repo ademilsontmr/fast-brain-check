@@ -19,6 +19,7 @@ const InteligenciaPraticaTeoricaDinheiro = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "inteligência prática teórica, inteligência gera dinheiro, QI prático, conhecimento aplicado, inteligência de rua, inteligência acadêmica vs prática, como ganhar dinheiro inteligência, habilidades práticas, conhecimento teórico renda, inteligência aplicada negócios",
   });
 
   useStructuredData(

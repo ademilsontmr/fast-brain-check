@@ -19,6 +19,7 @@ const PensamentoCriticoVsQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "pensamento crítico vs QI, pensamento crítico importante, análise crítica, tomada decisão inteligente, raciocínio crítico, QI vs análise, habilidade análise, pensamento analítico, decisões inteligentes, desenvolver pensamento crítico",
   });
 
   useStructuredData(

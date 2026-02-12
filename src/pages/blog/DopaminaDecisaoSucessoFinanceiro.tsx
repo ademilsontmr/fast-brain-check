@@ -19,6 +19,7 @@ const DopaminaDecisaoSucessoFinanceiro = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "dopamina decisões financeiras, neurociência sucesso, dopamina dinheiro, decisões impulsivas, controle dopamina, sucesso financeiro cérebro, neurotransmissores riqueza, decisões inteligentes, sistema de recompensa cerebral, dopamina investimentos",
   });
 
   useStructuredData(

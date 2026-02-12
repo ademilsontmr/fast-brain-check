@@ -19,6 +19,7 @@ const InteligenciaFluidaCristalizadaGanharDinheiro = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "inteligência fluida cristalizada, tipos de inteligência, inteligência ganhar dinheiro, QI fluido, QI cristalizado, como desenvolver inteligência, inteligência para negócios, capacidade cognitiva, raciocínio lógico dinheiro, conhecimento acumulado renda",
   });
 
   useStructuredData(

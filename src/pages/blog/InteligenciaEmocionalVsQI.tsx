@@ -19,6 +19,7 @@ const InteligenciaEmocionalVsQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
+    keywords: "inteligência emocional vs QI, QE vs QI, inteligência emocional sucesso, controle emocional, autoconhecimento, empatia, habilidades emocionais, QI emocional importante, desenvolver inteligência emocional, emoções e sucesso",
   });
 
   useStructuredData(
