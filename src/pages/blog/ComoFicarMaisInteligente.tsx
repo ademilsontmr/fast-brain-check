@@ -325,24 +325,24 @@ const ComoFicarMaisInteligente = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "É realmente possível mais inteligente?",
-                    "answer": "Sim! Estudos científicos comprovam que é possível através de treino cognitivo, exercícios físicos, sono adequado e alimentação saudável. Ganhos de 5-15 pontos são realistas."
+                    "question": "Posso ficar mais inteligente após os 40?",
+                    "answer": "Sim. Neuroplasticidade funciona em qualquer idade. Após 40, foque em QI cristalizado (conhecimento) e manutenção de QI fluido."
           },
           {
-                    "question": "Quanto tempo leva para ver resultados?",
-                    "answer": "Primeiros resultados em 30-60 dias com prática diária de 20-30 minutos. Ganhos significativos (5-10 pontos) requerem 6-12 meses de consistência."
+                    "question": "Qual habilidade aumenta mais inteligência?",
+                    "answer": "Aprender novo idioma tem maior impacto (7-10 pontos), seguido de instrumentos musicais (5-7 pontos) e programação (5-8 pontos)."
           },
           {
-                    "question": "Quais métodos são mais eficazes?",
-                    "answer": "Dual n-back (memória de trabalho), xadrez (estratégia), aprender idiomas (plasticidade), exercícios aeróbicos (BDNF) e sono de qualidade (consolidação)."
+                    "question": "Inteligência emocional pode ser desenvolvida?",
+                    "answer": "Sim. Meditação, terapia e prática de empatia aumentam IE. Tão importante quanto QI para sucesso pessoal e profissional."
           },
           {
-                    "question": "Existe limite de idade?",
-                    "answer": "Não. Neuroplasticidade funciona em qualquer idade. Jovens têm maior potencial (10-20 pontos), adultos 5-15 pontos, idosos podem manter e otimizar."
+                    "question": "Pessoas inteligentes nascem assim ou se tornam?",
+                    "answer": "Ambos. Genética contribui 50-80%, mas ambiente, educação e treino podem aumentar QI em 15-20 pontos acima do baseline genético."
           },
           {
-                    "question": "Os ganhos são permanentes?",
-                    "answer": "Sim, com manutenção. Parar completamente pode causar perda de 30-50% em 6-12 meses. Manutenção requer 2-3 sessões semanais."
+                    "question": "Quanto tempo para ficar significativamente mais inteligente?",
+                    "answer": "Mudanças mensuráveis em 3 meses. Transformação significativa (10+ pontos) em 12-24 meses de prática consistente e multifacetada."
           }
 ]} />
 

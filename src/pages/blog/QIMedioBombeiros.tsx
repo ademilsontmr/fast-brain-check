@@ -221,24 +221,24 @@ const QIMedioBombeiros = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Qual é o QI médio de bombeiros?",
-                    "answer": "O QI médio de bombeiros varia entre 95-115, dependendo de fatores como educação, ambiente e genética. A média populacional geral é 100."
+                    "question": "bombeiros têm potencial de aumentar QI?",
+                    "answer": "Sim. Independente do QI atual, treino cognitivo, exercícios e educação podem aumentar 5-15 pontos."
           },
           {
-                    "question": "Como bombeiros se comparam à média geral?",
-                    "answer": "Bombeiros geralmente estão próximos ou ligeiramente acima da média de 100, com variação individual significativa. Educação e ambiente influenciam mais que o grupo em si."
+                    "question": "Diferença de QI dentro de bombeiros?",
+                    "answer": "Grande. Mesmo dentro do grupo, QI varia de 70 a 140+. Média não define indivíduos."
           },
           {
-                    "question": "Bombeiros podem aumentar seu QI?",
-                    "answer": "Sim. Treino cognitivo, exercícios físicos, educação continuada e hábitos saudáveis podem aumentar QI em 5-15 pontos independente do grupo."
+                    "question": "bombeiros com QI baixo podem ter sucesso?",
+                    "answer": "Sim. Persistência, especialização e inteligência emocional compensam QI baixo. Muitos casos de sucesso com QI 85-95."
           },
           {
-                    "question": "O que mais influencia o QI de bombeiros?",
-                    "answer": "Educação (40%), ambiente familiar (30%), genética (20-30%), nutrição e estímulos cognitivos. Intervenções precoces maximizam potencial."
+                    "question": "Testes de QI são justos para bombeiros?",
+                    "answer": "Parcialmente. Testes podem ter viés cultural. Importante usar testes validados e considerar contexto socioeconômico."
           },
           {
-                    "question": "Diferença entre QI médio e individual?",
-                    "answer": "QI médio é estatística de grupo. Indivíduos variam amplamente: 68% estão entre 85-115, mas há muitos outliers em ambos extremos."
+                    "question": "bombeiros devem focar em aumentar QI?",
+                    "answer": "Sim, mas não exclusivamente. Desenvolver habilidades práticas, networking e inteligência emocional é igualmente importante."
           }
 ]} />
 

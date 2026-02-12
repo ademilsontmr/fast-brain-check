@@ -221,24 +221,24 @@ const QIMedioBombeiros = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Engenheiros têm QI mais alto que a média?",
-                    "answer": "Sim. QI médio de engenheiros é 110-125, acima da média populacional de 100. A profissão exige raciocínio analítico e resolução de problemas complexos."
+                    "question": "Engenheiros têm QI mais alto que outras profissões?",
+                    "answer": "Sim. QI médio de engenheiros é 120-130, entre os mais altos. Engenheiros de software e aeroespacial frequentemente acima de 130."
           },
           {
-                    "question": "Como engenheiros podem aumentar ainda mais o QI?",
-                    "answer": "Educação continuada, resolver problemas complexos no trabalho, aprender novas técnicas, ler literatura técnica e praticar habilidades cognitivas fora do trabalho."
+                    "question": "Programação aumenta QI?",
+                    "answer": "Sim. Aprender linguagens de programação e resolver algoritmos aumenta QI em 5-10 pontos. Desenvolve lógica e pensamento abstrato."
           },
           {
-                    "question": "Qual QI é necessário para ser engenheiro?",
-                    "answer": "QI 105+ é recomendado. Abaixo disso, dificuldade com aspectos técnicos. QI 115+ facilita aprendizado rápido e resolução de problemas complexos."
+                    "question": "Engenharia civil exige menos QI que software?",
+                    "answer": "Não necessariamente. Civil exige QI 115+ (cálculos estruturais). Software exige 120+ (abstração). Ambas são cognitivamente exigentes."
           },
           {
-                    "question": "A profissão desenvolve inteligência ao longo do tempo?",
-                    "answer": "Sim. Desafios cognitivos diários, aprendizado contínuo e resolução de problemas aumentam QI em 5-10 pontos ao longo da carreira."
+                    "question": "Resolver problemas de engenharia desenvolve inteligência?",
+                    "answer": "Sim. Design de sistemas, otimização e debugging desenvolvem raciocínio lógico e podem aumentar QI em 3-5 pontos ao longo da carreira."
           },
           {
-                    "question": "Engenheiros com QI alto ganham mais?",
-                    "answer": "Sim. Profissionais com QI 120+ tendem a ocupar cargos de liderança e especialização, com salários 30-50% maiores que a média da profissão."
+                    "question": "Engenheiros podem monetizar QI alto?",
+                    "answer": "Sim. Especialização em IA, blockchain ou sistemas complexos permite salários de R$20k-50k/mês. QI 130+ em tech pode gerar R$100k+/mês."
           }
 ]} />
 

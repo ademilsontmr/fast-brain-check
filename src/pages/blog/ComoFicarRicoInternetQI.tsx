@@ -340,24 +340,24 @@ const ComoFicarRicoInternetQI = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "É realmente possível rico internet q i?",
-                    "answer": "Sim! Estudos científicos comprovam que é possível através de treino cognitivo, exercícios físicos, sono adequado e alimentação saudável. Ganhos de 5-15 pontos são realistas."
+                    "question": "QI alto ajuda a ganhar dinheiro na internet?",
+                    "answer": "Sim. QI 120+ facilita aprender marketing digital, programação e análise de dados. Mas execução e persistência são igualmente importantes."
           },
           {
-                    "question": "Quanto tempo leva para ver resultados?",
-                    "answer": "Primeiros resultados em 30-60 dias com prática diária de 20-30 minutos. Ganhos significativos (5-10 pontos) requerem 6-12 meses de consistência."
+                    "question": "Qual QI é necessário para empreender online?",
+                    "answer": "QI 110+ é suficiente. Mais importante: aprender rápido, testar ideias e persistir. Muitos empreendedores digitais têm QI médio mas executam bem."
           },
           {
-                    "question": "Quais métodos são mais eficazes?",
-                    "answer": "Dual n-back (memória de trabalho), xadrez (estratégia), aprender idiomas (plasticidade), exercícios aeróbicos (BDNF) e sono de qualidade (consolidação)."
+                    "question": "Pessoas com QI alto ganham mais online?",
+                    "answer": "Não necessariamente. QI ajuda em áreas técnicas (programação, análise). Marketing e vendas valorizam mais inteligência social e emocional."
           },
           {
-                    "question": "Existe limite de idade?",
-                    "answer": "Não. Neuroplasticidade funciona em qualquer idade. Jovens têm maior potencial (10-20 pontos), adultos 5-15 pontos, idosos podem manter e otimizar."
+                    "question": "Como usar QI alto para criar negócio online?",
+                    "answer": "Foque em: criar produtos digitais complexos, automação, análise de dados, SEO técnico ou consultoria especializada. Capitalize vantagens cognitivas."
           },
           {
-                    "question": "Os ganhos são permanentes?",
-                    "answer": "Sim, com manutenção. Parar completamente pode causar perda de 30-50% em 6-12 meses. Manutenção requer 2-3 sessões semanais."
+                    "question": "Dropshipping ou infoprodutos para QI alto?",
+                    "answer": "Infoprodutos. Permite monetizar conhecimento especializado. Dropshipping é mais operacional. QI 120+ gera mais valor em consultoria/cursos."
           }
 ]} />
 

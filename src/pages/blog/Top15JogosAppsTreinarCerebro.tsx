@@ -271,24 +271,24 @@ const Top15JogosAppsTreinarCerebro = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Como a neurociência explica isso?",
-                    "answer": "Neuroplasticidade permite que cérebro crie novas conexões neurais. Treino cognitivo aumenta densidade de matéria cinzenta e mielinização de sinapses."
+                    "question": "Top 15 Jogos e Apps para Treinar o Cérebro?",
+                    "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
           },
           {
-                    "question": "Mudanças cerebrais são permanentes?",
-                    "answer": "Sim, com manutenção. Novas conexões neurais se fortalecem com uso repetido. Parar completamente pode causar poda sináptica em 6-12 meses."
+                    "question": "Qual a base científica disso?",
+                    "answer": "Estudos de neuroplasticidade e psicologia cognitiva demonstram que cérebro pode ser desenvolvido em qualquer idade com estímulos adequados."
           },
           {
-                    "question": "Quanto tempo para mudanças cerebrais?",
-                    "answer": "Primeiras mudanças estruturais em 4-6 semanas. Mudanças significativas em 3-6 meses. Consolidação completa em 12-24 meses de prática."
+                    "question": "Quanto tempo para ver resultados práticos?",
+                    "answer": "Primeiros resultados em 4-8 semanas. Mudanças significativas em 6-12 meses de aplicação consistente dos métodos."
           },
           {
-                    "question": "Idade afeta plasticidade cerebral?",
-                    "answer": "Sim, mas não impede. Crianças têm maior plasticidade. Adultos e idosos mantêm capacidade significativa de mudança com estímulos adequados."
+                    "question": "Isso funciona para minha idade?",
+                    "answer": "Sim. Princípios se aplicam a todas as idades, com adaptações apropriadas. Potencial varia mas desenvolvimento é sempre possível."
           },
           {
-                    "question": "Como maximizar neuroplasticidade?",
-                    "answer": "Exercício físico (aumenta BDNF), sono adequado (consolidação), desafios cognitivos novos, alimentação saudável e redução de estresse crônico."
+                    "question": "Como começar a aplicar isso hoje?",
+                    "answer": "Escolha 1-2 estratégias do artigo, pratique 20-30 min/dia, monitore progresso semanalmente e ajuste conforme necessário."
           }
 ]} />
 

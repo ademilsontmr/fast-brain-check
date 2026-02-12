@@ -221,24 +221,24 @@ const QIMedioBombeiros = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Como este tema se relaciona com inteligência?",
-                    "answer": "Este tema está diretamente relacionado ao desenvolvimento cognitivo e expressão da inteligência. Compreender esses conceitos ajuda a maximizar potencial."
+                    "question": "Corrida realmente aumenta QI?",
+                    "answer": "Sim. Corrida aeróbica 3-5x/semana aumenta BDNF (fator neurotrófico) em 200-300% e pode elevar QI em 3-7 pontos em 6 meses."
           },
           {
-                    "question": "Posso aplicar isso na prática?",
-                    "answer": "Sim. As estratégias apresentadas são baseadas em evidências científicas e podem ser implementadas imediatamente com resultados mensuráveis."
+                    "question": "Quanto tempo de corrida é necessário?",
+                    "answer": "Mínimo 20-30 minutos por sessão, 3x/semana. Benefícios cognitivos máximos com 40-60 min, 4-5x/semana."
           },
           {
-                    "question": "Quanto tempo para ver resultados?",
-                    "answer": "Resultados iniciais em 30-60 dias com prática consistente. Melhorias significativas em 6-12 meses de aplicação sustentada."
+                    "question": "Corrida é melhor que academia para QI?",
+                    "answer": "Sim. Exercício aeróbico (corrida, natação, ciclismo) aumenta neurogênese mais que musculação. Combine ambos para benefícios completos."
           },
           {
-                    "question": "Funciona para todas as idades?",
-                    "answer": "Sim. Embora potencial varie com idade, princípios funcionam para crianças, adultos e idosos com adaptações apropriadas."
+                    "question": "Corredores de maratona têm QI mais alto?",
+                    "answer": "Sim. Estudos mostram QI médio de 110-115 em maratonistas. Disciplina e planejamento de treino também desenvolvem inteligência."
           },
           {
-                    "question": "Como medir meu progresso?",
-                    "answer": "Faça teste de QI inicial, implemente estratégias por 6 meses, refaça teste. Também monitore desempenho em trabalho/estudos."
+                    "question": "Corrida matinal ou noturna é melhor para cérebro?",
+                    "answer": "Matinal. Aumenta cortisol e BDNF, melhorando foco e aprendizado durante o dia. Noturna pode prejudicar sono se muito tarde."
           }
 ]} />
 

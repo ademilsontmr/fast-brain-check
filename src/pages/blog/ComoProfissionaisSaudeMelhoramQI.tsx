@@ -235,24 +235,24 @@ const ComoProfissionaisSaudeMelhoramQI = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Profissionais Saude têm QI mais alto que a média?",
-                    "answer": "Sim. QI médio de profissionais saude é 110-125, acima da média populacional de 100. A profissão exige raciocínio analítico e resolução de problemas complexos."
+                    "question": "Formação de profissionais saude exige QI alto?",
+                    "answer": "QI 110+ facilita graduação. Áreas mais complexas da profissão podem exigir QI 120+. Esforço compensa QI médio."
           },
           {
-                    "question": "Como profissionais saude podem aumentar ainda mais o QI?",
-                    "answer": "Educação continuada, resolver problemas complexos no trabalho, aprender novas técnicas, ler literatura técnica e praticar habilidades cognitivas fora do trabalho."
+                    "question": "profissionais saude têm QI verbal ou matemático mais alto?",
+                    "answer": "Depende da especialização. Áreas técnicas favorecem QI matemático (120+). Áreas de atendimento valorizam QI verbal (115+)."
           },
           {
-                    "question": "Qual QI é necessário para ser profissionais saud?",
-                    "answer": "QI 105+ é recomendado. Abaixo disso, dificuldade com aspectos técnicos. QI 115+ facilita aprendizado rápido e resolução de problemas complexos."
+                    "question": "Trabalhar como profissionais saud estimula cérebro?",
+                    "answer": "Sim. Resolução constante de problemas, aprendizado de novas técnicas e tomada de decisões promovem neuroplasticidade."
           },
           {
-                    "question": "A profissão desenvolve inteligência ao longo do tempo?",
-                    "answer": "Sim. Desafios cognitivos diários, aprendizado contínuo e resolução de problemas aumentam QI em 5-10 pontos ao longo da carreira."
+                    "question": "profissionais saude aposentados mantêm QI alto?",
+                    "answer": "Sim, se mantiverem atividade mental. Leitura, cursos e hobbies cognitivos preservam QI. Inatividade pode reduzir 5-10 pontos."
           },
           {
-                    "question": "Profissionais Saude com QI alto ganham mais?",
-                    "answer": "Sim. Profissionais com QI 120+ tendem a ocupar cargos de liderança e especialização, com salários 30-50% maiores que a média da profissão."
+                    "question": "Estresse da profissão afeta QI de profissionais saude?",
+                    "answer": "Sim. Estresse crônico pode reduzir QI em 5-10 pontos. Gerenciamento de estresse e equilíbrio vida-trabalho são essenciais."
           }
 ]} />
 

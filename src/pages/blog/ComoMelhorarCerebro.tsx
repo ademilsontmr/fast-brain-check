@@ -347,24 +347,24 @@ const ComoMelhorarCerebro = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "É realmente possível cerebro?",
-                    "answer": "Sim! Estudos científicos comprovam que é possível através de treino cognitivo, exercícios físicos, sono adequado e alimentação saudável. Ganhos de 5-15 pontos são realistas."
+                    "question": "Como Melhorar o Cérebro?",
+                    "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
           },
           {
-                    "question": "Quanto tempo leva para ver resultados?",
-                    "answer": "Primeiros resultados em 30-60 dias com prática diária de 20-30 minutos. Ganhos significativos (5-10 pontos) requerem 6-12 meses de consistência."
+                    "question": "Qual a base científica disso?",
+                    "answer": "Estudos de neuroplasticidade e psicologia cognitiva demonstram que cérebro pode ser desenvolvido em qualquer idade com estímulos adequados."
           },
           {
-                    "question": "Quais métodos são mais eficazes?",
-                    "answer": "Dual n-back (memória de trabalho), xadrez (estratégia), aprender idiomas (plasticidade), exercícios aeróbicos (BDNF) e sono de qualidade (consolidação)."
+                    "question": "Quanto tempo para ver resultados práticos?",
+                    "answer": "Primeiros resultados em 4-8 semanas. Mudanças significativas em 6-12 meses de aplicação consistente dos métodos."
           },
           {
-                    "question": "Existe limite de idade?",
-                    "answer": "Não. Neuroplasticidade funciona em qualquer idade. Jovens têm maior potencial (10-20 pontos), adultos 5-15 pontos, idosos podem manter e otimizar."
+                    "question": "Isso funciona para minha idade?",
+                    "answer": "Sim. Princípios se aplicam a todas as idades, com adaptações apropriadas. Potencial varia mas desenvolvimento é sempre possível."
           },
           {
-                    "question": "Os ganhos são permanentes?",
-                    "answer": "Sim, com manutenção. Parar completamente pode causar perda de 30-50% em 6-12 meses. Manutenção requer 2-3 sessões semanais."
+                    "question": "Como começar a aplicar isso hoje?",
+                    "answer": "Escolha 1-2 estratégias do artigo, pratique 20-30 min/dia, monitore progresso semanalmente e ajuste conforme necessário."
           }
 ]} />
 

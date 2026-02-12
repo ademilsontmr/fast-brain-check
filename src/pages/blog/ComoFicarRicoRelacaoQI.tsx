@@ -295,24 +295,24 @@ const ComoFicarRicoRelacaoQI = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "É realmente possível rico relacao q i?",
-                    "answer": "Sim! Estudos científicos comprovam que é possível através de treino cognitivo, exercícios físicos, sono adequado e alimentação saudável. Ganhos de 5-15 pontos são realistas."
+                    "question": "Existe correlação entre QI e riqueza?",
+                    "answer": "Sim, mas moderada. QI explica 20-30% da variação em renda. Outros 70%: inteligência emocional, networking, sorte e oportunidades."
           },
           {
-                    "question": "Quanto tempo leva para ver resultados?",
-                    "answer": "Primeiros resultados em 30-60 dias com prática diária de 20-30 minutos. Ganhos significativos (5-10 pontos) requerem 6-12 meses de consistência."
+                    "question": "Qual QI dos milionários?",
+                    "answer": "QI médio de milionários é 120-125. Mas 30% têm QI médio (90-110). Persistência e decisões inteligentes compensam QI médio."
           },
           {
-                    "question": "Quais métodos são mais eficazes?",
-                    "answer": "Dual n-back (memória de trabalho), xadrez (estratégia), aprender idiomas (plasticidade), exercícios aeróbicos (BDNF) e sono de qualidade (consolidação)."
+                    "question": "QI 130+ garante riqueza?",
+                    "answer": "Não. Muitos com QI 130+ ganham pouco por escolhas de carreira (academia, artes). Riqueza requer aplicar inteligência em áreas lucrativas."
           },
           {
-                    "question": "Existe limite de idade?",
-                    "answer": "Não. Neuroplasticidade funciona em qualquer idade. Jovens têm maior potencial (10-20 pontos), adultos 5-15 pontos, idosos podem manter e otimizar."
+                    "question": "Como pessoa com QI médio pode ficar rica?",
+                    "answer": "Especialização profunda, networking estratégico, trabalho duro e aproveitar oportunidades. Foque em execução, não em inteligência pura."
           },
           {
-                    "question": "Os ganhos são permanentes?",
-                    "answer": "Sim, com manutenção. Parar completamente pode causar perda de 30-50% em 6-12 meses. Manutenção requer 2-3 sessões semanais."
+                    "question": "QI ou inteligência emocional para riqueza?",
+                    "answer": "Ambos. QI 115+ com alta IE gera melhores resultados. IE ajuda em negociação, liderança e relacionamentos - cruciais para riqueza."
           }
 ]} />
 

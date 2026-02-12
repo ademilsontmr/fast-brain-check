@@ -224,24 +224,24 @@ const InteligenciaAdaptativaSeculo21 = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Como este tema se relaciona com inteligência?",
-                    "answer": "Este tema está diretamente relacionado ao desenvolvimento cognitivo e expressão da inteligência. Compreender esses conceitos ajuda a maximizar potencial."
+                    "question": "Inteligência Adaptativa?",
+                    "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
           },
           {
-                    "question": "Posso aplicar isso na prática?",
-                    "answer": "Sim. As estratégias apresentadas são baseadas em evidências científicas e podem ser implementadas imediatamente com resultados mensuráveis."
+                    "question": "Qual a base científica disso?",
+                    "answer": "Estudos de neuroplasticidade e psicologia cognitiva demonstram que cérebro pode ser desenvolvido em qualquer idade com estímulos adequados."
           },
           {
-                    "question": "Quanto tempo para ver resultados?",
-                    "answer": "Resultados iniciais em 30-60 dias com prática consistente. Melhorias significativas em 6-12 meses de aplicação sustentada."
+                    "question": "Quanto tempo para ver resultados práticos?",
+                    "answer": "Primeiros resultados em 4-8 semanas. Mudanças significativas em 6-12 meses de aplicação consistente dos métodos."
           },
           {
-                    "question": "Funciona para todas as idades?",
-                    "answer": "Sim. Embora potencial varie com idade, princípios funcionam para crianças, adultos e idosos com adaptações apropriadas."
+                    "question": "Isso funciona para minha idade?",
+                    "answer": "Sim. Princípios se aplicam a todas as idades, com adaptações apropriadas. Potencial varia mas desenvolvimento é sempre possível."
           },
           {
-                    "question": "Como medir meu progresso?",
-                    "answer": "Faça teste de QI inicial, implemente estratégias por 6 meses, refaça teste. Também monitore desempenho em trabalho/estudos."
+                    "question": "Como começar a aplicar isso hoje?",
+                    "answer": "Escolha 1-2 estratégias do artigo, pratique 20-30 min/dia, monitore progresso semanalmente e ajuste conforme necessário."
           }
 ]} />
 

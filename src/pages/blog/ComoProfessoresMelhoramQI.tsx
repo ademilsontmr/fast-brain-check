@@ -82,24 +82,24 @@ const ComoProfessoresMelhoramQI = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Professores têm QI mais alto que a média?",
-                    "answer": "Sim. QI médio de professores é 110-125, acima da média populacional de 100. A profissão exige raciocínio analítico e resolução de problemas complexos."
+                    "question": "professores desenvolvem QI ao longo da carreira?",
+                    "answer": "Sim. Desafios cognitivos diários e aprendizado contínuo aumentam QI em 5-10 pontos durante anos de prática profissional."
           },
           {
-                    "question": "Como professores podem aumentar ainda mais o QI?",
-                    "answer": "Educação continuada, resolver problemas complexos no trabalho, aprender novas técnicas, ler literatura técnica e praticar habilidades cognitivas fora do trabalho."
+                    "question": "Qual QI mínimo para ser professore?",
+                    "answer": "QI 105+ é recomendado para formação. QI 115+ facilita especialização e cargos de liderança na área."
           },
           {
-                    "question": "Qual QI é necessário para ser professore?",
-                    "answer": "QI 105+ é recomendado. Abaixo disso, dificuldade com aspectos técnicos. QI 115+ facilita aprendizado rápido e resolução de problemas complexos."
+                    "question": "professores com pós-graduação têm QI mais alto?",
+                    "answer": "Sim. Mestrado e doutorado aumentam QI em 3-7 pontos através de pesquisa, análise crítica e resolução de problemas complexos."
           },
           {
-                    "question": "A profissão desenvolve inteligência ao longo do tempo?",
-                    "answer": "Sim. Desafios cognitivos diários, aprendizado contínuo e resolução de problemas aumentam QI em 5-10 pontos ao longo da carreira."
+                    "question": "Experiência prática aumenta QI de professores?",
+                    "answer": "Sim. Resolver problemas reais e tomar decisões complexas desenvolve inteligência prática e pode aumentar QI em 3-5 pontos."
           },
           {
-                    "question": "Professores com QI alto ganham mais?",
-                    "answer": "Sim. Profissionais com QI 120+ tendem a ocupar cargos de liderança e especialização, com salários 30-50% maiores que a média da profissão."
+                    "question": "professores podem treinar QI fora do trabalho?",
+                    "answer": "Sim. Xadrez, idiomas, instrumentos musicais e exercícios físicos complementam desenvolvimento cognitivo profissional."
           }
 ]} />
 

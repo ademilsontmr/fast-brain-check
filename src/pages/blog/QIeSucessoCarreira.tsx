@@ -519,24 +519,24 @@ const QIeSucessoCarreira = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "QI alto garante sucesso financeiro?",
-                    "answer": "Não garante, mas aumenta chances. QI explica 20-30% da variação em renda. Outros fatores: inteligência emocional, networking, persistência e oportunidades."
+                    "question": "QI e Sucesso na Carreira?",
+                    "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
           },
           {
-                    "question": "Qual QI é necessário para ficar rico?",
-                    "answer": "Não há mínimo. QI 115+ facilita, mas pessoas com QI médio (90-110) ficam ricas através de especialização, trabalho duro e decisões inteligentes."
+                    "question": "Qual a base científica disso?",
+                    "answer": "Estudos de neuroplasticidade e psicologia cognitiva demonstram que cérebro pode ser desenvolvido em qualquer idade com estímulos adequados."
           },
           {
-                    "question": "Como usar QI alto para ganhar dinheiro?",
-                    "answer": "Especialize-se em áreas complexas (tech, finanças, medicina), aprenda rápido, resolva problemas valiosos, tome decisões baseadas em dados e capitalize vantagens cognitivas."
+                    "question": "Quanto tempo para ver resultados práticos?",
+                    "answer": "Primeiros resultados em 4-8 semanas. Mudanças significativas em 6-12 meses de aplicação consistente dos métodos."
           },
           {
-                    "question": "Pessoas ricas têm QI mais alto?",
-                    "answer": "Em média sim. Milionários têm QI médio de 120-125. Mas correlação não é causalidade - hábitos, educação e oportunidades também importam muito."
+                    "question": "Isso funciona para minha idade?",
+                    "answer": "Sim. Princípios se aplicam a todas as idades, com adaptações apropriadas. Potencial varia mas desenvolvimento é sempre possível."
           },
           {
-                    "question": "Posso compensar QI médio?",
-                    "answer": "Absolutamente! Foque em: especialização profunda, networking estratégico, persistência, inteligência emocional e aproveitar oportunidades. Muitos milionários têm QI médio."
+                    "question": "Como começar a aplicar isso hoje?",
+                    "answer": "Escolha 1-2 estratégias do artigo, pratique 20-30 min/dia, monitore progresso semanalmente e ajuste conforme necessário."
           }
 ]} />
 

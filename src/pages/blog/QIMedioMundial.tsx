@@ -191,24 +191,24 @@ const QIMedioMundial = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Qual é o QI médio de mundial?",
-                    "answer": "O QI médio de mundial varia entre 95-115, dependendo de fatores como educação, ambiente e genética. A média populacional geral é 100."
+                    "question": "Qual faixa de QI de mundial?",
+                    "answer": "mundial geralmente têm QI entre 95-115, com média próxima de 100-105. Variação individual é significativa."
           },
           {
-                    "question": "Como mundial se comparam à média geral?",
-                    "answer": "Mundial geralmente estão próximos ou ligeiramente acima da média de 100, com variação individual significativa. Educação e ambiente influenciam mais que o grupo em si."
+                    "question": "mundial com QI alto se destacam mais?",
+                    "answer": "Sim. QI 120+ facilita aprendizado rápido e resolução de problemas. Mas dedicação e habilidades sociais também são cruciais."
           },
           {
-                    "question": "Mundial podem aumentar seu QI?",
-                    "answer": "Sim. Treino cognitivo, exercícios físicos, educação continuada e hábitos saudáveis podem aumentar QI em 5-15 pontos independente do grupo."
+                    "question": "Educação influencia QI de mundial?",
+                    "answer": "Sim. Cada ano adicional de educação aumenta QI em 1-3 pontos. Educação superior pode adicionar 5-10 pontos."
           },
           {
-                    "question": "O que mais influencia o QI de mundial?",
-                    "answer": "Educação (40%), ambiente familiar (30%), genética (20-30%), nutrição e estímulos cognitivos. Intervenções precoces maximizam potencial."
+                    "question": "mundial podem superar limitações de QI?",
+                    "answer": "Sim. Especialização, trabalho duro e desenvolvimento de habilidades específicas compensam QI médio ou abaixo da média."
           },
           {
-                    "question": "Diferença entre QI médio e individual?",
-                    "answer": "QI médio é estatística de grupo. Indivíduos variam amplamente: 68% estão entre 85-115, mas há muitos outliers em ambos extremos."
+                    "question": "Ambiente familiar afeta QI de mundial?",
+                    "answer": "Sim. Ambiente estimulante, acesso a livros e apoio educacional podem aumentar QI em 10-15 pontos comparado a ambiente carente."
           }
 ]} />
 

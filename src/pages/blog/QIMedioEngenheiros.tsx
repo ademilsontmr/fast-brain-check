@@ -221,24 +221,24 @@ const QIMedioBombeiros = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Qual é o QI médio de engenheiros?",
-                    "answer": "O QI médio de engenheiros varia entre 95-115, dependendo de fatores como educação, ambiente e genética. A média populacional geral é 100."
+                    "question": "engenheiros têm potencial de aumentar QI?",
+                    "answer": "Sim. Independente do QI atual, treino cognitivo, exercícios e educação podem aumentar 5-15 pontos."
           },
           {
-                    "question": "Como engenheiros se comparam à média geral?",
-                    "answer": "Engenheiros geralmente estão próximos ou ligeiramente acima da média de 100, com variação individual significativa. Educação e ambiente influenciam mais que o grupo em si."
+                    "question": "Diferença de QI dentro de engenheiros?",
+                    "answer": "Grande. Mesmo dentro do grupo, QI varia de 70 a 140+. Média não define indivíduos."
           },
           {
-                    "question": "Engenheiros podem aumentar seu QI?",
-                    "answer": "Sim. Treino cognitivo, exercícios físicos, educação continuada e hábitos saudáveis podem aumentar QI em 5-15 pontos independente do grupo."
+                    "question": "engenheiros com QI baixo podem ter sucesso?",
+                    "answer": "Sim. Persistência, especialização e inteligência emocional compensam QI baixo. Muitos casos de sucesso com QI 85-95."
           },
           {
-                    "question": "O que mais influencia o QI de engenheiros?",
-                    "answer": "Educação (40%), ambiente familiar (30%), genética (20-30%), nutrição e estímulos cognitivos. Intervenções precoces maximizam potencial."
+                    "question": "Testes de QI são justos para engenheiros?",
+                    "answer": "Parcialmente. Testes podem ter viés cultural. Importante usar testes validados e considerar contexto socioeconômico."
           },
           {
-                    "question": "Diferença entre QI médio e individual?",
-                    "answer": "QI médio é estatística de grupo. Indivíduos variam amplamente: 68% estão entre 85-115, mas há muitos outliers em ambos extremos."
+                    "question": "engenheiros devem focar em aumentar QI?",
+                    "answer": "Sim, mas não exclusivamente. Desenvolver habilidades práticas, networking e inteligência emocional é igualmente importante."
           }
 ]} />
 
