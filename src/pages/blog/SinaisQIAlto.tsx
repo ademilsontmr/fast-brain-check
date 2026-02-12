@@ -37,11 +37,11 @@ const SinaisQIAlto = () => {
             "dateModified": modifiedDate,
             "author": {
                 "@type": "Organization",
-                "name": "BomQI"
+                "name": "Equipe Bom QI"
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "BomQI",
+                "name": "Equipe Bom QI",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://bomqi.com.br/favicon-brain-icon.png"
