@@ -600,6 +600,12 @@ export const allBlogArticles: BlogArticle[] = [
     title: "QI Médio de Trabalhadores: Inteligência no Ambiente de Trabalho",
     description: "Descubra o QI médio de trabalhadores, como diferentes tipos de trabalho influenciam a inteligência, e a relação entre QI e desempenho profissional.",
     category: "Dados"
+  },
+  {
+    slug: "qi-jogadores-futebol",
+    title: "QI dos Principais Jogadores de Futebol: Inteligência no Campo",
+    description: "Análise completa do QI dos maiores jogadores de futebol da história. Descubra como a inteligência impacta o desempenho e o sucesso no esporte.",
+    category: "Curiosidades"
   }
 ];
 

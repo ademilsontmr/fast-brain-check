@@ -133,8 +133,8 @@ export const questions: Question[] = [
   },
   {
     id: 15,
-    question: "Se todos os pássaros voam e o pinguim é um pássaro, então:",
-    options: ["Pinguim voa", "Nem todos os pássaros voam", "Pinguim não é pássaro", "A informação é contraditória"],
+    question: "Se todos os cachorros latem e Rex é um cachorro, então:",
+    options: ["Rex não late", "Rex late", "Alguns cachorros não latem", "Impossível determinar"],
     correctAnswer: 1,
     difficulty: 'medium',
     category: 'logic'
@@ -228,8 +228,8 @@ export const questions: Question[] = [
   },
   {
     id: 26,
-    question: "Se CASA = 40 e MESA = 38, então PESO = ? (Considere que cada letra tem um valor: A=1, B=2, C=3...)",
-    options: ["40", "55", "60", "65"],
+    question: "Se BOLA = 40 (B=2, O=15, L=12, A=1) e CASA = 23 (C=3, A=1, S=19, A=1), então MESA = ?",
+    options: ["48", "50", "52", "54"],
     correctAnswer: 1,
     difficulty: 'hard',
     category: 'math'
@@ -265,8 +265,8 @@ export const questions: Question[] = [
   },
   {
     id: 30,
-    question: "Se ontem fosse amanhã, hoje seria sexta-feira. Que dia é hoje?",
-    options: ["Quarta", "Quinta", "Sexta", "Sábado"],
+    question: "Maria tem o dobro da idade de João. Se João tem 15 anos, quantos anos Maria terá daqui a 5 anos?",
+    options: ["30", "35", "40", "45"],
     correctAnswer: 1,
     difficulty: 'hard',
     category: 'logic'

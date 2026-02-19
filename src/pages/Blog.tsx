@@ -453,6 +453,16 @@ const Blog = () => {
     },
     {
       id: 94,
+      title: "QI dos Principais Jogadores de Futebol: Inteligência no Campo",
+      slug: "qi-jogadores-futebol",
+      description: "Análise completa do QI dos maiores jogadores de futebol da história. Descubra como a inteligência impacta o desempenho e o sucesso no esporte.",
+      icon: Trophy,
+      category: "Curiosidades",
+      gradient: "from-green-500/20 to-blue-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 95,
       title: "Inteligência Fluida vs Cristalizada: Como Usar Ambas Para Ganhar Dinheiro",
       slug: "inteligencia-fluida-cristalizada-ganhar-dinheiro",
       description: "Entenda os dois tipos de inteligência e como aplicá-los estrategicamente para aumentar sua renda e construir riqueza.",
@@ -462,7 +472,7 @@ const Blog = () => {
       borderColor: "border-violet-500/30"
     },
     {
-      id: 95,
+      id: 96,
       title: "Dopamina e Tomada de Decisão: A Química do Sucesso Financeiro",
       slug: "dopamina-decisao-sucesso-financeiro",
       description: "Como a dopamina influencia suas decisões financeiras. Aprenda a hackear seu cérebro para tomar decisões mais inteligentes e lucrativas.",
@@ -472,7 +482,7 @@ const Blog = () => {
       borderColor: "border-pink-500/30"
     },
     {
-      id: 96,
+      id: 97,
       title: "Inteligência Prática vs Teórica: Qual Gera Mais Dinheiro?",
       slug: "inteligencia-pratica-teorica-dinheiro",
       description: "Descubra a diferença entre inteligência prática e teórica e qual tipo gera mais renda. Estratégias para desenvolver ambas e maximizar ganhos.",
@@ -482,7 +492,7 @@ const Blog = () => {
       borderColor: "border-blue-500/30"
     },
     {
-      id: 97,
+      id: 98,
       title: "QI Empresarial vs QI Acadêmico: Qual Gera Mais Riqueza?",
       slug: "qi-empresarial-vs-qi-academico",
       description: "Descubra a diferença entre inteligência acadêmica e empresarial. Por que pessoas com QI alto nem sempre ficam ricas e como desenvolver inteligência para negócios.",
@@ -492,7 +502,7 @@ const Blog = () => {
       borderColor: "border-amber-500/30"
     },
     {
-      id: 98,
+      id: 99,
       title: "Inteligência Social vs QI: O Que Importa Mais Para o Sucesso?",
       slug: "inteligencia-social-vs-qi",
       description: "Descubra por que inteligência social pode ser mais importante que QI para sucesso profissional e financeiro. Como desenvolver ambas para maximizar resultados.",
@@ -502,7 +512,7 @@ const Blog = () => {
       borderColor: "border-purple-500/30"
     },
     {
-      id: 99,
+      id: 100,
       title: "Pensamento Crítico vs QI: Qual é Mais Importante?",
       slug: "pensamento-critico-vs-qi",
       description: "Descubra por que pensamento crítico pode ser mais valioso que QI alto. Como desenvolver habilidade de análise e tomada de decisão para sucesso profissional.",
@@ -512,7 +522,7 @@ const Blog = () => {
       borderColor: "border-indigo-500/30"
     },
     {
-      id: 100,
+      id: 101,
       title: "Inteligências Múltiplas: Como Identificar e Monetizar Seus Talentos",
       slug: "inteligencias-multiplas-monetizar",
       description: "Descubra suas inteligências dominantes e aprenda estratégias práticas para transformá-las em renda. Guia completo com exemplos reais de monetização.",
@@ -522,7 +532,7 @@ const Blog = () => {
       borderColor: "border-violet-500/30"
     },
     {
-      id: 101,
+      id: 102,
       title: "Inteligência Emocional vs QI: Qual Determina Mais Sucesso?",
       slug: "inteligencia-emocional-vs-qi",
       description: "Descubra por que inteligência emocional pode ser mais importante que QI para sucesso. Dados, estudos e como desenvolver ambas habilidades.",

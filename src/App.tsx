@@ -74,6 +74,7 @@ const ComoFicarMaisInteligente = lazy(() => import("./pages/blog/ComoFicarMaisIn
 const ComoFicarRicoRelacaoQI = lazy(() => import("./pages/blog/ComoFicarRicoRelacaoQI"));
 const ComoFicarRicoInternetQI = lazy(() => import("./pages/blog/ComoFicarRicoInternetQI"));
 const NeurocienciaRiquezaQIPatrimonio = lazy(() => import("./pages/blog/NeurocienciaRiquezaQIPatrimonio"));
+const QIJogadoresFutebol = lazy(() => import("./pages/blog/QIJogadoresFutebol"));
 const InteligenciaFluidaCristalizadaGanharDinheiro = lazy(() => import("./pages/blog/InteligenciaFluidaCristalizadaGanharDinheiro"));
 const DopaminaDecisaoSucessoFinanceiro = lazy(() => import("./pages/blog/DopaminaDecisaoSucessoFinanceiro"));
 const InteligenciaPraticaTeoricaDinheiro = lazy(() => import("./pages/blog/InteligenciaPraticaTeoricaDinheiro"));
@@ -666,6 +667,14 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <NeurocienciaRiquezaQIPatrimonio />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-jogadores-futebol"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIJogadoresFutebol />
               </Suspense>
             }
           />

@@ -11,7 +11,7 @@ import SocialProofCarousel from "@/components/SocialProofCarousel";
 import { useSEO } from "@/hooks/use-seo";
 
 // Price ID do produto no Stripe (Produção)
-const STRIPE_PRICE_ID = import.meta.env.VITE_STRIPE_PRICE_ID || 'price_1STUfDG0HYZrAR0LAzL3Syub';
+const STRIPE_PRICE_ID = import.meta.env.VITE_STRIPE_PRICE_ID || 'price_1T2ekWG0HYZrAR0Lcq3UZl41';
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -208,7 +208,7 @@ const Payment = () => {
             <div className="flex items-center justify-between mb-4">
               <span className="text-lg font-medium">Acesso Completo</span>
               <div className="text-right">
-                <span className="text-3xl font-bold text-primary">R$ 7,00</span>
+                <span className="text-3xl font-bold text-primary">R$ 14,90</span>
                 <p className="text-xs text-muted-foreground opacity-60">Pagamento único</p>
               </div>
             </div>
@@ -248,7 +248,7 @@ const Payment = () => {
             ) : (
               <>
                 <Zap className="w-5 h-5 mr-2" />
-                Desbloquear por R$ 7,00
+                Desbloquear por R$ 14,90
               </>
             )}
           </Button>
