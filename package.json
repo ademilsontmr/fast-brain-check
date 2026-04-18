@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:frontend dev:backend",
     "dev:frontend": "vite --port 5173",
-    "dev:backend": "wrangler pages dev --proxy 5173",
+    "dev:backend": "wrangler pages dev . --port 8787 --proxy 5173",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",

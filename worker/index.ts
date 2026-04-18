@@ -260,32 +260,49 @@ app.post('/api/webhook/stripe', async (c) => {
 
 // POST /api/webhook/abacate - Recebe confirmações de pagamento da Abacate Pay
 app.post('/api/webhook/abacate', async (c) => {
-	const event = c.req.body();
+	const body: any = await c.req.json();
+	const eventId = body.id || `abacate-event-${Date.now()}`; // Fallback para ID do evento
 
-	// Registrar o evento para idempotência
+	// 1. Registrar e verificar idempotência
 	try {
-		await c.env.DB.prepare(`INSERT INTO "abacate-pay-webhook_processing_log" (event_id, gateway) VALUES (?, 'abacate-pay')`).bind(event.id).run();
+		// Tenta inserir. Se a chave primária (event_id) já existir, falhará.
+		await c.env.DB.prepare(`INSERT INTO "abacate-pay-webhook_processing_log" (event_id, gateway) VALUES (?, 'abacate-pay')`).bind(eventId).run();
 	} catch (e: any) {
-		// ... (lógica de erro sem alteração) ...
+		// Se for um erro de chave única, significa que o evento já foi recebido.
+		if (e.message.includes('UNIQUE constraint failed')) {
+			console.log(`Webhook ${eventId} já processado. Ignorando.`);
+			return c.json({ received: true, message: 'Evento já processado.' });
+		}
+		// Outros erros de banco de dados
+		console.error("Erro ao registrar webhook no DB:", e.message);
+		return c.json({ error: 'Falha interna ao processar webhook.' }, 500);
 	}
 
+	// 2. Processar o evento
 	if (body.event === 'charge.paid') {
 		const resultAccessToken = body.data.reference;
 		if (resultAccessToken) {
 			// Atualiza o status do pagamento para 'approved'
-			const { success } = await c.env.DB.prepare(
+			const updateResult = await c.env.DB.prepare(
 				`UPDATE "abacate-pay-payments" SET status = 'approved', updated_at = CURRENT_TIMESTAMP WHERE result_access_token = ? AND status = 'pending'`
 			).bind(resultAccessToken).run();
 
-			if (success) {
-				// Anonimizar dados após confirmação
-				const payment = await c.env.DB.prepare(`SELECT user_cpf, user_email, user_whatsapp FROM "abacate-pay-payments" WHERE result_access_token = ?`)
-					.bind(resultAccessToken).first<{ user_cpf: string, user_email: string, user_whatsapp: string }>();
-				
-				if (payment) {
-					const { anonymizedCpf, anonymizedEmail, anonymizedWhatsapp } = anonymizeData(payment.user_cpf, payment.user_email, payment.user_whatsapp);
-					await c.env.DB.prepare(`UPDATE "abacate-pay-payments" SET user_cpf = ?, user_email = ?, user_whatsapp = ? WHERE result_access_token = ?`)
-						.bind(anonymizedCpf, anonymizedEmail, anonymizedWhatsapp, resultAccessToken).run();
+			// Se a atualização foi bem-sucedida (afetou 1 linha)
+			if (updateResult.changes > 0) {
+				// 3. Anonimizar dados após confirmação (com tratamento de erro)
+				try {
+					const payment = await c.env.DB.prepare(`SELECT user_cpf, user_email, user_whatsapp FROM "abacate-pay-payments" WHERE result_access_token = ?`)
+						.bind(resultAccessToken).first<{ user_cpf: string, user_email: string, user_whatsapp: string }>();
+
+					if (payment) {
+						const { anonymizedCpf, anonymizedEmail, anonymizedWhatsapp } = anonymizeData(payment.user_cpf, payment.user_email, payment.user_whatsapp);
+						await c.env.DB.prepare(`UPDATE "abacate-pay-payments" SET user_cpf = ?, user_email = ?, user_whatsapp = ? WHERE result_access_token = ?`)
+							.bind(anonymizedCpf, anonymizedEmail, anonymizedWhatsapp, resultAccessToken).run();
+					}
+				} catch (e: any) {
+					console.error(`Falha ao anonimizar dados para o token ${resultAccessToken}:`, e.message);
+					// O pagamento foi aprovado, mas a anonimização falhou.
+					// O sistema não deve parar aqui, mas o erro deve ser logado para análise.
 				}
 			}
 		}
