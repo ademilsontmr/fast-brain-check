@@ -1,110 +1,89 @@
-const API_URL = import.meta.env.VITE_API_URL || 'https://bomqi.com.br/api';
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 
-export interface UserData {
+// Interface para os dados do cliente enviados na criação do pagamento
+export interface CustomerData {
   name: string;
-  whatsapp: string;
-  score?: number;
-  iqScore?: number;
-  averageAnswerTime?: number;
+  email: string;
+  taxId: string; // CPF
+  phone: string;
 }
 
-export const saveUserData = async (userData: UserData): Promise<boolean> => {
-  const url = `${API_URL}/users`;
-  const payload = {
-    name: userData.name,
-    whatsapp: userData.whatsapp,
-    score: userData.score || 0,
-  };
+// =========================================================================
+// Funções de Pagamento
+// =========================================================================
 
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-
-    const responseText = await response.text();
-
-    if (!response.ok) {
-      console.error('Erro ao salvar:', response.status, responseText);
-      return false;
-    }
-
-    try {
-      const responseData = JSON.parse(responseText);
-      if (responseData.userId) {
-        localStorage.setItem("userId", responseData.userId);
-      }
-    } catch (e) {
-      // Resposta não é JSON válido
-    }
-
-    return true;
-  } catch (error) {
-    console.error('Erro ao salvar dados:', error);
-    return false;
-  }
-};
-
-export const getRank = async (_userId: string) => {
-  return { 
-    position: Math.floor(Math.random() * 5000) + 1000, 
-    total: 50000 
-  };
-};
-
-export interface CheckoutResponse {
+export interface CardPaymentResponse {
   sessionId: string;
   url: string;
-  resultToken: string;
 }
 
-export const createCheckoutSession = async (userId: string, priceId: string, email?: string): Promise<CheckoutResponse> => {
-  const url = `${API_URL}/checkout`;
+/**
+ * Cria uma sessão de pagamento com Cartão de Crédito via Stripe.
+ */
+export const createCardPayment = async (productKey: string, customer: CustomerData): Promise<CardPaymentResponse> => {
+  const url = `${API_URL}/create-payment/card`;
   
   const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, priceId, email }),
+    body: JSON.stringify({ productKey, customer }),
   });
 
   if (!response.ok) {
     const error = await response.json();
-    throw new Error(error.error || 'Erro ao criar sessão de checkout');
+    throw new Error(error.error || 'Erro ao criar sessão de pagamento com cartão');
   }
 
   return response.json();
 };
 
-export interface ResultData {
-  userId: string;
-  name: string;
-  whatsapp: string;
-  score: number;
-  iqScore: number;
-  averageAnswerTime?: number;
-  celebrity?: string;
-  cognitiveStrength?: string;
-  percentile?: number;
+
+export interface PixPaymentResponse {
+  paymentId: string;
+  brCode: string; // O código "copia e cola" do PIX
+  accessToken: string; // Token para buscar o resultado depois
 }
 
-export const saveResult = async (token: string, resultData: ResultData): Promise<boolean> => {
-  const url = `${API_URL}/results`;
+/**
+ * Cria uma cobrança PIX via Abacate Pay.
+ */
+export const createPixPayment = async (productKey: string, customer: CustomerData): Promise<PixPaymentResponse> => {
+  const url = `${API_URL}/create-payment/pix`;
   
   const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ token, resultData }),
+    body: JSON.stringify({ productKey, customer }),
   });
 
   if (!response.ok) {
     const error = await response.json();
-    throw new Error(error.error || 'Erro ao salvar resultado');
+    throw new Error(error.error || 'Erro ao gerar cobrança PIX');
   }
 
-  return true;
+  return response.json();
 };
 
+
+// =========================================================================
+// Funções de Resultado
+// =========================================================================
+
+export interface ResultData {
+  id: string; // ID do pagamento, usado para buscar o ranking
+  status: 'approved' | 'pending' | 'rejected';
+  name: string;
+  score?: number;
+  iqScore?: number;
+  celebrity?: string;
+  cognitiveStrength?: string;
+  percentile?: number;
+  averageAnswerTime?: number;
+}
+
+/**
+ * Busca o resultado de um pagamento usando o token de acesso.
+ */
 export const getResultByToken = async (token: string): Promise<ResultData> => {
   const url = `${API_URL}/results?token=${encodeURIComponent(token)}`;
   
@@ -120,3 +99,42 @@ export const getResultByToken = async (token: string): Promise<ResultData> => {
 
   return response.json();
 };
+
+
+export interface RankData {
+  position: number;
+  total: number;
+}
+
+/**
+ * Busca a posição do usuário no ranking.
+ */
+export const getRank = async (userId: string): Promise<RankData> => {
+  const url = `${API_URL}/rank/${userId}`;
+  
+  const response = await fetch(url, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.error || 'Erro ao buscar ranking');
+  }
+
+  return response.json();
+};
+
+
+// Funções antigas que podem ser removidas ou adaptadas
+// A lógica de saveUserData agora está embutida na criação do pagamento.
+export const saveUserData = async (userData: any): Promise<boolean> => {
+  console.warn("saveUserData está obsoleta e não faz mais chamadas de API.");
+  // Salva no localStorage para ser pego na hora de criar o pagamento
+  localStorage.setItem("userName", userData.name);
+  localStorage.setItem("userWhatsApp", userData.whatsapp);
+  localStorage.setItem("userEmail", userData.email || '');
+  localStorage.setItem("userTaxId", userData.taxId || '');
+  return true;
+};
+

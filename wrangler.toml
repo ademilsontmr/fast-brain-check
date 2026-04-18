@@ -1,3 +1,12 @@
 name = "bomqi"
 pages_build_output_dir = "dist"
 compatibility_date = "2024-01-01"
+
+# Adiciona a referência ao nosso banco de dados D1.
+# O Worker terá acesso ao banco através de `env.DB`.
+[[d1_databases]]
+binding = "DB" # Nome da variável no código do Worker: env.DB
+database_name = "fast-brain-check-db" # Nome do banco de dados no painel da Cloudflare
+database_id = "00000000-0000-0000-0000-000000000000" # Preencha com o ID do banco de dados D1 após criá-lo no painel da Cloudflare
+migrations_dir = "migrations" # Aponta para a pasta com os arquivos SQL
+
