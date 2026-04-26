@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 import InputMask from 'react-input-mask';
 
+
 const UserData = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
