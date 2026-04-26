@@ -25,6 +25,9 @@ supabase/.temp/
 
 # Scripts locais
 checkline.ps1
+
+# Kiro MCP config (contém project refs)
+.kiro/settings/mcp.json
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
