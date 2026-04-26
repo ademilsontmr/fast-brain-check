@@ -151,9 +151,6 @@ import SobreOTeste from "./pages/SobreOTeste";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import TermosUso from "./pages/TermosUso";
 import Contato from "./pages/Contato";
-import PaymentSuccess from "./pages/PaymentSuccess";
-import PaymentError from "./pages/PaymentError";
-import PaymentPending from "./pages/PaymentPending";
 import QIPorPais from "./pages/QIPorPais";
 
 const queryClient = new QueryClient();
@@ -1228,9 +1225,6 @@ const App = () => (
           <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/termos-uso" element={<TermosUso />} />
           <Route path="/contato" element={<Contato />} />
-          <Route path="/pagamento/sucesso" element={<PaymentSuccess />} />
-          <Route path="/pagamento/erro" element={<PaymentError />} />
-          <Route path="/pagamento/pendente" element={<PaymentPending />} />
           <Route path="/qi-por-pais" element={<QIPorPais />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

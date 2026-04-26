@@ -4,81 +4,53 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Brain, MessageCircle, User, Sparkles } from "lucide-react";
+import { Brain, MessageCircle, User, Sparkles, Mail, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { saveUserData } from "@/services/api";
-import { calculateIQ } from "@/types/quiz";
+import { saveUserDataLocally } from "@/services/api";
 import Footer from "@/components/Footer";
-import SocialProofCarousel from "@/components/SocialProofCarousel";
 import { useSEO } from "@/hooks/use-seo";
+import InputMask from 'react-input-mask';
 
 const UserData = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  // SEO: noIndex para página de dados do usuário (não deve ser indexada)
   useSEO({
-    title: "Seus Dados",
+    title: "Seus Dados - Finalize seu Teste",
     description: "Preencha seus dados para receber o resultado do teste de QI.",
     noIndex: true,
   });
 
   const [name, setName] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
+  const [email, setEmail] = useState("");
+  const [taxId, setTaxId] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    // Verificar se o usuário completou o teste
     const savedScore = localStorage.getItem("quizScore");
     if (!savedScore) {
       navigate("/");
-      return;
     }
   }, [navigate]);
 
-  const formatWhatsApp = (value: string) => {
-    // Remove tudo que não é número
-    const numbers = value.replace(/\D/g, "");
-    
-    // Limita a 11 dígitos (DDD + 9 dígitos)
-    const limited = numbers.slice(0, 11);
-    
-    // Formata: (XX) XXXXX-XXXX
-    if (limited.length <= 2) {
-      return limited;
-    } else if (limited.length <= 7) {
-      return `(${limited.slice(0, 2)}) ${limited.slice(2)}`;
-    } else {
-      return `(${limited.slice(0, 2)}) ${limited.slice(2, 7)}-${limited.slice(7)}`;
-    }
-  };
-
-  const handleWhatsAppChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatWhatsApp(e.target.value);
-    setWhatsapp(formatted);
-  };
-
-  const validateWhatsApp = (whatsapp: string): boolean => {
-    const numbers = whatsapp.replace(/\D/g, "");
-    return numbers.length === 11; // DDD + 9 dígitos
+  const validateForm = () => {
+    if (!name.trim()) return false;
+    if (!email.trim().includes('@')) return false;
+    const whatsappNumbers = whatsapp.replace(/\D/g, "");
+    if (whatsappNumbers.length < 10) return false; // Pelo menos DDD + 8 dígitos
+    const taxIdNumbers = taxId.replace(/\D/g, "");
+    if (taxIdNumbers.length !== 11) return false;
+    return true;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!name.trim()) {
+    if (!validateForm()) {
       toast({
-        title: "Nome obrigatório",
-        description: "Por favor, informe seu nome completo.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!validateWhatsApp(whatsapp)) {
-      toast({
-        title: "WhatsApp inválido",
-        description: "Por favor, informe um número de WhatsApp válido com DDD.",
+        title: "Dados incompletos",
+        description: "Por favor, preencha todos os campos corretamente.",
         variant: "destructive",
       });
       return;
@@ -86,65 +58,25 @@ const UserData = () => {
 
     setIsSubmitting(true);
 
-    const whatsappNumber = whatsapp.replace(/\D/g, "");
-    localStorage.setItem("userName", name.trim());
-    localStorage.setItem("userWhatsApp", whatsappNumber);
-
-    // Obter dados do localStorage
-    const score = localStorage.getItem("quizScore");
-    const averageAnswerTime = localStorage.getItem("quizAverageAnswerTime");
-    
-    // Calcular QI apenas uma vez
-    let iqScore: number | undefined;
-    if (score) {
-      const result = calculateIQ(
-        parseInt(score),
-        30,
-        averageAnswerTime ? parseFloat(averageAnswerTime) : undefined
-      );
-      iqScore = result.iqScore;
-    }
-
-    // Salvar dados do usuário (não bloqueia se falhar)
-    try {
-      await saveUserData({
-        name: name.trim(),
-        whatsapp: whatsappNumber,
-        score: score ? parseInt(score) : undefined,
-        iqScore,
-        averageAnswerTime: averageAnswerTime ? parseFloat(averageAnswerTime) : undefined,
-      });
-    } catch (error) {
-      // Não bloquear o fluxo se houver erro ao salvar
-      console.error("Erro ao salvar dados:", error);
-    }
+    saveUserDataLocally({
+      name: name.trim(),
+      whatsapp: whatsapp.replace(/\D/g, ""),
+      email: email.trim(),
+      taxId: taxId.replace(/\D/g, ""),
+    });
 
     toast({
       title: "Dados salvos!",
-      description: "Preparando seu resultado...",
+      description: "Redirecionando para o pagamento...",
     });
 
-    // Redirecionar imediatamente (usar window.location como fallback)
-    try {
-      navigate("/pagamento");
-    } catch (error) {
-      // Fallback caso navigate não funcione
-      window.location.href = "/pagamento";
-    }
+    navigate("/pagamento");
   };
 
   return (
     <div className="min-h-screen bg-gradient-hero">
       <header className="border-b border-border bg-background/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div 
-            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-            onClick={() => navigate("/")}
-          >
-            <Brain className="w-8 h-8 text-primary" />
-            <div className="text-2xl font-bold">BomQI</div>
-          </div>
-        </div>
+        {/* ... Header ... */}
       </header>
 
       <div className="container mx-auto px-4 py-12 max-w-2xl">
@@ -153,107 +85,81 @@ const UserData = () => {
             <Sparkles className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-4xl font-bold mb-4">
-            Quase lá! 🎯
+            Último Passo! 🚀
           </h1>
           <p className="text-xl text-muted-foreground">
-            Precisamos de algumas informações para gerar seu resultado personalizado
+            Preencha seus dados para o pagamento e para receber seu resultado.
           </p>
         </div>
 
         <Card className="p-8 shadow-elegant">
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Nome Completo */}
             <div className="space-y-2">
               <Label htmlFor="name" className="text-base font-semibold flex items-center gap-2">
                 <User className="w-5 h-5 text-primary" />
-                Seu Nome Completo
+                Nome Completo
               </Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="Digite seu nome completo"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="h-12 text-base"
-                required
-                autoFocus
-              />
+              <Input id="name" type="text" placeholder="Seu nome completo" value={name} onChange={(e) => setName(e.target.value)} required />
+            </div>
+
+            {/* Email */}
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-base font-semibold flex items-center gap-2">
+                <Mail className="w-5 h-5 text-primary" />
+                Seu Melhor E-mail
+              </Label>
+              <Input id="email" type="email" placeholder="exemplo@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            </div>
+
+            {/* CPF */}
+            <div className="space-y-2">
+              <Label htmlFor="taxId" className="text-base font-semibold flex items-center gap-2">
+                <FileText className="w-5 h-5 text-primary" />
+                CPF
+              </Label>
+              <InputMask
+                mask="999.999.999-99"
+                value={taxId}
+                onChange={(e) => setTaxId(e.target.value)}
+              >
+                {(inputProps: any) => <Input {...inputProps} id="taxId" type="tel" placeholder="000.000.000-00" required />}
+              </InputMask>
               <p className="text-sm text-muted-foreground">
-                Como você gostaria de ser chamado no seu resultado?
+                Necessário para a emissão da nota fiscal e para o pagamento.
               </p>
             </div>
 
+            {/* WhatsApp */}
             <div className="space-y-2">
               <Label htmlFor="whatsapp" className="text-base font-semibold flex items-center gap-2">
                 <MessageCircle className="w-5 h-5 text-primary" />
-                Seu WhatsApp
+                WhatsApp
               </Label>
-              <Input
-                id="whatsapp"
-                type="tel"
-                placeholder="(00) 00000-0000"
+              <InputMask
+                mask="(99) 99999-9999"
                 value={whatsapp}
-                onChange={handleWhatsAppChange}
-                className="h-12 text-base"
-                required
-                maxLength={15}
-              />
-              <p className="text-sm text-muted-foreground">
-                Enviaremos seu resultado completo por WhatsApp
-              </p>
-            </div>
-
-            <div className="bg-primary/5 rounded-lg p-4 border border-primary/20">
-              <h3 className="font-semibold mb-2 flex items-center gap-2">
-                <Brain className="w-5 h-5 text-primary" />
-                O que você vai receber:
-              </h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Seu QI exato e análise detalhada</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Comparação com celebridades</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Seu percentil nacional</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Análise dos seus pontos fortes</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Dicas personalizadas para desenvolvimento</span>
-                </li>
-              </ul>
+                onChange={(e) => setWhatsapp(e.target.value)}
+              >
+                {(inputProps: any) => <Input {...inputProps} id="whatsapp" type="tel" placeholder="(00) 00000-0000" required />}
+              </InputMask>
             </div>
 
             <Button
               type="submit"
               size="lg"
               className="w-full shadow-elegant text-lg"
-              disabled={isSubmitting || !name.trim() || !validateWhatsApp(whatsapp)}
+              disabled={isSubmitting || !validateForm()}
             >
-              {isSubmitting ? "Processando..." : "Ver Meu Resultado Completo"}
+              {isSubmitting ? "Processando..." : "Ir para o Pagamento"}
             </Button>
 
             <p className="text-center text-sm text-muted-foreground">
-              Seus dados estão seguros e serão usados apenas para enviar seu resultado
+              🔒 Seus dados estão seguros e são necessários para o processamento do pagamento.
             </p>
           </form>
         </Card>
       </div>
-
-      {/* Social Proof Carousel */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">O que as pessoas estão dizendo</h2>
-        </div>
-        <SocialProofCarousel />
-      </section>
 
       <Footer />
     </div>
@@ -261,4 +167,5 @@ const UserData = () => {
 };
 
 export default UserData;
+
 

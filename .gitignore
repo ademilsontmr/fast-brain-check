@@ -11,12 +11,23 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
 
 # Cloudflare
 .wrangler
 .dev.vars
 wrangler.toml.bak
 
+worker/.dev.vars
+
+# Supabase CLI temp files
+supabase/.temp/
+
+# Scripts locais
+checkline.ps1
+
+# Kiro MCP config (contém project refs)
+.kiro/settings/mcp.json
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

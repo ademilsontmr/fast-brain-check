@@ -1,122 +1,109 @@
-const API_URL = import.meta.env.VITE_API_URL || 'https://bomqi.com.br/api';
+// URL base das Edge Functions do Supabase
+// Formato: https://<project-ref>.supabase.co/functions/v1
+const FUNCTIONS_URL = import.meta.env.VITE_SUPABASE_FUNCTIONS_URL;
 
-export interface UserData {
+export interface CustomerData {
   name: string;
-  whatsapp: string;
-  score?: number;
-  iqScore?: number;
-  averageAnswerTime?: number;
+  email: string;
+  taxId: string; // CPF
+  phone: string;
 }
 
-export const saveUserData = async (userData: UserData): Promise<boolean> => {
-  const url = `${API_URL}/users`;
-  const payload = {
-    name: userData.name,
-    whatsapp: userData.whatsapp,
-    score: userData.score || 0,
+const getQuizData = () => {
+  const score = parseInt(localStorage.getItem('quizScore') || '0', 10);
+  const raw = parseFloat(localStorage.getItem('quizAverageAnswerTime') || '');
+  const averageAnswerTime = Number.isFinite(raw) && raw > 0 ? raw : undefined;
+  return { score, averageAnswerTime };
+};
+
+const toUserData = (customer: CustomerData) => {
+  const { score, averageAnswerTime } = getQuizData();
+  return {
+    name: customer.name,
+    email: customer.email,
+    cpf: customer.taxId,
+    whatsapp: customer.phone,
+    score,
+    averageAnswerTime,
   };
+};
 
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-
-    const responseText = await response.text();
-
-    if (!response.ok) {
-      console.error('Erro ao salvar:', response.status, responseText);
-      return false;
-    }
-
+async function callFunction(path: string, body: unknown, retries = 2) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const responseData = JSON.parse(responseText);
-      if (responseData.userId) {
-        localStorage.setItem("userId", responseData.userId);
-      }
-    } catch (e) {
-      // Resposta não é JSON válido
+      const res = await fetch(`${FUNCTIONS_URL}${path}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Erro na requisição');
+      return data;
+    } catch (err) {
+      if (attempt === retries) throw err;
+      // Aguarda antes de tentar novamente (cold start)
+      await new Promise(r => setTimeout(r, 1500 * (attempt + 1)));
     }
-
-    return true;
-  } catch (error) {
-    console.error('Erro ao salvar dados:', error);
-    return false;
   }
-};
-
-export const getRank = async (_userId: string) => {
-  return { 
-    position: Math.floor(Math.random() * 5000) + 1000, 
-    total: 50000 
-  };
-};
-
-export interface CheckoutResponse {
-  sessionId: string;
-  url: string;
-  resultToken: string;
 }
 
-export const createCheckoutSession = async (userId: string, priceId: string, email?: string): Promise<CheckoutResponse> => {
-  const url = `${API_URL}/checkout`;
-  
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, priceId, email }),
+// =========================================================================
+// Pagamento
+// =========================================================================
+
+export interface PixPaymentResponse {
+  paymentId: string;
+  brCode: string;
+  accessToken: string;
+}
+
+export const createPixPayment = async (productId: string, customer: CustomerData): Promise<PixPaymentResponse> => {
+  const data = await callFunction('/create-payment', {
+    productId,
+    userData: toUserData(customer),
   });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Erro ao criar sessão de checkout');
-  }
-
-  return response.json();
+  return { paymentId: '', brCode: data.qrCode, accessToken: data.resultAccessToken };
 };
+
+// =========================================================================
+// Resultado e Ranking
+// =========================================================================
 
 export interface ResultData {
-  userId: string;
+  id: string;
+  status: 'approved' | 'pending' | 'rejected';
   name: string;
-  whatsapp: string;
-  score: number;
-  iqScore: number;
-  averageAnswerTime?: number;
+  score?: number;
+  iqScore?: number;
   celebrity?: string;
   cognitiveStrength?: string;
   percentile?: number;
+  averageAnswerTime?: number;
 }
 
-export const saveResult = async (token: string, resultData: ResultData): Promise<boolean> => {
-  const url = `${API_URL}/results`;
-  
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ token, resultData }),
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Erro ao salvar resultado');
-  }
-
-  return true;
+export const getResultByToken = async (token: string): Promise<ResultData> => {
+  const res = await fetch(`${FUNCTIONS_URL}/get-results?token=${encodeURIComponent(token)}`);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Erro ao buscar resultado');
+  return data;
 };
 
-export const getResultByToken = async (token: string): Promise<ResultData> => {
-  const url = `${API_URL}/results?token=${encodeURIComponent(token)}`;
-  
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' },
-  });
+export interface RankData {
+  position: number;
+  total: number;
+}
 
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Erro ao buscar resultado');
-  }
+export const getRank = async (userId: string): Promise<RankData> => {
+  const res = await fetch(`${FUNCTIONS_URL}/get-rank/${userId}`);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Erro ao buscar ranking');
+  return data;
+};
 
-  return response.json();
+// Salva dados do usuário apenas no localStorage (sem chamada ao backend)
+export const saveUserDataLocally = (userData: { name: string; whatsapp: string; email?: string; taxId?: string }) => {
+  localStorage.setItem('userName', userData.name);
+  localStorage.setItem('userWhatsApp', userData.whatsapp);
+  localStorage.setItem('userEmail', userData.email || '');
+  localStorage.setItem('userTaxId', userData.taxId || '');
 };
