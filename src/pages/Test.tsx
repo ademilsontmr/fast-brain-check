@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { questions } from "@/types/quiz";
 import { Button } from "@/components/ui/button";
@@ -78,9 +78,9 @@ const Test = () => {
 
     if (timedOut) {
       toast({ title: "⏰ Tempo esgotado!", description: "O teste foi finalizado automaticamente.", variant: "destructive" });
-      setTimeout(() => navigate("/dados-usuario"), 1500);
+      setTimeout(() => navigate("/resultado-basico"), 1500);
     } else {
-      navigate("/dados-usuario");
+      navigate("/resultado-basico");
     }
   };
 
@@ -96,9 +96,9 @@ const Test = () => {
       setTimeRemaining(timeRemainingRef.current);
 
       if (timeRemainingRef.current === 120) {
-        toast({ title: "⏱️ Tempo passando", description: "Resta apenas 2 minutos!" });
+        toast({ title: "⏳ Tempo passando", description: "Resta apenas 2 minutos!" });
       } else if (timeRemainingRef.current === 30) {
-        toast({ title: "⏰ Atenção!", description: "Resta apenas 30 segundos!", variant: "destructive" });
+        toast({ title: "⚠️ Atenção!", description: "Resta apenas 30 segundos!", variant: "destructive" });
       } else if (timeRemainingRef.current <= 0) {
         finishQuiz(true);
       }
@@ -164,12 +164,12 @@ const Test = () => {
 
   const motivationContent = (() => {
     const next = currentQuestion + 1;
-    if (next === 7) return { icon: Sparkles, title: "Você está indo bem! ✨", message: "Seus primeiros acertos mostram que você tem um raciocínio rápido. Continue assim!", color: "text-primary" };
-    if (next === 15) return { icon: TrendingUp, title: "Impressionante! 📈", message: "Você está acima da média. Seu QI pode surpreender!", color: "text-accent" };
+    if (next === 7) return { icon: Sparkles, title: "Você está indo bem! 🧠", message: "Seus primeiros acertos mostram que você tem um raciocínio rápido. Continue assim!", color: "text-primary" };
+    if (next === 15) return { icon: TrendingUp, title: "Impressionante! 🚀", message: "Você está acima da média. Seu QI pode surpreender!", color: "text-accent" };
     return { icon: Zap, title: "Quase lá! ⚡", message: "Faltam poucos minutos para descobrir se você é um gênio. Não desista agora!", color: "text-primary" };
   })();
 
-  // ── Tela de gênero ──
+  // -- Tela de gênero --
   if (testStep === 'gender') {
     return (
       <div className="min-h-screen bg-gradient-hero flex flex-col items-center justify-center p-4">
@@ -202,7 +202,7 @@ const Test = () => {
     );
   }
 
-  // ── Tela de faixa etária ──
+  // -- Tela de faixa etária --
   if (testStep === 'age') {
     return (
       <div className="min-h-screen bg-gradient-hero flex flex-col items-center justify-center p-4">
@@ -235,7 +235,7 @@ const Test = () => {
     );
   }
 
-  // ── Tela de motivação ──
+  // -- Tela de motivação --
   if (showMotivation) {
     const MotivationIcon = motivationContent.icon;
     return (
@@ -252,7 +252,7 @@ const Test = () => {
     );
   }
 
-  // ── Tela de questão ──
+  // -- Tela de questão --
   const question = questions[currentQuestion];
 
   return (

@@ -138,7 +138,7 @@ const Payment = () => {
             <div className="flex items-center justify-between mb-4">
               <span className="text-lg font-medium">Acesso Completo</span>
               <div className="text-right">
-                <span className="text-3xl font-bold text-primary">R$ 29,90</span>
+                <span className="text-3xl font-bold text-primary">R$ 14,90</span>
                 <p className="text-xs text-muted-foreground opacity-60">Pagamento único</p>
               </div>
             </div>
