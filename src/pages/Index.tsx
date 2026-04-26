@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, CheckCircle, Sparkles, TrendingUp, Users, Zap, UserX, Clock, Globe, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ const Index = () => {
     if (sessionModal?.type === 'premium') {
       navigate(`/resultado-completo?token=${(sessionModal as any).token}`);
     } else {
-      navigate("/resultado-basico");
+      navigate("/dados-usuario");
     }
   };
 
