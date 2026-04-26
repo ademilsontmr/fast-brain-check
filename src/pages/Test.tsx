@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { questions } from "@/types/quiz";
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,7 @@ import { Progress } from "@/components/ui/progress";
 import { Brain, Sparkles, TrendingUp, Zap, User, Calendar } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useSEO } from "@/hooks/use-seo";
-import { markFreeResult } from "@/lib/session";
+
 
 type TestStep = 'gender' | 'age' | 'questions';
 
@@ -78,10 +78,9 @@ const Test = () => {
 
     if (timedOut) {
       toast({ title: "⏰ Tempo esgotado!", description: "O teste foi finalizado automaticamente.", variant: "destructive" });
-      setTimeout(() => navigate("/resultado-basico"), 1500);
+      setTimeout(() => navigate("/dados-usuario"), 1500);
     } else {
-      markFreeResult();
-      navigate("/resultado-basico");
+      navigate("/dados-usuario");
     }
   };
 
