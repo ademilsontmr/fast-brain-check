@@ -9,7 +9,6 @@ import { createPixPayment, getResultByToken, CustomerData } from "@/services/api
 import { markPremiumResult } from "@/lib/session";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { QRCodeSVG as QRCode } from "qrcode.react";
 
 const PRODUCT_KEY = "fast_brain_check_test";
@@ -28,13 +27,12 @@ const Payment = () => {
   const [userName, setUserName] = useState("");
   const [averageAnswerTime, setAverageAnswerTime] = useState<number | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(false);
-  const [pixModalOpen, setPixModalOpen] = useState(false);
   const [pixBrCode, setPixBrCode] = useState('');
   const [pixToken, setPixToken] = useState('');
 
-  // Polling: verifica status do pagamento PIX a cada 3s enquanto modal estiver aberta
+  // Polling: verifica status do pagamento PIX a cada 3s enquanto QR estiver visível
   useEffect(() => {
-    if (!pixModalOpen || !pixToken) return;
+    if (!pixToken) return;
     const interval = setInterval(async () => {
       try {
         const result = await getResultByToken(pixToken);
@@ -48,7 +46,7 @@ const Payment = () => {
       }
     }, 3000);
     return () => clearInterval(interval);
-  }, [pixModalOpen, pixToken, navigate]);
+  }, [pixToken, navigate]);
 
   useEffect(() => {
     const savedScore = localStorage.getItem("quizScore");
@@ -89,11 +87,9 @@ const Payment = () => {
     if (existingToken && existingBrCode && isValid) {
       setPixToken(existingToken);
       setPixBrCode(existingBrCode);
-      setPixModalOpen(true);
       return;
     }
 
-    // Limpar QR expirado (incluindo token — novo pagamento = novo token)
     localStorage.removeItem("resultAccessToken");
     localStorage.removeItem("pixBrCode");
     localStorage.removeItem("pixCreatedAt");
@@ -108,7 +104,6 @@ const Payment = () => {
       localStorage.setItem("pixCreatedAt", Date.now().toString());
       setPixToken(pixData.accessToken);
       setPixBrCode(pixData.brCode);
-      setPixModalOpen(true);
     } catch (error: any) {
       toast({ title: "Erro ao gerar PIX", description: error.message || "Tente novamente em alguns instantes.", variant: "destructive" });
     } finally {
@@ -144,43 +139,41 @@ const Payment = () => {
             </div>
           </div>
 
-          <Button
-            onClick={handlePixPayment}
-            size="lg"
-            className="w-full shadow-elegant text-lg"
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Gerando PIX...</>
-            ) : (
-              "Pagar com PIX"
-            )}
-          </Button>
+          {pixBrCode ? (
+            <div className="space-y-4">
+              <p className="text-center font-semibold text-lg">Pague com PIX</p>
+              <p className="text-center text-sm text-muted-foreground">
+                Escaneie o QR Code com o app do seu banco ou use o "Copia e Cola".
+              </p>
+              <div className="flex justify-center p-4">
+                <QRCode value={pixBrCode} size={256} />
+              </div>
+              <div className="relative min-w-0 overflow-hidden">
+                <p className="p-3 pr-12 border rounded-md bg-muted text-sm truncate">{pixBrCode}</p>
+                <Button variant="ghost" size="icon" className="absolute top-1/2 right-2 -translate-y-1/2" onClick={copyToClipboard}>
+                  <Copy className="w-4 h-4" />
+                </Button>
+              </div>
+              <p className="text-center text-sm text-muted-foreground">
+                Após o pagamento, você será redirecionado automaticamente.
+              </p>
+            </div>
+          ) : (
+            <Button
+              onClick={handlePixPayment}
+              size="lg"
+              className="w-full shadow-elegant text-lg"
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Gerando PIX...</>
+              ) : (
+                "Pagar com PIX"
+              )}
+            </Button>
+          )}
         </Card>
       </div>
-
-      <Dialog open={pixModalOpen} onOpenChange={setPixModalOpen}>
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle className="text-center text-2xl">Pague com PIX</DialogTitle>
-            <DialogDescription className="text-center">
-              Escaneie o QR Code com o app do seu banco ou use o "Copia e Cola".
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex justify-center p-4">
-            <QRCode value={pixBrCode} size={256} />
-          </div>
-          <div className="relative min-w-0 overflow-hidden">
-            <p className="p-3 pr-12 border rounded-md bg-muted text-sm truncate">{pixBrCode}</p>
-            <Button variant="ghost" size="icon" className="absolute top-1/2 right-2 -translate-y-1/2" onClick={copyToClipboard}>
-              <Copy className="w-4 h-4" />
-            </Button>
-          </div>
-          <p className="text-center text-sm text-muted-foreground mt-4">
-            Após o pagamento, você será redirecionado para a página de resultado.
-          </p>
-        </DialogContent>
-      </Dialog>
 
       <Footer />
     </div>
@@ -188,4 +181,3 @@ const Payment = () => {
 };
 
 export default Payment;
-
