@@ -1,6 +1,7 @@
 // URL base das Edge Functions do Supabase
 // Formato: https://<project-ref>.supabase.co/functions/v1
-const FUNCTIONS_URL = import.meta.env.VITE_SUPABASE_FUNCTIONS_URL;
+const FUNCTIONS_URL = import.meta.env.VITE_SUPABASE_FUNCTIONS_URL
+  ?? 'https://obmrtcwkdfeexhpvxizp.supabase.co/functions/v1';
 
 export interface CustomerData {
   name: string;
