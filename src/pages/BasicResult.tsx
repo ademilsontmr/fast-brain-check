@@ -19,7 +19,7 @@ const testimonials = [
 const BasicResult = () => {
   const navigate = useNavigate();
   const [score, setScore] = useState(0);
-
+  const [userName, setUserName] = useState("");
   const [averageAnswerTime, setAverageAnswerTime] = useState<number | undefined>(undefined);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
@@ -31,11 +31,13 @@ const BasicResult = () => {
 
   useEffect(() => {
     const savedScore = localStorage.getItem("quizScore");
+    const savedUserName = localStorage.getItem("userName");
     if (!savedScore) {
       navigate("/");
       return;
     }
     setScore(parseInt(savedScore, 10));
+    if (savedUserName) setUserName(savedUserName);
     const savedAverageTime = localStorage.getItem("quizAverageAnswerTime");
     if (savedAverageTime) setAverageAnswerTime(parseFloat(savedAverageTime));
   }, [navigate]);
@@ -66,6 +68,11 @@ const BasicResult = () => {
       <div className="container mx-auto px-4 py-10 max-w-2xl">
         {/* Saudação */}
         <div className="text-center mb-8">
+          {userName && (
+            <h1 className="text-3xl font-bold mb-2">
+              Olá, {userName}! 👋
+            </h1>
+          )}
           <p className="text-muted-foreground text-lg">Seu resultado completo está quase pronto!</p>
           <div className="inline-flex items-center gap-1 mt-3 bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full">
             <Zap className="w-4 h-4" /> Acesso imediato
