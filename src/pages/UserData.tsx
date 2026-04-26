@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Brain, MessageCircle, User, Sparkles, Mail, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { saveUserData } from "@/services/api";
+import { saveUserDataLocally } from "@/services/api";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 import InputMask from 'react-input-mask';
@@ -58,14 +58,7 @@ const UserData = () => {
 
     setIsSubmitting(true);
 
-    // Salvar dados no localStorage para usar na página de pagamento
-    localStorage.setItem("userName", name.trim());
-    localStorage.setItem("userWhatsApp", whatsapp.replace(/\D/g, ""));
-    localStorage.setItem("userEmail", email.trim());
-    localStorage.setItem("userTaxId", taxId.replace(/\D/g, ""));
-
-    // A função saveUserData agora é apenas um wrapper para o localStorage
-    await saveUserData({
+    saveUserDataLocally({
       name: name.trim(),
       whatsapp: whatsapp.replace(/\D/g, ""),
       email: email.trim(),

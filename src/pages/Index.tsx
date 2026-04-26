@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, CheckCircle, Sparkles, TrendingUp, Users, Zap, UserX, Clock, Globe, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState, useCallback } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { getSessionState, clearSession, SessionState } from "@/lib/session";
 import heroBrain from "@/assets/hero-brain.png";
 import Footer from "@/components/Footer";
 import { getCountryFlag } from "@/utils/countryFlags";
@@ -11,6 +14,31 @@ import { useSEO } from "@/hooks/use-seo";
 
 const Index = () => {
   const navigate = useNavigate();
+  const [sessionModal, setSessionModal] = useState<SessionState | null>(null);
+
+  const handleStartQuiz = useCallback(() => {
+    const state = getSessionState();
+    if (state.type !== 'none') {
+      setSessionModal(state);
+    } else {
+      navigate("/teste");
+    }
+  }, [navigate]);
+
+  const handleContinue = () => {
+    setSessionModal(null);
+    if (sessionModal?.type === 'premium') {
+      navigate(`/resultado-completo?token=${(sessionModal as any).token}`);
+    } else {
+      navigate("/resultado-basico");
+    }
+  };
+
+  const handleRestart = () => {
+    clearSession();
+    setSessionModal(null);
+    handleStartQuiz();
+  };
 
   // SEO para a página inicial
   useSEO({
@@ -102,7 +130,7 @@ const Index = () => {
               </button>
             </nav>
             
-            <Button onClick={() => navigate("/teste")}>
+            <Button onClick={() => handleStartQuiz()}>
               Fazer o Teste
             </Button>
           </div>
@@ -155,7 +183,7 @@ const Index = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button
-                onClick={() => navigate("/teste")}
+                onClick={() => handleStartQuiz()}
                 size="lg"
                 className="shadow-elegant text-lg px-8 hover-scale group"
               >
@@ -430,7 +458,7 @@ const Index = () => {
 
         <div className="text-center mt-8">
           <Button
-            onClick={() => navigate("/teste")}
+            onClick={() => handleStartQuiz()}
             size="lg"
             className="shadow-elegant"
           >
@@ -708,7 +736,7 @@ const Index = () => {
               </Card>
 
               <Button
-                onClick={() => navigate("/teste")}
+                onClick={() => handleStartQuiz()}
                 size="lg"
                 className="w-full shadow-elegant text-lg"
               >
@@ -827,7 +855,7 @@ const Index = () => {
             3 minutos para descobrir algo que você nunca soube sobre você mesmo
           </p>
           <Button
-            onClick={() => navigate("/teste")}
+            onClick={() => handleStartQuiz()}
             size="lg"
             variant="secondary"
             className="text-lg px-8"
@@ -838,6 +866,30 @@ const Index = () => {
       </section>
 
       {/* Footer */}
+      
+      {/* Modal de sessão existente */}
+      <Dialog open={sessionModal !== null} onOpenChange={() => setSessionModal(null)}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>
+              {sessionModal?.type === 'premium' ? '🏆 Resultado Premium salvo' : '📊 Resultado salvo'}
+            </DialogTitle>
+            <DialogDescription>
+              {sessionModal?.type === 'premium'
+                ? 'Você já tem um resultado completo disponível por mais algumas horas. Deseja ver ou refazer o teste?'
+                : 'Você já completou o teste recentemente. Deseja ver seu resultado ou refazer do zero?'}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col gap-3 mt-2">
+            <Button onClick={handleContinue} size="lg" className="w-full">
+              {sessionModal?.type === 'premium' ? 'Ver resultado completo' : 'Ver resultado'}
+            </Button>
+            <Button onClick={handleRestart} variant="outline" size="lg" className="w-full">
+              Refazer o teste
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
       <Footer />
     </div>
   );

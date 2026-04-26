@@ -1,6 +1,7 @@
-const API_URL = import.meta.env.VITE_API_URL || '/api';
+// URL base das Edge Functions do Supabase
+// Formato: https://<project-ref>.supabase.co/functions/v1
+const FUNCTIONS_URL = import.meta.env.VITE_SUPABASE_FUNCTIONS_URL;
 
-// Interface para os dados do cliente enviados na criação do pagamento
 export interface CustomerData {
   name: string;
   email: string;
@@ -8,69 +9,68 @@ export interface CustomerData {
   phone: string;
 }
 
-// =========================================================================
-// Funções de Pagamento
-// =========================================================================
-
-export interface CardPaymentResponse {
-  sessionId: string;
-  url: string;
-}
-
-/**
- * Cria uma sessão de pagamento com Cartão de Crédito via Stripe.
- */
-export const createCardPayment = async (productKey: string, customer: CustomerData): Promise<CardPaymentResponse> => {
-  const url = `${API_URL}/create-payment/card`;
-  
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ productKey, customer }),
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Erro ao criar sessão de pagamento com cartão');
-  }
-
-  return response.json();
+const getQuizData = () => {
+  const score = parseInt(localStorage.getItem('quizScore') || '0', 10);
+  const raw = parseFloat(localStorage.getItem('quizAverageAnswerTime') || '');
+  const averageAnswerTime = Number.isFinite(raw) && raw > 0 ? raw : undefined;
+  return { score, averageAnswerTime };
 };
 
+const toUserData = (customer: CustomerData) => {
+  const { score, averageAnswerTime } = getQuizData();
+  return {
+    name: customer.name,
+    email: customer.email,
+    cpf: customer.taxId,
+    whatsapp: customer.phone,
+    score,
+    averageAnswerTime,
+  };
+};
+
+async function callFunction(path: string, body: unknown, retries = 2) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(`${FUNCTIONS_URL}${path}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Erro na requisição');
+      return data;
+    } catch (err) {
+      if (attempt === retries) throw err;
+      // Aguarda antes de tentar novamente (cold start)
+      await new Promise(r => setTimeout(r, 1500 * (attempt + 1)));
+    }
+  }
+}
+
+// =========================================================================
+// Pagamento
+// =========================================================================
 
 export interface PixPaymentResponse {
   paymentId: string;
-  brCode: string; // O código "copia e cola" do PIX
-  accessToken: string; // Token para buscar o resultado depois
+  brCode: string;
+  accessToken: string;
 }
 
-/**
- * Cria uma cobrança PIX via Abacate Pay.
- */
-export const createPixPayment = async (productKey: string, customer: CustomerData): Promise<PixPaymentResponse> => {
-  const url = `${API_URL}/create-payment/pix`;
-  
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ productKey, customer }),
+export const createPixPayment = async (productId: string, customer: CustomerData): Promise<PixPaymentResponse> => {
+  const data = await callFunction('/create-payment', {
+    productId,
+    userData: toUserData(customer),
   });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Erro ao gerar cobrança PIX');
-  }
-
-  return response.json();
+  return { paymentId: '', brCode: data.qrCode, accessToken: data.resultAccessToken };
 };
 
-
 // =========================================================================
-// Funções de Resultado
+// Resultado e Ranking
 // =========================================================================
 
 export interface ResultData {
-  id: string; // ID do pagamento, usado para buscar o ranking
+  id: string;
   status: 'approved' | 'pending' | 'rejected';
   name: string;
   score?: number;
@@ -81,60 +81,29 @@ export interface ResultData {
   averageAnswerTime?: number;
 }
 
-/**
- * Busca o resultado de um pagamento usando o token de acesso.
- */
 export const getResultByToken = async (token: string): Promise<ResultData> => {
-  const url = `${API_URL}/results?token=${encodeURIComponent(token)}`;
-  
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' },
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Erro ao buscar resultado');
-  }
-
-  return response.json();
+  const res = await fetch(`${FUNCTIONS_URL}/get-results?token=${encodeURIComponent(token)}`);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Erro ao buscar resultado');
+  return data;
 };
-
 
 export interface RankData {
   position: number;
   total: number;
 }
 
-/**
- * Busca a posição do usuário no ranking.
- */
 export const getRank = async (userId: string): Promise<RankData> => {
-  const url = `${API_URL}/rank/${userId}`;
-  
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' },
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Erro ao buscar ranking');
-  }
-
-  return response.json();
+  const res = await fetch(`${FUNCTIONS_URL}/get-rank/${userId}`);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Erro ao buscar ranking');
+  return data;
 };
 
-
-// Funções antigas que podem ser removidas ou adaptadas
-// A lógica de saveUserData agora está embutida na criação do pagamento.
-export const saveUserData = async (userData: any): Promise<boolean> => {
-  console.warn("saveUserData está obsoleta e não faz mais chamadas de API.");
-  // Salva no localStorage para ser pego na hora de criar o pagamento
-  localStorage.setItem("userName", userData.name);
-  localStorage.setItem("userWhatsApp", userData.whatsapp);
-  localStorage.setItem("userEmail", userData.email || '');
-  localStorage.setItem("userTaxId", userData.taxId || '');
-  return true;
+// Salva dados do usuário apenas no localStorage (sem chamada ao backend)
+export const saveUserDataLocally = (userData: { name: string; whatsapp: string; email?: string; taxId?: string }) => {
+  localStorage.setItem('userName', userData.name);
+  localStorage.setItem('userWhatsApp', userData.whatsapp);
+  localStorage.setItem('userEmail', userData.email || '');
+  localStorage.setItem('userTaxId', userData.taxId || '');
 };
-

@@ -1,0 +1,80 @@
+{
+  "mcpServers": {
+    "context-mode": {
+      "command": "context-mode"
+    },
+    "supabase": {
+      "url": "https://mcp.supabase.com/mcp?project_ref=snlcxtmjtdqpnietotkb"
+    }
+  },
+
+  "knowledge_sources": {
+    "react": {
+      "match": ["react", "hook", "useeffect", "usestate", "component"],
+      "docs": ["https://react.dev", "https://react.dev/reference/react"]
+    },
+
+    "tanstack_query": {
+      "match": ["react query", "tanstack", "usequery", "usemutation", "cache"],
+      "docs": ["https://tanstack.com/query/latest"],
+      "rules": [
+        "always use hooks for fetching",
+        "never fetch directly in components"
+      ]
+    },
+
+
+    "stripe": {
+      "match": ["stripe", "checkout", "webhook stripe", "payment intent"],
+      "docs": ["https://stripe.com/docs/api", "https://stripe.com/docs/webhooks"],
+      "rules": [
+        "always verify webhook signature with constructEventAsync",
+        "use c.req.text() to read raw body before parsing"
+      ]
+    },
+
+    "abacate_pay": {
+      "match": ["abacate pay", "pix", "qrcode", "pixqrcode", "webhook abacate"],
+      "docs": ["https://docs.abacatepay.com"],
+      "rules": [
+        "endpoint correto: POST https://api.abacatepay.com/v1/pixQrCode/create",
+        "payload: { amount (centavos), description, customer: { name, email, taxId, cellphone } }",
+        "resposta: data.data.id (gateway_payment_id) e data.data.brCode (QR code)",
+        "webhook evento: pixQrCode.paid",
+        "validar webhookSecret via query param"
+      ]
+    },
+
+    "zod": {
+      "match": ["zod", "schema", "validation", "safeParse"],
+      "docs": ["https://zod.dev"]
+    },
+
+    "react_hook_form": {
+      "match": ["react hook form", "useform", "register", "handlesubmit"],
+      "docs": ["https://react-hook-form.com/docs"]
+    },
+
+    "tailwind": {
+      "match": ["tailwind", "className", "tw"],
+      "docs": ["https://tailwindcss.com/docs"],
+      "rules": [
+        "use semantic colors (text-primary, text-destructive) not hardcoded (text-red-500)",
+        "spacing scale: gap-4, gap-6, gap-8 (multiples of 4)"
+      ]
+    },
+
+    "shadcn": {
+      "match": ["shadcn", "radix", "button", "card", "dialog", "toast"],
+      "docs": ["https://ui.shadcn.com"],
+      "rules": [
+        "import directly: from '@/components/ui/button' not from '@/components/ui'"
+      ]
+    },
+
+    "typescript": {
+      "match": ["typescript", "type", "interface", "generic"],
+      "docs": ["https://www.typescriptlang.org/docs/"]
+    }
+  }
+}

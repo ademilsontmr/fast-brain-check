@@ -35,7 +35,7 @@ const CompleteResult = () => {
   
   const [shareCount, setShareCount] = useState(0);
   const [rankPosition, setRankPosition] = useState(0);
-  const [totalUsers, setTotalUsers] = useState(50000); // Fallback
+  const [totalUsers, setTotalUsers] = useState(52419);
 
   useEffect(() => {
     const fetchResult = async () => {
@@ -55,6 +55,11 @@ const CompleteResult = () => {
 
       try {
         const data = await getResultByToken(token);
+        if (data.status !== 'approved') {
+          setErrorMessage("Pagamento ainda não confirmado. Aguarde alguns instantes e tente novamente.");
+          setStatus("error");
+          return;
+        }
         setResultData(data);
         setStatus("success");
         
@@ -69,7 +74,7 @@ const CompleteResult = () => {
             })
             .catch(() => {
               // Fallback em caso de erro no ranking
-              setRankPosition(Math.floor(Math.random() * 5000) + 1000);
+              setRankPosition(generateFixedShareCount(token) * 10);
             });
         }
 
@@ -168,12 +173,12 @@ const CompleteResult = () => {
   // O componente principal de resultado é renderizado aqui
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
-      <header className="bg-gradient-hero text-white p-6 shadow-lg text-center relative overflow-hidden">
+      <header className="bg-primary text-primary-foreground p-6 shadow-lg text-center">
         <h1 className="text-3xl font-bold animate-fade-in-down">Seu Resultado Completo</h1>
         <p className="text-lg mt-1 animate-fade-in-up">Parabéns, {name}!</p>
       </header>
 
-      <main className="container mx-auto p-4 -mt-12">
+      <main className="container mx-auto p-4 mt-6">
         <Card className="p-6 mb-6 shadow-xl animate-slide-in-up">
           <div className="text-center">
             <div className={`inline-block p-3 rounded-full bg-gradient-to-br ${badge.color} mb-4`}>

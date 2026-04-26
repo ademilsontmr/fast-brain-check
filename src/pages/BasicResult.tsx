@@ -129,7 +129,7 @@ const BasicResult = () => {
 
           <div className="text-center">
             <Button
-              onClick={() => navigate("/pagamento")}
+              onClick={() => navigate("/dados-usuario")}
               size="lg"
               className="w-full shadow-elegant text-lg"
             >

@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, Lock, Shield, Star, Zap, CheckCircle2, Loader2, QrCode, Copy } from "lucide-react";
+import { Brain, Loader2, Copy } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { calculateIQ, getCelebrityComparison } from "@/types/quiz";
-import { createCardPayment, createPixPayment, CustomerData } from "@/services/api";
+import { createPixPayment, getResultByToken, CustomerData } from "@/services/api";
+import { markPremiumResult } from "@/lib/session";
 import Footer from "@/components/Footer";
-import SocialProofCarousel from "@/components/SocialProofCarousel";
 import { useSEO } from "@/hooks/use-seo";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { QRCodeSVG as QRCode } from "qrcode.react";
@@ -27,27 +27,40 @@ const Payment = () => {
   const [score, setScore] = useState(0);
   const [userName, setUserName] = useState("");
   const [averageAnswerTime, setAverageAnswerTime] = useState<number | undefined>(undefined);
-  
-  const [isLoading, setIsLoading] = useState<'pix' | 'card' | false>(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [pixModalOpen, setPixModalOpen] = useState(false);
   const [pixBrCode, setPixBrCode] = useState('');
-  
+  const [pixToken, setPixToken] = useState('');
+
+  // Polling: verifica status do pagamento PIX a cada 3s enquanto modal estiver aberta
+  useEffect(() => {
+    if (!pixModalOpen || !pixToken) return;
+    const interval = setInterval(async () => {
+      try {
+        const result = await getResultByToken(pixToken);
+        if (result.status === 'approved') {
+          clearInterval(interval);
+          markPremiumResult();
+          navigate(`/resultado-completo?token=${pixToken}`);
+        }
+      } catch {
+        // ignora erros de polling
+      }
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [pixModalOpen, pixToken, navigate]);
+
   useEffect(() => {
     const savedScore = localStorage.getItem("quizScore");
     const savedUserName = localStorage.getItem("userName");
-    
     if (!savedScore || !savedUserName) {
       navigate("/dados-usuario");
       return;
     }
-    
     setScore(parseInt(savedScore, 10));
     setUserName(savedUserName);
-    
     const savedAverageTime = localStorage.getItem("quizAverageAnswerTime");
-    if (savedAverageTime) {
-      setAverageAnswerTime(parseFloat(savedAverageTime));
-    }
+    if (savedAverageTime) setAverageAnswerTime(parseFloat(savedAverageTime));
   }, [navigate]);
 
   const result = calculateIQ(score, 30, averageAnswerTime);
@@ -58,53 +71,46 @@ const Payment = () => {
     const email = localStorage.getItem("userEmail");
     const taxId = localStorage.getItem("userTaxId");
     const phone = localStorage.getItem("userWhatsApp");
-
     if (!name || !email || !taxId || !phone) {
-      toast({
-        title: "Dados incompletos",
-        description: "Por favor, preencha seus dados novamente.",
-        variant: "destructive",
-      });
+      toast({ title: "Dados incompletos", description: "Por favor, preencha seus dados novamente.", variant: "destructive" });
       navigate("/dados-usuario");
       return null;
     }
     return { name, email, taxId, phone };
   };
 
-  const handleCardPayment = async () => {
-    const customer = getCustomerData();
-    if (!customer) return;
-
-    setIsLoading('card');
-    try {
-      const checkout = await createCardPayment(PRODUCT_KEY, customer);
-      window.location.href = checkout.url;
-    } catch (error: any) {
-      setIsLoading(false);
-      toast({
-        title: "Erro ao processar pagamento",
-        description: error.message || "Tente novamente em alguns instantes.",
-        variant: "destructive",
-      });
-    }
-  };
-
   const handlePixPayment = async () => {
+    // Reutilizar pagamento existente se ainda válido (< 25 min)
+    const existingToken = localStorage.getItem("resultAccessToken");
+    const existingBrCode = localStorage.getItem("pixBrCode");
+    const pixCreatedAt = localStorage.getItem("pixCreatedAt");
+    const isValid = pixCreatedAt && (Date.now() - parseInt(pixCreatedAt)) < 25 * 60 * 1000;
+
+    if (existingToken && existingBrCode && isValid) {
+      setPixToken(existingToken);
+      setPixBrCode(existingBrCode);
+      setPixModalOpen(true);
+      return;
+    }
+
+    // Limpar QR expirado (incluindo token — novo pagamento = novo token)
+    localStorage.removeItem("resultAccessToken");
+    localStorage.removeItem("pixBrCode");
+    localStorage.removeItem("pixCreatedAt");
+
     const customer = getCustomerData();
     if (!customer) return;
-
-    setIsLoading('pix');
+    setIsLoading(true);
     try {
       const pixData = await createPixPayment(PRODUCT_KEY, customer);
       localStorage.setItem("resultAccessToken", pixData.accessToken);
+      localStorage.setItem("pixBrCode", pixData.brCode);
+      localStorage.setItem("pixCreatedAt", Date.now().toString());
+      setPixToken(pixData.accessToken);
       setPixBrCode(pixData.brCode);
       setPixModalOpen(true);
     } catch (error: any) {
-      toast({
-        title: "Erro ao gerar PIX",
-        description: error.message || "Tente novamente em alguns instantes.",
-        variant: "destructive",
-      });
+      toast({ title: "Erro ao gerar PIX", description: error.message || "Tente novamente em alguns instantes.", variant: "destructive" });
     } finally {
       setIsLoading(false);
     }
@@ -112,15 +118,11 @@ const Payment = () => {
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(pixBrCode);
-    toast({
-      title: "Copiado!",
-      description: "Código PIX copiado para a área de transferência.",
-    });
+    toast({ title: "Copiado!", description: "Código PIX copiado para a área de transferência." });
   };
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      {/* Header */}
       <header className="border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/")}>
@@ -130,12 +132,8 @@ const Payment = () => {
         </div>
       </header>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-12 max-w-2xl">
-        {/* ... (Conteúdo do teaser e benefícios) ... */}
         <Card className="p-8 mb-6 shadow-elegant">
-          {/* ... (Lista de benefícios) ... */}
-
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg p-6 mb-6 border-2 border-primary/20">
             <div className="flex items-center justify-between mb-4">
               <span className="text-lg font-medium">Acesso Completo</span>
@@ -144,44 +142,23 @@ const Payment = () => {
                 <p className="text-xs text-muted-foreground opacity-60">Pagamento único</p>
               </div>
             </div>
-            {/* ... (Detalhes do pagamento) ... */}
           </div>
 
-          <div className="space-y-4">
-            <Button 
-              onClick={handleCardPayment} 
-              size="lg" 
-              className="w-full shadow-elegant text-lg"
-              disabled={!!isLoading}
-            >
-              {isLoading === 'card' ? (
-                <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Processando...</>
-              ) : (
-                "Pagar com Cartão de Crédito"
-              )}
-            </Button>
-
-            <Button 
-              onClick={handlePixPayment} 
-              size="lg" 
-              variant="outline"
-              className="w-full shadow-elegant text-lg"
-              disabled={!!isLoading}
-            >
-              {isLoading === 'pix' ? (
-                <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Gerando PIX...</>
-              ) : (
-                "Pagar com PIX"
-              )}
-            </Button>
-          </div>
-
-          {/* ... (Garantias de segurança) ... */}
+          <Button
+            onClick={handlePixPayment}
+            size="lg"
+            className="w-full shadow-elegant text-lg"
+            disabled={isLoading}
+          >
+            {isLoading ? (
+              <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Gerando PIX...</>
+            ) : (
+              "Pagar com PIX"
+            )}
+          </Button>
         </Card>
-        {/* ... (Restante da página) ... */}
       </div>
 
-      {/* PIX Modal */}
       <Dialog open={pixModalOpen} onOpenChange={setPixModalOpen}>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -193,8 +170,8 @@ const Payment = () => {
           <div className="flex justify-center p-4">
             <QRCode value={pixBrCode} size={256} />
           </div>
-          <div className="relative">
-            <p className="p-3 pr-12 border rounded-md bg-muted text-sm break-all">{pixBrCode}</p>
+          <div className="relative min-w-0 overflow-hidden">
+            <p className="p-3 pr-12 border rounded-md bg-muted text-sm truncate">{pixBrCode}</p>
             <Button variant="ghost" size="icon" className="absolute top-1/2 right-2 -translate-y-1/2" onClick={copyToClipboard}>
               <Copy className="w-4 h-4" />
             </Button>
@@ -209,5 +186,6 @@ const Payment = () => {
     </div>
   );
 };
-  
+
 export default Payment;
+

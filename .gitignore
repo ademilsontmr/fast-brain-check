@@ -11,12 +11,20 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
 
 # Cloudflare
 .wrangler
 .dev.vars
 wrangler.toml.bak
 
+worker/.dev.vars
+
+# Supabase CLI temp files
+supabase/.temp/
+
+# Scripts locais
+checkline.ps1
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
