@@ -59,10 +59,11 @@ export interface PixPaymentResponse {
 }
 
 export const createPixPayment = async (productId: string, customer: CustomerData): Promise<PixPaymentResponse> => {
+  // Sem retry — operação não-idempotente (cria pagamento no gateway)
   const data = await callFunction('/create-payment', {
     productId,
     userData: toUserData(customer),
-  });
+  }, 0);
   return { paymentId: '', brCode: data.qrCode, accessToken: data.resultAccessToken };
 };
 
