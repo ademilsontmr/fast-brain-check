@@ -62,6 +62,36 @@ const Blog = () => {
 
   const allArticles = [
     {
+      id: 105,
+      title: "Como Descobrir Meu QI: 5 Formas Confiáveis em 2026",
+      slug: "como-descobrir-meu-qi",
+      description: "Descubra como saber seu QI de forma confiável. Comparamos os 5 melhores métodos: testes online, psicólogos, apps e mais.",
+      icon: Lightbulb,
+      category: "Guia",
+      gradient: "from-indigo-500/20 to-purple-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      id: 104,
+      title: "Teste de QI para Crianças: Guia Completo para Pais",
+      slug: "teste-qi-criancas",
+      description: "Tudo sobre teste de QI para crianças: quando fazer, como funciona, o que mede e como interpretar os resultados.",
+      icon: Users,
+      category: "Crianças",
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 103,
+      title: "Qual era o QI de Einstein? E o Seu Comparado ao Dele?",
+      slug: "qi-de-einstein",
+      description: "Descubra qual era o QI de Einstein, como ele se compara com outros gênios da história e como você pode medir sua própria inteligência.",
+      icon: Star,
+      category: "Curiosidades",
+      gradient: "from-yellow-500/20 to-amber-500/20",
+      borderColor: "border-yellow-500/30"
+    },
+    {
       id: 1,
       title: "Melhor Teste de QI de 2026: Análise Completa",
       slug: "melhor-teste-qi-2026",
@@ -540,7 +570,377 @@ const Blog = () => {
       category: "Conceitos",
       gradient: "from-rose-500/20 to-pink-500/20",
       borderColor: "border-rose-500/30"
-    }
+    },
+    {
+      id: 106,
+      title: "Atividades que Aumentam QI: Lista Completa de Exercícios Cognitivos",
+      slug: "atividades-que-aumentam-qi",
+      description: "Descubra as melhores atividades cientificamente comprovadas para aumentar seu QI e desenvolver sua inteligência.",
+      icon: Zap,
+      category: "Desenvolvimento",
+      gradient: "from-green-500/20 to-emerald-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 107,
+      title: "Como Aumentar a Inteligência: Guia Científico Completo",
+      slug: "como-aumentar-inteligencia",
+      description: "Guia completo com estratégias científicas para aumentar inteligência, memória e capacidade cognitiva.",
+      icon: TrendingUp,
+      category: "Desenvolvimento",
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 108,
+      title: "Como Manter a Mente Afiada: Estratégias para Toda a Vida",
+      slug: "como-manter-mente-afiada",
+      description: "Descubra como manter a mente afiada em qualquer idade com hábitos e estratégias baseadas em neurociência.",
+      icon: Brain,
+      category: "Hábitos",
+      gradient: "from-purple-500/20 to-violet-500/20",
+      borderColor: "border-purple-500/30"
+    },
+    {
+      id: 109,
+      title: "Como Melhorar o Cérebro: Técnicas Científicas Comprovadas",
+      slug: "como-melhorar-cerebro",
+      description: "Aprenda como melhorar o funcionamento do cérebro com técnicas baseadas em neurociência e estudos científicos.",
+      icon: Brain,
+      category: "Ciência",
+      gradient: "from-indigo-500/20 to-blue-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      id: 110,
+      title: "Como Saber Meu QI Sem Pagar? Opções Grátis e Confiáveis",
+      slug: "como-saber-meu-qi-sem-pagar",
+      description: "Descubra como descobrir seu QI gratuitamente com opções confiáveis e científicas disponíveis online.",
+      icon: Lightbulb,
+      category: "Guia",
+      gradient: "from-yellow-500/20 to-amber-500/20",
+      borderColor: "border-yellow-500/30"
+    },
+    {
+      id: 111,
+      title: "Conexão entre QI e Desempenho Acadêmico",
+      slug: "conexao-qi-desempenho-academico",
+      description: "Entenda como o QI influencia o desempenho acadêmico e quais outros fatores são igualmente importantes.",
+      icon: GraduationCap,
+      category: "Ciência",
+      gradient: "from-teal-500/20 to-cyan-500/20",
+      borderColor: "border-teal-500/30"
+    },
+    {
+      id: 112,
+      title: "Crianças Superdotadas: Sinais e Características",
+      slug: "criancas-superdotadas-sinais-caracteristicas",
+      description: "Identifique os sinais de superdotação em crianças e saiba como apoiar o desenvolvimento de altas habilidades.",
+      icon: Star,
+      category: "Crianças",
+      gradient: "from-yellow-500/20 to-orange-500/20",
+      borderColor: "border-yellow-500/30"
+    },
+    {
+      id: 113,
+      title: "Desenvolvimento Cognitivo e Conexão com QI",
+      slug: "desenvolvimento-cognitivo-conexao-qi",
+      description: "Como o desenvolvimento cognitivo ao longo da vida se conecta com o QI e a inteligência geral.",
+      icon: TrendingUp,
+      category: "Ciência",
+      gradient: "from-blue-500/20 to-indigo-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 114,
+      title: "Diferença entre QI e Inteligência Emocional",
+      slug: "diferenca-qi-inteligencia-emocional",
+      description: "Entenda as diferenças fundamentais entre QI e inteligência emocional e como desenvolver ambas.",
+      icon: Sparkles,
+      category: "Conceitos",
+      gradient: "from-pink-500/20 to-rose-500/20",
+      borderColor: "border-pink-500/30"
+    },
+    {
+      id: 115,
+      title: "Diferenças entre QI e Inteligência: O Que a Ciência Diz",
+      slug: "diferencas-qi-e-inteligencia",
+      description: "Descubra as diferenças entre QI e inteligência segundo a ciência moderna e como cada um é medido.",
+      icon: BookOpen,
+      category: "Conceitos",
+      gradient: "from-violet-500/20 to-purple-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 116,
+      title: "Escala de Inteligência Wechsler (WAIS): Guia Completo",
+      slug: "escala-inteligencia-wechsler-wais",
+      description: "Tudo sobre a Escala Wechsler de Inteligência para Adultos: como funciona, o que mede e como interpretar.",
+      icon: BarChart3,
+      category: "Guia",
+      gradient: "from-slate-500/20 to-gray-500/20",
+      borderColor: "border-slate-500/30"
+    },
+    {
+      id: 117,
+      title: "Impacto da Nutrição e Dieta na Função Cognitiva e QI",
+      slug: "impacto-nutricao-dieta-funcao-cognitiva-qi",
+      description: "Como a alimentação influencia diretamente o QI e a função cognitiva. Alimentos que aumentam e reduzem a inteligência.",
+      icon: Leaf,
+      category: "Ciência",
+      gradient: "from-green-500/20 to-lime-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 118,
+      title: "Inteligência Adaptativa no Século 21",
+      slug: "inteligencia-adaptativa-seculo-21",
+      description: "Como desenvolver inteligência adaptativa para prosperar no mundo em constante mudança do século 21.",
+      icon: Cpu,
+      category: "Tendências",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      borderColor: "border-cyan-500/30"
+    },
+    {
+      id: 119,
+      title: "Inteligências Múltiplas: Como Identificar e Monetizar Seus Talentos",
+      slug: "inteligencias-multiplas-monetizar",
+      description: "Descubra suas inteligências dominantes e aprenda estratégias práticas para transformá-las em renda.",
+      icon: Sparkles,
+      category: "Desenvolvimento",
+      gradient: "from-violet-500/20 to-purple-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 120,
+      title: "QI dos Jogadores de Futebol com Maior Inteligência",
+      slug: "jogadores-futebol-maior-qi",
+      description: "Descubra quais jogadores de futebol têm os maiores QIs e como a inteligência influencia o desempenho no campo.",
+      icon: Trophy,
+      category: "Curiosidades",
+      gradient: "from-green-500/20 to-emerald-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 121,
+      title: "Nature vs Nurture: Genética e Ambiente no QI",
+      slug: "nature-vs-nurture-genetica-ambiente-qi",
+      description: "O debate nature vs nurture aplicado ao QI: quanto da inteligência é genética e quanto é moldada pelo ambiente?",
+      icon: Dna,
+      category: "Ciência",
+      gradient: "from-emerald-500/20 to-teal-500/20",
+      borderColor: "border-emerald-500/30"
+    },
+    {
+      id: 122,
+      title: "O Que Causa QI Alto? Fatores Genéticos e Ambientais",
+      slug: "o-que-causa-qi-alto",
+      description: "Descubra os fatores científicos que causam QI alto: genética, ambiente, educação e hábitos de vida.",
+      icon: Lightbulb,
+      category: "Ciência",
+      gradient: "from-amber-500/20 to-yellow-500/20",
+      borderColor: "border-amber-500/30"
+    },
+    {
+      id: 123,
+      title: "O Que é Considerado QI Alto? Números e Classificações",
+      slug: "o-que-e-considerado-qi-alto",
+      description: "Descubra a partir de qual número o QI é considerado alto e como você se compara com a população mundial.",
+      icon: TrendingUp,
+      category: "Conceitos",
+      gradient: "from-purple-500/20 to-pink-500/20",
+      borderColor: "border-purple-500/30"
+    },
+    {
+      id: 124,
+      title: "O Que é Teste de QI? Como Funciona e Para Que Serve",
+      slug: "o-que-e-teste-qi",
+      description: "Entenda o que é um teste de QI, como funciona, o que mede e para que serve na prática.",
+      icon: FileText,
+      category: "Conceitos",
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 125,
+      title: "Pessoas Famosas com QI Alto: Os Maiores Gênios Vivos",
+      slug: "pessoas-famosas-com-qi-alto",
+      description: "Conheça as pessoas famosas com QI mais alto do mundo e o que as torna tão excepcionalmente inteligentes.",
+      icon: Star,
+      category: "Curiosidades",
+      gradient: "from-yellow-500/20 to-amber-500/20",
+      borderColor: "border-yellow-500/30"
+    },
+    {
+      id: 126,
+      title: "Pessoas Mais Inteligentes que Você Nunca Ouviu Falar",
+      slug: "pessoas-mais-inteligentes-que-voce-nunca-ouviu-falar",
+      description: "Conheça os gênios desconhecidos com QI extraordinário que mudaram o mundo sem fama ou reconhecimento.",
+      icon: Users,
+      category: "Curiosidades",
+      gradient: "from-indigo-500/20 to-violet-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      id: 127,
+      title: "QI Brasileiro vs Outros Países: Comparação Global",
+      slug: "qi-brasileiro-vs-outros-paises",
+      description: "Como o QI médio do brasileiro se compara com outros países? Dados, causas e o que isso significa.",
+      icon: Globe,
+      category: "Dados",
+      gradient: "from-green-500/20 to-teal-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 128,
+      title: "QI e Genética: Quanto Nasce e Quanto se Aprende",
+      slug: "qi-e-genetica-quanto-nasce-quanto-aprende",
+      description: "A ciência responde: quanto do QI é determinado pela genética e quanto pode ser desenvolvido ao longo da vida?",
+      icon: Dna,
+      category: "Ciência",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      borderColor: "border-cyan-500/30"
+    },
+    {
+      id: 129,
+      title: "QI e Sucesso na Carreira: O Que os Dados Mostram",
+      slug: "qi-e-sucesso-carreira",
+      description: "Como o QI influencia o sucesso profissional? Dados científicos sobre a relação entre inteligência e carreira.",
+      icon: Briefcase,
+      category: "Carreira",
+      gradient: "from-teal-500/20 to-green-500/20",
+      borderColor: "border-teal-500/30"
+    },
+    {
+      id: 130,
+      title: "QI Médio por Idade: Como a Inteligência Evolui",
+      slug: "qi-medio-por-idade",
+      description: "Descubra como o QI médio varia por faixa etária e como a inteligência evolui ao longo da vida.",
+      icon: TrendingUp,
+      category: "Dados",
+      gradient: "from-blue-500/20 to-indigo-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 131,
+      title: "QI Médio por País: Ranking Mundial Atualizado",
+      slug: "qi-medio-por-pais",
+      description: "Ranking completo do QI médio por país. Descubra quais nações têm as populações mais inteligentes.",
+      icon: Globe,
+      category: "Dados",
+      gradient: "from-indigo-500/20 to-purple-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      id: 132,
+      title: "QI Médio por Profissão: Quais Carreiras Exigem Mais",
+      slug: "qi-medio-por-profissao",
+      description: "Descubra o QI médio das principais profissões e quais carreiras estão associadas a maior inteligência.",
+      icon: Briefcase,
+      category: "Dados",
+      gradient: "from-amber-500/20 to-orange-500/20",
+      borderColor: "border-amber-500/30"
+    },
+    {
+      id: 133,
+      title: "QI vs Experiência de Mercado: O Que Vale Mais?",
+      slug: "qi-vs-experiencia-mercado",
+      description: "QI alto ou experiência acumulada: qual é mais valioso no mercado de trabalho atual? A ciência responde.",
+      icon: BarChart3,
+      category: "Carreira",
+      gradient: "from-slate-500/20 to-gray-500/20",
+      borderColor: "border-slate-500/30"
+    },
+    {
+      id: 134,
+      title: "QI vs Inteligência Social: Qual Importa Mais?",
+      slug: "qi-vs-inteligencia-social",
+      description: "Comparação entre QI e inteligência social: qual tem mais impacto no sucesso pessoal e profissional?",
+      icon: Users,
+      category: "Conceitos",
+      gradient: "from-pink-500/20 to-rose-500/20",
+      borderColor: "border-pink-500/30"
+    },
+    {
+      id: 135,
+      title: "Quanto da Inteligência é Herdada? Genética e QI",
+      slug: "quanto-inteligencia-e-herdada",
+      description: "Pesquisas com gêmeos e estudos de adoção revelam quanto da inteligência é determinada pela herança genética.",
+      icon: Dna,
+      category: "Ciência",
+      gradient: "from-violet-500/20 to-indigo-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 136,
+      title: "Reduzindo Demência com Treinamento Cerebral",
+      slug: "reduzindo-demencia-treinamento-cerebral",
+      description: "Como o treinamento cognitivo pode reduzir o risco de demência e manter o cérebro saudável na terceira idade.",
+      icon: Brain,
+      category: "Ciência",
+      gradient: "from-teal-500/20 to-cyan-500/20",
+      borderColor: "border-teal-500/30"
+    },
+    {
+      id: 137,
+      title: "Sua Pontuação de QI Pode Mudar? O Que a Ciência Diz",
+      slug: "sua-pontuacao-qi-pode-mudar",
+      description: "Descubra se sua pontuação de QI pode mudar ao longo do tempo e quais fatores influenciam essa variação.",
+      icon: TrendingUp,
+      category: "Ciência",
+      gradient: "from-green-500/20 to-emerald-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 138,
+      title: "Suplementos que Melhoram QI: O Que Funciona de Verdade",
+      slug: "suplementos-que-melhoram-qi",
+      description: "Análise científica dos suplementos que realmente melhoram QI e função cognitiva. O que funciona e o que é mito.",
+      icon: Leaf,
+      category: "Ciência",
+      gradient: "from-lime-500/20 to-green-500/20",
+      borderColor: "border-lime-500/30"
+    },
+    { id: 139, title: "Como Advogados Melhoram QI", slug: "como-advogados-melhoram-qi", description: "Estratégias usadas por advogados para desenvolver raciocínio lógico e aumentar QI.", icon: Briefcase, category: "Carreira", gradient: "from-blue-500/20 to-indigo-500/20", borderColor: "border-blue-500/30" },
+    { id: 140, title: "Como Andar a Cavalo Melhora QI", slug: "como-andar-cavalo-melhora-qi", description: "Descubra como a equitação estimula o cérebro e contribui para o desenvolvimento cognitivo.", icon: Brain, category: "Ciência", gradient: "from-amber-500/20 to-orange-500/20", borderColor: "border-amber-500/30" },
+    { id: 141, title: "Como Bombeiros Melhoram QI", slug: "como-bombeiros-melhoram-qi", description: "Como o treinamento e o trabalho de bombeiros desenvolve habilidades cognitivas e QI.", icon: Zap, category: "Carreira", gradient: "from-red-500/20 to-orange-500/20", borderColor: "border-red-500/30" },
+    { id: 142, title: "Como Filhos Melhoram QI dos Pais", slug: "como-filhos-melhoram-qi", description: "Estudos mostram que ter filhos pode aumentar o QI dos pais. Entenda como isso acontece.", icon: Users, category: "Ciência", gradient: "from-pink-500/20 to-rose-500/20", borderColor: "border-pink-500/30" },
+    { id: 143, title: "Como Idosos Melhoram QI", slug: "como-idosos-melhoram-qi", description: "Estratégias científicas para idosos manterem e melhorarem o QI na terceira idade.", icon: Brain, category: "Hábitos", gradient: "from-teal-500/20 to-cyan-500/20", borderColor: "border-teal-500/30" },
+    { id: 144, title: "Como Jovens Melhoram QI", slug: "como-jovens-melhoram-qi", description: "As melhores estratégias para jovens desenvolverem inteligência e aumentarem o QI.", icon: TrendingUp, category: "Desenvolvimento", gradient: "from-green-500/20 to-emerald-500/20", borderColor: "border-green-500/30" },
+    { id: 145, title: "Como Mães Melhoram QI", slug: "como-maes-melhoram-qi", description: "Como a maternidade e hábitos específicos ajudam mães a desenvolverem e manterem QI alto.", icon: Users, category: "Ciência", gradient: "from-purple-500/20 to-pink-500/20", borderColor: "border-purple-500/30" },
+    { id: 146, title: "Como Médicos Melhoram QI", slug: "como-medicos-melhoram-qi", description: "Hábitos e práticas de médicos que contribuem para manter e aumentar o QI ao longo da carreira.", icon: Briefcase, category: "Carreira", gradient: "from-blue-500/20 to-cyan-500/20", borderColor: "border-blue-500/30" },
+    { id: 147, title: "Como Melhorar QI em Adolescentes", slug: "como-melhorar-qi-adolescentes", description: "Guia completo para adolescentes desenvolverem inteligência e aumentarem QI na fase mais crítica.", icon: TrendingUp, category: "Desenvolvimento", gradient: "from-indigo-500/20 to-blue-500/20", borderColor: "border-indigo-500/30" },
+    { id: 148, title: "Como Melhorar QI em Estudantes", slug: "como-melhorar-qi-estudantes", description: "Técnicas científicas para estudantes melhorarem QI, memória e desempenho acadêmico.", icon: GraduationCap, category: "Desenvolvimento", gradient: "from-violet-500/20 to-purple-500/20", borderColor: "border-violet-500/30" },
+    { id: 149, title: "Como o Mercado Financeiro Melhora QI", slug: "como-mercado-financeiro-melhora-qi", description: "Como trabalhar no mercado financeiro desenvolve habilidades cognitivas e aumenta QI.", icon: BarChart3, category: "Carreira", gradient: "from-green-500/20 to-teal-500/20", borderColor: "border-green-500/30" },
+    { id: 150, title: "Como Netos Melhoram QI dos Avós", slug: "como-netos-melhoram-qi", description: "A ciência mostra que conviver com netos estimula o cérebro dos avós e melhora cognição.", icon: Users, category: "Ciência", gradient: "from-amber-500/20 to-yellow-500/20", borderColor: "border-amber-500/30" },
+    { id: 151, title: "Como Pais Melhoram QI", slug: "como-pais-melhoram-qi", description: "Como a paternidade ativa e hábitos específicos ajudam pais a desenvolverem QI mais alto.", icon: Users, category: "Ciência", gradient: "from-blue-500/20 to-indigo-500/20", borderColor: "border-blue-500/30" },
+    { id: 152, title: "Como Pedalar Melhora QI", slug: "como-pedal-melhora-qi", description: "Descubra como o ciclismo estimula o cérebro, melhora cognição e contribui para QI mais alto.", icon: Zap, category: "Ciência", gradient: "from-cyan-500/20 to-blue-500/20", borderColor: "border-cyan-500/30" },
+    { id: 153, title: "Como Professores Melhoram QI", slug: "como-professores-melhoram-qi", description: "Como ensinar e as práticas pedagógicas desenvolvem habilidades cognitivas e aumentam QI.", icon: GraduationCap, category: "Carreira", gradient: "from-orange-500/20 to-amber-500/20", borderColor: "border-orange-500/30" },
+    { id: 154, title: "Como Profissionais de Saúde Melhoram QI", slug: "como-profissionais-saude-melhoram-qi", description: "Hábitos e práticas de profissionais de saúde que contribuem para manter QI elevado.", icon: Briefcase, category: "Carreira", gradient: "from-teal-500/20 to-green-500/20", borderColor: "border-teal-500/30" },
+    { id: 155, title: "Como a Religiosidade Influencia o QI", slug: "como-religiosidade-influencia-qi", description: "O que a ciência diz sobre a relação entre religiosidade, espiritualidade e QI.", icon: BookOpen, category: "Ciência", gradient: "from-violet-500/20 to-indigo-500/20", borderColor: "border-violet-500/30" },
+    { id: 156, title: "Como Segurança do Trabalho Melhora QI", slug: "como-seguranca-trabalho-melhora-qi", description: "Como profissionais de segurança do trabalho desenvolvem raciocínio analítico e QI.", icon: Briefcase, category: "Carreira", gradient: "from-slate-500/20 to-gray-500/20", borderColor: "border-slate-500/30" },
+    { id: 157, title: "Como Trabalhadores Melhoram QI", slug: "como-trabalhadores-melhoram-qi", description: "Estratégias práticas para trabalhadores de qualquer área desenvolverem QI no dia a dia.", icon: Briefcase, category: "Desenvolvimento", gradient: "from-blue-500/20 to-teal-500/20", borderColor: "border-blue-500/30" },
+    { id: 158, title: "QI Baixo: Causas, Sinais e Como Melhorar", slug: "qi-baixo", description: "Tudo sobre QI baixo: o que causa, como identificar e estratégias científicas para melhorar.", icon: TrendingDown, category: "Conceitos", gradient: "from-red-500/20 to-orange-500/20", borderColor: "border-red-500/30" },
+    { id: 159, title: "QI e Ansiedade: Como a Ansiedade Afeta a Inteligência", slug: "qi-e-ansiedade", description: "Descubra como a ansiedade impacta o QI e estratégias para gerenciar emoções e melhorar cognição.", icon: Brain, category: "Ciência", gradient: "from-purple-500/20 to-violet-500/20", borderColor: "border-purple-500/30" },
+    { id: 160, title: "QI e Autismo: Inteligência no Espectro Autista", slug: "qi-e-autismo", description: "Como o QI se manifesta no espectro autista e o que a ciência diz sobre inteligência e autismo.", icon: Brain, category: "Ciência", gradient: "from-blue-500/20 to-indigo-500/20", borderColor: "border-blue-500/30" },
+    { id: 161, title: "QI e Exercício Físico: Como Mover o Corpo Aumenta QI", slug: "qi-e-exercicio-fisico", description: "A ciência comprova: exercício físico regular aumenta QI. Descubra como e quanto praticar.", icon: Zap, category: "Ciência", gradient: "from-green-500/20 to-lime-500/20", borderColor: "border-green-500/30" },
+    { id: 162, title: "QI Médio de Adolescentes", slug: "qi-medio-adolescentes", description: "Qual é o QI médio de adolescentes? Dados científicos e como o QI se desenvolve na adolescência.", icon: Users, category: "Dados", gradient: "from-indigo-500/20 to-blue-500/20", borderColor: "border-indigo-500/30" },
+    { id: 163, title: "QI Médio de Advogados", slug: "qi-medio-advogados", description: "Qual é o QI médio dos advogados? Dados sobre inteligência na profissão jurídica.", icon: Briefcase, category: "Dados", gradient: "from-blue-500/20 to-cyan-500/20", borderColor: "border-blue-500/30" },
+    { id: 164, title: "QI Médio de Bombeiros", slug: "qi-medio-bombeiros", description: "Qual é o QI médio dos bombeiros? Dados sobre inteligência e habilidades cognitivas na profissão.", icon: Zap, category: "Dados", gradient: "from-red-500/20 to-orange-500/20", borderColor: "border-red-500/30" },
+    { id: 165, title: "QI Médio de Ciclistas", slug: "qi-medio-ciclistas", description: "Qual é o QI médio de ciclistas? Como o ciclismo se relaciona com inteligência e cognição.", icon: Zap, category: "Dados", gradient: "from-cyan-500/20 to-teal-500/20", borderColor: "border-cyan-500/30" },
+    { id: 166, title: "QI Médio de Corredores", slug: "qi-medio-corredores", description: "Qual é o QI médio de corredores? A relação entre corrida, saúde cerebral e inteligência.", icon: Zap, category: "Dados", gradient: "from-orange-500/20 to-amber-500/20", borderColor: "border-orange-500/30" },
+    { id: 167, title: "QI Médio de Filhos", slug: "qi-medio-filhos", description: "Como o QI dos filhos se relaciona com o dos pais? Dados sobre hereditariedade e ambiente.", icon: Users, category: "Dados", gradient: "from-pink-500/20 to-rose-500/20", borderColor: "border-pink-500/30" },
+    { id: 168, title: "QI Médio de Mães", slug: "qi-medio-maes", description: "Qual é o QI médio das mães? Dados sobre inteligência e maternidade.", icon: Users, category: "Dados", gradient: "from-purple-500/20 to-pink-500/20", borderColor: "border-purple-500/30" },
+    { id: 169, title: "QI Médio no Mercado Financeiro", slug: "qi-medio-mercado-financeiro", description: "Qual é o QI médio de profissionais do mercado financeiro? Dados e análises.", icon: BarChart3, category: "Dados", gradient: "from-green-500/20 to-teal-500/20", borderColor: "border-green-500/30" },
+    { id: 170, title: "QI Médio de Pais", slug: "qi-medio-pais", description: "Qual é o QI médio dos pais? Como a paternidade influencia o desenvolvimento cognitivo.", icon: Users, category: "Dados", gradient: "from-blue-500/20 to-indigo-500/20", borderColor: "border-blue-500/30" },
+    { id: 171, title: "QI Médio por Gênero: Diferenças entre Homens e Mulheres", slug: "qi-medio-por-genero", description: "O que a ciência diz sobre diferenças de QI entre gêneros? Dados e análise imparcial.", icon: Users, category: "Dados", gradient: "from-violet-500/20 to-purple-500/20", borderColor: "border-violet-500/30" },
+    { id: 172, title: "QI Médio de Professores", slug: "qi-medio-professores", description: "Qual é o QI médio dos professores? Dados sobre inteligência na carreira docente.", icon: GraduationCap, category: "Dados", gradient: "from-amber-500/20 to-orange-500/20", borderColor: "border-amber-500/30" },
+    { id: 173, title: "QI Médio em Segurança do Trabalho", slug: "qi-medio-seguranca-trabalho", description: "Qual é o QI médio de profissionais de segurança do trabalho? Dados e análises.", icon: Briefcase, category: "Dados", gradient: "from-slate-500/20 to-gray-500/20", borderColor: "border-slate-500/30" },
+    { id: 174, title: "QI Médio de Trabalhadores", slug: "qi-medio-trabalhadores", description: "Qual é o QI médio dos trabalhadores brasileiros? Dados por setor e profissão.", icon: Briefcase, category: "Dados", gradient: "from-teal-500/20 to-cyan-500/20", borderColor: "border-teal-500/30" },
+    { id: 175, title: "Religiosidade e QI: O Que a Ciência Diz", slug: "religiosidade-e-qi", description: "A relação entre religiosidade e QI segundo estudos científicos. Dados e análise imparcial.", icon: BookOpen, category: "Ciência", gradient: "from-indigo-500/20 to-violet-500/20", borderColor: "border-indigo-500/30" },
+    { id: 176, title: "Sinais de QI Alto: Como Identificar Alta Inteligência", slug: "sinais-qi-alto", description: "Quais são os sinais de QI alto? Descubra as características que indicam alta inteligência.", icon: Star, category: "Conceitos", gradient: "from-yellow-500/20 to-amber-500/20", borderColor: "border-yellow-500/30" },
+    { id: 177, title: "Teste de QI Confiável: Como Escolher o Melhor", slug: "teste-qi-confiavel", description: "Como identificar um teste de QI confiável e evitar testes fraudulentos ou imprecisos.", icon: Award, category: "Guia", gradient: "from-green-500/20 to-emerald-500/20", borderColor: "border-green-500/30" },
+    { id: 178, title: "Teste de QI Grátis: Os Melhores Disponíveis Online", slug: "teste-qi-gratis", description: "Os melhores testes de QI gratuitos disponíveis online. Quais são confiáveis e quais evitar.", icon: Trophy, category: "Guia", gradient: "from-primary/20 to-accent/20", borderColor: "border-primary/30" }
   ];
 
   // Extrair categorias únicas

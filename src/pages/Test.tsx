@@ -11,7 +11,7 @@ import { useSEO } from "@/hooks/use-seo";
 
 type TestStep = 'gender' | 'age' | 'questions';
 
-const TOTAL_TIME = 10 * 60; // 600 segundos
+const TOTAL_TIME = 20 * 60; // 1200 segundos
 
 const Test = () => {
   const navigate = useNavigate();

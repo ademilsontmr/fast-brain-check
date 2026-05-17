@@ -358,12 +358,6 @@ const CompleteResult = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" style={{ animationDuration: '3s' }} />
             </div>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl opacity-100 font-bold mb-4 sm:mb-5 tracking-tight">{getIQDescription(result.iqScore)}</p>
-            
-            {/* Badge de Ranking - Premium UX */}
-            <div className="inline-flex items-center gap-2 sm:gap-2.5 bg-white/25 backdrop-blur-md px-4 sm:px-5 py-2 sm:py-2.5 rounded-full mb-4 sm:mb-5 text-xs sm:text-sm md:text-base shadow-lg border-2 border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
-              <Trophy className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-300 drop-shadow-md" />
-              <span className="font-bold tracking-tight">Posição <span className="text-yellow-300">#{rankPosition > 0 ? rankPosition.toLocaleString() : '...'}</span> de {totalUsers > 0 ? totalUsers.toLocaleString() + '+' : '50.000+'}</span>
-            </div>
 
             {/* Botão de Compartilhar - Topo - CTA Premium Otimizado */}
             <div className="space-y-2 sm:space-y-3">
@@ -2052,22 +2046,6 @@ const CompleteResult = () => {
                 <p className="text-4xl sm:text-5xl md:text-6xl font-bold mb-1">{result.iqScore}</p>
                 <p className="text-base sm:text-lg font-semibold">Top {100 - result.percentile}%</p>
                 <p className="text-xs sm:text-sm opacity-75 mt-2">🧠 {getIQDescription(result.iqScore)}</p>
-              </div>
-            </div>
-
-            {/* Estatísticas do Desafio - Otimizado para Mobile */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <div className="bg-primary-foreground/10 rounded-lg p-2 sm:p-3 backdrop-blur-sm">
-                <div className="text-lg sm:text-xl md:text-2xl font-bold">{result.score}</div>
-                <div className="text-[10px] sm:text-xs opacity-80 leading-tight">Questões Certas</div>
-              </div>
-              <div className="bg-primary-foreground/10 rounded-lg p-2 sm:p-3 backdrop-blur-sm">
-                <div className="text-lg sm:text-xl md:text-2xl font-bold">{Math.round(result.percentile)}%</div>
-                <div className="text-[10px] sm:text-xs opacity-80 leading-tight">Percentil</div>
-              </div>
-              <div className="bg-primary-foreground/10 rounded-lg p-2 sm:p-3 backdrop-blur-sm">
-                <div className="text-lg sm:text-xl md:text-2xl font-bold">#{rankPosition.toLocaleString()}</div>
-                <div className="text-[10px] sm:text-xs opacity-80 leading-tight">No Ranking</div>
               </div>
             </div>
 

@@ -33,7 +33,7 @@ const ComoPedalMelhoraQI = () => {
         </nav>
 
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{articleTitle}</h1>
-        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8"><time>Janeiro 2024</time><span>•</span><span>8 min de leitura</span></div>
+        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8"><time>15 de Janeiro de 2024</time><span>•</span><span>8 min de leitura</span></div>
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><Bike className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">

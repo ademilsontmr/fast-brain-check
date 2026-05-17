@@ -48,7 +48,7 @@ const QIJogadoresFutebol = () => {
         </nav>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{articleTitle}</h1>
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Fevereiro 2026</time>
+          <time>15 de Fevereiro de 2026</time>
         </div>
         <div className="w-full h-64 bg-gradient-to-br from-green-500/20 to-blue-500/5 rounded-lg mb-12 flex items-center justify-center">
           <Trophy className="w-24 h-24 text-green-600" />

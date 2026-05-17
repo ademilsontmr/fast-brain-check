@@ -92,7 +92,7 @@ const ComoReligiosidadeInfluenciaQI = () => {
         </h1>
 
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Janeiro 2025</time>
+          <time>15 de Janeiro de 2025</time>
           <span>•</span>
         </div>
 

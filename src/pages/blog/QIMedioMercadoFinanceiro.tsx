@@ -65,7 +65,7 @@ const QIMedioMercadoFinanceiro = () => {
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{articleTitle}</h1>
 
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Janeiro 2024</time>
+          <time>15 de Janeiro de 2024</time>
           <span>•</span>
           <span>9 min de leitura</span>
         </div>

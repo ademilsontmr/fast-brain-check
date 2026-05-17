@@ -55,7 +55,7 @@ const ComoAumentarInteligenciaFormaNatural = () => {
         </h1>
 
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Novembro 2025</time>
+          <time>15 de Novembro de 2025</time>
         </div>
 
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Brain, MessageCircle, User, Sparkles, Mail, FileText } from "lucide-react";
+import { Brain, MessageCircle, User, Sparkles, Mail, FileText, Star, Shield, Zap, Lock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { saveUserDataLocally } from "@/services/api";
 import Footer from "@/components/Footer";
@@ -86,10 +86,10 @@ const UserData = () => {
             <Sparkles className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-4xl font-bold mb-4">
-            Último Passo! 🚀
+            Seu resultado está pronto! 🧠
           </h1>
           <p className="text-xl text-muted-foreground">
-            Preencha seus dados para o pagamento e para receber seu resultado.
+            Preencha seus dados para receber seu resultado completo.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ const UserData = () => {
               className="w-full shadow-elegant text-lg"
               disabled={isSubmitting || !validateForm()}
             >
-              {isSubmitting ? "Processando..." : "Ir para o Pagamento"}
+              {isSubmitting ? "Processando..." : "Ir para o Resultado Completo →"}
             </Button>
 
             <p className="text-center text-sm text-muted-foreground">
@@ -160,6 +160,50 @@ const UserData = () => {
             </p>
           </form>
         </Card>
+
+        {/* Prova Social */}
+        <div className="mt-8 space-y-4">
+          <div className="flex items-center justify-center gap-1 mb-2">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+            ))}
+            <span className="ml-2 text-sm font-semibold text-muted-foreground">4.9/5 — +50.000 resultados entregues</span>
+          </div>
+
+          <div className="grid gap-3">
+            {[
+              { name: "Fernanda R.", text: "Preenchi em menos de 1 minuto e já recebi meu resultado. Muito fácil e rápido!", stars: 5 },
+              { name: "Carlos A.", text: "Processo simples e seguro. O resultado foi entregue na hora, super detalhado.", stars: 5 },
+              { name: "Juliana M.", text: "Fiquei surpresa com a precisão do resultado. Valeu cada segundo!", stars: 5 },
+            ].map((review, i) => (
+              <Card key={i} className="p-4 bg-muted/30">
+                <div className="flex items-center gap-1 mb-2">
+                  {[...Array(review.stars)].map((_, j) => (
+                    <Star key={j} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">"{review.text}"</p>
+                <p className="text-xs font-semibold">{review.name}</p>
+              </Card>
+            ))}
+          </div>
+
+          {/* Garantias */}
+          <div className="grid grid-cols-3 gap-3 text-center mt-4">
+            <div className="flex flex-col items-center gap-1">
+              <Lock className="w-6 h-6 text-primary" />
+              <span className="text-xs text-muted-foreground">Dados protegidos</span>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <Zap className="w-6 h-6 text-primary" />
+              <span className="text-xs text-muted-foreground">Acesso imediato</span>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <Shield className="w-6 h-6 text-primary" />
+              <span className="text-xs text-muted-foreground">Pagamento seguro</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer />

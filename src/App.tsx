@@ -77,6 +77,9 @@ const NeurocienciaRiquezaQIPatrimonio = lazy(() => import("./pages/blog/Neurocie
 const QIJogadoresFutebol = lazy(() => import("./pages/blog/QIJogadoresFutebol"));
 const InteligenciaFluidaCristalizadaGanharDinheiro = lazy(() => import("./pages/blog/InteligenciaFluidaCristalizadaGanharDinheiro"));
 const DopaminaDecisaoSucessoFinanceiro = lazy(() => import("./pages/blog/DopaminaDecisaoSucessoFinanceiro"));
+const QIDeEinstein = lazy(() => import("./pages/blog/QIDeEinstein"));
+const TesteQICriancas = lazy(() => import("./pages/blog/TesteQICriancas"));
+const ComoDescubrirMeuQI = lazy(() => import("./pages/blog/ComoDescubrirMeuQI"));
 const InteligenciaPraticaTeoricaDinheiro = lazy(() => import("./pages/blog/InteligenciaPraticaTeoricaDinheiro"));
 const QIEmpresarialVsQIAcademico = lazy(() => import("./pages/blog/QIEmpresarialVsQIAcademico"));
 const InteligenciaSocialVsQI = lazy(() => import("./pages/blog/InteligenciaSocialVsQI"));
@@ -688,6 +691,30 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <DopaminaDecisaoSucessoFinanceiro />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-de-einstein"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIDeEinstein />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-qi-criancas"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteQICriancas />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-descobrir-meu-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoDescubrirMeuQI />
               </Suspense>
             }
           />

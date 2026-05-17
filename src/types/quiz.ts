@@ -27,9 +27,9 @@ export const questions: Question[] = [
   },
   {
     id: 2,
-    question: "Quadrado tem 4 lados. Triângulo tem 3 lados. Hexágono tem quantos lados?",
-    options: ["5", "6", "7", "8"],
-    correctAnswer: 1,
+    question: "Qual destas figuras geométricas não pertence ao mesmo grupo?",
+    options: ["Círculo", "Quadrado", "Triângulo", "Retângulo"],
+    correctAnswer: 0,
     difficulty: 'easy',
     category: 'spatial'
   },
@@ -67,11 +67,11 @@ export const questions: Question[] = [
   },
   {
     id: 7,
-    question: "Se 3×4 = 12, então 4×3 = ?",
-    options: ["12", "15", "16", "18"],
+    question: "Pensando na relação do tempo, o AMANHÃ de ONTEM é o mesmo que:",
+    options: ["Hoje", "Ontem", "O dia seguinte", "Passado"],
     correctAnswer: 0,
     difficulty: 'easy',
-    category: 'math'
+    category: 'logic'
   },
   {
     id: 8,
@@ -91,11 +91,11 @@ export const questions: Question[] = [
   },
   {
     id: 10,
-    question: "Quantos lados tem um pentágono?",
-    options: ["4", "5", "6", "7"],
-    correctAnswer: 1,
+    question: "Qual das palavras abaixo NÃO pertence ao mesmo grupo?",
+    options: ["Maçã", "Morango", "Cenoura", "Uva"],
+    correctAnswer: 2,
     difficulty: 'easy',
-    category: 'spatial'
+    category: 'verbal'
   },
   
   // Médias (11-20) - Desafio moderado
@@ -149,11 +149,11 @@ export const questions: Question[] = [
   },
   {
     id: 17,
-    question: "Se um produto custa R$ 100 e tem 20% de desconto, qual o preço final?",
-    options: ["R$ 70", "R$ 80", "R$ 85", "R$ 90"],
+    question: "Uma lesma cai em um poço de 10 metros. De dia ela sobe 3 metros, e de noite escorrega 2 metros. Em quantos dias ela sairá do poço?",
+    options: ["7 dias", "8 dias", "9 dias", "10 dias"],
     correctAnswer: 1,
     difficulty: 'medium',
-    category: 'math'
+    category: 'logic'
   },
   {
     id: 18,
@@ -228,11 +228,11 @@ export const questions: Question[] = [
   },
   {
     id: 26,
-    question: "Se BOLA = 40 (B=2, O=15, L=12, A=1) e CASA = 23 (C=3, A=1, S=19, A=1), então MESA = ?",
-    options: ["48", "50", "52", "54"],
+    question: "Se no alfabeto numérico A=2, B=4 e C=6... Seguindo este padrão lógico, qual é a soma das letras da palavra 'FACA'?",
+    options: ["20", "22", "24", "26"],
     correctAnswer: 1,
     difficulty: 'hard',
-    category: 'math'
+    category: 'pattern'
   },
   {
     id: 27,

@@ -53,7 +53,7 @@ const QIEmpresarialVsQIAcademico = () => {
         </h1>
 
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Janeiro 2026</time>
+          <time>15 de Janeiro de 2026</time>
         </div>
 
         <div className="w-full h-64 bg-gradient-to-br from-amber-500/20 to-orange-500/5 rounded-lg mb-12 flex items-center justify-center">

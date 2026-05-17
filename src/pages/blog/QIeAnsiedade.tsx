@@ -98,7 +98,7 @@ const QIeAnsiedade = () => {
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Janeiro 2024</time>
+          <time>15 de Janeiro de 2024</time>
           <span>•</span>
           <span>12 min de leitura</span>
         </div>

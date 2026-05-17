@@ -58,7 +58,7 @@ const Top15JogosAppsTreinarCerebro = () => {
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Fevereiro 2025</time>
+          <time>15 de Fevereiro de 2025</time>
           
         </div>
 
