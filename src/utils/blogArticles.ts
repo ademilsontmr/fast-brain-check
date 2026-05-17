@@ -606,6 +606,108 @@ export const allBlogArticles: BlogArticle[] = [
     title: "QI dos Principais Jogadores de Futebol: Inteligência no Campo",
     description: "Análise completa do QI dos maiores jogadores de futebol da história. Descubra como a inteligência impacta o desempenho e o sucesso no esporte.",
     category: "Curiosidades"
+  },
+  {
+    slug: "inteligencia-adaptativa-seculo-21",
+    title: "Inteligência Adaptativa no Século 21",
+    description: "Como a inteligência adaptativa se tornou essencial no mundo moderno e o que isso significa para QI e carreira.",
+    category: "Tendências"
+  },
+  {
+    slug: "jogadores-futebol-maior-qi",
+    title: "Jogadores de Futebol com Maior QI",
+    description: "Quais jogadores de futebol têm o maior QI estimado e como a inteligência impacta o desempenho em campo.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-e-genetica-quanto-nasce-quanto-aprende",
+    title: "QI e Genética: Quanto Nasce e Quanto Aprende",
+    description: "A influência da genética e do ambiente no QI. O que a ciência diz sobre natureza versus nutrição cognitiva.",
+    category: "Ciência"
+  },
+  {
+    slug: "qi-vs-experiencia-mercado",
+    title: "QI vs Experiência no Mercado de Trabalho",
+    description: "QI ou experiência: o que pesa mais na carreira? Análise para profissionais e recrutadores.",
+    category: "Carreira"
+  },
+  {
+    slug: "qi-vs-inteligencia-social",
+    title: "QI vs Inteligência Social",
+    description: "Diferenças entre QI e inteligência social e qual delas mais impacta relações e sucesso profissional.",
+    category: "Conceitos"
+  },
+  {
+    slug: "inteligencia-multiplas-monetizar",
+    title: "Inteligências Múltiplas: Como Monetizar Cada Tipo",
+    description: "Como transformar cada tipo de inteligência de Gardner em oportunidades de renda e carreira.",
+    category: "Carreira"
+  },
+  {
+    slug: "tabela-escala-qi",
+    title: "Tabela e Escala de QI: Classificação Completa",
+    description: "Tabela de QI com faixas, percentis e classificação. Guia para interpretar sua pontuação.",
+    category: "Guia"
+  },
+  {
+    slug: "como-medir-qi",
+    title: "Como Medir QI: Métodos e Testes",
+    description: "Aprenda como medir QI de forma confiável com testes padronizados, online e avaliação profissional.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-mensa-brasil",
+    title: "Teste Mensa Brasil: Como Entrar",
+    description: "Guia sobre o teste Mensa no Brasil: requisitos, inscrição e diferença para testes comuns de QI.",
+    category: "Guia"
+  },
+  {
+    slug: "matrizes-raven-teste-qi",
+    title: "Matrizes de Raven no Teste de QI",
+    description: "O que são as Matrizes de Raven e como funcionam em testes de QI não verbais.",
+    category: "Guia"
+  },
+  {
+    slug: "quanto-tempo-dura-teste-qi",
+    title: "Quanto Tempo Dura um Teste de QI",
+    description: "Duração de testes de QI online, WAIS, Raven e Mensa. O que esperar em cada formato.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-qi-adultos",
+    title: "Teste de QI para Adultos",
+    description: "Melhores testes de QI para adultos: WAIS, Raven, online e presencial.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-steve-jobs",
+    title: "Qual era o QI de Steve Jobs?",
+    description: "Estimativas do QI de Steve Jobs e o que isso revela sobre inteligência e sucesso.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-elon-musk",
+    title: "Qual é o QI do Elon Musk?",
+    description: "Análise das estimativas de QI do Elon Musk e limitações de números não verificados.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "superdotacao-o-que-e",
+    title: "Superdotação: O Que É e Critérios",
+    description: "O que é superdotação, QI necessário, sinais e como identificar alto potencial cognitivo.",
+    category: "Conceitos"
+  },
+  {
+    slug: "qi-faixas-pontuacao-significado",
+    title: "QI 120, 130, 140: Significado das Faixas",
+    description: "O que significa QI 120, 130, 140 e outras pontuações. Percentis e classificação.",
+    category: "Guia"
+  },
+  {
+    slug: "onde-fazer-teste-qi-brasil",
+    title: "Onde Fazer Teste de QI no Brasil",
+    description: "Onde fazer teste de QI no Brasil: psicólogos, Mensa, clínicas e opções online.",
+    category: "Guia"
   }
 ];
 

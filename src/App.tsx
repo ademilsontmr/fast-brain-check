@@ -146,6 +146,23 @@ const ComoBombeirosMelhoramQI = lazy(() => import("./pages/blog/ComoBombeirosMel
 const ComoFilhosMelhoramQI = lazy(() => import("./pages/blog/ComoFilhosMelhoramQI"));
 const ComoAndarCavaloMelhoraQI = lazy(() => import("./pages/blog/ComoAndarCavaloMelhoraQI"));
 const ComoMedicosMelhoramQI = lazy(() => import("./pages/blog/ComoMedicosMelhoramQI"));
+const InteligenciaAdaptativaSeculo21 = lazy(() => import("./pages/blog/InteligenciaAdaptativaSeculo21"));
+const JogadoresFutebolMaiorQI = lazy(() => import("./pages/blog/JogadoresFutebolMaiorQI"));
+const QIEGeneticaQuantoNasceQuantoAprende = lazy(() => import("./pages/blog/QIEGeneticaQuantoNasceQuantoAprende"));
+const QIVsExperienciaMercado = lazy(() => import("./pages/blog/QIVsExperienciaMercado"));
+const QIVsInteligenciaSocial = lazy(() => import("./pages/blog/QIVsInteligenciaSocial"));
+const InteligenciaMultiplasMonetizar = lazy(() => import("./pages/blog/InteligenciaMultiplasMonetizar"));
+const TabelaEscalaQI = lazy(() => import("./pages/blog/TabelaEscalaQI.tsx"));
+const ComoMedirQI = lazy(() => import("./pages/blog/ComoMedirQI.tsx"));
+const TesteMensaBrasil = lazy(() => import("./pages/blog/TesteMensaBrasil.tsx"));
+const MatrizesRavenTesteQI = lazy(() => import("./pages/blog/MatrizesRavenTesteQI"));
+const QuantoTempoDuraTesteQI = lazy(() => import("./pages/blog/QuantoTempoDuraTesteQI"));
+const TesteQIAdultos = lazy(() => import("./pages/blog/TesteQIAdultos"));
+const QISteveJobs = lazy(() => import("./pages/blog/QISteveJobs"));
+const QIElonMusk = lazy(() => import("./pages/blog/QIElonMusk"));
+const SuperdotacaoOQueE = lazy(() => import("./pages/blog/SuperdotacaoOQueE"));
+const QIFaixasPontuacao = lazy(() => import("./pages/blog/QIFaixasPontuacao"));
+const OndeFazerTesteQIBrasil = lazy(() => import("./pages/blog/OndeFazerTesteQIBrasil"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -1243,6 +1260,142 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <ComoMedicosMelhoramQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/inteligencia-adaptativa-seculo-21"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <InteligenciaAdaptativaSeculo21 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/jogadores-futebol-maior-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <JogadoresFutebolMaiorQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-e-genetica-quanto-nasce-quanto-aprende"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIEGeneticaQuantoNasceQuantoAprende />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-vs-experiencia-mercado"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIVsExperienciaMercado />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-vs-inteligencia-social"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIVsInteligenciaSocial />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/inteligencia-multiplas-monetizar"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <InteligenciaMultiplasMonetizar />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/tabela-escala-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TabelaEscalaQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-medir-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoMedirQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-mensa-brasil"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteMensaBrasil />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/matrizes-raven-teste-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <MatrizesRavenTesteQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/quanto-tempo-dura-teste-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QuantoTempoDuraTesteQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-qi-adultos"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteQIAdultos />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-steve-jobs"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QISteveJobs />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-elon-musk"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIElonMusk />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/superdotacao-o-que-e"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <SuperdotacaoOQueE />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-faixas-pontuacao-significado"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIFaixasPontuacao />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/onde-fazer-teste-qi-brasil"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <OndeFazerTesteQIBrasil />
               </Suspense>
             }
           />
