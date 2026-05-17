@@ -23,7 +23,7 @@ const QIFaixasPontuacao = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-faixas-pontuacao-significado",
-      publishDate: "2026-05-08",
+      publishDate: "2026-05-17",
     })
   );
 
@@ -40,7 +40,7 @@ const QIFaixasPontuacao = () => {
         </nav>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{articleTitle}</h1>
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Maio de 2026</time>
+          <time>17 de Maio de 2026</time>
         </div>
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">
           <TrendingUp className="w-24 h-24 text-primary" />

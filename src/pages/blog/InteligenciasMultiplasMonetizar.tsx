@@ -12,7 +12,7 @@ import useStructuredData from "@/hooks/use-structured-data";
 import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 
 const InteligenciasMultiplasMonetizar = () => {
-  const articleUrl = "https://bomqi.com.br/blog/inteligencias-multiplas-monetizar";
+  const articleUrl = "https://bomqi.com.br/blog/inteligencia-multiplas-monetizar";
   const articleTitle = "Inteligências Múltiplas: Como Identificar e Monetizar Seus Talentos";
   const articleDescription = "Descubra suas inteligências dominantes e aprenda estratégias práticas para transformá-las em renda. Guia completo com exemplos reais de monetização.";
 
@@ -28,12 +28,12 @@ const InteligenciasMultiplasMonetizar = () => {
       title: articleTitle,
       description: articleDescription,
       url: articleUrl,
-      slug: "inteligencias-multiplas-monetizar",
+      slug: "inteligencia-multiplas-monetizar",
       publishDate: "2026-01-21",
     })
   );
 
-  const relatedArticles = getRelatedArticles("inteligencias-multiplas-monetizar");
+  const relatedArticles = getRelatedArticles("inteligencia-multiplas-monetizar");
 
   return (
     <div className="min-h-screen bg-background">

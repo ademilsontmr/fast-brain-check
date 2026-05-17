@@ -24,7 +24,7 @@ const TesteMensaBrasil = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "teste-mensa-brasil",
-      publishDate: "2026-05-08",
+      publishDate: "2026-05-17",
     })
   );
 
@@ -41,7 +41,7 @@ const TesteMensaBrasil = () => {
         </nav>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{articleTitle}</h1>
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>Maio de 2026</time>
+          <time>17 de Maio de 2026</time>
         </div>
         <div className="w-full h-64 bg-gradient-to-br from-amber-500/20 to-amber-500/5 rounded-lg mb-12 flex items-center justify-center">
           <Award className="w-24 h-24 text-amber-600" />

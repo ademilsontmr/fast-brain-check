@@ -1,21 +1,11 @@
 import { useState, useEffect, useMemo } from "react";
-import { Brain, ArrowRight, Lightbulb, GraduationCap, Target, Users, BookOpen, Award, Zap, BarChart3, Briefcase, Gamepad2, Sparkles, Cpu, Trophy, TrendingUp, Dna, Calculator, Globe, TrendingDown, FileText, Leaf, AlertTriangle, Star, DollarSign, ChevronLeft, ChevronRight } from "lucide-react";
+import { Brain, ArrowRight, Lightbulb, GraduationCap, Target, Users, BookOpen, Award, Zap, BarChart3, Briefcase, Gamepad2, Sparkles, Cpu, Trophy, TrendingUp, Dna, Calculator, Globe, TrendingDown, FileText, Leaf, AlertTriangle, Star, DollarSign, ChevronLeft, ChevronRight, Ruler, Grid3x3, Clock, User, Laptop, Rocket, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 import useStructuredData from "@/hooks/use-structured-data";
-
-// Função para embaralhar array (Fisher-Yates shuffle)
-const shuffleArray = <T,>(array: T[]): T[] => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -62,12 +52,310 @@ const Blog = () => {
 
   const allArticles = [
     {
+      id: 189,
+      title: "Onde Fazer Teste de QI no Brasil: Opções Online e Presencial",
+      slug: "onde-fazer-teste-qi-brasil",
+      description: "Onde fazer teste de QI no Brasil: psicólogos, Mensa, clínicas e testes online confiáveis.",
+      icon: MapPin,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-primary/20 to-accent/20",
+      borderColor: "border-primary/30"
+    },
+    {
+      id: 188,
+      title: "QI 120, 130, 140: O Que Significa Cada Faixa de Pontuação",
+      slug: "qi-faixas-pontuacao-significado",
+      description: "Significado do QI 120, 130, 140 e outras faixas. Percentis e classificação na prática.",
+      icon: TrendingUp,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-green-500/20 to-teal-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 187,
+      title: "Superdotação: O Que É, QI Necessário e Sinais",
+      slug: "superdotacao-o-que-e",
+      description: "O que é superdotação, critérios de QI, sinais em crianças e adultos e como apoiar alto potencial.",
+      icon: Sparkles,
+      category: "Conceitos",
+      publishedAt: "2026-05-17",
+      gradient: "from-violet-500/20 to-purple-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 186,
+      title: "Qual é o QI do Elon Musk? Estimativas e Análise",
+      slug: "qi-elon-musk",
+      description: "Qual o QI do Elon Musk? Estimativas, limitações e diferença entre QI medido e sucesso.",
+      icon: Rocket,
+      category: "Curiosidades",
+      publishedAt: "2026-05-17",
+      gradient: "from-slate-500/20 to-gray-500/20",
+      borderColor: "border-slate-500/30"
+    },
+    {
+      id: 185,
+      title: "Qual era o QI de Steve Jobs? Estimativas e Contexto",
+      slug: "qi-steve-jobs",
+      description: "QI estimado de Steve Jobs e o que isso revela sobre inteligência e sucesso em tecnologia.",
+      icon: Laptop,
+      category: "Curiosidades",
+      publishedAt: "2026-05-17",
+      gradient: "from-gray-500/20 to-slate-500/20",
+      borderColor: "border-gray-500/30"
+    },
+    {
+      id: 184,
+      title: "Teste de QI para Adultos: Qual Escolher e Como Fazer",
+      slug: "teste-qi-adultos",
+      description: "Guia de teste de QI para adultos: WAIS, Raven, online e presencial.",
+      icon: User,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-blue-500/20 to-indigo-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 183,
+      title: "Quanto Tempo Dura um Teste de QI? Duração por Tipo",
+      slug: "quanto-tempo-dura-teste-qi",
+      description: "Duração de testes de QI online, WAIS, Raven, Mensa e fatores que influenciam o tempo.",
+      icon: Clock,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      borderColor: "border-cyan-500/30"
+    },
+    {
+      id: 182,
+      title: "Matrizes de Raven: O Que É e Como Funciona no Teste de QI",
+      slug: "matrizes-raven-teste-qi",
+      description: "Entenda as Matrizes de Raven: teste não verbal, aplicação e preparação.",
+      icon: Grid3x3,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-indigo-500/20 to-violet-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      id: 181,
+      title: "Teste Mensa Brasil: Como Entrar, Requisitos e O Que Esperar",
+      slug: "teste-mensa-brasil",
+      description: "Guia sobre o teste Mensa no Brasil: requisitos, inscrição e diferença para testes comuns.",
+      icon: Award,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-amber-500/20 to-yellow-500/20",
+      borderColor: "border-amber-500/30"
+    },
+    {
+      id: 180,
+      title: "Como Medir QI: Métodos, Testes e O Que Esperar",
+      slug: "como-medir-qi",
+      description: "Aprenda como medir QI de forma confiável com testes padronizados e avaliação profissional.",
+      icon: Ruler,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-teal-500/20 to-cyan-500/20",
+      borderColor: "border-teal-500/30"
+    },
+    {
+      id: 179,
+      title: "Tabela e Escala de QI: Classificação Completa por Pontuação",
+      slug: "tabela-escala-qi",
+      description: "Tabela de QI com faixas, percentis e classificação. Guia para interpretar sua pontuação.",
+      icon: BarChart3,
+      category: "Guia",
+      publishedAt: "2026-05-17",
+      gradient: "from-primary/20 to-accent/20",
+      borderColor: "border-primary/30"
+    },
+    {
+      id: 190,
+      title: "Inteligências Múltiplas: Como Monetizar Cada Tipo",
+      slug: "inteligencia-multiplas-monetizar",
+      description: "Como transformar cada tipo de inteligência de Gardner em oportunidades de renda e carreira.",
+      icon: Sparkles,
+      category: "Carreira",
+      publishedAt: "2025-01-15",
+      gradient: "from-violet-500/20 to-purple-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 191,
+      title: "Como Correr Melhora o QI: Ciência do Exercício Aeróbico",
+      slug: "como-correr-melhora-qi",
+      description: "Descubra como a corrida melhora o QI através de neurogênese, fluxo sanguíneo cerebral e BDNF.",
+      icon: Zap,
+      category: "Desenvolvimento",
+      publishedAt: "2025-01-15",
+      gradient: "from-orange-500/20 to-amber-500/20",
+      borderColor: "border-orange-500/30"
+    },
+    {
+      id: 192,
+      title: "Como Melhorar o QI em 30 Dias: Plano Científico Completo",
+      slug: "como-melhorar-qi-30-dias",
+      description: "Plano de 30 dias baseado em ciência para desenvolvimento cognitivo com exercícios e hábitos.",
+      icon: Target,
+      category: "Guia",
+      publishedAt: "2025-01-15",
+      gradient: "from-green-500/20 to-teal-500/20",
+      borderColor: "border-green-500/30"
+    },
+    {
+      id: 193,
+      title: "Como Engenheiros Melhoram o QI: Desenvolvimento Cognitivo Técnico",
+      slug: "como-engenheiros-melhoram-qi",
+      description: "Como a engenharia melhora o QI através de resolução de problemas e pensamento sistêmico.",
+      icon: Briefcase,
+      category: "Carreira",
+      publishedAt: "2025-01-15",
+      gradient: "from-slate-500/20 to-gray-500/20",
+      borderColor: "border-slate-500/30"
+    },
+    {
+      id: 194,
+      title: "QI Normal: O Que É e O Que Significa",
+      slug: "qi-normal",
+      description: "O que é QI normal, faixa de pontuação e como interpretar resultados na média populacional.",
+      icon: BarChart3,
+      category: "Conceitos",
+      publishedAt: "2025-01-15",
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 195,
+      title: "QI e TDAH: Relação Entre Inteligência e Déficit de Atenção",
+      slug: "qi-e-tdah",
+      description: "Relação entre QI e TDAH, impacto em testes de inteligência e estratégias de potencialização.",
+      icon: Brain,
+      category: "Ciência",
+      publishedAt: "2025-01-15",
+      gradient: "from-purple-500/20 to-violet-500/20",
+      borderColor: "border-purple-500/30"
+    },
+    {
+      id: 196,
+      title: "QI e Memória: Relação Científica Entre Inteligência e Memória",
+      slug: "qi-e-memoria",
+      description: "Como memória e QI se relacionam e estratégias para desenvolver ambos.",
+      icon: Brain,
+      category: "Ciência",
+      publishedAt: "2025-01-15",
+      gradient: "from-indigo-500/20 to-blue-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      id: 197,
+      title: "QI e Sono: Como o Sono Afeta a Inteligência",
+      slug: "qi-e-sono",
+      description: "Como o sono afeta o QI e estratégias para otimizar descanso e cognição.",
+      icon: Brain,
+      category: "Ciência",
+      publishedAt: "2025-01-15",
+      gradient: "from-violet-500/20 to-purple-500/20",
+      borderColor: "border-violet-500/30"
+    },
+    {
+      id: 198,
+      title: "QI Médio de Cavaleiros: Inteligência Equestre",
+      slug: "qi-medio-cavaleiros",
+      description: "QI médio em equitação e habilidades cognitivas desenvolvidas no esporte equestre.",
+      icon: Users,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-amber-500/20 to-yellow-500/20",
+      borderColor: "border-amber-500/30"
+    },
+    {
+      id: 199,
+      title: "QI Médio de Engenheiros: Inteligência Técnica e Criativa",
+      slug: "qi-medio-engenheiros",
+      description: "QI médio de engenheiros e como a profissão desenvolve inteligência técnica.",
+      icon: Briefcase,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-slate-500/20 to-zinc-500/20",
+      borderColor: "border-slate-500/30"
+    },
+    {
+      id: 200,
+      title: "QI Médio de Estudantes: Inteligência Acadêmica",
+      slug: "qi-medio-estudantes",
+      description: "QI médio de estudantes por nível educacional e fatores que influenciam desempenho.",
+      icon: GraduationCap,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-blue-500/20 to-indigo-500/20",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 201,
+      title: "QI Médio de Idosos: Inteligência na Terceira Idade",
+      slug: "qi-medio-idosos",
+      description: "QI médio na terceira idade e estratégias para manter a mente afiada.",
+      icon: Users,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-gray-500/20 to-slate-500/20",
+      borderColor: "border-gray-500/30"
+    },
+    {
+      id: 202,
+      title: "QI Médio de Jovens: Desenvolvimento Cognitivo na Juventude",
+      slug: "qi-medio-jovens",
+      description: "QI médio de jovens e como otimizar o potencial cognitivo nessa fase.",
+      icon: Users,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      borderColor: "border-cyan-500/30"
+    },
+    {
+      id: 203,
+      title: "QI Médio de Médicos: Inteligência na Medicina",
+      slug: "qi-medio-medicos",
+      description: "QI médio de médicos e habilidades cognitivas da profissão médica.",
+      icon: Briefcase,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-teal-500/20 to-green-500/20",
+      borderColor: "border-teal-500/30"
+    },
+    {
+      id: 204,
+      title: "QI Médio de Netos: Inteligência das Novas Gerações",
+      slug: "qi-medio-netos",
+      description: "QI das novas gerações e o papel dos avós no desenvolvimento cognitivo.",
+      icon: Users,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-pink-500/20 to-rose-500/20",
+      borderColor: "border-pink-500/30"
+    },
+    {
+      id: 205,
+      title: "QI Médio de Profissionais de Saúde: Inteligência no Cuidado",
+      slug: "qi-medio-profissionais-saude",
+      description: "QI médio em profissionais de saúde e cognição no cuidado com pacientes.",
+      icon: Briefcase,
+      category: "Dados",
+      publishedAt: "2025-01-15",
+      gradient: "from-emerald-500/20 to-teal-500/20",
+      borderColor: "border-emerald-500/30"
+    },
+    {
       id: 105,
       title: "Como Descobrir Meu QI: 5 Formas Confiáveis em 2026",
       slug: "como-descobrir-meu-qi",
       description: "Descubra como saber seu QI de forma confiável. Comparamos os 5 melhores métodos: testes online, psicólogos, apps e mais.",
       icon: Lightbulb,
       category: "Guia",
+      publishedAt: "2026-01-20",
       gradient: "from-indigo-500/20 to-purple-500/20",
       borderColor: "border-indigo-500/30"
     },
@@ -78,6 +366,7 @@ const Blog = () => {
       description: "Tudo sobre teste de QI para crianças: quando fazer, como funciona, o que mede e como interpretar os resultados.",
       icon: Users,
       category: "Crianças",
+      publishedAt: "2026-01-20",
       gradient: "from-blue-500/20 to-cyan-500/20",
       borderColor: "border-blue-500/30"
     },
@@ -88,6 +377,7 @@ const Blog = () => {
       description: "Descubra qual era o QI de Einstein, como ele se compara com outros gênios da história e como você pode medir sua própria inteligência.",
       icon: Star,
       category: "Curiosidades",
+      publishedAt: "2026-01-20",
       gradient: "from-yellow-500/20 to-amber-500/20",
       borderColor: "border-yellow-500/30"
     },
@@ -552,16 +842,6 @@ const Blog = () => {
       borderColor: "border-indigo-500/30"
     },
     {
-      id: 101,
-      title: "Inteligências Múltiplas: Como Identificar e Monetizar Seus Talentos",
-      slug: "inteligencias-multiplas-monetizar",
-      description: "Descubra suas inteligências dominantes e aprenda estratégias práticas para transformá-las em renda. Guia completo com exemplos reais de monetização.",
-      icon: Sparkles,
-      category: "Conceitos",
-      gradient: "from-violet-500/20 to-purple-500/20",
-      borderColor: "border-violet-500/30"
-    },
-    {
       id: 102,
       title: "Inteligência Emocional vs QI: Qual Determina Mais Sucesso?",
       slug: "inteligencia-emocional-vs-qi",
@@ -700,16 +980,6 @@ const Blog = () => {
       category: "Tendências",
       gradient: "from-cyan-500/20 to-blue-500/20",
       borderColor: "border-cyan-500/30"
-    },
-    {
-      id: 119,
-      title: "Inteligências Múltiplas: Como Identificar e Monetizar Seus Talentos",
-      slug: "inteligencias-multiplas-monetizar",
-      description: "Descubra suas inteligências dominantes e aprenda estratégias práticas para transformá-las em renda.",
-      icon: Sparkles,
-      category: "Desenvolvimento",
-      gradient: "from-violet-500/20 to-purple-500/20",
-      borderColor: "border-violet-500/30"
     },
     {
       id: 120,
@@ -949,11 +1219,21 @@ const Blog = () => {
     return cats.sort();
   }, []);
 
+  // Ordenar do mais recente para o mais antigo
+  const sortedArticles = useMemo(() => {
+    return [...allArticles].sort((a, b) => {
+      const dateA = a.publishedAt ?? "2024-01-01";
+      const dateB = b.publishedAt ?? "2024-01-01";
+      const byDate = dateB.localeCompare(dateA);
+      return byDate !== 0 ? byDate : b.id - a.id;
+    });
+  }, []);
+
   // Filtrar artigos por categoria
   const filteredArticles = useMemo(() => {
-    if (selectedCategory === "Todos") return allArticles;
-    return allArticles.filter(a => a.category === selectedCategory);
-  }, [selectedCategory]);
+    if (selectedCategory === "Todos") return sortedArticles;
+    return sortedArticles.filter(a => a.category === selectedCategory);
+  }, [selectedCategory, sortedArticles]);
 
   // Calcular paginação
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
@@ -970,14 +1250,6 @@ const Blog = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPage]);
-
-  // Embaralhar artigos dinamicamente toda vez que o componente é montado
-  const [articles, setArticles] = useState(() => shuffleArray(allArticles));
-
-  // Re-embaralhar quando a página é acessada novamente
-  useEffect(() => {
-    setArticles(shuffleArray(allArticles));
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">

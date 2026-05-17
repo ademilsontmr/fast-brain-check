@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Test from "./pages/Test";
 import BasicResult from "./pages/BasicResult";
@@ -151,7 +151,6 @@ const JogadoresFutebolMaiorQI = lazy(() => import("./pages/blog/JogadoresFutebol
 const QIEGeneticaQuantoNasceQuantoAprende = lazy(() => import("./pages/blog/QIEGeneticaQuantoNasceQuantoAprende"));
 const QIVsExperienciaMercado = lazy(() => import("./pages/blog/QIVsExperienciaMercado"));
 const QIVsInteligenciaSocial = lazy(() => import("./pages/blog/QIVsInteligenciaSocial"));
-const InteligenciaMultiplasMonetizar = lazy(() => import("./pages/blog/InteligenciaMultiplasMonetizar"));
 const TabelaEscalaQI = lazy(() => import("./pages/blog/TabelaEscalaQI.tsx"));
 const ComoMedirQI = lazy(() => import("./pages/blog/ComoMedirQI.tsx"));
 const TesteMensaBrasil = lazy(() => import("./pages/blog/TesteMensaBrasil.tsx"));
@@ -769,11 +768,7 @@ const App = () => (
           />
           <Route
             path="/blog/inteligencias-multiplas-monetizar"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <InteligenciasMultiplasMonetizar />
-              </Suspense>
-            }
+            element={<Navigate to="/blog/inteligencia-multiplas-monetizar" replace />}
           />
           <Route
             path="/blog/inteligencia-emocional-vs-qi"
@@ -1307,7 +1302,7 @@ const App = () => (
             path="/blog/inteligencia-multiplas-monetizar"
             element={
               <Suspense fallback={<ArticleLoading />}>
-                <InteligenciaMultiplasMonetizar />
+                <InteligenciasMultiplasMonetizar />
               </Suspense>
             }
           />
