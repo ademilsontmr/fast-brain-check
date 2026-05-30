@@ -159,6 +159,54 @@ const QuantoTempoDuraTesteQI = lazy(() => import("./pages/blog/QuantoTempoDuraTe
 const TesteQIAdultos = lazy(() => import("./pages/blog/TesteQIAdultos"));
 const QISteveJobs = lazy(() => import("./pages/blog/QISteveJobs"));
 const QIElonMusk = lazy(() => import("./pages/blog/QIElonMusk"));
+const QIPele = lazy(() => import("./pages/blog/QIPele"));
+const QINeymar = lazy(() => import("./pages/blog/QINeymar"));
+const QIRonaldoFenomeno = lazy(() => import("./pages/blog/QIRonaldoFenomeno"));
+const QIAyrtonSenna = lazy(() => import("./pages/blog/QIAyrtonSenna"));
+const QIGiseleBundchen = lazy(() => import("./pages/blog/QIGiseleBundchen"));
+const QISantosDumont = lazy(() => import("./pages/blog/QISantosDumont"));
+const QIMachadoDeAssis = lazy(() => import("./pages/blog/QIMachadoDeAssis"));
+const QISilvioSantos = lazy(() => import("./pages/blog/QISilvioSantos"));
+const QIXuxa = lazy(() => import("./pages/blog/QIXuxa"));
+const QIPauloCoelho = lazy(() => import("./pages/blog/QIPauloCoelho"));
+const QIAnitta = lazy(() => import("./pages/blog/QIAnitta"));
+const QILula = lazy(() => import("./pages/blog/QILula"));
+const QIRonaldinho = lazy(() => import("./pages/blog/QIRonaldinho"));
+const QIKaka = lazy(() => import("./pages/blog/QIKaka"));
+const QIMarta = lazy(() => import("./pages/blog/QIMarta"));
+const QIBolsonaro = lazy(() => import("./pages/blog/QIBolsonaro"));
+const QIFaustao = lazy(() => import("./pages/blog/QIFaustao"));
+const QIPabloMarcal = lazy(() => import("./pages/blog/QIPabloMarcal"));
+const QITomJobim = lazy(() => import("./pages/blog/QITomJobim"));
+const QIChicoBuarque = lazy(() => import("./pages/blog/QIChicoBuarque"));
+const QIElisRegina = lazy(() => import("./pages/blog/QIElisRegina"));
+const QIOscarNiemeyer = lazy(() => import("./pages/blog/QIOscarNiemeyer"));
+const QIDrauzioVarella = lazy(() => import("./pages/blog/QIDrauzioVarella"));
+const QIIveteSangalo = lazy(() => import("./pages/blog/QIIveteSangalo"));
+const QIRomario = lazy(() => import("./pages/blog/QIRomario"));
+const QIRivaldo = lazy(() => import("./pages/blog/QIRivaldo"));
+const QIGalCosta = lazy(() => import("./pages/blog/QIGalCosta"));
+const QICaetanoVeloso = lazy(() => import("./pages/blog/QICaetanoVeloso"));
+const QIGilbertoGil = lazy(() => import("./pages/blog/QIGilbertoGil"));
+const QILucianoHuck = lazy(() => import("./pages/blog/QILucianoHuck"));
+const QICasimiro = lazy(() => import("./pages/blog/QICasimiro"));
+const QIFernandoHenriqueCardoso = lazy(() => import("./pages/blog/QIFernandoHenriqueCardoso"));
+const QITite = lazy(() => import("./pages/blog/QITite"));
+const QIGuguLiberato = lazy(() => import("./pages/blog/QIGuguLiberato"));
+const QIJorgeBenJor = lazy(() => import("./pages/blog/QIJorgeBenJor"));
+const QIZezeDiCamargo = lazy(() => import("./pages/blog/QIZezeDiCamargo"));
+const QIRaulSeixas = lazy(() => import("./pages/blog/QIRaulSeixas"));
+const QIRitaLee = lazy(() => import("./pages/blog/QIRitaLee"));
+const QIRobertoCarlos = lazy(() => import("./pages/blog/QIRobertoCarlos"));
+const QIWhinderssonNunes = lazy(() => import("./pages/blog/QIWhinderssonNunes"));
+const QIAlok = lazy(() => import("./pages/blog/QIAlok"));
+const QILudmilla = lazy(() => import("./pages/blog/QILudmilla"));
+const QIGusttavoLima = lazy(() => import("./pages/blog/QIGusttavoLima"));
+const QIMarinaSilva = lazy(() => import("./pages/blog/QIMarinaSilva"));
+const QISergioMoro = lazy(() => import("./pages/blog/QISergioMoro"));
+const QIRatinho = lazy(() => import("./pages/blog/QIRatinho"));
+const QIRai = lazy(() => import("./pages/blog/QIRai"));
+const QIAdrianaLima = lazy(() => import("./pages/blog/QIAdrianaLima"));
 const SuperdotacaoOQueE = lazy(() => import("./pages/blog/SuperdotacaoOQueE"));
 const QIFaixasPontuacao = lazy(() => import("./pages/blog/QIFaixasPontuacao"));
 const OndeFazerTesteQIBrasil = lazy(() => import("./pages/blog/OndeFazerTesteQIBrasil"));
@@ -1370,6 +1418,138 @@ const App = () => (
               </Suspense>
             }
           />
+          <Route
+            path="/blog/qi-pele"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIPele />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-neymar"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QINeymar />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-ronaldo-fenomeno"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIRonaldoFenomeno />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-ayrton-senna"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIAyrtonSenna />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-gisele-bundchen"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIGiseleBundchen />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-santos-dumont"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QISantosDumont />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-machado-de-assis"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIMachadoDeAssis />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-silvio-santos"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QISilvioSantos />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-xuxa"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIXuxa />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-paulo-coelho"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIPauloCoelho />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-anitta"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIAnitta />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-lula"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QILula />
+              </Suspense>
+            }
+          />
+          <Route path="/blog/qi-ronaldinho" element={<Suspense fallback={<ArticleLoading />}><QIRonaldinho /></Suspense>} />
+          <Route path="/blog/qi-kaka" element={<Suspense fallback={<ArticleLoading />}><QIKaka /></Suspense>} />
+          <Route path="/blog/qi-marta" element={<Suspense fallback={<ArticleLoading />}><QIMarta /></Suspense>} />
+          <Route path="/blog/qi-bolsonaro" element={<Suspense fallback={<ArticleLoading />}><QIBolsonaro /></Suspense>} />
+          <Route path="/blog/qi-faustao" element={<Suspense fallback={<ArticleLoading />}><QIFaustao /></Suspense>} />
+          <Route path="/blog/qi-pablo-marcal" element={<Suspense fallback={<ArticleLoading />}><QIPabloMarcal /></Suspense>} />
+          <Route path="/blog/qi-tom-jobim" element={<Suspense fallback={<ArticleLoading />}><QITomJobim /></Suspense>} />
+          <Route path="/blog/qi-chico-buarque" element={<Suspense fallback={<ArticleLoading />}><QIChicoBuarque /></Suspense>} />
+          <Route path="/blog/qi-elis-regina" element={<Suspense fallback={<ArticleLoading />}><QIElisRegina /></Suspense>} />
+          <Route path="/blog/qi-oscar-niemeyer" element={<Suspense fallback={<ArticleLoading />}><QIOscarNiemeyer /></Suspense>} />
+          <Route path="/blog/qi-drauzio-varella" element={<Suspense fallback={<ArticleLoading />}><QIDrauzioVarella /></Suspense>} />
+          <Route path="/blog/qi-ivete-sangalo" element={<Suspense fallback={<ArticleLoading />}><QIIveteSangalo /></Suspense>} />
+          <Route path="/blog/qi-romario" element={<Suspense fallback={<ArticleLoading />}><QIRomario /></Suspense>} />
+          <Route path="/blog/qi-rivaldo" element={<Suspense fallback={<ArticleLoading />}><QIRivaldo /></Suspense>} />
+          <Route path="/blog/qi-gal-costa" element={<Suspense fallback={<ArticleLoading />}><QIGalCosta /></Suspense>} />
+          <Route path="/blog/qi-caetano-veloso" element={<Suspense fallback={<ArticleLoading />}><QICaetanoVeloso /></Suspense>} />
+          <Route path="/blog/qi-gilberto-gil" element={<Suspense fallback={<ArticleLoading />}><QIGilbertoGil /></Suspense>} />
+          <Route path="/blog/qi-luciano-huck" element={<Suspense fallback={<ArticleLoading />}><QILucianoHuck /></Suspense>} />
+          <Route path="/blog/qi-casimiro" element={<Suspense fallback={<ArticleLoading />}><QICasimiro /></Suspense>} />
+          <Route path="/blog/qi-fernando-henrique-cardoso" element={<Suspense fallback={<ArticleLoading />}><QIFernandoHenriqueCardoso /></Suspense>} />
+          <Route path="/blog/qi-tite" element={<Suspense fallback={<ArticleLoading />}><QITite /></Suspense>} />
+          <Route path="/blog/qi-gugu-liberato" element={<Suspense fallback={<ArticleLoading />}><QIGuguLiberato /></Suspense>} />
+          <Route path="/blog/qi-jorge-ben-jor" element={<Suspense fallback={<ArticleLoading />}><QIJorgeBenJor /></Suspense>} />
+          <Route path="/blog/qi-zeze-di-camargo" element={<Suspense fallback={<ArticleLoading />}><QIZezeDiCamargo /></Suspense>} />
+          <Route path="/blog/qi-raul-seixas" element={<Suspense fallback={<ArticleLoading />}><QIRaulSeixas /></Suspense>} />
+          <Route path="/blog/qi-rita-lee" element={<Suspense fallback={<ArticleLoading />}><QIRitaLee /></Suspense>} />
+          <Route path="/blog/qi-roberto-carlos" element={<Suspense fallback={<ArticleLoading />}><QIRobertoCarlos /></Suspense>} />
+          <Route path="/blog/qi-whindersson-nunes" element={<Suspense fallback={<ArticleLoading />}><QIWhinderssonNunes /></Suspense>} />
+          <Route path="/blog/qi-alok" element={<Suspense fallback={<ArticleLoading />}><QIAlok /></Suspense>} />
+          <Route path="/blog/qi-ludmilla" element={<Suspense fallback={<ArticleLoading />}><QILudmilla /></Suspense>} />
+          <Route path="/blog/qi-gusttavo-lima" element={<Suspense fallback={<ArticleLoading />}><QIGusttavoLima /></Suspense>} />
+          <Route path="/blog/qi-marina-silva" element={<Suspense fallback={<ArticleLoading />}><QIMarinaSilva /></Suspense>} />
+          <Route path="/blog/qi-sergio-moro" element={<Suspense fallback={<ArticleLoading />}><QISergioMoro /></Suspense>} />
+          <Route path="/blog/qi-ratinho" element={<Suspense fallback={<ArticleLoading />}><QIRatinho /></Suspense>} />
+          <Route path="/blog/qi-rai" element={<Suspense fallback={<ArticleLoading />}><QIRai /></Suspense>} />
+          <Route path="/blog/qi-adriana-lima" element={<Suspense fallback={<ArticleLoading />}><QIAdrianaLima /></Suspense>} />
           <Route
             path="/blog/superdotacao-o-que-e"
             element={

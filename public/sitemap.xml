@@ -4,55 +4,55 @@
     <loc>https://bomqi.com.br/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/sobre-o-teste</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/como-funciona</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/perguntas-frequentes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/qi-por-pais</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/contato</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/politica-privacidade</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/termos-uso</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
 
   <!-- Blog Articles -->
@@ -60,54 +60,342 @@
     <loc>https://bomqi.com.br/blog/como-andar-cavalo-melhora-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-bombeiros-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-filhos-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-idosos-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-jovens-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-medicos-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-17</lastmod>
-  </url>
-  <url>
-    <loc>https://bomqi.com.br/blog/como-medir-qi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-pedal-melhora-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-professores-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-adriana-lima</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-alok</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-anitta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-ayrton-senna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-bolsonaro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-caetano-veloso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-casimiro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-chico-buarque</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-drauzio-varella</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-elis-regina</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-faustao</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-fernando-henrique-cardoso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-gal-costa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-gilberto-gil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-gisele-bundchen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-gugu-liberato</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-gusttavo-lima</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-ivete-sangalo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-jorge-ben-jor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-kaka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-luciano-huck</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-ludmilla</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-lula</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-machado-de-assis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-marina-silva</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-marta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-neymar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-oscar-niemeyer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-pablo-marcal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-paulo-coelho</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-pele</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-rai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-ratinho</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-raul-seixas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-rita-lee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-rivaldo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-roberto-carlos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-romario</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-ronaldinho</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-ronaldo-fenomeno</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-santos-dumont</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-sergio-moro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-silvio-santos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-tite</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-tom-jobim</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-whindersson-nunes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-xuxa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-zeze-di-camargo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-medir-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
     <lastmod>2026-05-17</lastmod>
   </url>
   <url>

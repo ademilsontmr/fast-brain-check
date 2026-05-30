@@ -708,6 +708,294 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Onde Fazer Teste de QI no Brasil",
     description: "Onde fazer teste de QI no Brasil: psicólogos, Mensa, clínicas e opções online.",
     category: "Guia"
+  },
+  {
+    slug: "qi-pele",
+    title: "Qual era o QI de Pelé?",
+    description: "Estimativas sobre o QI de Pelé e inteligência tática no futebol.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-neymar",
+    title: "Qual é o QI do Neymar?",
+    description: "Estimativas do QI do Neymar e limites de comparar QI com talento esportivo.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-ronaldo-fenomeno",
+    title: "Qual era o QI de Ronaldo Fenômeno?",
+    description: "Estimativas sobre o QI de Ronaldo Nazário e genialidade em campo.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-ayrton-senna",
+    title: "Qual era o QI de Ayrton Senna?",
+    description: "Análise de estimativas do QI de Ayrton Senna e cognição no automobilismo.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-gisele-bundchen",
+    title: "Qual é o QI de Gisele Bündchen?",
+    description: "Estimativas do QI de Gisele e inteligência em moda e negócios.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-santos-dumont",
+    title: "Qual era o QI de Santos Dumont?",
+    description: "Estimativas sobre o QI de Santos Dumont e inventividade brasileira.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-machado-de-assis",
+    title: "Qual era o QI de Machado de Assis?",
+    description: "Estimativas do QI de Machado de Assis e genialidade literária.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-silvio-santos",
+    title: "Qual é o QI de Silvio Santos?",
+    description: "Estimativas do QI de Silvio Santos e inteligência empresarial na TV.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-xuxa",
+    title: "Qual é o QI da Xuxa?",
+    description: "Estimativas sobre o QI de Xuxa e impacto no entretenimento brasileiro.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-paulo-coelho",
+    title: "Qual é o QI de Paulo Coelho?",
+    description: "Estimativas do QI de Paulo Coelho e sucesso literário global.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-anitta",
+    title: "Qual é o QI da Anitta?",
+    description: "Estimativas sobre o QI da Anitta e estratégia de carreira internacional.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-lula",
+    title: "Qual é o QI do Lula?",
+    description: "Estimativas do QI de Lula e limites de atribuir QI a líderes políticos.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-ronaldinho",
+    title: "Qual é o QI do Ronaldinho?",
+    description: "Estimativas do QI de Ronaldinho Gaúcho e criatividade no futebol.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-kaka",
+    title: "Qual é o QI do Kaká?",
+    description: "Estimativas do QI de Kaká e inteligência tática e disciplina.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-marta",
+    title: "Qual é o QI de Marta?",
+    description: "Estimativas do QI de Marta e liderança no futebol feminino.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-bolsonaro",
+    title: "Qual é o QI de Bolsonaro?",
+    description: "Estimativas do QI de Bolsonaro e análise imparcial sobre política.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-faustao",
+    title: "Qual é o QI do Faustão?",
+    description: "Estimativas do QI de Faustão e longevidade na TV brasileira.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-pablo-marcal",
+    title: "Qual é o QI do Pablo Marçal?",
+    description: "Estimativas do QI de Pablo Marçal e inteligência empresarial.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-tom-jobim",
+    title: "Qual era o QI de Tom Jobim?",
+    description: "Estimativas do QI de Tom Jobim e genialidade na bossa nova.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-chico-buarque",
+    title: "Qual é o QI de Chico Buarque?",
+    description: "Estimativas do QI de Chico Buarque em música e literatura.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-elis-regina",
+    title: "Qual era o QI de Elis Regina?",
+    description: "Estimativas do QI de Elis Regina e interpretação musical.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-oscar-niemeyer",
+    title: "Qual era o QI de Oscar Niemeyer?",
+    description: "Estimativas do QI de Oscar Niemeyer e arquitetura brasileira.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-drauzio-varella",
+    title: "Qual é o QI do Drauzio Varella?",
+    description: "Estimativas do QI de Drauzio Varella e divulgação científica.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-ivete-sangalo",
+    title: "Qual é o QI da Ivete Sangalo?",
+    description: "Estimativas do QI de Ivete Sangalo e carreira artística.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-romario",
+    title: "Qual é o QI do Romário?",
+    description: "Estimativas do QI de Romário e inteligência em campo.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-rivaldo",
+    title: "Qual é o QI do Rivaldo?",
+    description: "Estimativas do QI de Rivaldo e genialidade técnica.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-gal-costa",
+    title: "Qual era o QI de Gal Costa?",
+    description: "Estimativas do QI de Gal Costa e legado na MPB.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-caetano-veloso",
+    title: "Qual é o QI de Caetano Veloso?",
+    description: "Estimativas do QI de Caetano Veloso e erudição cultural.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-gilberto-gil",
+    title: "Qual é o QI de Gilberto Gil?",
+    description: "Estimativas do QI de Gilberto Gil e carreira multidimensional.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-luciano-huck",
+    title: "Qual é o QI do Luciano Huck?",
+    description: "Estimativas do QI de Luciano Huck e inteligência na TV.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-casimiro",
+    title: "Qual é o QI do Casimiro?",
+    description: "Estimativas do QI de Casimiro e inteligência no streaming.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-fernando-henrique-cardoso",
+    title: "Qual é o QI de Fernando Henrique Cardoso?",
+    description: "Estimativas do QI de FHC e inteligência política.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-tite",
+    title: "Qual é o QI do Tite?",
+    description: "Estimativas do QI de Tite e raciocínio tático.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-gugu-liberato",
+    title: "Qual era o QI do Gugu Liberato?",
+    description: "Estimativas do QI de Gugu Liberato e carreira na TV.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-jorge-ben-jor",
+    title: "Qual é o QI de Jorge Ben Jor?",
+    description: "Estimativas do QI de Jorge Ben Jor e samba rock.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-zeze-di-camargo",
+    title: "Qual é o QI de Zezé Di Camargo?",
+    description: "Estimativas do QI de Zezé Di Camargo e carreira sertaneja.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-raul-seixas",
+    title: "Qual era o QI de Raul Seixas?",
+    description: "Estimativas do QI de Raul Seixas e criatividade no rock.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-rita-lee",
+    title: "Qual é o QI de Rita Lee?",
+    description: "Estimativas do QI de Rita Lee e inteligência artística.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-roberto-carlos",
+    title: "Qual é o QI de Roberto Carlos?",
+    description: "Estimativas do QI de Roberto Carlos e longevidade musical.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-whindersson-nunes",
+    title: "Qual é o QI do Whindersson Nunes?",
+    description: "Estimativas do QI de Whindersson Nunes e empreendedorismo digital.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-alok",
+    title: "Qual é o QI do Alok?",
+    description: "Estimativas do QI de Alok e carreira global na eletrônica.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-ludmilla",
+    title: "Qual é o QI da Ludmilla?",
+    description: "Estimativas do QI de Ludmilla e reinvenção artística.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-gusttavo-lima",
+    title: "Qual é o QI do Gusttavo Lima?",
+    description: "Estimativas do QI de Gusttavo Lima e mercado sertanejo.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-marina-silva",
+    title: "Qual é o QI de Marina Silva?",
+    description: "Estimativas do QI de Marina Silva e trajetória política.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-sergio-moro",
+    title: "Qual é o QI de Sérgio Moro?",
+    description: "Estimativas do QI de Sérgio Moro e carreira jurídica.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-ratinho",
+    title: "Qual é o QI do Ratinho?",
+    description: "Estimativas do QI de Ratinho e longevidade na TV.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-rai",
+    title: "Qual é o QI do Raí?",
+    description: "Estimativas do QI de Raí e liderança tática.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-adriana-lima",
+    title: "Qual é o QI de Adriana Lima?",
+    description: "Estimativas do QI de Adriana Lima e carreira internacional.",
+    category: "Curiosidades"
   }
 ];
 
