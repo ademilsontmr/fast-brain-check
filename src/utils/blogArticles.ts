@@ -996,6 +996,42 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Qual é o QI de Adriana Lima?",
     description: "Estimativas do QI de Adriana Lima e carreira internacional.",
     category: "Curiosidades"
+  },
+  {
+    slug: "teste-qi-gratuito-e-confiavel",
+    title: "Teste de QI Gratuito e Confiável",
+    description: "Guia para encontrar teste de QI gratuito e confiável com critérios científicos.",
+    category: "Guia"
+  },
+  {
+    slug: "como-saber-meu-qi",
+    title: "Como Saber Meu QI",
+    description: "6 métodos práticos para saber seu QI em 2026.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-qi-oficial",
+    title: "Teste de QI Oficial",
+    description: "O que é teste de QI oficial e como fazer avaliação formal.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-qi-gratuito-sem-cadastro",
+    title: "Teste de QI Gratuito Sem Cadastro",
+    description: "Como fazer teste de QI grátis sem cadastro complicado.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-qi-em-portugues",
+    title: "Teste de QI em Português",
+    description: "Teste de QI em português adaptado ao Brasil.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-qi-com-resultado-imediato",
+    title: "Teste de QI com Resultado Imediato",
+    description: "Teste de QI com resultado na hora após o questionário.",
+    category: "Guia"
   }
 ];
 

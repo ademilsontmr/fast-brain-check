@@ -4,55 +4,55 @@
     <loc>https://bomqi.com.br/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/sobre-o-teste</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/como-funciona</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/perguntas-frequentes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/qi-por-pais</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/contato</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/politica-privacidade</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/termos-uso</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
 
   <!-- Blog Articles -->
@@ -60,49 +60,85 @@
     <loc>https://bomqi.com.br/blog/como-andar-cavalo-melhora-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-bombeiros-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-filhos-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-idosos-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-jovens-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-medicos-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-pedal-melhora-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-professores-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-saber-meu-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/teste-qi-com-resultado-imediato</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/teste-qi-em-portugues</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/teste-qi-gratuito-e-confiavel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/teste-qi-gratuito-sem-cadastro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/teste-qi-oficial</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-26</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/qi-adriana-lima</loc>

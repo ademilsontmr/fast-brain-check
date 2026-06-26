@@ -41,6 +41,8 @@ const highPriority = [
   'como-descobrir-meu-qi', 'teste-qi-criancas', 'qi-de-einstein',
   'como-aumentar-qi', 'o-que-e-qi', 'melhor-teste-qi-2026',
   'qi-medio-brasil', 'qi-medio-mundial', 'como-saber-meu-qi-sem-pagar',
+  'como-saber-meu-qi', 'teste-qi-gratuito-e-confiavel', 'teste-qi-oficial',
+  'teste-qi-gratuito-sem-cadastro', 'teste-qi-em-portugues', 'teste-qi-com-resultado-imediato',
   'teste-qi-gratis', 'teste-qi-online-guia-completo', 'como-aumentar-qi-rapidamente',
   'tabela-escala-qi', 'como-medir-qi', 'teste-mensa-brasil', 'qi-faixas-pontuacao-significado',
   'onde-fazer-teste-qi-brasil', 'superdotacao-o-que-e',

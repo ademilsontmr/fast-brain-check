@@ -207,6 +207,12 @@ const QISergioMoro = lazy(() => import("./pages/blog/QISergioMoro"));
 const QIRatinho = lazy(() => import("./pages/blog/QIRatinho"));
 const QIRai = lazy(() => import("./pages/blog/QIRai"));
 const QIAdrianaLima = lazy(() => import("./pages/blog/QIAdrianaLima"));
+const TesteQIGratuitoEConfiavel = lazy(() => import("./pages/blog/TesteQIGratuitoEConfiavel"));
+const ComoSaberMeuQI = lazy(() => import("./pages/blog/ComoSaberMeuQI"));
+const TesteQIOficial = lazy(() => import("./pages/blog/TesteQIOficial"));
+const TesteQIGratuitoSemCadastro = lazy(() => import("./pages/blog/TesteQIGratuitoSemCadastro"));
+const TesteQIEmPortugues = lazy(() => import("./pages/blog/TesteQIEmPortugues"));
+const TesteQIComResultadoImediato = lazy(() => import("./pages/blog/TesteQIComResultadoImediato"));
 const SuperdotacaoOQueE = lazy(() => import("./pages/blog/SuperdotacaoOQueE"));
 const QIFaixasPontuacao = lazy(() => import("./pages/blog/QIFaixasPontuacao"));
 const OndeFazerTesteQIBrasil = lazy(() => import("./pages/blog/OndeFazerTesteQIBrasil"));
@@ -1550,6 +1556,12 @@ const App = () => (
           <Route path="/blog/qi-ratinho" element={<Suspense fallback={<ArticleLoading />}><QIRatinho /></Suspense>} />
           <Route path="/blog/qi-rai" element={<Suspense fallback={<ArticleLoading />}><QIRai /></Suspense>} />
           <Route path="/blog/qi-adriana-lima" element={<Suspense fallback={<ArticleLoading />}><QIAdrianaLima /></Suspense>} />
+          <Route path="/blog/teste-qi-gratuito-e-confiavel" element={<Suspense fallback={<ArticleLoading />}><TesteQIGratuitoEConfiavel /></Suspense>} />
+          <Route path="/blog/como-saber-meu-qi" element={<Suspense fallback={<ArticleLoading />}><ComoSaberMeuQI /></Suspense>} />
+          <Route path="/blog/teste-qi-oficial" element={<Suspense fallback={<ArticleLoading />}><TesteQIOficial /></Suspense>} />
+          <Route path="/blog/teste-qi-gratuito-sem-cadastro" element={<Suspense fallback={<ArticleLoading />}><TesteQIGratuitoSemCadastro /></Suspense>} />
+          <Route path="/blog/teste-qi-em-portugues" element={<Suspense fallback={<ArticleLoading />}><TesteQIEmPortugues /></Suspense>} />
+          <Route path="/blog/teste-qi-com-resultado-imediato" element={<Suspense fallback={<ArticleLoading />}><TesteQIComResultadoImediato /></Suspense>} />
           <Route
             path="/blog/superdotacao-o-que-e"
             element={
