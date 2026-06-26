@@ -14,8 +14,8 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 const TesteQIGratuitoEConfiavel = () => {
   const navigate = useNavigate();
   const articleUrl = "https://bomqi.com.br/blog/teste-qi-gratuito-e-confiavel";
-  const articleTitle = "Teste de QI Gratuito e Confiável: Guia Completo 2026";
-  const articleDescription = "Encontre um teste de QI gratuito e confiável. Critérios científicos, comparação de opções e como fazer o teste online com resultado em minutos.";
+  const articleTitle = "Teste de QI Gratuito e Confiável: O Que Existe de Verdade em 2026";
+  const articleDescription = "Muita gente busca teste de QI gratuito e confiável. Entenda o que é possível de graça, as limitações e quando vale um teste pago acessível.";
 
   useSEO({ title: articleTitle, description: articleDescription, url: articleUrl });
   useStructuredData(
@@ -49,13 +49,21 @@ const TesteQIGratuitoEConfiavel = () => {
           <Shield className="w-24 h-24 text-primary" />
         </div>
         <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-muted-foreground mb-8">Buscar um <strong>teste de QI gratuito e confiável</strong> é o que milhares de brasileiros fazem todo mês. O desafio não é achar qualquer teste — é escolher um que use lógica validada, explique limitações e entregue resultado útil sem promessas falsas.</p>
+          <p className="text-xl text-muted-foreground mb-8">Buscar um <strong>teste de QI gratuito e confiável</strong> é comum — mas é importante entender a diferença: muitos sites prometem “grátis” e entregam resultado impreciso ou escondem o score atrás de paywall confuso. Neste guia, explicamos o que dá para esperar de testes gratuitos e quando um teste pago acessível faz mais sentido.</p>
+          <div className="bg-amber-50 dark:bg-amber-950/20 border-2 border-amber-200 dark:border-amber-800 rounded-lg p-6 my-8">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-amber-900 dark:text-amber-100">Transparência: como funciona o BomQI</h3>
+                <p className="text-amber-800 dark:text-amber-200 mb-3 text-sm">Você faz o teste online sem pagar antecipado. O <strong>resultado completo</strong> (QI exato, percentil e análise) é desbloqueado após pagamento via PIX. Não somos um teste 100% gratuito — somos acessíveis e transparentes.</p>
+              </div>
+            </div>
+          </div>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-bold mb-2 text-green-900 dark:text-green-100">O que define um teste gratuito confiável</h3>
-                <p className="text-green-800 dark:text-green-200 mb-3 text-sm">Confiável não significa laudo clínico. Significa metodologia clara, perguntas de raciocínio lógico, tempo adequado e transparência sobre o que o resultado representa.</p>
+                <h3 className="text-xl font-bold mb-2 text-green-900 dark:text-green-100">O que define um teste confiável</h3>
                 <ul className="text-green-800 dark:text-green-200 space-y-1 text-sm">
                   <li>✓ Perguntas de raciocínio fluido e lógica</li>
                   <li>✓ Tempo entre 3 e 20 minutos</li>
@@ -83,8 +91,7 @@ const TesteQIGratuitoEConfiavel = () => {
           </ul>
           <h3 className="text-2xl font-bold mt-8 mb-4">Teste grátis vs teste pago: quando cada um faz sentido</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
-            <li>Grátis/inicial: curiosidade, autoconhecimento, triagem</li>
-            <li>Pago com relatório: análise mais detalhada por subáreas</li>
+            <li>Pago acessível: resultado completo com análise detalhada</li>
             <li>Clínico (WAIS): diagnóstico, superdotação, processos formais</li>
             <li>Online confiável cobre 85–90% da necessidade casual</li>
           </ul>
@@ -94,11 +101,11 @@ const TesteQIGratuitoEConfiavel = () => {
               <div>
                 <p className="font-semibold text-green-600 mb-2">Vantagens</p>
                 <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li>✓ Acesso imediato</li>
-                  <li>✓ Custo zero para começar</li>
-                  <li>✓ Boa estimativa para autoconhecimento</li>
-                  <li>✓ Comparável entre tentativas</li>
-                  <li>✓ Ideal para triagem inicial</li>
+                  <li>✓ Teste online em poucos minutos</li>
+                  <li>✓ Preço acessível</li>
+                  <li>✓ Resultado completo após pagamento</li>
+                  <li>✓ Transparência sobre o que está incluso</li>
+                  <li>✓ Pagamento seguro via PIX</li>
                 </ul>
               </div>
               <div>
@@ -117,7 +124,7 @@ const TesteQIGratuitoEConfiavel = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2 text-blue-900 dark:text-blue-100">Próximo passo</h3>
                 <p className="text-blue-800 dark:text-blue-200 text-sm">
-                  O jeito mais rápido de colocar tudo isso em prática é fazer o teste agora e comparar seu resultado com as faixas de QI. Leva poucos minutos.
+                  O jeito mais honesto é fazer o teste, ver a prévia e decidir se desbloqueia o resultado completo.
                 </p>
               </div>
             </div>
@@ -126,14 +133,13 @@ const TesteQIGratuitoEConfiavel = () => {
           <p className="text-muted-foreground mb-4"><Link to="/blog/teste-qi-confiavel" className="text-primary hover:underline">Teste de QI confiável</Link>,  <Link to="/blog/melhor-teste-qi-2026" className="text-primary hover:underline">Melhor teste de QI 2026</Link>,  <Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">Como descobrir meu QI</Link>.</p>
         </div>
         <ArticleFAQ faqs={[
-          { question: "Existe teste de QI gratuito e confiável de verdade?", answer: "Sim, para estimativa pessoal. Testes com raciocínio lógico estruturado são úteis, mas não têm validade clínica como o WAIS." },
-          { question: "Teste grátis pode dar QI errado?", answer: "Pode variar ±10–15 pontos. Evite testes com poucas perguntas ou que prometem precisão de laboratório." },
-          { question: "Preciso pagar para ter resultado confiável?", answer: "Não necessariamente. Pagar pode trazer relatório mais detalhado, mas um teste gratuito bem feito já orienta bem." },
-          { question: "Como saber se o site é confiável?", answer: "Verifique metodologia, política de privacidade, ausência de promessas exageradas e se explica que não é diagnóstico." }
+          { question: "Existe teste de QI 100% gratuito e confiável?", answer: "Raramente. Testes totalmente grátis costumam ser imprecisos ou escondem o resultado. Testes pagos acessíveis costumam ser mais transparentes." },
+          { question: "Preciso pagar para ter resultado confiável?", answer: "Em geral, sim — testes sérios online cobram um valor acessível. Muitos oferecem prévia gratuita e resultado completo pago." },
+          { question: "Como saber se o site é confiável?", answer: "Verifique metodologia, preço claro antes do pagamento, política de privacidade e ausência de promessas exageradas." }
         ]} />
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Faça seu teste de QI agora</h3>
-          <p className="text-muted-foreground mb-6">Resultado em minutos — gratuito para começar.</p>
+          <p className="text-muted-foreground mb-6">Resultado em minutos — faça o teste agora.</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Iniciar Teste <ArrowRight className="w-5 h-5" />
           </Button>

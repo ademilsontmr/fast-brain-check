@@ -51,8 +51,15 @@ const Blog = () => {
   ]);
 
   const allArticles = [
-    { id: 259, title: "Teste de QI com Resultado Imediato: Grátis e Rápido em 2026", slug: "teste-qi-com-resultado-imediato", description: "Teste de QI com resultado imediato após o questionário. Tempo, score e interpretação na hora.", icon: Clock, category: "Guia", publishedAt: "2026-06-26", gradient: "from-emerald-500/20 to-green-500/20", borderColor: "border-emerald-500/30" },
-    { id: 258, title: "Teste de QI em Português: Gratuito e Adaptado ao Brasil", slug: "teste-qi-em-portugues", description: "Faça teste de QI em português adaptado ao Brasil. Por que idioma importa e como evitar testes mal traduzidos.", icon: Globe, category: "Guia", publishedAt: "2026-06-26", gradient: "from-blue-500/20 to-cyan-500/20", borderColor: "border-blue-500/30" },
+    { id: 266, title: "Qual é o QI de Donald Trump? Estimativas e Retórica", slug: "qi-donald-trump", description: "Estimativas de QI de Donald Trump, limitações das fontes e diferença entre QI e retórica política.", icon: Users, category: "Curiosidades", publishedAt: "2026-05-30", gradient: "from-amber-500/20 to-red-500/20", borderColor: "border-amber-500/30" },
+    { id: 265, title: "Qual é o QI de Bill Gates? Estimativas e Visão Estratégica", slug: "qi-bill-gates", description: "Estimativas sobre o QI de Bill Gates, Microsoft e raciocínio analítico na tecnologia.", icon: Cpu, category: "Curiosidades", publishedAt: "2026-05-30", gradient: "from-indigo-500/20 to-violet-500/20", borderColor: "border-indigo-500/30" },
+    { id: 264, title: "Qual é o QI do Cristiano Ronaldo? Estimativas e Disciplina", slug: "qi-cristiano-ronaldo", description: "Estimativas sobre o QI de Cristiano Ronaldo, preparação física e raciocínio tático.", icon: Trophy, category: "Curiosidades", publishedAt: "2026-05-30", gradient: "from-red-500/20 to-orange-500/20", borderColor: "border-red-500/30" },
+    { id: 263, title: "Qual é o QI do Lionel Messi? Estimativas e Inteligência em Campo", slug: "qi-lionel-messi", description: "Estimativas sobre o QI de Lionel Messi, visão de jogo e raciocínio tático.", icon: Trophy, category: "Curiosidades", publishedAt: "2026-05-30", gradient: "from-sky-500/20 to-blue-500/20", borderColor: "border-sky-500/30" },
+    { id: 262, title: "QI de Famosos: Índice Completo com 55+ Personalidades", slug: "qi-de-famosos", description: "Índice de artigos sobre QI de famosos brasileiros e internacionais: futebol, música, TV, política e ciência.", icon: Users, category: "Curiosidades", publishedAt: "2026-06-26", gradient: "from-amber-500/20 to-orange-500/20", borderColor: "border-amber-500/30" },
+    { id: 261, title: "Teste de Inteligência Online: Guia Completo 2026", slug: "teste-de-inteligencia-online", description: "Como fazer teste de inteligência online confiável. Critérios, tempo e como interpretar o resultado.", icon: Laptop, category: "Guia", publishedAt: "2026-06-26", gradient: "from-cyan-500/20 to-blue-500/20", borderColor: "border-cyan-500/30" },
+    { id: 260, title: "O Que É QI Médio? Média da População Explicada em 2026", slug: "o-que-e-qi-medio", description: "O que é QI médio e qual a média de QI da população? Escala, número 100 e faixas explicadas.", icon: BarChart3, category: "Guia", publishedAt: "2026-06-26", gradient: "from-violet-500/20 to-purple-500/20", borderColor: "border-violet-500/30" },
+    { id: 259, title: "Teste de QI com Resultado Imediato: Rápido em 2026", slug: "teste-qi-com-resultado-imediato", description: "Teste de QI com resultado imediato após o questionário. Tempo, score e interpretação na hora.", icon: Clock, category: "Guia", publishedAt: "2026-06-26", gradient: "from-emerald-500/20 to-green-500/20", borderColor: "border-emerald-500/30" },
+    { id: 258, title: "Teste de QI em Português: Adaptado ao Brasil", slug: "teste-qi-em-portugues", description: "Faça teste de QI em português adaptado ao Brasil. Por que idioma importa e como evitar testes mal traduzidos.", icon: Globe, category: "Guia", publishedAt: "2026-06-26", gradient: "from-blue-500/20 to-cyan-500/20", borderColor: "border-blue-500/30" },
     { id: 257, title: "Teste de QI Gratuito Sem Cadastro: Faça Agora em 2026", slug: "teste-qi-gratuito-sem-cadastro", description: "Teste de QI gratuito sem cadastro complicado. Como funciona e o que esperar do resultado.", icon: Zap, category: "Guia", publishedAt: "2026-06-26", gradient: "from-yellow-500/20 to-orange-500/20", borderColor: "border-yellow-500/30" },
     { id: 256, title: "Teste de QI Oficial: O Que É e Como Fazer em 2026", slug: "teste-qi-oficial", description: "Entenda o que é teste de QI oficial, diferença para online e onde fazer avaliação formal.", icon: Award, category: "Guia", publishedAt: "2026-06-26", gradient: "from-amber-500/20 to-yellow-500/20", borderColor: "border-amber-500/30" },
     { id: 255, title: "Como Saber Meu QI: 6 Métodos Práticos em 2026", slug: "como-saber-meu-qi", description: "Aprenda como saber seu QI: teste online, psicólogo, Mensa e mais. Compare custo e precisão.", icon: Lightbulb, category: "Guia", publishedAt: "2026-06-26", gradient: "from-indigo-500/20 to-purple-500/20", borderColor: "border-indigo-500/30" },
@@ -757,9 +764,9 @@ const Blog = () => {
     },
     {
       id: 75,
-      title: "QI Médio Mundial: Ranking Atualizado 2025",
+      title: "Média de QI do Mundo: Ranking Global 2026",
       slug: "qi-medio-mundial",
-      description: "Qual o QI médio mundial? Descubra o ranking atualizado por país. Teste seu QI e compare. Rápido e científico!",
+      description: "Qual é a média de QI do mundo? Ranking global por país e análise por região.",
       icon: Globe,
       category: "Dados",
       gradient: "from-indigo-500/20 to-purple-500/20",
@@ -1444,6 +1451,12 @@ const Blog = () => {
                 Blog
               </button>
               <button
+                onClick={() => navigate("/blog/qi-de-famosos")}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                QI de Famosos
+              </button>
+              <button
                 onClick={() => navigate("/como-funciona")}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
@@ -1472,6 +1485,27 @@ const Blog = () => {
             Artigos científicos, dicas práticas e insights sobre inteligência, QI e desenvolvimento cognitivo
           </p>
         </div>
+
+        {/* Hub QI de Famosos */}
+        <Link
+          to="/blog/qi-de-famosos"
+          className="block max-w-4xl mx-auto mb-10 p-6 rounded-xl border-2 border-amber-500/30 bg-gradient-to-r from-amber-500/10 to-orange-500/5 hover:border-amber-500/50 hover:shadow-md transition-all"
+        >
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center">
+                <Users className="w-6 h-6 text-amber-600" />
+              </div>
+              <div className="text-left">
+                <p className="font-bold text-lg">QI de Famosos — Índice Completo</p>
+                <p className="text-sm text-muted-foreground">55+ artigos: Pelé, Neymar, Messi, CR7, Einstein e mais</p>
+              </div>
+            </div>
+            <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+              Ver índice <ArrowRight className="w-4 h-4" />
+            </span>
+          </div>
+        </Link>
 
         {/* Filtros por Categoria */}
         <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-5xl mx-auto">

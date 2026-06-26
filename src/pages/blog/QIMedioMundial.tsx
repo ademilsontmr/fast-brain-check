@@ -15,8 +15,8 @@ const QIMedioMundial = () => {
   const navigate = useNavigate();
   
   const articleUrl = "https://bomqi.com.br/blog/qi-medio-mundial";
-  const articleTitle = "QI Médio Mundial: Ranking Atualizado 2025";
-  const articleDescription = "Qual o QI médio mundial? Descubra o ranking atualizado por país. Teste seu QI e compare. Rápido e científico!";
+  const articleTitle = "Média de QI do Mundo: Ranking Global Atualizado 2026";
+  const articleDescription = "Qual é a média de QI do mundo? Ranking global por país, o que significa QI 100 e como comparar seu resultado em 2026.";
   
   useSEO({
     title: articleTitle,
@@ -31,7 +31,7 @@ const QIMedioMundial = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-medio-mundial",
-      publishDate: "2024-01-01",
+      publishDate: "2026-06-26",
     })
   );
 
@@ -47,15 +47,17 @@ const QIMedioMundial = () => {
           <span className="mx-2">/</span>
           <Link to="/blog" className="hover:text-primary">Blog</Link>
           <span className="mx-2">/</span>
-          <span>QI Médio Mundial</span>
+          <span>Média de QI do Mundo</span>
         </nav>
 
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          QI Médio Mundial: Ranking Atualizado 2025
+          Média de QI do Mundo: Ranking Global Atualizado 2026
         </h1>
 
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Novembro de 2025</time>
+          <time>26 de Junho de 2026</time>
+          <span>•</span>
+          <span>10 min de leitura</span>
         </div>
 
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">
@@ -64,9 +66,9 @@ const QIMedioMundial = () => {
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            "Qual o QI médio mundial?" é uma pergunta importante sobre inteligência global. <strong>QI médio mundial é 
-            aproximadamente 100</strong>, mas varia significativamente entre países e regiões. Neste artigo, apresentamos o 
-            ranking atualizado de QI médio por país e as principais descobertas.
+            <strong>Qual é a média de QI do mundo?</strong> Por definição estatística, o <strong>QI médio global é 100</strong> — mas as médias <em>por país</em> variam bastante. Neste artigo, apresentamos o ranking atualizado, as regiões com QI mais alto e o que isso significa para você. Veja também{" "}
+            <Link to="/blog/o-que-e-qi-medio" className="text-primary hover:underline">o que é QI médio</Link> e o{" "}
+            <Link to="/blog/qi-medio-por-pais" className="text-primary hover:underline">ranking detalhado por país</Link>.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">QI Médio Mundial</h2>
@@ -184,47 +186,38 @@ const QIMedioMundial = () => {
           </p>
 
           <p className="mb-4">
-            Quer descobrir seu QI e comparar com a média mundial? Faça nosso teste científico validado e receba uma análise 
-            completa de suas capacidades cognitivas.
+            Quer descobrir seu QI e comparar com a média mundial? Faça um{" "}
+            <Link to="/blog/teste-de-inteligencia-online" className="text-primary hover:underline">teste de inteligência online</Link>{" "}
+            ou vá direto ao{" "}
+            <Link to="/teste" className="text-primary hover:underline">teste do BomQI</Link>.
+          </p>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
+          <p className="text-muted-foreground mb-4">
+            <Link to="/blog/o-que-e-qi-medio" className="text-primary hover:underline">O que é QI médio</Link>,{" "}
+            <Link to="/blog/qi-medio-por-pais" className="text-primary hover:underline">QI médio por país</Link>,{" "}
+            <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link> e{" "}
+            <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como saber meu QI</Link>.
           </p>
         </div>
-        {/* FAQ Section */}
         <ArticleFAQ faqs={[
-          {
-                    "question": "Qual faixa de QI de mundial?",
-                    "answer": "mundial geralmente têm QI entre 95-115, com média próxima de 100-105. Variação individual é significativa."
-          },
-          {
-                    "question": "mundial com QI alto se destacam mais?",
-                    "answer": "Sim. QI 120+ facilita aprendizado rápido e resolução de problemas. Mas dedicação e habilidades sociais também são cruciais."
-          },
-          {
-                    "question": "Educação influencia QI de mundial?",
-                    "answer": "Sim. Cada ano adicional de educação aumenta QI em 1-3 pontos. Educação superior pode adicionar 5-10 pontos."
-          },
-          {
-                    "question": "mundial podem superar limitações de QI?",
-                    "answer": "Sim. Especialização, trabalho duro e desenvolvimento de habilidades específicas compensam QI médio ou abaixo da média."
-          },
-          {
-                    "question": "Ambiente familiar afeta QI de mundial?",
-                    "answer": "Sim. Ambiente estimulante, acesso a livros e apoio educacional podem aumentar QI em 10-15 pontos comparado a ambiente carente."
-          }
-]} />
+          { question: "Qual é a média de QI do mundo?", answer: "100 pontos, por definição dos testes padronizados. As médias por país variam em estudos comparativos (aproximadamente 70–108)." },
+          { question: "Qual país tem o QI médio mais alto?", answer: "Singapura e Hong Kong aparecem entre os mais altos (~108) em estudos internacionais, seguidos por Coreia do Sul e Japão (~105–106)." },
+          { question: "O QI médio do Brasil é quanto?", answer: "Estudos colocam o Brasil em torno de 87, abaixo da média de referência global, influenciado por fatores educacionais e socioeconômicos." },
+          { question: "QI médio mundial muda ao longo do tempo?", answer: "Sim. O efeito Flynn mostrou aumento de QI médio ao longo do século XX em vários países, ligado a educação e nutrição." },
+          { question: "Como comparar meu QI com a média mundial?", answer: "Faça um teste estruturado. QI 100 = média; 85–115 = faixa normal onde está a maioria da população." },
+        ]} />
 
 
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI</h3>
           <p className="text-muted-foreground mb-6">
-            Faça nosso teste científico validado e descubra seu QI. 
-            Compare com a média mundial e veja onde você se posiciona.
+            Faça nosso teste científico e descubra seu QI. Compare com a média mundial e veja onde você se posiciona.
           </p>
-          <Link to="/teste">
-            <Button size="lg" className="gap-2">
-              Fazer o Teste Agora
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-          </Link>
+          <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
+            Fazer o Teste Agora
+            <ArrowRight className="w-5 h-5" />
+          </Button>
         </div>
 
         {relatedArticles.length > 0 && (

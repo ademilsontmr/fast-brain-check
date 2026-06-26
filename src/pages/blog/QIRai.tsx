@@ -143,7 +143,7 @@ const QIRai = () => {
         ]} />
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI de verdade</h3>
-          <p className="text-muted-foreground mb-6">Teste gratuito no BomQI — resultado em minutos.</p>
+          <p className="text-muted-foreground mb-6">Faça seu teste de QI no BomQI — resultado em minutos.</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Fazer o Teste Agora <ArrowRight className="w-5 h-5" />
           </Button>

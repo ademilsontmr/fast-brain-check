@@ -321,6 +321,13 @@ const PessoasFamosasComQIAlto = () => {
           </ul>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
+          <p className="mb-4 text-muted-foreground">
+            Explore o{" "}
+            <Link to="/blog/qi-de-famosos" className="text-primary hover:underline">
+              índice completo de QI de famosos
+            </Link>{" "}
+            com mais de 50 personalidades brasileiras e internacionais.
+          </p>
           <p className="mb-4">
             Muitas pessoas famosas têm QI alto, mas é importante lembrar que:
           </p>

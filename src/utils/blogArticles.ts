@@ -117,8 +117,8 @@ export const allBlogArticles: BlogArticle[] = [
   },
   {
     slug: "qi-medio-por-pais",
-    title: "QI Médio por País: Ranking Mundial e Análise Completa 2025",
-    description: "Descubra o QI médio por país em 2025. Ranking mundial completo, fatores que influenciam diferenças entre nações e análise científica das variações.",
+    title: "Média de QI do Mundo: Ranking por País 2026",
+    description: "Qual é a média de QI do mundo? Ranking mundial por país, fatores e análise atualizada para 2026.",
     category: "Dados",
   },
   {
@@ -165,8 +165,8 @@ export const allBlogArticles: BlogArticle[] = [
   },
   {
     slug: "o-que-e-considerado-qi-alto",
-    title: "O Que é Considerado um QI Alto? Classificação e Significado Completo",
-    description: "Descubra o que é considerado QI alto. Classificação completa (QI médio, alto, muito alto, gênio), percentis, significado prático e como interpretar seu resultado.",
+    title: "O Que é Considerado um QI Alto? Classificação 2026",
+    description: "Descubra o que é QI alto: classificação, percentis, significado prático e como interpretar seu resultado.",
     category: "Conceitos",
   },
   {
@@ -297,8 +297,8 @@ export const allBlogArticles: BlogArticle[] = [
   },
   {
     slug: "como-interpretar-resultado-qi",
-    title: "Como Interpretar Seu Resultado de QI: Guia Completo",
-    description: "Como interpretar seu resultado de QI? Descubra o que significa sua pontuação. Guia completo e científico. Teste seu QI rapidamente!",
+    title: "Como Interpretar Seu Resultado de QI: Guia 2026",
+    description: "Aprenda como interpretar seu resultado de QI: faixas, percentis e o que sua pontuação significa.",
     category: "Guia"
   },
   {
@@ -686,9 +686,39 @@ export const allBlogArticles: BlogArticle[] = [
     category: "Curiosidades"
   },
   {
+    slug: "qi-de-einstein",
+    title: "Qual era o QI de Einstein?",
+    description: "Estimativas do QI de Albert Einstein e comparação com outros gênios da história.",
+    category: "Curiosidades"
+  },
+  {
     slug: "qi-elon-musk",
     title: "Qual é o QI do Elon Musk?",
     description: "Análise das estimativas de QI do Elon Musk e limitações de números não verificados.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-lionel-messi",
+    title: "Qual é o QI do Lionel Messi?",
+    description: "Estimativas sobre o QI de Lionel Messi, visão de jogo e raciocínio tático em campo.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-cristiano-ronaldo",
+    title: "Qual é o QI do Cristiano Ronaldo?",
+    description: "Estimativas sobre o QI de Cristiano Ronaldo, disciplina e inteligência tática.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-bill-gates",
+    title: "Qual é o QI de Bill Gates?",
+    description: "Estimativas sobre o QI de Bill Gates, Microsoft e raciocínio analítico.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-donald-trump",
+    title: "Qual é o QI de Donald Trump?",
+    description: "O que se sabe sobre estimativas de QI de Donald Trump e limitações das fontes.",
     category: "Curiosidades"
   },
   {
@@ -1031,6 +1061,30 @@ export const allBlogArticles: BlogArticle[] = [
     slug: "teste-qi-com-resultado-imediato",
     title: "Teste de QI com Resultado Imediato",
     description: "Teste de QI com resultado na hora após o questionário.",
+    category: "Guia"
+  },
+  {
+    slug: "o-que-e-qi-medio",
+    title: "O Que É QI Médio",
+    description: "O que é QI médio e qual a média de QI da população? Escala e faixas explicadas.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-de-inteligencia-online",
+    title: "Teste de Inteligência Online",
+    description: "Guia completo para fazer teste de inteligência online confiável em 2026.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-de-famosos",
+    title: "QI de Famosos: Índice Completo",
+    description: "Índice com 55+ artigos sobre QI de famosos brasileiros e internacionais.",
+    category: "Curiosidades"
+  },
+  {
+    slug: "qi-medio-mundial",
+    title: "Média de QI do Mundo",
+    description: "Qual é a média de QI do mundo? Ranking global e análise por região.",
     category: "Guia"
   }
 ];

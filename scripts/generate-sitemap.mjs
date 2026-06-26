@@ -59,7 +59,10 @@ const highPriority = [
   'qi-raul-seixas', 'qi-rita-lee', 'qi-roberto-carlos', 'qi-whindersson-nunes',
   'qi-alok', 'qi-ludmilla', 'qi-gusttavo-lima', 'qi-marina-silva',
   'qi-sergio-moro', 'qi-ratinho', 'qi-rai', 'qi-adriana-lima',
-  'qi-alto-caracteristicas', 'o-que-e-qi-baixo', 'sinais-qi-alto',
+  'qi-lionel-messi', 'qi-cristiano-ronaldo', 'qi-bill-gates', 'qi-donald-trump',
+  'qi-steve-jobs', 'qi-elon-musk', 'qi-criancas-sinais-superdotacao',
+  'qi-medio-por-pais', 'o-que-e-considerado-qi-alto', 'como-interpretar-resultado-qi',
+  'o-que-e-qi-medio', 'teste-de-inteligencia-online', 'qi-de-famosos',
   'qi-pode-aumentar-ao-longo-vida', 'qi-medio-por-pais', 'qi-medio-por-profissao',
 ];
 

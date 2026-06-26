@@ -14,7 +14,7 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 const TesteQIEmPortugues = () => {
   const navigate = useNavigate();
   const articleUrl = "https://bomqi.com.br/blog/teste-qi-em-portugues";
-  const articleTitle = "Teste de QI em Português: Gratuito e Adaptado ao Brasil";
+  const articleTitle = "Teste de QI em Português: Adaptado ao Brasil";
   const articleDescription = "Faça um teste de QI em português adaptado ao Brasil. Por que o idioma importa e como evitar testes traduzidos com erro.";
 
   useSEO({ title: articleTitle, description: articleDescription, url: articleUrl });
@@ -132,7 +132,7 @@ const TesteQIEmPortugues = () => {
         ]} />
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Faça seu teste de QI agora</h3>
-          <p className="text-muted-foreground mb-6">Resultado em minutos — gratuito para começar.</p>
+          <p className="text-muted-foreground mb-6">Resultado em minutos — faça o teste agora.</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Iniciar Teste <ArrowRight className="w-5 h-5" />
           </Button>

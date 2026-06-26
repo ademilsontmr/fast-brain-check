@@ -125,14 +125,15 @@ const ComoSaberMeuQI = () => {
           <p className="text-muted-foreground mb-4"><Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">Como descobrir meu QI</Link>,  <Link to="/blog/como-saber-meu-qi-sem-pagar" className="text-primary hover:underline">Como saber meu QI sem pagar</Link>,  <Link to="/blog/como-medir-qi" className="text-primary hover:underline">Como medir QI</Link>.</p>
         </div>
         <ArticleFAQ faqs={[
-          { question: "Como saber meu QI de graça?", answer: "Faça um teste online estruturado. Para opções sem custo, veja também nosso guia de testes gratuitos." },
+          { question: "Como saber meu QI online?", answer: "Faça um teste online estruturado. Compare métodos e escolha um com metodologia clara." },
+          { question: "O BomQI é gratuito?", answer: "Não. Oferecemos prévia do nível após o teste; o resultado completo é pago." },
           { question: "Qual a forma mais precisa de saber meu QI?", answer: "Avaliação presencial com psicólogo usando WAIS-IV ou WISC-V." },
           { question: "Posso confiar em teste de QI no celular?", answer: "Depende da metodologia. Apps com poucas perguntas são apenas curiosidade." },
           { question: "De quanto em quanto tempo posso refazer o teste?", answer: "Espere pelo menos 6–12 meses para evitar efeito de prática nas mesmas questões." }
         ]} />
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Faça seu teste de QI agora</h3>
-          <p className="text-muted-foreground mb-6">Resultado em minutos — gratuito para começar.</p>
+          <p className="text-muted-foreground mb-6">Resultado em minutos — faça o teste agora.</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Iniciar Teste <ArrowRight className="w-5 h-5" />
           </Button>

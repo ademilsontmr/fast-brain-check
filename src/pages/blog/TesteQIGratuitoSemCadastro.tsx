@@ -49,7 +49,16 @@ const TesteQIGratuitoSemCadastro = () => {
           <Zap className="w-24 h-24 text-yellow-500" />
         </div>
         <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-muted-foreground mb-8">Quer um <strong>teste de QI gratuito sem cadastro</strong> longo? A busca cresce porque ninguém quer criar conta em dez sites só para ver um número. Veja como equilibrar praticidade e confiabilidade.</p>
+          <p className="text-xl text-muted-foreground mb-8">Muita gente busca <strong>teste de QI sem cadastro</strong> complicado — e com razão: ninguém quer criar conta em dez sites só para ver um número. Veja como equilibrar praticidade, confiabilidade e transparência de preço.</p>
+          <div className="bg-amber-50 dark:bg-amber-950/20 border-2 border-amber-200 dark:border-amber-800 rounded-lg p-6 my-8">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-amber-900 dark:text-amber-100">Como funciona o BomQI</h3>
+                <p className="text-amber-800 dark:text-amber-200 mb-3 text-sm">Você faz o teste online com cadastro mínimo. O <strong>resultado completo</strong> (QI exato, percentil e análise) é desbloqueado após pagamento via PIX. Não é 100% gratuito — é acessível e direto.</p>
+              </div>
+            </div>
+          </div>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
@@ -133,7 +142,7 @@ const TesteQIGratuitoSemCadastro = () => {
         ]} />
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Faça seu teste de QI agora</h3>
-          <p className="text-muted-foreground mb-6">Resultado em minutos — gratuito para começar.</p>
+          <p className="text-muted-foreground mb-6">Resultado em minutos — faça o teste agora.</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Iniciar Teste <ArrowRight className="w-5 h-5" />
           </Button>

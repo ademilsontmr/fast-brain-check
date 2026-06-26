@@ -15,8 +15,8 @@ const QIMedioPorPais = () => {
   const navigate = useNavigate();
   
     const articleUrl = "https://bomqi.com.br/blog/qi-medio-por-pais";
-  const articleTitle = "QI Médio por País: Ranking Mundial e Análise Completa 2025";
-  const articleDescription = "Descubra o QI médio por país em 2025. Ranking mundial completo, fatores que influenciam diferenças entre nações e análise científica das variações.";
+  const articleTitle = "Média de QI do Mundo: Ranking por País e Análise 2026";
+  const articleDescription = "Qual é a média de QI do mundo? Ranking mundial por país, fatores que explicam diferenças e o que isso significa para você em 2026.";
   
   useSEO({
     title: articleTitle,
@@ -31,7 +31,7 @@ const QIMedioPorPais = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-medio-por-pais",
-      publishDate: "2024-01-01",
+      publishDate: "2026-06-26",
     })
   );
 
@@ -53,13 +53,14 @@ const QIMedioPorPais = () => {
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          QI Médio por País: Ranking Mundial e Análise Científica Completa
+          Média de QI do Mundo: Ranking Mundial por País em 2026
         </h1>
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Novembro de 2025</time>
-          
+          <time>26 de Junho de 2026</time>
+          <span>•</span>
+          <span>12 min de leitura</span>
         </div>
 
         {/* Featured Image */}
@@ -70,9 +71,8 @@ const QIMedioPorPais = () => {
         {/* Content */}
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            O QI médio varia significativamente entre países. Mas o que explica essas diferenças? 
-            Neste artigo, exploramos o ranking mundial de QI por país, os fatores científicos que 
-            influenciam essas variações e o que os dados realmente significam.
+            A <strong>média de QI do mundo</strong> é 100 por definição estatística — mas o QI médio <em>por país</em> varia bastante.
+            Neste guia atualizado para 2026, você vê o ranking mundial, onde o Brasil se posiciona e o que esses números realmente significam.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Ranking Mundial: QI Médio por País</h2>
@@ -319,32 +319,39 @@ const QIMedioPorPais = () => {
             é descobrir seu próprio QI e trabalhar para desenvolvê-lo continuamente através de 
             educação, treino cognitivo e hábitos saudáveis.
           </p>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
+          <p className="text-muted-foreground mb-4">
+            <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">Média de QI no Brasil</Link>,{" "}
+            <Link to="/blog/qi-medio-mundial" className="text-primary hover:underline">QI médio mundial</Link>,{" "}
+            <Link to="/blog/o-que-e-qi-medio" className="text-primary hover:underline">o que é QI médio</Link>,{" "}
+            <Link to="/blog/qi-brasileiro-vs-outros-paises" className="text-primary hover:underline">QI brasileiro vs outros países</Link>,{" "}
+            <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">Como saber meu QI</Link> e{" "}
+            <Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">teste de QI confiável e acessível</Link>.
+          </p>
         </div>
 
-        {/* CTA */}
-        {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Qual faixa de QI de por pais?",
-                    "answer": "por pais geralmente têm QI entre 95-115, com média próxima de 100-105. Variação individual é significativa."
+            question: "Qual é a média de QI do mundo?",
+            answer: "Na escala padrão, a média mundial é 100 com desvio padrão de 15. Rankings por país mostram variações, mas comparações entre nações têm limitações metodológicas."
           },
           {
-                    "question": "por pais com QI alto se destacam mais?",
-                    "answer": "Sim. QI 120+ facilita aprendizado rápido e resolução de problemas. Mas dedicação e habilidades sociais também são cruciais."
+            question: "Qual o QI médio do Brasil?",
+            answer: "Estudos internacionais costumam estimar o Brasil entre 85 e 90, abaixo da média global. Fatores como educação e nutrição explicam parte da diferença."
           },
           {
-                    "question": "Educação influencia QI de por pais?",
-                    "answer": "Sim. Cada ano adicional de educação aumenta QI em 1-3 pontos. Educação superior pode adicionar 5-10 pontos."
+            question: "O país com maior QI médio é qual?",
+            answer: "Singapura e Hong Kong aparecem no topo de rankings compilados, com médias em torno de 108. Os dados variam conforme a fonte."
           },
           {
-                    "question": "por pais podem superar limitações de QI?",
-                    "answer": "Sim. Especialização, trabalho duro e desenvolvimento de habilidades específicas compensam QI médio ou abaixo da média."
+            question: "QI médio do país define meu QI?",
+            answer: "Não. Média nacional é estatística de grupo. Seu QI individual depende de genética, educação, saúde e estímulo cognitivo."
           },
           {
-                    "question": "Ambiente familiar afeta QI de por pais?",
-                    "answer": "Sim. Ambiente estimulante, acesso a livros e apoio educacional podem aumentar QI em 10-15 pontos comparado a ambiente carente."
+            question: "Como descobrir meu QI real?",
+            answer: "Faça um teste online estruturado para estimativa rápida ou avaliação com psicólogo para laudo clínico formal."
           }
-]} />
+        ]} />
 
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI Real</h3>

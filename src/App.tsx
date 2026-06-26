@@ -159,6 +159,10 @@ const QuantoTempoDuraTesteQI = lazy(() => import("./pages/blog/QuantoTempoDuraTe
 const TesteQIAdultos = lazy(() => import("./pages/blog/TesteQIAdultos"));
 const QISteveJobs = lazy(() => import("./pages/blog/QISteveJobs"));
 const QIElonMusk = lazy(() => import("./pages/blog/QIElonMusk"));
+const QILionelMessi = lazy(() => import("./pages/blog/QILionelMessi"));
+const QICristianoRonaldo = lazy(() => import("./pages/blog/QICristianoRonaldo"));
+const QIBillGates = lazy(() => import("./pages/blog/QIBillGates"));
+const QIDonaldTrump = lazy(() => import("./pages/blog/QIDonaldTrump"));
 const QIPele = lazy(() => import("./pages/blog/QIPele"));
 const QINeymar = lazy(() => import("./pages/blog/QINeymar"));
 const QIRonaldoFenomeno = lazy(() => import("./pages/blog/QIRonaldoFenomeno"));
@@ -213,6 +217,9 @@ const TesteQIOficial = lazy(() => import("./pages/blog/TesteQIOficial"));
 const TesteQIGratuitoSemCadastro = lazy(() => import("./pages/blog/TesteQIGratuitoSemCadastro"));
 const TesteQIEmPortugues = lazy(() => import("./pages/blog/TesteQIEmPortugues"));
 const TesteQIComResultadoImediato = lazy(() => import("./pages/blog/TesteQIComResultadoImediato"));
+const OQueEQiMedio = lazy(() => import("./pages/blog/OQueEQiMedio"));
+const TesteDeInteligenciaOnline = lazy(() => import("./pages/blog/TesteDeInteligenciaOnline"));
+const QIDeFamosos = lazy(() => import("./pages/blog/QIDeFamosos"));
 const SuperdotacaoOQueE = lazy(() => import("./pages/blog/SuperdotacaoOQueE"));
 const QIFaixasPontuacao = lazy(() => import("./pages/blog/QIFaixasPontuacao"));
 const OndeFazerTesteQIBrasil = lazy(() => import("./pages/blog/OndeFazerTesteQIBrasil"));
@@ -1425,6 +1432,38 @@ const App = () => (
             }
           />
           <Route
+            path="/blog/qi-lionel-messi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QILionelMessi />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-cristiano-ronaldo"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QICristianoRonaldo />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-bill-gates"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIBillGates />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-donald-trump"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QIDonaldTrump />
+              </Suspense>
+            }
+          />
+          <Route
             path="/blog/qi-pele"
             element={
               <Suspense fallback={<ArticleLoading />}>
@@ -1562,6 +1601,9 @@ const App = () => (
           <Route path="/blog/teste-qi-gratuito-sem-cadastro" element={<Suspense fallback={<ArticleLoading />}><TesteQIGratuitoSemCadastro /></Suspense>} />
           <Route path="/blog/teste-qi-em-portugues" element={<Suspense fallback={<ArticleLoading />}><TesteQIEmPortugues /></Suspense>} />
           <Route path="/blog/teste-qi-com-resultado-imediato" element={<Suspense fallback={<ArticleLoading />}><TesteQIComResultadoImediato /></Suspense>} />
+          <Route path="/blog/o-que-e-qi-medio" element={<Suspense fallback={<ArticleLoading />}><OQueEQiMedio /></Suspense>} />
+          <Route path="/blog/teste-de-inteligencia-online" element={<Suspense fallback={<ArticleLoading />}><TesteDeInteligenciaOnline /></Suspense>} />
+          <Route path="/blog/qi-de-famosos" element={<Suspense fallback={<ArticleLoading />}><QIDeFamosos /></Suspense>} />
           <Route
             path="/blog/superdotacao-o-que-e"
             element={

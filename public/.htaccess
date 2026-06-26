@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # HTML prerenderizado do blog
+  RewriteRule ^blog/([^/]+)/?$ blog/$1/index.html [L]
+  RewriteRule ^blog/?$ blog/index.html [L]
+
+  # SPA fallback para demais rotas
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

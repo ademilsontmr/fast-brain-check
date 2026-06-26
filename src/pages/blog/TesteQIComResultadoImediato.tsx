@@ -14,8 +14,8 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 const TesteQIComResultadoImediato = () => {
   const navigate = useNavigate();
   const articleUrl = "https://bomqi.com.br/blog/teste-qi-com-resultado-imediato";
-  const articleTitle = "Teste de QI com Resultado Imediato: Grátis e Rápido em 2026";
-  const articleDescription = "Teste de QI com resultado imediato após o questionário. Quanto tempo leva, o que o score significa e como interpretar na hora.";
+  const articleTitle = "Teste de QI com Resultado Imediato: Rápido em 2026";
+  const articleDescription = "Teste de QI com resultado imediato após o pagamento. Quanto tempo leva, o que o score significa e como interpretar na hora.";
 
   useSEO({ title: articleTitle, description: articleDescription, url: articleUrl });
   useStructuredData(
@@ -133,7 +133,7 @@ const TesteQIComResultadoImediato = () => {
         ]} />
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Faça seu teste de QI agora</h3>
-          <p className="text-muted-foreground mb-6">Resultado em minutos — gratuito para começar.</p>
+          <p className="text-muted-foreground mb-6">Resultado em minutos — faça o teste agora.</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Iniciar Teste <ArrowRight className="w-5 h-5" />
           </Button>

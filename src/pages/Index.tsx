@@ -1,7 +1,7 @@
 ﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, CheckCircle, Sparkles, TrendingUp, Users, Zap, UserX, Clock, Globe, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState, useCallback } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { getSessionState, clearSession, SessionState } from "@/lib/session";
@@ -42,9 +42,9 @@ const Index = () => {
 
   // SEO para a página inicial
   useSEO({
-    title: "Descubra Seu QI em 3 Minutos | Teste de QI Online Científico",
-    description: "Faça o teste de QI mais rápido e preciso do Brasil. Descubra seu resultado completo em apenas 3 minutos com análise científica detalhada.",
-    keywords: "teste de QI, teste de inteligência online, QI grátis, descobrir QI, quociente de inteligência, teste QI rápido, teste cognitivo, avaliação QI, medir inteligência, teste QI científico",
+    title: "Teste de QI Online Confiável | Resultado em Minutos",
+    description: "Faça o teste de QI online do BomQI em 3 minutos. Resultado completo com QI, percentil e análise — confiável e acessível.",
+    keywords: "teste de QI, teste de QI online, teste de QI confiável, teste de inteligência online, descobrir QI, teste QI rápido, avaliação QI, medir inteligência",
     url: "https://bomqi.com.br/",
     type: "website",
   });
@@ -57,7 +57,7 @@ const Index = () => {
       "name": "BomQI",
       "url": "https://bomqi.com.br",
       "logo": "https://bomqi.com.br/favicon-brain-icon.png",
-      "description": "Teste de QI online científico e preciso. Descubra seu quociente de inteligência em apenas 3 minutos.",
+      "description": "Teste de QI online confiável. Resultado completo com análise científica em minutos.",
       "sameAs": [],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -70,7 +70,7 @@ const Index = () => {
       "@type": "WebSite",
       "name": "BomQI",
       "url": "https://bomqi.com.br",
-      "description": "Teste de QI online científico e preciso. Descubra seu quociente de inteligência em apenas 3 minutos.",
+      "description": "Teste de QI online confiável. Resultado completo com análise científica em minutos.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -92,11 +92,6 @@ const Index = () => {
       "areaServed": {
         "@type": "Country",
         "name": "Brasil"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "BRL"
       }
     }
   ]);
@@ -156,7 +151,7 @@ const Index = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Você é mais inteligente que seus amigos? Só existe um jeito de saber.
+              Teste de QI online científico e confiável. Resultado completo em minutos.
             </p>
             
             {/* Badges sutis */}
@@ -275,9 +270,9 @@ const Index = () => {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl font-bold text-primary">2</span>
             </div>
-            <h3 className="text-xl font-bold mb-2">Veja um resultado básico grátis</h3>
+            <h3 className="text-xl font-bold mb-2">Veja uma prévia do seu nível</h3>
             <p className="text-muted-foreground">
-              Descubra uma estimativa do seu QI imediatamente
+              Descubra sua faixa de inteligência antes de desbloquear o QI exato
             </p>
           </Card>
 
@@ -287,7 +282,7 @@ const Index = () => {
             </div>
             <h3 className="text-xl font-bold mb-2">Desbloqueie o resultado completo</h3>
             <p className="text-muted-foreground">
-              QI exato, ranking, comparação com famosos e badge exclusivo
+              QI exato, ranking e análise detalhada do seu desempenho
             </p>
           </Card>
         </div>
@@ -842,6 +837,25 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-4">O que as pessoas estão dizendo</h2>
         </div>
         <SocialProofCarousel />
+      </section>
+
+      {/* Guias populares — links internos SEO */}
+      <section className="container mx-auto px-4 py-16">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Guias mais buscados</h2>
+        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <Link to="/blog/teste-qi-gratuito-e-confiavel" className="block p-5 rounded-lg border border-border hover:border-primary/40 hover:shadow-md transition-all">
+            <p className="font-semibold mb-1">Teste confiável e acessível</p>
+            <p className="text-sm text-muted-foreground">Como escolher um teste sério</p>
+          </Link>
+          <Link to="/blog/como-saber-meu-qi" className="block p-5 rounded-lg border border-border hover:border-primary/40 hover:shadow-md transition-all">
+            <p className="font-semibold mb-1">Como saber meu QI</p>
+            <p className="text-sm text-muted-foreground">6 métodos práticos em 2026</p>
+          </Link>
+          <Link to="/blog/teste-qi-com-resultado-imediato" className="block p-5 rounded-lg border border-border hover:border-primary/40 hover:shadow-md transition-all">
+            <p className="font-semibold mb-1">Resultado imediato</p>
+            <p className="text-sm text-muted-foreground">Score na hora após o teste</p>
+          </Link>
+        </div>
       </section>
 
       {/* CTA Final */}

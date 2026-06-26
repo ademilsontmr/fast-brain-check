@@ -31,7 +31,7 @@ const OQueEConsideradoQIAlto = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "o-que-e-considerado-qi-alto",
-      publishDate: "2024-01-01",
+      publishDate: "2026-06-26",
     })
   );
 
@@ -58,8 +58,9 @@ const OQueEConsideradoQIAlto = () => {
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Novembro de 2025</time>
+          <time>26 de Junho de 2026</time>
           <span>•</span>
+          <span>10 min de leitura</span>
         </div>
 
         {/* Featured Image */}
@@ -312,32 +313,37 @@ const OQueEConsideradoQIAlto = () => {
             Se você quer saber seu QI, faça um teste válido. Mas lembre-se: o número é menos 
             importante que usar suas capacidades para crescer, aprender e contribuir.
           </p>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
+          <p className="text-muted-foreground mb-4">
+            <Link to="/blog/tabela-escala-qi" className="text-primary hover:underline">Tabela de escala de QI</Link>,{" "}
+            <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas de QI</Link>,{" "}
+            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar seu resultado</Link> e{" "}
+            <Link to="/blog/teste-qi-com-resultado-imediato" className="text-primary hover:underline">teste com resultado imediato</Link>.
+          </p>
         </div>
 
-        {/* CTA */}
-        {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "O Que é Considerado um QI Alto? Classificação e Significado Completo?",
-                    "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
+            question: "A partir de quanto o QI é considerado alto?",
+            answer: "Em geral, QI 120 ou mais é considerado alto (top 9% da população). QI 130+ entra na faixa muito superior ou superdotação."
           },
           {
-                    "question": "Qual a base científica disso?",
-                    "answer": "Estudos de neuroplasticidade e psicologia cognitiva demonstram que cérebro pode ser desenvolvido em qualquer idade com estímulos adequados."
+            question: "QI 110 é alto?",
+            answer: "QI 110 está acima da média, mas não na faixa 'alta' clássica. Corresponde ao percentil 75 aproximadamente."
           },
           {
-                    "question": "Quanto tempo para ver resultados práticos?",
-                    "answer": "Primeiros resultados em 4-8 semanas. Mudanças significativas em 6-12 meses de aplicação consistente dos métodos."
+            question: "QI alto garante sucesso?",
+            answer: "Não. QI é um preditor parcial. Persistência, inteligência emocional e oportunidades também contam muito."
           },
           {
-                    "question": "Isso funciona para minha idade?",
-                    "answer": "Sim. Princípios se aplicam a todas as idades, com adaptações apropriadas. Potencial varia mas desenvolvimento é sempre possível."
+            question: "Como saber se meu QI é alto?",
+            answer: "Faça um teste válido e compare com a tabela de faixas. Veja também nosso guia de interpretação de resultados."
           },
           {
-                    "question": "Como começar a aplicar isso hoje?",
-                    "answer": "Escolha 1-2 estratégias do artigo, pratique 20-30 min/dia, monitore progresso semanalmente e ajuste conforme necessário."
+            question: "Qual a diferença entre QI alto e superdotação?",
+            answer: "Superdotação costuma ser definida como QI 130+ (top 2%). QI alto geralmente começa em 120."
           }
-]} />
+        ]} />
 
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI</h3>

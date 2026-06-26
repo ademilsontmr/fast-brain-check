@@ -16,6 +16,12 @@ const ArticleHeader = () => {
           
           <nav className="hidden md:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
             <button
+              onClick={() => navigate("/blog/qi-de-famosos")}
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              QI de Famosos
+            </button>
+            <button
               onClick={() => navigate("/blog")}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >

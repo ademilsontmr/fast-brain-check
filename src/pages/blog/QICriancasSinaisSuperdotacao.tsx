@@ -15,8 +15,8 @@ const QICriancasSinaisSuperdotacao = () => {
   const navigate = useNavigate();
   
     const articleUrl = "https://bomqi.com.br/blog/qi-criancas-sinais-superdotacao";
-  const articleTitle = "QI de Crianças e Sinais de Superdotação Infantil: Guia Completo";
-  const articleDescription = "QI de crianças e sinais de superdotação infantil. Descubra como identificar crianças superdotadas. Guia científico completo. Teste seu QI rapidamente!";
+  const articleTitle = "QI de Crianças e Sinais de Superdotação: Guia Completo 2026";
+  const articleDescription = "Como identificar QI de crianças e sinais de superdotação infantil. Critérios, teste WISC, quando buscar avaliação e o que fazer em 2026.";
   
   useSEO({
     title: articleTitle,
@@ -31,7 +31,7 @@ const QICriancasSinaisSuperdotacao = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-criancas-sinais-superdotacao",
-      publishDate: "2024-01-01",
+      publishDate: "2026-06-26",
     })
   );
 
@@ -51,11 +51,13 @@ const QICriancasSinaisSuperdotacao = () => {
         </nav>
 
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          QI de Crianças e Sinais de Superdotação Infantil: Guia Completo
+          {articleTitle}
         </h1>
 
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Novembro de 2025</time>
+          <time>26 de Junho de 2026</time>
+          <span>•</span>
+          <span>12 min de leitura</span>
         </div>
 
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center">
@@ -284,47 +286,30 @@ const QICriancasSinaisSuperdotacao = () => {
           </p>
 
           <p className="mb-4">
-            Quer descobrir o QI de uma criança ou entender melhor capacidades cognitivas? Faça nosso teste científico 
-            validado e receba uma análise completa.
+            Quer entender melhor faixas de QI? Veja{" "}
+            <Link to="/blog/superdotacao-o-que-e" className="text-primary hover:underline">o que é superdotação</Link>,{" "}
+            <Link to="/blog/o-que-e-considerado-qi-alto" className="text-primary hover:underline">o que é QI alto</Link> e{" "}
+            <Link to="/blog/teste-qi-criancas" className="text-primary hover:underline">teste de QI para crianças</Link>.
           </p>
         </div>
-        {/* FAQ Section */}
         <ArticleFAQ faqs={[
-          {
-                    "question": "QI de Crianças e Sinais de Superdotação Infantil?",
-                    "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
-          },
-          {
-                    "question": "Qual a base científica disso?",
-                    "answer": "Estudos de neuroplasticidade e psicologia cognitiva demonstram que cérebro pode ser desenvolvido em qualquer idade com estímulos adequados."
-          },
-          {
-                    "question": "Quanto tempo para ver resultados práticos?",
-                    "answer": "Primeiros resultados em 4-8 semanas. Mudanças significativas em 6-12 meses de aplicação consistente dos métodos."
-          },
-          {
-                    "question": "Isso funciona para minha idade?",
-                    "answer": "Sim. Princípios se aplicam a todas as idades, com adaptações apropriadas. Potencial varia mas desenvolvimento é sempre possível."
-          },
-          {
-                    "question": "Como começar a aplicar isso hoje?",
-                    "answer": "Escolha 1-2 estratégias do artigo, pratique 20-30 min/dia, monitore progresso semanalmente e ajuste conforme necessário."
-          }
-]} />
+          { question: "A partir de que idade testar QI de criança?", answer: "Testes formais como o WISC costumam ser aplicados a partir dos 6 anos, por psicólogo especializado." },
+          { question: "Quais sinais de superdotação observar?", answer: "Curiosidade intensa, vocabulário avançado, memória excepcional, raciocínio lógico precoce e tédio na escola." },
+          { question: "QI alto em criança é superdotação?", answer: "Não necessariamente. Superdotação costuma envolver QI 130+ em teste formal, mas requer avaliação multidisciplinar." },
+          { question: "Teste online serve para criança?", answer: "Pode orientar, mas não substitui avaliação clínica com WISC e laudo para escola ou Mensa." },
+          { question: "O que fazer se suspeitar de altas habilidades?", answer: "Busque psicólogo infantil, converse com a escola sobre enriquecimento curricular e evite pressionar a criança." }
+        ]} />
 
 
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra Seu QI</h3>
           <p className="text-muted-foreground mb-6">
-            Faça nosso teste científico validado e descubra seu QI. 
-            Receba uma análise completa de suas capacidades cognitivas.
+            Faça nosso teste online e receba uma análise das capacidades cognitivas. Resultado em minutos.
           </p>
-          <Link to="/teste">
-            <Button size="lg" className="gap-2">
+          <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
               Fazer o Teste Agora
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-          </Link>
+            <ArrowRight className="w-5 h-5" />
+          </Button>
         </div>
 
         {relatedArticles.length > 0 && (

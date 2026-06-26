@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -25,7 +26,7 @@ const ComoDescubrirMeuQI = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "como-descobrir-meu-qi",
-      publishDate: "2026-01-20",
+      publishDate: "2026-06-26",
     })
   );
 
@@ -46,7 +47,9 @@ const ComoDescubrirMeuQI = () => {
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{articleTitle}</h1>
 
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>8 de Maio de 2026</time>
+          <time>26 de Junho de 2026</time>
+          <span>•</span>
+          <span>10 min de leitura</span>
         </div>
 
         <div className="w-full h-64 bg-gradient-to-br from-indigo-500/20 to-purple-500/5 rounded-lg mb-12 flex items-center justify-center">
@@ -55,7 +58,9 @@ const ComoDescubrirMeuQI = () => {
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            <strong>"Como descobrir meu QI?"</strong> é uma das perguntas mais buscadas sobre inteligência no Brasil. Neste guia, comparamos os 5 métodos mais confiáveis — do teste com psicólogo ao teste online gratuito — para você escolher o melhor para sua situação.
+            <strong>"Como descobrir meu QI?"</strong> é uma das perguntas mais buscadas sobre inteligência no Brasil.             Neste guia, comparamos os 5 métodos mais confiáveis — do teste com psicólogo ao teste online pago acessível — para você escolher o melhor para sua situação. Veja também{" "}
+            <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como saber meu QI</Link> e{" "}
+            <Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">o que esperar de testes “gratuitos”</Link>.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Resposta Rápida: O Método Mais Fácil</h2>
@@ -71,7 +76,7 @@ const ComoDescubrirMeuQI = () => {
                 <ul className="text-green-800 dark:text-green-200 space-y-1 text-sm">
                   <li>✓ Resultado em 3-5 minutos</li>
                   <li>✓ Sem necessidade de agendamento</li>
-                  <li>✓ Custo acessível ou gratuito</li>
+                  <li>✓ Custo acessível</li>
                   <li>✓ Precisão de 85-90% comparado ao teste formal</li>
                 </ul>
               </div>
@@ -143,7 +148,7 @@ const ComoDescubrirMeuQI = () => {
                 <tbody className="space-y-2">
                   {[
                     { method: "Psicólogo (WAIS)", precision: "★★★★★", cost: "R$800+", time: "2h" },
-                    { method: "Teste Online", precision: "★★★★☆", cost: "Grátis-R$30", time: "5min" },
+                    { method: "Teste Online", precision: "★★★★☆", cost: "Acessível", time: "5min" },
                     { method: "Mensa", precision: "★★★★★", cost: "R$150+", time: "3h" },
                     { method: "Universidade", precision: "★★★★★", cost: "Grátis", time: "2h" },
                     { method: "Apps", precision: "★★☆☆☆", cost: "Grátis+", time: "Diário" },
@@ -202,7 +207,7 @@ const ComoDescubrirMeuQI = () => {
                 Nosso teste científico oferece uma estimativa precisa do seu QI com resultado imediato.
               </p>
               <Button onClick={() => navigate("/teste")} size="lg" className="shadow-lg">
-                Fazer Teste de QI Grátis
+                Fazer Teste de QI
               </Button>
             </div>
           </div>
@@ -215,6 +220,13 @@ const ComoDescubrirMeuQI = () => {
             O mais importante é usar o resultado como ponto de partida para o desenvolvimento, não como um rótulo definitivo. QI pode mudar com aprendizado, hábitos saudáveis e estimulação cognitiva.
           </p>
         </div>
+
+        <ArticleFAQ faqs={[
+          { question: "Qual a diferença entre descobrir e saber meu QI?", answer: "São buscas parecidas. Descobrir implica primeiro teste; saber pode incluir reteste ou confirmação clínica." },
+          { question: "O método mais rápido é qual?", answer: "Teste online estruturado — resultado em 3 a 5 minutos." },
+          { question: "Preciso de psicólogo para saber meu QI?", answer: "Só se precisar de laudo clínico. Para curiosidade, teste online basta." },
+          { question: "Teste grátis é confiável?", answer: "Pode ser, se tiver metodologia clara. Evite testes com poucas perguntas ou promessas exageradas." },
+        ]} />
 
         <SocialProofCarousel />
 
