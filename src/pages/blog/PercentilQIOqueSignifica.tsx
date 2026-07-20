@@ -199,10 +199,10 @@ const PercentilQIOqueSignifica = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4">
-            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">Como interpretar resultado de QI</Link>,{" "}
-            <Link to="/blog/como-qi-e-calculado" className="text-primary hover:underline">como o QI é calculado</Link>,{" "}
-            <Link to="/blog/o-que-e-qi-medio" className="text-primary hover:underline">o que é QI médio</Link> e{" "}
-            <Link to="/blog/teste-mensa-brasil" className="text-primary hover:underline">teste Mensa Brasil</Link>.
+            <Link to="/blog/qi-100-significa" className="text-primary hover:underline">QI 100 significa</Link>,{" "}
+            <Link to="/blog/qi-110-e-bom" className="text-primary hover:underline">QI 110 é bom?</Link>,{" "}
+            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado</Link> e{" "}
+            <Link to="/blog/tabela-escala-qi" className="text-primary hover:underline">tabela de escala de QI</Link>.
           </p>
         </div>
 

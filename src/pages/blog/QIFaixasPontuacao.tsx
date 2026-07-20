@@ -57,8 +57,15 @@ const QIFaixasPontuacao = () => {
             <li><strong>QI 140:</strong> extremamente raro — top 0,4% aproximadamente</li>
             <li><strong>QI 100:</strong> média populacional de referência</li>
           </ul>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-4">
             Tabela completa: <Link to="/blog/tabela-escala-qi" className="text-primary hover:underline">tabela e escala de QI</Link>.
+          </p>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
+          <p className="text-muted-foreground mb-4">
+            <Link to="/blog/qi-100-significa" className="text-primary hover:underline">QI 100 significa o quê?</Link>,{" "}
+            <Link to="/blog/qi-110-e-bom" className="text-primary hover:underline">QI 110 é bom?</Link>,{" "}
+            <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">percentil de QI</Link> e{" "}
+            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado</Link>.
           </p>
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">

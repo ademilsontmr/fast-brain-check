@@ -122,7 +122,12 @@ const TesteQIOficial = () => {
             </div>
           </div>
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
-          <p className="text-muted-foreground mb-4"><Link to="/blog/teste-mensa-brasil" className="text-primary hover:underline">Teste Mensa Brasil</Link>,  <Link to="/blog/onde-fazer-teste-qi-brasil" className="text-primary hover:underline">Onde fazer teste de QI</Link>,  <Link to="/blog/o-que-e-teste-qi" className="text-primary hover:underline">O que é teste de QI</Link>.</p>
+          <p className="text-muted-foreground mb-4">
+            <Link to="/blog/quanto-custa-teste-de-qi" className="text-primary hover:underline">Quanto custa um teste de QI</Link>,{" "}
+            <Link to="/blog/teste-mensa-brasil" className="text-primary hover:underline">teste Mensa Brasil</Link>,{" "}
+            <Link to="/blog/onde-fazer-teste-qi-brasil" className="text-primary hover:underline">onde fazer teste no Brasil</Link> e{" "}
+            <Link to="/blog/o-que-e-teste-qi" className="text-primary hover:underline">o que é teste de QI</Link>.
+          </p>
         </div>
         <ArticleFAQ faqs={[
           { question: "Teste de QI online pode ser oficial?", answer: "Não no sentido clínico. Pode ser metodologicamente sério, mas oficial implica aplicação profissional e laudo." },

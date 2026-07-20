@@ -75,16 +75,17 @@ const TabelaEscalaQI = () => {
           <h2 className="text-3xl font-bold mt-12 mb-6">Como ler a escala</h2>
           <p className="mb-4 text-muted-foreground">
             QI mede desempenho relativo a uma amostra normativa, não valor pessoal. Pequenas diferenças (3–5 pontos) costumam
-            estar dentro da margem de erro do teste. Para interpretação detalhada, veja também{" "}
-            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">
-              como interpretar seu resultado de QI
-            </Link>.
+            estar dentro da margem de erro do teste. Para interpretação detalhada, veja{" "}
+            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado de QI</Link>,{" "}
+            <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">o que é percentil de QI</Link> e{" "}
+            <Link to="/blog/qi-100-significa" className="text-primary hover:underline">o que QI 100 significa</Link>.
           </p>
           <h2 className="text-3xl font-bold mt-12 mb-6">QI médio e referências</h2>
           <ul className="list-disc pl-6 mb-4 space-y-2 text-muted-foreground">
             <li>QI médio mundial e brasileiro: aproximadamente 100 na escala padronizada</li>
             <li>QI 100 = desempenho médio da população de referência do teste</li>
             <li>Cada +15 pontos ≈ um desvio padrão acima da média</li>
+            <li>QI 110 ≈ acima da média — veja <Link to="/blog/qi-110-e-bom" className="text-primary hover:underline">QI 110 é bom?</Link></li>
           </ul>
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">

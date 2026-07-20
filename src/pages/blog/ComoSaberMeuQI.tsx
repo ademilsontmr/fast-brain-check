@@ -122,7 +122,12 @@ const ComoSaberMeuQI = () => {
             </div>
           </div>
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
-          <p className="text-muted-foreground mb-4"><Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">Como descobrir meu QI</Link>,  <Link to="/blog/como-saber-meu-qi-sem-pagar" className="text-primary hover:underline">Como saber meu QI sem pagar</Link>,  <Link to="/blog/como-medir-qi" className="text-primary hover:underline">Como medir QI</Link>.</p>
+          <p className="text-muted-foreground mb-4">
+            <Link to="/blog/quanto-custa-teste-de-qi" className="text-primary hover:underline">Quanto custa um teste de QI</Link>,{" "}
+            <Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link>,{" "}
+            <Link to="/blog/como-saber-meu-qi-sem-pagar" className="text-primary hover:underline">como saber sem pagar</Link> e{" "}
+            <Link to="/blog/como-medir-qi" className="text-primary hover:underline">como medir QI</Link>.
+          </p>
         </div>
         <ArticleFAQ faqs={[
           { question: "Como saber meu QI online?", answer: "Faça um teste online estruturado. Compare métodos e escolha um com metodologia clara." },

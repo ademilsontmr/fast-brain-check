@@ -165,10 +165,10 @@ const QI110EBom = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4">
-            <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">Percentil de QI</Link>,{" "}
-            <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">faixas de pontuação</Link>,{" "}
-            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado</Link> e{" "}
-            <Link to="/blog/sinais-qi-alto" className="text-primary hover:underline">sinais de QI alto</Link>.
+            <Link to="/blog/qi-100-significa" className="text-primary hover:underline">QI 100 significa o quê?</Link>,{" "}
+            <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">percentil de QI</Link>,{" "}
+            <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">faixas de pontuação</Link> e{" "}
+            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado</Link>.
           </p>
         </div>
 

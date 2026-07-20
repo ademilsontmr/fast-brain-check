@@ -58,10 +58,11 @@ const OndeFazerTesteQIBrasil = () => {
           </ul>
           <h2 className="text-3xl font-bold mt-12 mb-6">Opções online</h2>
           <p className="text-muted-foreground mb-4">
-            O BomQI oferece teste gratuito em poucos minutos. Ideal para triagem antes de investir em avaliação presencial.
+            O BomQI oferece teste online estruturado em poucos minutos — ideal para triagem antes de investir em avaliação presencial.
           </p>
-          <p className="text-muted-foreground">
-            Veja <Link to="/blog/teste-mensa-brasil" className="text-primary hover:underline">teste Mensa Brasil</Link> e{" "}
+          <p className="text-muted-foreground mb-4">
+            Veja <Link to="/blog/quanto-custa-teste-de-qi" className="text-primary hover:underline">quanto custa um teste de QI</Link>,{" "}
+            <Link to="/blog/teste-mensa-brasil" className="text-primary hover:underline">teste Mensa Brasil</Link> e{" "}
             <Link to="/blog/como-medir-qi" className="text-primary hover:underline">como medir QI</Link>.
           </p>
         </div>

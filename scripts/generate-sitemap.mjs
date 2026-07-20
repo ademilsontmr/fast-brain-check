@@ -63,7 +63,7 @@ const highPriority = [
   'qi-steve-jobs', 'qi-elon-musk', 'qi-criancas-sinais-superdotacao',
   'qi-medio-por-pais', 'o-que-e-considerado-qi-alto', 'como-interpretar-resultado-qi',
   'o-que-e-qi-medio', 'teste-de-inteligencia-online', 'qi-de-famosos',
-  'qi-pode-aumentar-ao-longo-vida', 'qi-medio-por-pais', 'qi-medio-por-profissao',
+  'qi-pode-aumentar-ao-longo-vida', 'qi-medio-por-profissao',
   'quanto-custa-teste-de-qi', 'qi-100-significa', 'qi-110-e-bom',
   'percentil-qi-o-que-significa', 'teste-raciocinio-logico-online',
 ];

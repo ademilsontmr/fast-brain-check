@@ -135,9 +135,10 @@ const OQueEQiMedio = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4">
-            <Link to="/blog/o-que-e-considerado-qi-alto" className="text-primary hover:underline">O que é considerado QI alto</Link>,{" "}
-            <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">faixas de pontuação de QI</Link>,{" "}
-            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado de QI</Link> e{" "}
+            <Link to="/blog/qi-100-significa" className="text-primary hover:underline">QI 100 significa o quê?</Link>,{" "}
+            <Link to="/blog/qi-110-e-bom" className="text-primary hover:underline">QI 110 é bom?</Link>,{" "}
+            <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">percentil de QI</Link>,{" "}
+            <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado</Link> e{" "}
             <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como saber meu QI</Link>.
           </p>
         </div>
