@@ -1086,6 +1086,36 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Média de QI do Mundo",
     description: "Qual é a média de QI do mundo? Ranking global e análise por região.",
     category: "Guia"
+  },
+  {
+    slug: "quanto-custa-teste-de-qi",
+    title: "Quanto Custa um Teste de QI no Brasil?",
+    description: "Preços de psicólogo, WAIS, WISC, Mensa e teste online em 2026.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-100-significa",
+    title: "QI 100 Significa o Quê?",
+    description: "O que significa QI 100: média da população, percentil 50 e mitos.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-110-e-bom",
+    title: "QI 110 É Bom?",
+    description: "QI 110 é acima da média? Percentil, carreira e comparação com outras faixas.",
+    category: "Guia"
+  },
+  {
+    slug: "percentil-qi-o-que-significa",
+    title: "Percentil de QI: O Que Significa",
+    description: "Como interpretar percentil no teste de QI e converter QI em ranking.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-raciocinio-logico-online",
+    title: "Teste de Raciocínio Lógico Online",
+    description: "Guia completo: tipos de questões, diferença para QI e como fazer online.",
+    category: "Guia"
   }
 ];
 

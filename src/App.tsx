@@ -220,6 +220,11 @@ const TesteQIComResultadoImediato = lazy(() => import("./pages/blog/TesteQIComRe
 const OQueEQiMedio = lazy(() => import("./pages/blog/OQueEQiMedio"));
 const TesteDeInteligenciaOnline = lazy(() => import("./pages/blog/TesteDeInteligenciaOnline"));
 const QIDeFamosos = lazy(() => import("./pages/blog/QIDeFamosos"));
+const QuantoCustaTesteDeQI = lazy(() => import("./pages/blog/QuantoCustaTesteDeQI"));
+const QI100Significa = lazy(() => import("./pages/blog/QI100Significa"));
+const QI110EBom = lazy(() => import("./pages/blog/QI110EBom"));
+const PercentilQIOqueSignifica = lazy(() => import("./pages/blog/PercentilQIOqueSignifica"));
+const TesteRaciocinioLogicoOnline = lazy(() => import("./pages/blog/TesteRaciocinioLogicoOnline"));
 const SuperdotacaoOQueE = lazy(() => import("./pages/blog/SuperdotacaoOQueE"));
 const QIFaixasPontuacao = lazy(() => import("./pages/blog/QIFaixasPontuacao"));
 const OndeFazerTesteQIBrasil = lazy(() => import("./pages/blog/OndeFazerTesteQIBrasil"));
@@ -1604,6 +1609,11 @@ const App = () => (
           <Route path="/blog/o-que-e-qi-medio" element={<Suspense fallback={<ArticleLoading />}><OQueEQiMedio /></Suspense>} />
           <Route path="/blog/teste-de-inteligencia-online" element={<Suspense fallback={<ArticleLoading />}><TesteDeInteligenciaOnline /></Suspense>} />
           <Route path="/blog/qi-de-famosos" element={<Suspense fallback={<ArticleLoading />}><QIDeFamosos /></Suspense>} />
+          <Route path="/blog/quanto-custa-teste-de-qi" element={<Suspense fallback={<ArticleLoading />}><QuantoCustaTesteDeQI /></Suspense>} />
+          <Route path="/blog/qi-100-significa" element={<Suspense fallback={<ArticleLoading />}><QI100Significa /></Suspense>} />
+          <Route path="/blog/qi-110-e-bom" element={<Suspense fallback={<ArticleLoading />}><QI110EBom /></Suspense>} />
+          <Route path="/blog/percentil-qi-o-que-significa" element={<Suspense fallback={<ArticleLoading />}><PercentilQIOqueSignifica /></Suspense>} />
+          <Route path="/blog/teste-raciocinio-logico-online" element={<Suspense fallback={<ArticleLoading />}><TesteRaciocinioLogicoOnline /></Suspense>} />
           <Route
             path="/blog/superdotacao-o-que-e"
             element={
