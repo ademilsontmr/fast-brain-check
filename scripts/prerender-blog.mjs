@@ -96,6 +96,16 @@ async function prerenderRoute(browser, route) {
       html = html.replace("<head>", "<head>\n  <!-- prerendered-by-bomqi -->");
     }
 
+    // Garante stylesheet absoluto e sem depender de CORS no Safari
+    html = html.replace(
+      /<link[^>]*rel=["']stylesheet["'][^>]*>/i,
+      (tag) => tag.replace(/\s*crossorigin(?:="[^"]*")?/i, "")
+    );
+    html = html.replace(
+      /<script([^>]*\ssrc=["']\/assets\/[^"']+["'][^>]*)>/gi,
+      (full, attrs) => `<script${attrs.replace(/\s*crossorigin(?:="[^"]*")?/gi, "")}>`
+    );
+
     const outputPath = routeToOutputPath(route);
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     fs.writeFileSync(outputPath, html, "utf8");
