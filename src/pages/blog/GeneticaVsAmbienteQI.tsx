@@ -22,7 +22,7 @@ const GeneticaVsAmbienteQI = () => {
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
-    keywords: "GeneticaVsAmbienteQI, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
+    keywords: "genética vs ambiente QI, nature vs nurture inteligência, QI herdado, quanto do QI é genética",
   });
 
   useStructuredData(
@@ -31,7 +31,8 @@ const GeneticaVsAmbienteQI = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "genetica-vs-ambiente-qi",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 
@@ -74,6 +75,14 @@ const GeneticaVsAmbienteQI = () => {
             ou pelo ambiente? A resposta científica é mais complexa e fascinante do que você imagina. 
             Estudos com gêmeos, adoções e neurociência revelam uma verdade surpreendente sobre como 
             desenvolvemos inteligência.
+          </p>
+
+          <h2 className="text-3xl font-bold mt-12 mb-6">Quanto do QI nasce e quanto se aprende?</h2>
+          <p className="mb-4">
+            Em adultos de países desenvolvidos, a heritabilidade do QI costuma ficar entre <strong>50% e 80%</strong>
+            — ou seja, boa parte da variação entre pessoas tem componente genético, mas o ambiente
+            (educação, nutrição, estimulação) continua decisivo, sobretudo na infância. O debate
+            “nature vs nurture” não é 0 ou 100: é interação contínua entre genes e experiência.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">O Que Dizem os Estudos com Gêmeos?</h2>

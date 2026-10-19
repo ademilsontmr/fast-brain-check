@@ -13,7 +13,7 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 
 const TesteQIGratuitoSemCadastro = () => {
   const navigate = useNavigate();
-  const articleUrl = "https://bomqi.com.br/blog/teste-qi-gratuito-sem-cadastro";
+  const articleUrl = "https://bomqi.com.br/blog/teste-qi-gratuito-e-confiavel";
   const articleTitle = "Teste de QI Gratuito Sem Cadastro: Faça Agora em 2026";
   const articleDescription = "Teste de QI gratuito sem cadastro complicado. Saiba como funciona, o que esperar do resultado e limitações de testes sem registro.";
 
@@ -132,7 +132,7 @@ const TesteQIGratuitoSemCadastro = () => {
             </div>
           </div>
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
-          <p className="text-muted-foreground mb-4"><Link to="/blog/teste-qi-gratis" className="text-primary hover:underline">Teste de QI grátis</Link>,  <Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">teste-qi-gratuito-e-confiavel</Link>,  <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como-saber-meu-qi</Link>.</p>
+          <p className="text-muted-foreground mb-4"><Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">Teste de QI grátis</Link>,  <Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">teste-qi-gratuito-e-confiavel</Link>,  <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como-saber-meu-qi</Link>.</p>
         </div>
         <ArticleFAQ faqs={[
           { question: "Dá para fazer teste de QI sem criar conta?", answer: "Sim. Vários testes permitem começar direto; alguns pedem e-mail só para enviar o resultado." },

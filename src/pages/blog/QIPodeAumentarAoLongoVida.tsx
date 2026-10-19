@@ -31,7 +31,8 @@ const QIPodeAumentarAoLongoVida = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-pode-aumentar-ao-longo-vida",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

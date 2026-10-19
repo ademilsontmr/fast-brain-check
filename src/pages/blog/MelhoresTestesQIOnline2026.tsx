@@ -11,18 +11,18 @@ import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
 import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 
-const MelhoresTestesQIOnline2025 = () => {
+const MelhoresTestesQIOnline2026 = () => {
   const navigate = useNavigate();
   
-    const articleUrl = "https://bomqi.com.br/blog/melhores-testes-qi-online-2025";
-  const articleTitle = "Melhores Testes de QI Online em 2025";
-  const articleDescription = "Comparativo atualizado de testes de QI online grátis e pagos em 2025 com análise de metodologia, custo e precisão dos resultados.";
+    const articleUrl = "https://bomqi.com.br/blog/melhores-testes-qi-online-2026";
+  const articleTitle = "Melhores Testes de QI Online em 2026";
+  const articleDescription = "Comparativo atualizado de testes de QI online grátis e pagos em 2026 com análise de metodologia, custo e precisão dos resultados.";
   
   useSEO({
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
-    keywords: "MelhoresTestesQIOnline2025, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
+    keywords: "MelhoresTestesQIOnline2026, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
   });
 
   useStructuredData(
@@ -30,8 +30,8 @@ const MelhoresTestesQIOnline2025 = () => {
       title: articleTitle,
       description: articleDescription,
       url: articleUrl,
-      slug: "melhores-testes-qi-online-2025",
-      publishDate: "2024-01-01",
+      slug: "melhores-testes-qi-online-2026",
+      publishDate: "2026-08-08",
     })
   );
 
@@ -48,17 +48,17 @@ const MelhoresTestesQIOnline2025 = () => {
           <span className="mx-2">/</span>
           <Link to="/blog" className="hover:text-primary">Blog</Link>
           <span className="mx-2">/</span>
-          <span>Melhores Testes de QI Online 2025</span>
+          <span>Melhores Testes de QI Online 2026</span>
         </nav>
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Melhores Testes de QI Online em 2025: Grátis vs Pago (Análise Completa)
+          Melhores Testes de QI Online em 2026: Grátis vs Pago (Análise Completa)
         </h1>
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Fevereiro de 2025</time>
+          <time>8 de Agosto de 2026</time>
           
         </div>
 
@@ -71,7 +71,7 @@ const MelhoresTestesQIOnline2025 = () => {
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
             Com centenas de testes de QI online disponíveis, como escolher um confiável? Analisamos 
-            os principais testes disponíveis em 2025, comparando precisão, metodologia, custo e 
+            os principais testes disponíveis em 2026, comparando precisão, metodologia, custo e 
             qualidade dos resultados. Aqui está o guia definitivo.
           </p>
 
@@ -290,7 +290,7 @@ const MelhoresTestesQIOnline2025 = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Melhores Testes de QI Online em 2025?",
+                    "question": "Melhores Testes de QI Online em 2026?",
                     "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
           },
           {
@@ -332,7 +332,7 @@ const MelhoresTestesQIOnline2025 = () => {
             <h2 className="text-2xl md:text-3xl font-bold">Continue Lendo</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {getRelatedArticles("melhores-testes-qi-online-2025", 3).map((article) => (
+            {getRelatedArticles("melhores-testes-qi-online-2026", 3).map((article) => (
               <Card
                 key={article.slug}
                 className="p-6 hover:shadow-lg transition-all duration-300 border-2 border-primary/20 hover:border-primary/40 group cursor-pointer"
@@ -373,5 +373,5 @@ const MelhoresTestesQIOnline2025 = () => {
   );
 };
 
-export default MelhoresTestesQIOnline2025;
+export default MelhoresTestesQIOnline2026;
 

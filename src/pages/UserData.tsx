@@ -8,6 +8,7 @@ import { Brain, MessageCircle, User, Sparkles, Mail, FileText, Star, Shield, Zap
 import { useToast } from "@/hooks/use-toast";
 import { saveUserDataLocally } from "@/services/api";
 import Footer from "@/components/Footer";
+import SiteHeader from "@/components/SiteHeader";
 import { useSEO } from "@/hooks/use-seo";
 import InputMask from 'react-input-mask';
 
@@ -76,9 +77,7 @@ const UserData = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm">
-        {/* ... Header ... */}
-      </header>
+      <SiteHeader />
 
       <div className="container mx-auto px-4 py-12 max-w-2xl">
         <div className="text-center mb-8">

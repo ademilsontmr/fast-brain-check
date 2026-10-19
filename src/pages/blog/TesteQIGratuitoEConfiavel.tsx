@@ -25,6 +25,7 @@ const TesteQIGratuitoEConfiavel = () => {
       url: articleUrl,
       slug: "teste-qi-gratuito-e-confiavel",
       publishDate: "2026-06-26",
+      modifiedDate: "2026-10-19",
     })
   );
 
@@ -95,6 +96,17 @@ const TesteQIGratuitoEConfiavel = () => {
             <li>Clínico (WAIS): diagnóstico, superdotação, processos formais</li>
             <li>Online confiável cobre 85–90% da necessidade casual</li>
           </ul>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Teste de QI gratuito sem cadastro: o que esperar</h3>
+          <p className="mb-4 text-muted-foreground">
+            Muita gente busca <strong>teste de QI grátis sem cadastro</strong>. Dá para começar o questionário
+            sem criar conta em vários sites — inclusive no BomQI. O ponto crítico não é o cadastro:
+            é se o resultado completo é transparente, metodologicamente sério e sem paywall enganoso.
+          </p>
+          <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
+            <li>Sem cadastro no início: bom sinal de baixa fricção</li>
+            <li>Resultado só com e-mail spam: sinal de alerta</li>
+            <li>Prévia gratuita + score completo pago e claro: modelo honesto</li>
+          </ul>
           <Card className="p-6 my-8">
             <h3 className="text-xl font-bold mb-4">Resumo prático</h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -130,7 +142,7 @@ const TesteQIGratuitoEConfiavel = () => {
             </div>
           </div>
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
-          <p className="text-muted-foreground mb-4"><Link to="/blog/teste-qi-confiavel" className="text-primary hover:underline">Teste de QI confiável</Link>,  <Link to="/blog/melhor-teste-qi-2026" className="text-primary hover:underline">Melhor teste de QI 2026</Link>,  <Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">Como descobrir meu QI</Link>.</p>
+          <p className="text-muted-foreground mb-4"><Link to="/blog/teste-qi-confiavel" className="text-primary hover:underline">Teste de QI confiável</Link>,  <Link to="/blog/melhor-teste-qi-2026" className="text-primary hover:underline">Melhor teste de QI 2026</Link>,  <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">Como descobrir meu QI</Link>.</p>
         </div>
         <ArticleFAQ faqs={[
           { question: "Existe teste de QI 100% gratuito e confiável?", answer: "Raramente. Testes totalmente grátis costumam ser imprecisos ou escondem o resultado. Testes pagos acessíveis costumam ser mais transparentes." },

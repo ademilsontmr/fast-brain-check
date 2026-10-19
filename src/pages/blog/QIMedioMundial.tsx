@@ -95,28 +95,23 @@ const QIMedioMundial = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Ranking de QI Médio por País</h2>
 
-          <h3 className="text-2xl font-bold mt-8 mb-4">Países com QI Mais Alto (105-110)</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Países com QI Mais Alto (IIT 2025)</h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
-            <li><strong>Singapura:</strong> ~108</li>
             <li><strong>Hong Kong:</strong> ~108</li>
-            <li><strong>Coreia do Sul:</strong> ~106</li>
-            <li><strong>Japão:</strong> ~105</li>
-            <li><strong>China:</strong> ~105</li>
-            <li><strong>Taiwan:</strong> ~105</li>
-            <li><strong>Finlândia:</strong> ~101</li>
-            <li><strong>Suíça:</strong> ~101</li>
+            <li><strong>Coreia do Sul:</strong> ~107</li>
+            <li><strong>China / Macau / Japão / Taiwan:</strong> ~106</li>
+            <li><strong>Austrália / Rússia / Singapura:</strong> ~104</li>
           </ul>
+          <p className="mb-4 text-sm text-muted-foreground">
+            Fonte: International IQ Test 2025 (World Population Review). Compilações Lynn &amp; Becker usam outra metodologia.
+          </p>
 
-          <h3 className="text-2xl font-bold mt-8 mb-4">Países com QI Médio (95-105)</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Referência e Brasil</h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
-            <li><strong>Estados Unidos:</strong> ~98</li>
-            <li><strong>Reino Unido:</strong> ~100</li>
-            <li><strong>Alemanha:</strong> ~99</li>
-            <li><strong>França:</strong> ~98</li>
-            <li><strong>Canadá:</strong> ~99</li>
-            <li><strong>Austrália:</strong> ~99</li>
-            <li><strong>Brasil:</strong> ~87</li>
-            <li><strong>Argentina:</strong> ~93</li>
+            <li><strong>Estados Unidos / Canadá / Reino Unido:</strong> ~101–102 (IIT)</li>
+            <li><strong>Alemanha / França:</strong> próximo de 99–100</li>
+            <li><strong>Brasil:</strong> ~95 (IIT) · ~83–87 (Lynn &amp; Becker)</li>
+            <li><strong>Argentina / Chile / Uruguai:</strong> ~96–97 (IIT)</li>
           </ul>
 
           <h3 className="text-2xl font-bold mt-8 mb-4">Fatores que Influenciam QI por País</h3>
@@ -147,7 +142,7 @@ const QIMedioMundial = () => {
           <h2 className="text-3xl font-bold mt-12 mb-6">QI Médio no Brasil</h2>
           
           <p className="mb-4">
-            <strong>QI médio no Brasil é aproximadamente 87</strong>, abaixo da média mundial:
+            <strong>QI médio no Brasil:</strong> ~95 no IIT 2025 (ou ~83–87 em Lynn &amp; Becker), abaixo da referência 100:
           </p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Posição:</strong> abaixo da média mundial (~100)</li>

@@ -31,7 +31,7 @@ const Top15JogosAppsTreinarCerebro = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "top-15-jogos-apps-treinar-cerebro",
-      publishDate: "2024-01-01",
+      publishDate: "2026-08-08",
     })
   );
 
@@ -53,12 +53,12 @@ const Top15JogosAppsTreinarCerebro = () => {
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Top 15 Jogos e Apps para Treinar o Cérebro e Melhorar o QI em 2025
+          Top 15 Jogos e Apps para Treinar o Cérebro e Melhorar o QI em 2026
         </h1>
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Fevereiro de 2025</time>
+          <time>8 de Agosto de 2026</time>
           
         </div>
 

@@ -31,7 +31,8 @@ const QIProcessosSeletivos = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-processos-seletivos",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

@@ -31,7 +31,8 @@ const PessoasMaisInteligentesQueVoceNuncaOuviuFalar = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "pessoas-mais-inteligentes-que-voce-nunca-ouviu-falar",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

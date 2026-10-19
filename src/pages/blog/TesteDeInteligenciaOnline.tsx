@@ -136,7 +136,7 @@ const TesteDeInteligenciaOnline = () => {
             <Link to="/blog/teste-raciocinio-logico-online" className="text-primary hover:underline">Teste de raciocínio lógico online</Link>,{" "}
             <Link to="/blog/teste-qi-online-guia-completo" className="text-primary hover:underline">teste de QI online</Link>,{" "}
             <Link to="/blog/melhor-teste-qi-2026" className="text-primary hover:underline">melhor teste de QI 2026</Link> e{" "}
-            <Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link>.
+            <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link>.
           </p>
         </div>
 

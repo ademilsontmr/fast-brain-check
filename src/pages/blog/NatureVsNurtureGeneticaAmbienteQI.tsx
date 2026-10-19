@@ -14,7 +14,7 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 const NatureVsNurtureGeneticaAmbienteQI = () => {
   const navigate = useNavigate();
   
-    const articleUrl = "https://bomqi.com.br/blog/nature-vs-nurture-genetica-ambiente-qi";
+    const articleUrl = "https://bomqi.com.br/blog/genetica-vs-ambiente-qi";
   const articleTitle = "Nature vs Nurture: Genética e Ambiente no QI - Análise Científica Completa";
   const articleDescription = "Descubra como genética e ambiente influenciam QI. Análise completa do debate nature vs nurture, estudos com gêmeos, fatores ambientais e interação gene-ambiente.";
   
@@ -31,7 +31,8 @@ const NatureVsNurtureGeneticaAmbienteQI = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "nature-vs-nurture-genetica-ambiente-qi",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

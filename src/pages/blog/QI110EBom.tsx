@@ -126,7 +126,7 @@ const QI110EBom = () => {
                 <tr>
                   <td className="py-3 pr-4 font-medium text-foreground">120</td>
                   <td className="py-3 pr-4">Superior</td>
-                  <td className="py-3">~91</td>
+                  <td className="py-3">~91 — veja <Link to="/blog/qi-120-e-bom" className="text-primary hover:underline">QI 120 é bom?</Link></td>
                 </tr>
               </tbody>
             </table>

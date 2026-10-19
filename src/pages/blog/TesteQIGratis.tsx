@@ -13,7 +13,7 @@ import useStructuredData from "@/hooks/use-structured-data";
 const TesteQIGratis = () => {
   const navigate = useNavigate();
   
-  const articleUrl = "https://bomqi.com.br/blog/teste-qi-gratis";
+  const articleUrl = "https://bomqi.com.br/blog/teste-qi-gratuito-e-confiavel";
   const articleTitle = "Teste de QI Grátis: Como Descobrir Sua Inteligência Sem Pagar";
   const articleDescription = "Descubra como fazer um teste de QI grátis e confiável. Guia completo com os melhores testes gratuitos disponíveis online.";
   const publishDate = "2024-01-15";
@@ -33,7 +33,7 @@ const TesteQIGratis = () => {
       "@type": "Article",
       "headline": articleTitle,
       "description": articleDescription,
-      "image": "https://bomqi.com.br/favicon-brain-icon.png",
+      "image": "https://bomqi.com.br/og-image.jpg",
       "datePublished": publishDate,
       "dateModified": modifiedDate,
       "author": {
@@ -45,7 +45,7 @@ const TesteQIGratis = () => {
         "name": "Equipe Bom QI",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://bomqi.com.br/favicon-brain-icon.png"
+          "url": "https://bomqi.com.br/og-image.jpg"
         }
       }
     },

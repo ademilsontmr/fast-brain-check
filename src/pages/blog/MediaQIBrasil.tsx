@@ -15,14 +15,14 @@ const MediaQIBrasil = () => {
   const navigate = useNavigate();
   
     const articleUrl = "https://bomqi.com.br/blog/media-qi-brasil";
-  const articleTitle = "Qual é a Média de QI no Brasil?";
-  const articleDescription = "Dados atualizados e perguntas frequentes sobre a média de QI no Brasil, fatores que influenciam resultados e diferenças regionais.";
+  const articleTitle = "Média de QI no Brasil 2026: Dados IIT e Comparativo Mundial";
+  const articleDescription = "Qual a média de QI no Brasil? Veja os dados IIT 2025 (~95), estimativas Lynn & Becker, comparação com outros países e o que isso significa na prática.";
   
   useSEO({
     title: articleTitle,
     description: articleDescription,
     url: articleUrl,
-    keywords: "MediaQIBrasil, inteligência, QI, desenvolvimento cognitivo, melhorar mente, treinar cérebro, capacidade mental, raciocínio, cognição, inteligência superior",
+    keywords: "média de QI no Brasil, QI médio Brasil, QI médio brasileiro, média QI Brasil 2026, IIT 2025",
   });
 
   useStructuredData(
@@ -31,7 +31,8 @@ const MediaQIBrasil = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "media-qi-brasil",
-      publishDate: "2024-01-01",
+      publishDate: "2025-02-15",
+      modifiedDate: "2026-10-19",
     })
   );
 
@@ -53,13 +54,14 @@ const MediaQIBrasil = () => {
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Qual é a Média de QI no Brasil? Perguntas Mais Buscadas sobre Inteligência
+          Qual é a Média de QI no Brasil? Dados Atualizados e Comparativo
         </h1>
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Fevereiro de 2025</time>
-          
+          <time dateTime="2025-02-15">15 de Fevereiro de 2025</time>
+          <span>•</span>
+          <span>Atualizado em outubro de 2026</span>
         </div>
 
         {/* Featured Image */}
@@ -75,30 +77,31 @@ const MediaQIBrasil = () => {
             respondemos as principais questões sobre QI no contexto brasileiro.
           </p>
 
-          <h2 className="text-3xl font-bold mt-12 mb-6">Qual é a Média de QI no Brasil?</h2>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Qual é o QI médio no Brasil?</h2>
           <p className="mb-4">
-            Estudos internacionais indicam que a média de QI no Brasil está entre <strong>87 e 90 pontos</strong>, 
-            abaixo da média mundial padronizada de 100. É importante entender que:
+            Depende da fonte. No <strong>International IQ Test (IIT) 2025</strong> (amostra online global),
+            o Brasil aparece com cerca de <strong>95,4</strong> pontos — esse é o número mais citado em 2026
+            para “QI médio Brasil”. Em <strong>Lynn &amp; Becker (2019)</strong>,
+            a estimativa clássica fica em torno de <strong>83–87</strong>. A média de referência dos testes é 100.
           </p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
-            <li>Essa média é baseada em testes padronizados internacionalmente</li>
-            <li>Pode variar significativamente entre regiões e grupos socioeconômicos</li>
-            <li>QI médio não reflete potencial individual</li>
-            <li>Fatores ambientais (educação, nutrição) influenciam resultados</li>
+            <li>Números mudam conforme amostragem (online vs. meta-análises acadêmicas)</li>
+            <li>Pode variar bastante entre regiões e grupos socioeconômicos no Brasil</li>
+            <li>QI médio nacional não reflete o potencial de cada pessoa</li>
+            <li>Educação e nutrição influenciam — no PISA 2022 o Brasil marcou 379 em matemática (OCDE: 472)</li>
           </ul>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Como o Brasil se Compara Internacionalmente?</h2>
           <p className="mb-4">
-            Em rankings internacionais de QI médio por país, o Brasil geralmente aparece entre as posições 
-            80-90 de aproximadamente 200 países. Países com médias mais altas incluem:
+            No ranking IIT 2025 (World Population Review), Hong Kong, Coreia do Sul e China lideram (~106–108).
+            O Brasil fica abaixo da referência 100, mas acima de muitas estimativas antigas que citavam só ~87.
           </p>
           <div className="bg-muted/50 p-6 rounded-lg my-6">
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Singapura, Hong Kong, Coreia do Sul:</strong> Média acima de 105</li>
-              <li><strong>Japão, China, Taiwan:</strong> Média entre 100-105</li>
-              <li><strong>Estados Unidos, Reino Unido:</strong> Média próxima de 100</li>
-              <li><strong>Brasil:</strong> Média entre 87-90</li>
-              <li><strong>Países africanos (alguns):</strong> Média entre 60-80</li>
+              <li><strong>Hong Kong / Coreia do Sul / China (IIT 2025):</strong> ~106–108</li>
+              <li><strong>Japão / Taiwan / Singapura:</strong> ~104–106</li>
+              <li><strong>EUA / Reino Unido / Canadá:</strong> próximo de 100–102</li>
+              <li><strong>Brasil:</strong> ~95 (IIT) ou ~83–87 (Lynn &amp; Becker)</li>
             </ul>
           </div>
           <p className="mb-4">

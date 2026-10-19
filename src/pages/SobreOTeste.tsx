@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Brain, Award, Users, Shield, Target, Sparkles, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 
@@ -17,22 +18,7 @@ const SobreOTeste = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div 
-              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-              onClick={() => navigate("/")}
-            >
-              <Brain className="w-8 h-8 text-primary" />
-              <div className="text-2xl font-bold">BomQI</div>
-            </div>
-            <Button onClick={() => navigate("/teste")} size="lg">
-              Fazer o Teste
-            </Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
         <div className="text-center mb-12">

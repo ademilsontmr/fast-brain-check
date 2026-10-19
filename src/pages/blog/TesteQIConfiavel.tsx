@@ -32,7 +32,7 @@ const TesteQIConfiavel = () => {
       "@type": "Article",
       "headline": articleTitle,
       "description": articleDescription,
-      "image": "https://bomqi.com.br/favicon-brain-icon.png",
+      "image": "https://bomqi.com.br/og-image.jpg",
       "datePublished": publishDate,
       "dateModified": modifiedDate,
       "author": {
@@ -44,7 +44,7 @@ const TesteQIConfiavel = () => {
         "name": "Equipe Bom QI",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://bomqi.com.br/favicon-brain-icon.png"
+          "url": "https://bomqi.com.br/og-image.jpg"
         }
       }
     },

@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { REDIRECT_SLUGS } from './seo-redirects.mjs';
+import { getBlogPrerenderRoutes } from './blog-routes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,61 +20,87 @@ const staticPages = [
   { loc: 'https://bomqi.com.br/termos-uso', changefreq: 'yearly', priority: '0.4', lastmod: today },
 ];
 
-// Extrair slugs dos arquivos de artigos
 const blogDir = path.join(__dirname, '../src/pages/blog');
-const files = fs.readdirSync(blogDir).filter(f => f.endsWith('.tsx'));
+const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.tsx'));
 
-const articleEntries = [];
+/** lastmod por slug (melhor data encontrada nos .tsx) */
+const lastmodBySlug = new Map();
 for (const file of files) {
   const content = fs.readFileSync(path.join(blogDir, file), 'utf8');
   const slugMatch = content.match(/const articleUrl = "https:\/\/bomqi\.com\.br\/blog\/([^"]+)"/);
   if (!slugMatch) continue;
+  const slug = slugMatch[1];
+  if (REDIRECT_SLUGS.has(slug)) continue;
   const dateMatch =
+    content.match(/modifiedDate:\s*"([^"]+)"/) ||
     content.match(/publishDate:\s*"([^"]+)"/) ||
     content.match(/const publishDate = "([^"]+)"/);
   const lastmod = dateMatch ? dateMatch[1] : today;
-  articleEntries.push({ slug: slugMatch[1], lastmod });
+  const prev = lastmodBySlug.get(slug);
+  if (!prev || lastmod > prev) lastmodBySlug.set(slug, lastmod);
 }
+
+// Fonte de verdade: rotas reais do App (sem Navigate/301)
+const liveSlugs = getBlogPrerenderRoutes()
+  .filter((r) => r.startsWith('/blog/') && r !== '/blog')
+  .map((r) => r.replace(/^\/blog\//, ''))
+  .filter((slug) => !REDIRECT_SLUGS.has(slug));
+
+const articleEntries = [...new Set(liveSlugs)].map((slug) => ({
+  slug,
+  lastmod: lastmodBySlug.get(slug) || today,
+}));
 
 articleEntries.sort((a, b) => b.lastmod.localeCompare(a.lastmod) || a.slug.localeCompare(b.slug));
 
-// Artigos de alta prioridade (mais buscados)
 const highPriority = [
-  'como-descobrir-meu-qi', 'teste-qi-criancas', 'qi-de-einstein',
-  'como-aumentar-qi', 'o-que-e-qi', 'melhor-teste-qi-2026',
-  'qi-medio-brasil', 'qi-medio-mundial', 'como-saber-meu-qi-sem-pagar',
-  'como-saber-meu-qi', 'teste-qi-gratuito-e-confiavel', 'teste-qi-oficial',
-  'teste-qi-gratuito-sem-cadastro', 'teste-qi-em-portugues', 'teste-qi-com-resultado-imediato',
-  'teste-qi-gratis', 'teste-qi-online-guia-completo', 'como-aumentar-qi-rapidamente',
-  'tabela-escala-qi', 'como-medir-qi', 'teste-mensa-brasil', 'qi-faixas-pontuacao-significado',
-  'onde-fazer-teste-qi-brasil', 'superdotacao-o-que-e',
-  'qi-pele', 'qi-neymar', 'qi-ronaldo-fenomeno', 'qi-ayrton-senna',
-  'qi-gisele-bundchen', 'qi-santos-dumont', 'qi-machado-de-assis',
-  'qi-silvio-santos', 'qi-xuxa', 'qi-paulo-coelho', 'qi-anitta', 'qi-lula',
-  'qi-ronaldinho', 'qi-kaka', 'qi-marta', 'qi-bolsonaro', 'qi-faustao',
-  'qi-pablo-marcal', 'qi-tom-jobim', 'qi-chico-buarque', 'qi-elis-regina',
-  'qi-oscar-niemeyer', 'qi-drauzio-varella', 'qi-ivete-sangalo',
-  'qi-romario', 'qi-rivaldo', 'qi-gal-costa', 'qi-caetano-veloso',
-  'qi-gilberto-gil', 'qi-luciano-huck', 'qi-casimiro',
-  'qi-fernando-henrique-cardoso', 'qi-tite', 'qi-gugu-liberato',
-  'qi-jorge-ben-jor', 'qi-zeze-di-camargo',
-  'qi-raul-seixas', 'qi-rita-lee', 'qi-roberto-carlos', 'qi-whindersson-nunes',
-  'qi-alok', 'qi-ludmilla', 'qi-gusttavo-lima', 'qi-marina-silva',
-  'qi-sergio-moro', 'qi-ratinho', 'qi-rai', 'qi-adriana-lima',
-  'qi-lionel-messi', 'qi-cristiano-ronaldo', 'qi-bill-gates', 'qi-donald-trump',
-  'qi-steve-jobs', 'qi-elon-musk', 'qi-criancas-sinais-superdotacao',
-  'qi-medio-por-pais', 'o-que-e-considerado-qi-alto', 'como-interpretar-resultado-qi',
-  'o-que-e-qi-medio', 'teste-de-inteligencia-online', 'qi-de-famosos',
-  'qi-pode-aumentar-ao-longo-vida', 'qi-medio-por-profissao',
-  'quanto-custa-teste-de-qi', 'qi-100-significa', 'qi-110-e-bom',
-  'percentil-qi-o-que-significa', 'teste-raciocinio-logico-online',
+  'media-qi-brasil',
+  'genetica-vs-ambiente-qi',
+  'teste-qi-criancas',
+  'qi-de-einstein',
+  'como-aumentar-qi',
+  'o-que-e-qi',
+  'melhor-teste-qi-2026',
+  'qi-medio-mundial',
+  'como-saber-meu-qi-sem-pagar',
+  'como-saber-meu-qi',
+  'teste-qi-gratuito-e-confiavel',
+  'teste-qi-oficial',
+  'teste-qi-em-portugues',
+  'teste-qi-com-resultado-imediato',
+  'teste-qi-online-guia-completo',
+  'como-aumentar-qi-rapidamente',
+  'tabela-escala-qi',
+  'como-medir-qi',
+  'teste-mensa-brasil',
+  'qi-faixas-pontuacao-significado',
+  'onde-fazer-teste-qi-brasil',
+  'superdotacao-o-que-e',
+  'qi-medio-por-pais',
+  'o-que-e-considerado-qi-alto',
+  'como-interpretar-resultado-qi',
+  'o-que-e-qi-medio',
+  'teste-de-inteligencia-online',
+  'qi-de-famosos',
+  'qi-pode-aumentar-ao-longo-vida',
+  'qi-medio-por-profissao',
+  'quanto-custa-teste-de-qi',
+  'qi-100-significa',
+  'qi-110-e-bom',
+  'percentil-qi-o-que-significa',
+  'teste-raciocinio-logico-online',
+  'como-fazer-teste-de-qi',
+  'qi-120-e-bom',
+  'qi-130-significa',
+  'idade-certa-para-fazer-teste-qi',
+  'melhores-testes-qi-online-2026',
+  'qual-meu-qi',
 ];
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 `;
 
-// Páginas estáticas
 for (const page of staticPages) {
   xml += `  <url>
     <loc>${page.loc}</loc>
@@ -84,7 +112,6 @@ for (const page of staticPages) {
 
 xml += `\n  <!-- Blog Articles -->\n`;
 
-// Artigos do blog
 for (const { slug, lastmod } of articleEntries) {
   const priority = highPriority.includes(slug) ? '0.9' : '0.7';
   xml += `  <url>
@@ -98,4 +125,6 @@ for (const { slug, lastmod } of articleEntries) {
 xml += `</urlset>\n`;
 
 fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), xml, 'utf8');
-console.log(`✓ Sitemap gerado com ${articleEntries.length} artigos + ${staticPages.length} páginas estáticas`);
+console.log(
+  `✓ Sitemap gerado com ${articleEntries.length} artigos + ${staticPages.length} páginas estáticas (satélites 301 excluídos)`
+);

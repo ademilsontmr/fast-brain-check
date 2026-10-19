@@ -16,7 +16,7 @@ const IATestesCognitivos = () => {
   
     const articleUrl = "https://bomqi.com.br/blog/ia-testes-cognitivos";
   const articleTitle = "IA e Testes Cognitivos na Educação";
-  const articleDescription = "Veja como a inteligência artificial está transformando testes cognitivos, educação e processos seletivos em 2025 e quais cuidados ter.";
+  const articleDescription = "Veja como a inteligência artificial está transformando testes cognitivos, educação e processos seletivos em 2026 e quais cuidados ter.";
   
   useSEO({
     title: articleTitle,
@@ -31,7 +31,7 @@ const IATestesCognitivos = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "ia-testes-cognitivos",
-      publishDate: "2024-01-01",
+      publishDate: "2026-08-08",
     })
   );
 
@@ -53,12 +53,12 @@ const IATestesCognitivos = () => {
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          O Papel da IA e dos Testes Cognitivos na Educação e no Trabalho em 2025
+          O Papel da IA e dos Testes Cognitivos na Educação e no Trabalho em 2026
         </h1>
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Fevereiro de 2025</time>
+          <time>8 de Agosto de 2026</time>
           
         </div>
 

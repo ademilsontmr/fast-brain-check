@@ -31,7 +31,8 @@ const MelhorTesteQI2026 = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "melhor-teste-qi-2026",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

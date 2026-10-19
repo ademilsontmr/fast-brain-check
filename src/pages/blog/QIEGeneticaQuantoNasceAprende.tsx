@@ -14,7 +14,7 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 const QIEGeneticaQuantoNasceAprende = () => {
   const navigate = useNavigate();
   
-    const articleUrl = "https://bomqi.com.br/blog/qi-e-genetica-quanto-nasce-aprende";
+    const articleUrl = "https://bomqi.com.br/blog/genetica-vs-ambiente-qi";
   const articleTitle = "QI e Genética: O Quanto Nasce e O Quanto Se Aprende - Evidências Científicas";
   const articleDescription = "QI e genética: o quanto nasce e o quanto se aprende? Descubra a relação entre genética e ambiente no QI. Evidências científicas. Teste seu QI rapidamente!";
   
@@ -31,7 +31,8 @@ const QIEGeneticaQuantoNasceAprende = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-e-genetica-quanto-nasce-aprende",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

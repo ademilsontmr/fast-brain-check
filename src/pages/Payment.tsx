@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, Loader2, Copy, CheckCircle, Star, Shield, Lock, Zap, ChevronRight } from "lucide-react";
+import { Loader2, Copy, CheckCircle, Star, Shield, Lock, Zap, ChevronRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { calculateIQ, getCelebrityComparison } from "@/types/quiz";
 import { createPixPayment, getResultByToken, CustomerData } from "@/services/api";
 import { markPremiumResult } from "@/lib/session";
 import { useSEO } from "@/hooks/use-seo";
 import { QRCodeSVG as QRCode } from "qrcode.react";
+import SiteHeader from "@/components/SiteHeader";
 
 const PRODUCT_KEY = "fast_brain_check_test";
 
@@ -124,18 +125,16 @@ const Payment = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
       {/* Header minimalista */}
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-3 max-w-2xl flex items-center justify-between">
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/")}>
-            <Brain className="w-7 h-7 text-primary" />
-            <span className="text-xl font-bold">BomQI</span>
-          </div>
+      <SiteHeader
+        showNav={false}
+        showCta={false}
+        rightSlot={
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
             <Lock className="w-3.5 h-3.5" />
             <span>Pagamento seguro</span>
           </div>
-        </div>
-      </header>
+        }
+      />
 
       <div className="container mx-auto px-4 py-8 max-w-lg">
 

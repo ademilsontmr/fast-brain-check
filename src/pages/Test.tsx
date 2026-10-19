@@ -4,9 +4,10 @@ import { questions } from "@/types/quiz";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Brain, Sparkles, TrendingUp, Zap, User, Calendar } from "lucide-react";
+import { Sparkles, TrendingUp, Zap, User, Calendar } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useSEO } from "@/hooks/use-seo";
+import SiteHeader from "@/components/SiteHeader";
 
 
 type TestStep = 'gender' | 'age' | 'questions';
@@ -257,24 +258,20 @@ const Test = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/")}>
-              <Brain className="w-8 h-8 text-primary" />
-              <div className="text-2xl font-bold">BomQI</div>
+      <SiteHeader
+        showNav={false}
+        showCta={false}
+        rightSlot={
+          <>
+            <div className={`text-sm font-mono font-semibold ${timeRemaining <= 30 ? 'text-destructive' : timeRemaining <= 120 ? 'text-yellow-500' : 'text-muted-foreground'}`}>
+              {Math.floor(timeRemaining / 60)}:{String(timeRemaining % 60).padStart(2, '0')}
             </div>
-            <div className="flex items-center gap-4">
-              <div className={`text-sm font-mono font-semibold ${timeRemaining <= 30 ? 'text-destructive' : timeRemaining <= 120 ? 'text-yellow-500' : 'text-muted-foreground'}`}>
-                {Math.floor(timeRemaining / 60)}:{String(timeRemaining % 60).padStart(2, '0')}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                Pergunta {currentQuestion + 1} de {questions.length}
-              </div>
+            <div className="text-sm text-muted-foreground">
+              Pergunta {currentQuestion + 1} de {questions.length}
             </div>
-          </div>
-        </div>
-      </header>
+          </>
+        }
+      />
 
       <div className="flex-1 container mx-auto px-4 py-8 max-w-3xl">
         <div className="mb-8">

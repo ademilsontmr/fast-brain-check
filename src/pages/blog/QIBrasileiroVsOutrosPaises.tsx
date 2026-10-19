@@ -31,7 +31,8 @@ const QIBrasileiroVsOutrosPaises = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-brasileiro-vs-outros-paises",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 
@@ -78,13 +79,14 @@ const QIBrasileiroVsOutrosPaises = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">QI do Brasileiro: Onde Estamos?</h2>
           <p className="mb-4">
-            Estudos internacionais indicam que o <strong>QI médio do brasileiro está entre 87 e 90 pontos</strong>, 
-            abaixo da média mundial padronizada de 100. Isso coloca o Brasil em uma posição intermediária 
+            No <strong>IIT 2025</strong> a média brasileira fica em torno de <strong>95</strong>; em
+            <strong> Lynn &amp; Becker (2019)</strong>, cerca de <strong>83–87</strong> — ambas abaixo da referência 100.
+            Isso coloca o Brasil em uma posição intermediária
             no ranking global, mas abaixo de muitos países desenvolvidos.
           </p>
 
           <div className="bg-primary/10 p-6 rounded-lg my-6 border-l-4 border-primary">
-            <h3 className="text-xl font-bold mb-4">QI Médio do Brasil: 87-90 pontos</h3>
+            <h3 className="text-xl font-bold mb-4">QI médio do Brasil: ~95 (IIT) · ~83–87 (Lynn)</h3>
             <p className="mb-2">
               <strong>Posição no ranking mundial:</strong> Aproximadamente 80-90 de ~200 países
             </p>
@@ -178,7 +180,7 @@ const QIBrasileiroVsOutrosPaises = () => {
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded border-2 border-red-300">
                 <span><strong>Brasil</strong></span>
-                <span className="text-primary font-bold">87-90 (referência)</span>
+                <span className="text-primary font-bold">~95 IIT / ~83–87 Lynn</span>
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded">
                 <span><strong>México</strong></span>
@@ -233,7 +235,7 @@ const QIBrasileiroVsOutrosPaises = () => {
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded border-2 border-red-300">
                 <span><strong>Brasil</strong></span>
-                <span className="text-primary font-bold">87-90 (referência)</span>
+                <span className="text-primary font-bold">~95 IIT / ~83–87 Lynn</span>
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded">
                 <span><strong>África do Sul</strong></span>
@@ -395,7 +397,7 @@ const QIBrasileiroVsOutrosPaises = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">
-            O QI médio do brasileiro (87-90) está abaixo de países desenvolvidos (10-20 pontos) 
+            O QI médio brasileiro (~95 no IIT, ou ~83–87 em Lynn) está abaixo de vários países de alto desempenho acadêmico 
             e ligeiramente abaixo de alguns países latino-americanos (3-6 pontos). Essas diferenças 
             são explicadas principalmente por fatores ambientais: investimento em educação, qualidade 
             educacional, nutrição, e desigualdade social.

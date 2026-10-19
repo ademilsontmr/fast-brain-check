@@ -10,6 +10,9 @@ import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
 import { generateArticleStructuredData } from "@/utils/articleStructuredData";
+import { getTopCountries, NATIONAL_IQ_SOURCE } from "@/data/nationalIq";
+
+const topTenIit = getTopCountries(10);
 
 const QIMedioPorPais = () => {
   const navigate = useNavigate();
@@ -77,115 +80,42 @@ const QIMedioPorPais = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Ranking Mundial: QI Médio por País</h2>
           <p className="mb-4">
-            Estudos internacionais, como o <strong>Lynn-Vanhanen Dataset</strong> e pesquisas do 
-            <strong> Richard Lynn</strong>, compilaram dados de QI médio de mais de 200 países. 
-            Aqui está o ranking atualizado:
+            Usamos como referência principal o <strong>{NATIONAL_IQ_SOURCE.primary}</strong>
+            (amostra online ~1,35 milhão de pessoas; World Population Review, out/2026).
+            Compilações clássicas como <strong>{NATIONAL_IQ_SOURCE.secondary}</strong> usam outra metodologia
+            e podem divergir — por isso sempre citamos a fonte.
           </p>
 
           <div className="bg-muted/50 p-6 rounded-lg my-6">
-            <h3 className="text-xl font-bold mb-4">Top 20 Países com Maior QI Médio</h3>
+            <h3 className="text-xl font-bold mb-4">Top 10 (IIT 2025)</h3>
             <div className="space-y-3">
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>1. Singapura</strong></span>
-                <span className="text-primary font-bold">108</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>2. Hong Kong</strong></span>
-                <span className="text-primary font-bold">108</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>3. Coreia do Sul</strong></span>
-                <span className="text-primary font-bold">106</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>4. Taiwan</strong></span>
-                <span className="text-primary font-bold">106</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>5. Japão</strong></span>
-                <span className="text-primary font-bold">105</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>6. China</strong></span>
-                <span className="text-primary font-bold">105</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>7. Finlândia</strong></span>
-                <span className="text-primary font-bold">101</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>8. Canadá</strong></span>
-                <span className="text-primary font-bold">101</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>9. Holanda</strong></span>
-                <span className="text-primary font-bold">101</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>10. Suíça</strong></span>
-                <span className="text-primary font-bold">101</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>11. Alemanha</strong></span>
-                <span className="text-primary font-bold">100</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>12. Áustria</strong></span>
-                <span className="text-primary font-bold">100</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>13. Reino Unido</strong></span>
-                <span className="text-primary font-bold">100</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>14. Estados Unidos</strong></span>
-                <span className="text-primary font-bold">98</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>15. França</strong></span>
-                <span className="text-primary font-bold">98</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>16. Bélgica</strong></span>
-                <span className="text-primary font-bold">99</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>17. Nova Zelândia</strong></span>
-                <span className="text-primary font-bold">100</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>18. Austrália</strong></span>
-                <span className="text-primary font-bold">98</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>19. Itália</strong></span>
-                <span className="text-primary font-bold">97</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-background rounded">
-                <span><strong>20. Espanha</strong></span>
-                <span className="text-primary font-bold">97</span>
-              </div>
+              {topTenIit.map((c) => (
+                <div key={c.rank} className="flex justify-between items-center p-3 bg-background rounded">
+                  <span><strong>{c.rank}. {c.country}</strong></span>
+                  <span className="text-primary font-bold">{c.iq}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <h3 className="text-2xl font-bold mt-8 mb-4">Brasil e América Latina</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4">Brasil e América Latina (IIT 2025)</h3>
           <div className="bg-muted/50 p-6 rounded-lg my-6">
             <div className="space-y-3">
               <div className="flex justify-between items-center p-3 bg-background rounded">
                 <span><strong>Brasil</strong></span>
-                <span className="text-primary font-bold">87</span>
+                <span className="text-primary font-bold">~{NATIONAL_IQ_SOURCE.brazilIit}</span>
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded">
                 <span><strong>Argentina</strong></span>
-                <span className="text-primary font-bold">93</span>
+                <span className="text-primary font-bold">97</span>
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded">
                 <span><strong>Chile</strong></span>
-                <span className="text-primary font-bold">90</span>
+                <span className="text-primary font-bold">96</span>
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded">
                 <span><strong>Uruguai</strong></span>
-                <span className="text-primary font-bold">92</span>
+                <span className="text-primary font-bold">96</span>
               </div>
               <div className="flex justify-between items-center p-3 bg-background rounded">
                 <span><strong>México</strong></span>
@@ -337,11 +267,11 @@ const QIMedioPorPais = () => {
           },
           {
             question: "Qual o QI médio do Brasil?",
-            answer: "Estudos internacionais costumam estimar o Brasil entre 85 e 90, abaixo da média global. Fatores como educação e nutrição explicam parte da diferença."
+            answer: "No IIT 2025 a média brasileira fica em torno de 95. Compilações clássicas (Lynn & Becker, 2019) estimavam cerca de 83–87. A diferença vem da metodologia — nenhuma substitui um teste individual."
           },
           {
             question: "O país com maior QI médio é qual?",
-            answer: "Singapura e Hong Kong aparecem no topo de rankings compilados, com médias em torno de 108. Os dados variam conforme a fonte."
+            answer: "No IIT 2025, Hong Kong lidera (~108), seguido por Coreia do Sul e China (~106–107). Rankings antigos às vezes colocavam Singapura no topo. Sempre confira a fonte."
           },
           {
             question: "QI médio do país define meu QI?",

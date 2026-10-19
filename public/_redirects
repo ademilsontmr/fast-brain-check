@@ -1,5 +1,10 @@
-# Cloudflare Pages
-#
-# Sem catch-all /* → /index.html (isso pode devolver HTML no lugar de CSS/JS).
-# Sem 404.html no root = Pages usa fallback SPA nativo para /teste, /pagamento, etc.
-# Artigos em /blog/:slug/index.html já são servidos automaticamente pelo Pages.
+# Redirects 301 — consolidação SEO (fonte: scripts/seo-redirects.mjs)
+/blog/qi-medio-brasil /blog/media-qi-brasil 301
+/blog/nature-vs-nurture-genetica-ambiente-qi /blog/genetica-vs-ambiente-qi 301
+/blog/qi-e-genetica-quanto-nasce-aprende /blog/genetica-vs-ambiente-qi 301
+/blog/qi-e-genetica-quanto-nasce-quanto-aprende /blog/genetica-vs-ambiente-qi 301
+/blog/teste-qi-gratis /blog/teste-qi-gratuito-e-confiavel 301
+/blog/teste-qi-gratuito-sem-cadastro /blog/teste-qi-gratuito-e-confiavel 301
+/blog/como-descobrir-meu-qi /blog/como-saber-meu-qi 301
+/blog/melhores-testes-qi-online-2025 /blog/melhores-testes-qi-online-2026 301
+/blog/inteligencias-multiplas-monetizar /blog/inteligencia-multiplas-monetizar 301

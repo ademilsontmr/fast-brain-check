@@ -14,7 +14,7 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 const ComoDescubrirMeuQI = () => {
   const navigate = useNavigate();
 
-  const articleUrl = "https://bomqi.com.br/blog/como-descobrir-meu-qi";
+  const articleUrl = "https://bomqi.com.br/blog/como-saber-meu-qi";
   const articleTitle = "Como Descobrir Meu QI: 5 Formas Confiáveis em 2026";
   const articleDescription = "Descubra como saber seu QI de forma confiável. Comparamos os 5 melhores métodos: testes online, psicólogos, apps e mais. Qual é o mais preciso?";
 

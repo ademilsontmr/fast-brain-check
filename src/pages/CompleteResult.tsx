@@ -7,6 +7,7 @@ import { calculateIQ, getCelebrityComparison, getCognitiveStrength } from "@/typ
 import { useToast } from "@/hooks/use-toast";
 import { getRank, getResultByToken } from "@/services/api";
 import { useSEO } from "@/hooks/use-seo";
+import SiteHeader from "@/components/SiteHeader";
 
 // Função para gerar um número fixo baseado em uma string (token/userId)
 const generateFixedShareCount = (seed: string): number => {
@@ -283,17 +284,7 @@ const CompleteResult = () => {
         </div>
       )}
 
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-40">
-        <div className="container mx-auto px-4 py-4">
-          <div 
-            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-            onClick={() => navigate("/")}
-          >
-            <Brain className="w-8 h-8 text-primary" />
-            <div className="text-2xl font-bold">BomQI</div>
-          </div>
-        </div>
-      </header>
+      <SiteHeader showNav={false} showCta={false} />
 
       <div className="container mx-auto px-4 py-8 max-w-2xl">
         {/* Social Proof e Urgência - Topo */}

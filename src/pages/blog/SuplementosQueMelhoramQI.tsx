@@ -15,7 +15,7 @@ const SuplementosQueMelhoramQI = () => {
   const navigate = useNavigate();
   
     const articleUrl = "https://bomqi.com.br/blog/suplementos-que-melhoram-qi";
-  const articleTitle = "Suplementos que Melhoram QI: Análise Científica Completa 2025";
+  const articleTitle = "Suplementos que Melhoram QI: Análise Científica Completa 2026";
   const articleDescription = "Descubra quais suplementos realmente melhoram QI baseado em evidências científicas. Análise completa de eficácia, dosagens, segurança e mitos sobre nootrópicos.";
   
   useSEO({
@@ -31,7 +31,7 @@ const SuplementosQueMelhoramQI = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "suplementos-que-melhoram-qi",
-      publishDate: "2024-01-01",
+      publishDate: "2026-08-08",
     })
   );
 
@@ -58,7 +58,7 @@ const SuplementosQueMelhoramQI = () => {
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Novembro de 2025</time>
+          <time>8 de Agosto de 2026</time>
           <span>•</span>
         </div>
 

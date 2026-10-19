@@ -19,7 +19,6 @@ const HabitosQIAlto = lazy(() => import("./pages/blog/HabitosQIAlto"));
 const GeniosEmComum = lazy(() => import("./pages/blog/GeniosEmComum"));
 const TesteQIOnlineGuiaCompleto = lazy(() => import("./pages/blog/TesteQIOnlineGuiaCompleto"));
 const ComoSePrepararTesteQI = lazy(() => import("./pages/blog/ComoSePrepararTesteQI"));
-const MelhoresTestesQIOnline2025 = lazy(() => import("./pages/blog/MelhoresTestesQIOnline2025"));
 const NeuroplasticidadeCerebroEvolui = lazy(() => import("./pages/blog/NeuroplasticidadeCerebroEvolui"));
 const MediaQIBrasil = lazy(() => import("./pages/blog/MediaQIBrasil"));
 const QIProcessosSeletivos = lazy(() => import("./pages/blog/QIProcessosSeletivos"));
@@ -46,7 +45,6 @@ const ComoSaberMeuQISemPagar = lazy(() => import("./pages/blog/ComoSaberMeuQISem
 const CriancasSuperdotadasSinaisCaracteristicas = lazy(() => import("./pages/blog/CriancasSuperdotadasSinaisCaracteristicas"));
 const ImpactoNutricaoDietaFuncaoCognitivaQI = lazy(() => import("./pages/blog/ImpactoNutricaoDietaFuncaoCognitivaQI"));
 const ConexaoQIDesempenhoAcademico = lazy(() => import("./pages/blog/ConexaoQIDesempenhoAcademico"));
-const NatureVsNurtureGeneticaAmbienteQI = lazy(() => import("./pages/blog/NatureVsNurtureGeneticaAmbienteQI"));
 const QIeSucessoCarreira = lazy(() => import("./pages/blog/QIeSucessoCarreira"));
 const QuantoInteligenciaEHerdada = lazy(() => import("./pages/blog/QuantoInteligenciaEHerdada"));
 const DiferencasQIEInteligencia = lazy(() => import("./pages/blog/DiferencasQIEInteligencia"));
@@ -56,7 +54,6 @@ const OQueETesteQI = lazy(() => import("./pages/blog/OQueETesteQI"));
 const OQueEQI = lazy(() => import("./pages/blog/OQueEQI"));
 const ComoQIECalculado = lazy(() => import("./pages/blog/ComoQIECalculado"));
 const QIMedioMundial = lazy(() => import("./pages/blog/QIMedioMundial"));
-const QIMedioBrasil = lazy(() => import("./pages/blog/QIMedioBrasil"));
 const QIAltoCaracteristicas = lazy(() => import("./pages/blog/QIAltoCaracteristicas"));
 const OQueEQIBaixo = lazy(() => import("./pages/blog/OQueEQIBaixo"));
 const ComoInterpretarResultadoQI = lazy(() => import("./pages/blog/ComoInterpretarResultadoQI"));
@@ -69,7 +66,6 @@ const ComoAtivarModoFocoProfundo = lazy(() => import("./pages/blog/ComoAtivarMod
 const QIPodeAumentarAoLongoVida = lazy(() => import("./pages/blog/QIPodeAumentarAoLongoVida"));
 const QICriancasSinaisSuperdotacao = lazy(() => import("./pages/blog/QICriancasSinaisSuperdotacao"));
 const ComoAprenderMaisRapidoNeurociencia = lazy(() => import("./pages/blog/ComoAprenderMaisRapidoNeurociencia"));
-const QIEGeneticaQuantoNasceAprende = lazy(() => import("./pages/blog/QIEGeneticaQuantoNasceAprende"));
 const ComoFicarMaisInteligente = lazy(() => import("./pages/blog/ComoFicarMaisInteligente"));
 const ComoFicarRicoRelacaoQI = lazy(() => import("./pages/blog/ComoFicarRicoRelacaoQI"));
 const ComoFicarRicoInternetQI = lazy(() => import("./pages/blog/ComoFicarRicoInternetQI"));
@@ -79,7 +75,6 @@ const InteligenciaFluidaCristalizadaGanharDinheiro = lazy(() => import("./pages/
 const DopaminaDecisaoSucessoFinanceiro = lazy(() => import("./pages/blog/DopaminaDecisaoSucessoFinanceiro"));
 const QIDeEinstein = lazy(() => import("./pages/blog/QIDeEinstein"));
 const TesteQICriancas = lazy(() => import("./pages/blog/TesteQICriancas"));
-const ComoDescubrirMeuQI = lazy(() => import("./pages/blog/ComoDescubrirMeuQI"));
 const InteligenciaPraticaTeoricaDinheiro = lazy(() => import("./pages/blog/InteligenciaPraticaTeoricaDinheiro"));
 const QIEmpresarialVsQIAcademico = lazy(() => import("./pages/blog/QIEmpresarialVsQIAcademico"));
 const InteligenciaSocialVsQI = lazy(() => import("./pages/blog/InteligenciaSocialVsQI"));
@@ -98,7 +93,6 @@ const ComoSegurancaTrabalhoMelhoraQI = lazy(() => import("./pages/blog/ComoSegur
 const ComoTrabalhadoresMelhoramQI = lazy(() => import("./pages/blog/ComoTrabalhadoresMelhoramQI"));
 const QIEExercicioFisico = lazy(() => import("./pages/blog/QIEExercicioFisico"));
 const QIeAnsiedade = lazy(() => import("./pages/blog/QIeAnsiedade"));
-const TesteQIGratis = lazy(() => import("./pages/blog/TesteQIGratis"));
 const QIBaixoCompleto = lazy(() => import("./pages/blog/QIBaixoCompleto"));
 const QIMedioAdolescentes = lazy(() => import("./pages/blog/QIMedioAdolescentes"));
 const QIMedioCorredores = lazy(() => import("./pages/blog/QIMedioCorredores"));
@@ -148,7 +142,6 @@ const ComoAndarCavaloMelhoraQI = lazy(() => import("./pages/blog/ComoAndarCavalo
 const ComoMedicosMelhoramQI = lazy(() => import("./pages/blog/ComoMedicosMelhoramQI"));
 const InteligenciaAdaptativaSeculo21 = lazy(() => import("./pages/blog/InteligenciaAdaptativaSeculo21"));
 const JogadoresFutebolMaiorQI = lazy(() => import("./pages/blog/JogadoresFutebolMaiorQI"));
-const QIEGeneticaQuantoNasceQuantoAprende = lazy(() => import("./pages/blog/QIEGeneticaQuantoNasceQuantoAprende"));
 const QIVsExperienciaMercado = lazy(() => import("./pages/blog/QIVsExperienciaMercado"));
 const QIVsInteligenciaSocial = lazy(() => import("./pages/blog/QIVsInteligenciaSocial"));
 const TabelaEscalaQI = lazy(() => import("./pages/blog/TabelaEscalaQI.tsx"));
@@ -214,7 +207,6 @@ const QIAdrianaLima = lazy(() => import("./pages/blog/QIAdrianaLima"));
 const TesteQIGratuitoEConfiavel = lazy(() => import("./pages/blog/TesteQIGratuitoEConfiavel"));
 const ComoSaberMeuQI = lazy(() => import("./pages/blog/ComoSaberMeuQI"));
 const TesteQIOficial = lazy(() => import("./pages/blog/TesteQIOficial"));
-const TesteQIGratuitoSemCadastro = lazy(() => import("./pages/blog/TesteQIGratuitoSemCadastro"));
 const TesteQIEmPortugues = lazy(() => import("./pages/blog/TesteQIEmPortugues"));
 const TesteQIComResultadoImediato = lazy(() => import("./pages/blog/TesteQIComResultadoImediato"));
 const OQueEQiMedio = lazy(() => import("./pages/blog/OQueEQiMedio"));
@@ -228,6 +220,12 @@ const TesteRaciocinioLogicoOnline = lazy(() => import("./pages/blog/TesteRacioci
 const SuperdotacaoOQueE = lazy(() => import("./pages/blog/SuperdotacaoOQueE"));
 const QIFaixasPontuacao = lazy(() => import("./pages/blog/QIFaixasPontuacao"));
 const OndeFazerTesteQIBrasil = lazy(() => import("./pages/blog/OndeFazerTesteQIBrasil"));
+const ComoFazerTesteDeQI = lazy(() => import("./pages/blog/ComoFazerTesteDeQI"));
+const QI120EBom = lazy(() => import("./pages/blog/QI120EBom"));
+const QI130Significa = lazy(() => import("./pages/blog/QI130Significa"));
+const IdadeCertaTesteQI = lazy(() => import("./pages/blog/IdadeCertaTesteQI"));
+const QualMeuQI = lazy(() => import("./pages/blog/QualMeuQI"));
+const MelhoresTestesQIOnline2026 = lazy(() => import("./pages/blog/MelhoresTestesQIOnline2026"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -297,12 +295,16 @@ const App = () => (
             }
           />
           <Route
-            path="/blog/melhores-testes-qi-online-2025"
+            path="/blog/melhores-testes-qi-online-2026"
             element={
               <Suspense fallback={<ArticleLoading />}>
-                <MelhoresTestesQIOnline2025 />
+                <MelhoresTestesQIOnline2026 />
               </Suspense>
             }
+          />
+          <Route
+            path="/blog/melhores-testes-qi-online-2025"
+            element={<Navigate to="/blog/melhores-testes-qi-online-2026" replace />}
           />
           <Route
             path="/blog/neuroplasticidade-cerebro-evolui"
@@ -530,11 +532,7 @@ const App = () => (
           />
           <Route
             path="/blog/nature-vs-nurture-genetica-ambiente-qi"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <NatureVsNurtureGeneticaAmbienteQI />
-              </Suspense>
-            }
+            element={<Navigate to="/blog/genetica-vs-ambiente-qi" replace />}
           />
           <Route
             path="/blog/qi-e-sucesso-carreira"
@@ -610,11 +608,7 @@ const App = () => (
           />
           <Route
             path="/blog/qi-medio-brasil"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <QIMedioBrasil />
-              </Suspense>
-            }
+            element={<Navigate to="/blog/media-qi-brasil" replace />}
           />
           <Route
             path="/blog/qi-alto-caracteristicas"
@@ -714,11 +708,7 @@ const App = () => (
           />
           <Route
             path="/blog/qi-e-genetica-quanto-nasce-aprende"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <QIEGeneticaQuantoNasceAprende />
-              </Suspense>
-            }
+            element={<Navigate to="/blog/genetica-vs-ambiente-qi" replace />}
           />
           <Route
             path="/blog/como-ficar-mais-inteligente"
@@ -794,11 +784,7 @@ const App = () => (
           />
           <Route
             path="/blog/como-descobrir-meu-qi"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <ComoDescubrirMeuQI />
-              </Suspense>
-            }
+            element={<Navigate to="/blog/como-saber-meu-qi" replace />}
           />
           <Route
             path="/blog/inteligencia-pratica-teorica-dinheiro"
@@ -942,11 +928,7 @@ const App = () => (
           />
           <Route
             path="/blog/teste-qi-gratis"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <TesteQIGratis />
-              </Suspense>
-            }
+            element={<Navigate to="/blog/teste-qi-gratuito-e-confiavel" replace />}
           />
           <Route
             path="/blog/qi-baixo"
@@ -1342,11 +1324,7 @@ const App = () => (
           />
           <Route
             path="/blog/qi-e-genetica-quanto-nasce-quanto-aprende"
-            element={
-              <Suspense fallback={<ArticleLoading />}>
-                <QIEGeneticaQuantoNasceQuantoAprende />
-              </Suspense>
-            }
+            element={<Navigate to="/blog/genetica-vs-ambiente-qi" replace />}
           />
           <Route
             path="/blog/qi-vs-experiencia-mercado"
@@ -1603,7 +1581,7 @@ const App = () => (
           <Route path="/blog/teste-qi-gratuito-e-confiavel" element={<Suspense fallback={<ArticleLoading />}><TesteQIGratuitoEConfiavel /></Suspense>} />
           <Route path="/blog/como-saber-meu-qi" element={<Suspense fallback={<ArticleLoading />}><ComoSaberMeuQI /></Suspense>} />
           <Route path="/blog/teste-qi-oficial" element={<Suspense fallback={<ArticleLoading />}><TesteQIOficial /></Suspense>} />
-          <Route path="/blog/teste-qi-gratuito-sem-cadastro" element={<Suspense fallback={<ArticleLoading />}><TesteQIGratuitoSemCadastro /></Suspense>} />
+          <Route path="/blog/teste-qi-gratuito-sem-cadastro" element={<Navigate to="/blog/teste-qi-gratuito-e-confiavel" replace />} />
           <Route path="/blog/teste-qi-em-portugues" element={<Suspense fallback={<ArticleLoading />}><TesteQIEmPortugues /></Suspense>} />
           <Route path="/blog/teste-qi-com-resultado-imediato" element={<Suspense fallback={<ArticleLoading />}><TesteQIComResultadoImediato /></Suspense>} />
           <Route path="/blog/o-que-e-qi-medio" element={<Suspense fallback={<ArticleLoading />}><OQueEQiMedio /></Suspense>} />
@@ -1635,6 +1613,46 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <OndeFazerTesteQIBrasil />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/como-fazer-teste-de-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <ComoFazerTesteDeQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-120-e-bom"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QI120EBom />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-130-significa"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QI130Significa />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/idade-certa-para-fazer-teste-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <IdadeCertaTesteQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qual-meu-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QualMeuQI />
               </Suspense>
             }
           />

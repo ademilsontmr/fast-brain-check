@@ -1,16 +1,38 @@
 ﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, CheckCircle, Sparkles, TrendingUp, Users, Zap, UserX, Clock, Globe, ArrowRight } from "lucide-react";
+import {
+  Brain,
+  CheckCircle,
+  TrendingUp,
+  Zap,
+  Clock,
+  Globe,
+  ArrowRight,
+  BookOpen,
+  ChevronDown,
+  Target,
+  BarChart3,
+  Users,
+} from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useCallback } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { getSessionState, clearSession, SessionState } from "@/lib/session";
-import heroBrain from "@/assets/hero-brain.png";
 import Footer from "@/components/Footer";
+import SiteHeader from "@/components/SiteHeader";
+import MobileStickyTestCta from "@/components/MobileStickyTestCta";
+import { DEFAULT_OG_IMAGE } from "@/constants/site";
 import { getCountryFlag } from "@/utils/countryFlags";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
 import { useSEO } from "@/hooks/use-seo";
+import {
+  BRAZIL_IQ,
+  getTopCountries,
+  NATIONAL_IQ_SOURCE,
+} from "@/data/nationalIq";
+
+const homeTopCountries = getTopCountries(30);
 
 const Index = () => {
   const navigate = useNavigate();
@@ -47,6 +69,7 @@ const Index = () => {
     keywords: "teste de QI, teste de QI online, teste de QI confiável, teste de inteligência online, descobrir QI, teste QI rápido, avaliação QI, medir inteligência",
     url: "https://bomqi.com.br/",
     type: "website",
+    image: DEFAULT_OG_IMAGE,
   });
 
   // Structured Data para SEO e Rich Results
@@ -56,7 +79,7 @@ const Index = () => {
       "@type": "Organization",
       "name": "BomQI",
       "url": "https://bomqi.com.br",
-      "logo": "https://bomqi.com.br/favicon-brain-icon.png",
+      "logo": "https://bomqi.com.br/og-image.jpg",
       "description": "Teste de QI online confiável. Resultado completo com análise científica em minutos.",
       "sameAs": [],
       "contactPoint": {
@@ -97,315 +120,273 @@ const Index = () => {
   ]);
 
   return (
-    <div className="min-h-screen bg-gradient-hero">
-      {/* Header */}
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div 
-              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-              onClick={() => navigate("/")}
-            >
-              <Brain className="w-8 h-8 text-primary" />
-              <div className="text-2xl font-bold">BomQI</div>
-            </div>
-            
-            <nav className="hidden md:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
-              <button
-                onClick={() => navigate("/blog")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Blog
-              </button>
-              <button
-                onClick={() => navigate("/como-funciona")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Como Funciona
-              </button>
-            </nav>
-            
-            <Button onClick={() => handleStartQuiz()}>
-              Fazer o Teste
-            </Button>
-          </div>
-        </div>
-      </header>
+    <div className="home-guide min-h-screen">
+      <SiteHeader onStartTest={handleStartQuiz} />
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div className="animate-fade-in">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6 animate-scale-in">
-              <Sparkles className="w-4 h-4" />
-              <span className="text-sm font-semibold">Teste de QI Científico</span>
+      {/* Hero — composição centrada */}
+      <section className="relative overflow-hidden">
+        <div className="container mx-auto px-4 pt-16 pb-12 md:pt-24 md:pb-16">
+          <div className="mx-auto max-w-3xl text-center animate-fade-in">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/80 px-4 py-1.5 text-sm text-muted-foreground shadow-sm">
+              <Brain className="h-4 w-4 text-primary" />
+              <span>Teste de QI online · resultado em minutos</span>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              Descubra Seu QI em 3 Minutos
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Teste de QI online científico e confiável. Resultado completo em minutos.
+
+            <div className="mb-8 flex items-center justify-center gap-3">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-md animate-scale-in">
+                <Zap className="h-7 w-7" strokeWidth={2.25} />
+              </div>
+              <div
+                className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[hsl(222_40%_18%)] text-white shadow-md animate-scale-in"
+                style={{ animationDelay: "80ms" }}
+              >
+                <BookOpen className="h-7 w-7" strokeWidth={2} />
+              </div>
+            </div>
+
+            <p className="mb-3 font-display text-3xl md:text-4xl text-primary tracking-tight">
+              BomQI
             </p>
-            
-            {/* Badges sutis */}
-            <div className="flex flex-wrap items-center gap-4 mb-8">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <UserX className="w-4 h-4 text-primary" />
-                </div>
-                <span>Sem cadastro</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Clock className="w-4 h-4 text-primary" />
-                </div>
-                <span>3 minutos</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Zap className="w-4 h-4 text-primary" />
-                </div>
-                <span>Super simples</span>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+
+            <h1 className="mb-6 text-4xl leading-[1.12] text-foreground md:text-5xl lg:text-[3.35rem]">
+              Descubra seu QI com clareza — teste rápido, sério e fácil de entender
+            </h1>
+
+            <p className="mx-auto mb-9 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+              Avalie raciocínio lógico e velocidade mental em cerca de 3 minutos.
+              Depois, veja seu QI, percentil e onde você se posiciona.
+            </p>
+
+            <div className="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
               <Button
                 onClick={() => handleStartQuiz()}
                 size="lg"
-                className="shadow-elegant text-lg px-8 hover-scale group"
+                className="rounded-xl px-8 text-base font-semibold shadow-elegant hover:brightness-105 group"
               >
-                Começar o Teste
-                <Sparkles className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
+                Começar o teste
+                <ArrowRight className="ml-1.5 h-5 w-5 transition-transform group-hover:translate-x-0.5" />
               </Button>
-              
-              <Button
-                onClick={() => navigate("/sobre-o-teste")}
-                size="lg"
-                variant="outline"
-                className="text-lg px-8"
-              >
-                Como Funciona
-              </Button>
-            </div>
-            
-            <div className="flex items-center gap-6 pt-4 border-t border-border/50">
-              <div className="flex items-center gap-2 text-sm">
-                <div className="flex -space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background" />
-                  <div className="w-8 h-8 rounded-full bg-accent/20 border-2 border-background" />
-                  <div className="w-8 h-8 rounded-full bg-primary/30 border-2 border-background" />
-                </div>
-                <span className="text-muted-foreground">
-                  <span className="font-bold text-foreground">50.000+</span> pessoas já testaram
-                </span>
+              <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[15px]">
+                <button
+                  type="button"
+                  onClick={() => navigate("/sobre-o-teste")}
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Como funciona
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navigate("/blog")}
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Guias de QI
+                </button>
               </div>
             </div>
+
+            <p className="text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">50.000+</span> pessoas já testaram · sem cadastro complicado
+            </p>
           </div>
-          
-          <div className="flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="relative">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl animate-pulse" />
-              
-              <img
-                src={heroBrain}
-                alt="Cérebro estilizado representando inteligência"
-                className="w-full max-w-md rounded-2xl shadow-elegant relative z-10 hover-scale"
-              />
-              
-              {/* Floating stats */}
-              <div className="absolute -top-4 -right-4 bg-background border border-border rounded-2xl p-4 shadow-elegant animate-scale-in z-20" style={{ animationDelay: '0.4s' }}>
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-primary" />
-                  <div>
-                    <div className="text-2xl font-bold">98%</div>
-                    <div className="text-xs text-muted-foreground">Precisão</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-background border border-border rounded-2xl p-4 shadow-elegant animate-scale-in z-20" style={{ animationDelay: '0.6s' }}>
-                <div className="flex items-center gap-2">
-                  <Brain className="w-5 h-5 text-accent" />
-                  <div>
-                    <div className="text-2xl font-bold">3 min</div>
-                    <div className="text-xs text-muted-foreground">Duração</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+          <div className="mt-14 flex justify-center text-muted-foreground/70 animate-bounce-subtle">
+            <ChevronDown className="h-6 w-6" aria-hidden />
           </div>
         </div>
       </section>
 
-      {/* Como Funciona */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Como Funciona</h2>
-          <p className="text-xl text-muted-foreground">
-            Simples, rápido e preciso
+      {/* Como funciona — passos limpos */}
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+            Em 3 passos
+          </p>
+          <h2 className="mb-3 text-3xl md:text-4xl text-foreground">Como funciona o teste</h2>
+          <p className="text-lg text-muted-foreground">Simples, rápido e com resultado interpretável</p>
+        </div>
+
+        <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
+          {[
+            {
+              n: "1",
+              title: "Responda 30 perguntas",
+              body: "Raciocínio lógico, padrões e velocidade — no seu ritmo, em poucos minutos.",
+              tint: "bg-[hsl(210_60%_96%)]",
+              icon: Target,
+            },
+            {
+              n: "2",
+              title: "Veja a prévia do seu nível",
+              body: "Entenda sua faixa antes de desbloquear o QI exato e a análise completa.",
+              tint: "bg-[hsl(256_55%_95%)]",
+              icon: BarChart3,
+            },
+            {
+              n: "3",
+              title: "Desbloqueie o resultado",
+              body: "QI, percentil, ranking e leitura clara do seu desempenho cognitivo.",
+              tint: "bg-[hsl(160_35%_94%)]",
+              icon: Brain,
+            },
+          ].map((step) => (
+            <div
+              key={step.n}
+              className={`rounded-2xl border border-border/70 ${step.tint} p-7 transition-shadow hover:shadow-elegant`}
+            >
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-background/80 text-primary shadow-sm">
+                <step.icon className="h-6 w-6" strokeWidth={1.75} />
+              </div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Passo {step.n}
+              </p>
+              <h3 className="mb-2 text-xl text-foreground">{step.title}</h3>
+              <p className="text-[15px] leading-relaxed text-muted-foreground">{step.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Hub de exploração — cards editoriais */}
+      <section className="container mx-auto px-4 py-8 md:py-12">
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <h2 className="mb-3 text-3xl md:text-4xl text-foreground">Explore o BomQI</h2>
+          <p className="text-lg text-muted-foreground">
+            Teste, compare médias e leia guias práticos sobre inteligência
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <Card className="p-6 text-center shadow-elegant">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-primary">1</span>
-            </div>
-            <h3 className="text-xl font-bold mb-2">Responda 30 perguntas rápidas</h3>
-            <p className="text-muted-foreground">
-              Teste suas habilidades de raciocínio lógico, matemático e verbal
-            </p>
-          </Card>
-
-          <Card className="p-6 text-center shadow-elegant">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-primary">2</span>
-            </div>
-            <h3 className="text-xl font-bold mb-2">Veja uma prévia do seu nível</h3>
-            <p className="text-muted-foreground">
-              Descubra sua faixa de inteligência antes de desbloquear o QI exato
-            </p>
-          </Card>
-
-          <Card className="p-6 text-center shadow-elegant">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-primary">3</span>
-            </div>
-            <h3 className="text-xl font-bold mb-2">Desbloqueie o resultado completo</h3>
-            <p className="text-muted-foreground">
-              QI exato, ranking e análise detalhada do seu desempenho
-            </p>
-          </Card>
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              to: "/teste",
+              onClick: true,
+              label: "Teste de QI",
+              title: "Faça o teste agora",
+              excerpt: "Resultado com QI, percentil e análise — em cerca de 3 minutos.",
+              tint: "bg-[hsl(256_60%_95%)]",
+              icon: Zap,
+              cta: "Começar →",
+            },
+            {
+              to: "/qi-por-pais",
+              label: "Dados globais",
+              title: "QI médio por país",
+              excerpt: "Veja o ranking mundial e onde o Brasil aparece na média.",
+              tint: "bg-[hsl(210_55%_95%)]",
+              icon: Globe,
+              cta: "Ver ranking →",
+            },
+            {
+              to: "/blog/qual-meu-qi",
+              label: "Guia prático",
+              title: "Qual meu QI?",
+              excerpt: "Descubra seu score agora, entenda as faixas e o que fazer com o resultado.",
+              tint: "bg-[hsl(340_40%_96%)]",
+              icon: BookOpen,
+              cta: "Ler guia →",
+            },
+            {
+              to: "/blog/qi-de-famosos",
+              label: "Curiosidades",
+              title: "QI de famosos",
+              excerpt: "Estimativas e contexto sobre personalidades conhecidas.",
+              tint: "bg-[hsl(280_30%_96%)]",
+              icon: Users,
+              cta: "Ver índice →",
+            },
+            {
+              to: "/blog/teste-qi-gratuito-e-confiavel",
+              label: "Confiabilidade",
+              title: "Teste confiável",
+              excerpt: "Critérios para escolher um teste sério e interpretar o score.",
+              tint: "bg-[hsl(160_35%_94%)]",
+              icon: CheckCircle,
+              cta: "Ler artigo →",
+            },
+            {
+              to: "/como-funciona",
+              label: "Método",
+              title: "Como o BomQI funciona",
+              excerpt: "O que medimos, quanto tempo leva e o que vem no resultado.",
+              tint: "bg-[hsl(220_25%_95%)]",
+              icon: Clock,
+              cta: "Saiba mais →",
+            },
+          ].map((item) => {
+            const Icon = item.icon;
+            const inner = (
+              <>
+                <div className={`-mx-6 -mt-6 mb-5 flex h-28 items-center justify-center rounded-t-2xl ${item.tint}`}>
+                  <Icon className="h-10 w-10 text-primary" strokeWidth={1.5} />
+                </div>
+                <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+                  {item.label}
+                </p>
+                <h3 className="mb-2 text-xl text-foreground">{item.title}</h3>
+                <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">{item.excerpt}</p>
+                <span className="text-sm font-semibold text-primary">{item.cta}</span>
+              </>
+            );
+            const className =
+              "flex h-full flex-col rounded-2xl border border-border/70 bg-background p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-elegant";
+            if (item.onClick) {
+              return (
+                <button key={item.to} type="button" onClick={() => handleStartQuiz()} className={`${className} text-left`}>
+                  {inner}
+                </button>
+              );
+            }
+            return (
+              <Link key={item.to} to={item.to} className={className}>
+                {inner}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
       {/* Médias de QI por País */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
-            <Globe className="w-5 h-5" />
-            <span className="text-sm font-semibold">Dados Globais</span>
-          </div>
-          <h2 className="text-4xl font-bold mb-4">
-            Médias de QI por País
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Descubra como o Brasil se compara com outros países do mundo. Os dados são baseados em estudos científicos internacionais sobre inteligência.
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+            Dados globais
+          </p>
+          <h2 className="mb-3 text-3xl md:text-4xl text-foreground">Médias de QI por país</h2>
+          <p className="text-lg text-muted-foreground">
+            Fonte: {NATIONAL_IQ_SOURCE.primary} — amostra online global. Veja como o Brasil se compara.
           </p>
         </div>
 
-        <Card className="p-8 shadow-elegant max-w-6xl mx-auto">
+        <Card className="max-w-6xl mx-auto rounded-2xl border-border/70 p-8 shadow-sm">
           <div className="grid md:grid-cols-3 gap-6">
-            {/* Coluna 1 - Top 10 */}
-            <div className="space-y-2">
-              <h3 className="text-lg font-bold mb-4 text-center pb-2 border-b border-border">
-                Top 10 Países
-              </h3>
-              {[
-                { rank: 1, country: "Singapura", iq: 108 },
-                { rank: 2, country: "Hong Kong", iq: 108 },
-                { rank: 3, country: "Taiwan", iq: 106 },
-                { rank: 4, country: "Coreia do Sul", iq: 106 },
-                { rank: 5, country: "Japão", iq: 105 },
-                { rank: 6, country: "China", iq: 104 },
-                { rank: 7, country: "Eslovênia", iq: 103 },
-                { rank: 8, country: "Suíça", iq: 102 },
-                { rank: 9, country: "Holanda", iq: 102 },
-                { rank: 10, country: "Coreia do Norte", iq: 102 },
-              ].map((item) => (
-                <div
-                  key={item.rank}
-                  className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-bold text-muted-foreground w-6">
-                      {item.rank}.
-                    </span>
-                    <span className="text-xl">{getCountryFlag(item.country)}</span>
-                    <span className="font-medium">{item.country}</span>
+            {[
+              { title: "Top 10", slice: homeTopCountries.slice(0, 10) },
+              { title: "Ranks 11–20", slice: homeTopCountries.slice(10, 20) },
+              { title: "Ranks 21–30", slice: homeTopCountries.slice(20, 30) },
+            ].map((col) => (
+              <div key={col.title} className="space-y-2">
+                <h3 className="text-lg font-bold mb-4 text-center pb-2 border-b border-border">
+                  {col.title}
+                </h3>
+                {col.slice.map((item) => (
+                  <div
+                    key={item.rank}
+                    className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-sm font-bold text-muted-foreground w-6">
+                        {item.rank}.
+                      </span>
+                      <span className="text-xl">{getCountryFlag(item.country)}</span>
+                      <span className="font-medium">{item.country}</span>
+                    </div>
+                    <span className="font-bold text-primary">{item.iq}</span>
                   </div>
-                  <span className="font-bold text-primary">{item.iq}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Coluna 2 - Ranks 11-20 */}
-            <div className="space-y-2">
-              <h3 className="text-lg font-bold mb-4 text-center pb-2 border-b border-border">
-                Ranks 11-20
-              </h3>
-              {[
-                { rank: 11, country: "Macau", iq: 101 },
-                { rank: 12, country: "Islândia", iq: 101 },
-                { rank: 13, country: "Finlândia", iq: 101 },
-                { rank: 14, country: "Canadá", iq: 101 },
-                { rank: 15, country: "Bélgica", iq: 100 },
-                { rank: 16, country: "Alemanha", iq: 100 },
-                { rank: 17, country: "Reino Unido", iq: 100 },
-                { rank: 18, country: "Áustria", iq: 100 },
-                { rank: 19, country: "Nova Zelândia", iq: 100 },
-                { rank: 20, country: "Israel", iq: 100 },
-              ].map((item) => (
-                <div
-                  key={item.rank}
-                  className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-bold text-muted-foreground w-6">
-                      {item.rank}.
-                    </span>
-                    <span className="text-xl">{getCountryFlag(item.country)}</span>
-                    <span className="font-medium">{item.country}</span>
-                  </div>
-                  <span className="font-bold text-primary">{item.iq}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Coluna 3 - Ranks 21-30 + Brasil */}
-            <div className="space-y-2">
-              <h3 className="text-lg font-bold mb-4 text-center pb-2 border-b border-border">
-                Ranks 21-30
-              </h3>
-              {[
-                { rank: 21, country: "Malta", iq: 99 },
-                { rank: 22, country: "Eslováquia", iq: 99 },
-                { rank: 23, country: "Noruega", iq: 99 },
-                { rank: 24, country: "Suécia", iq: 99 },
-                { rank: 25, country: "Luxemburgo", iq: 99 },
-                { rank: 26, country: "Dinamarca", iq: 99 },
-                { rank: 27, country: "República Tcheca", iq: 99 },
-                { rank: 28, country: "Estônia", iq: 99 },
-                { rank: 29, country: "Austrália", iq: 99 },
-                { rank: 30, country: "França", iq: 98 },
-              ].map((item) => (
-                <div
-                  key={item.rank}
-                  className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-bold text-muted-foreground w-6">
-                      {item.rank}.
-                    </span>
-                    <span className="text-xl">{getCountryFlag(item.country)}</span>
-                    <span className="font-medium">{item.country}</span>
-                  </div>
-                  <span className="font-bold text-primary">{item.iq}</span>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ))}
           </div>
 
-          {/* Botão Ver Ranking Completo */}
           <div className="text-center mt-8 mb-6">
             <Button
               onClick={() => navigate("/qi-por-pais")}
@@ -418,7 +399,6 @@ const Index = () => {
             </Button>
           </div>
 
-          {/* Brasil destacado */}
           <div className="pt-6 border-t border-border">
             <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
               <div className="flex items-center justify-between">
@@ -427,26 +407,26 @@ const Index = () => {
                   <div>
                     <div className="font-bold text-lg">Brasil</div>
                     <div className="text-sm text-muted-foreground">
-                      Média de QI: 87 (Rank ~70)
+                      IIT 2025: ~{NATIONAL_IQ_SOURCE.brazilIit} (≈ {NATIONAL_IQ_SOURCE.brazilRankIit}º)
                     </div>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-primary">87</div>
+                  <div className="text-2xl font-bold text-primary">{BRAZIL_IQ.iq}</div>
                   <div className="text-xs text-muted-foreground">QI médio</div>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-3">
-                O Brasil está abaixo da média global (100). Faça o teste e descubra se você está acima da média brasileira!
+                Compilações clássicas (Lynn &amp; Becker) estimavam ~{NATIONAL_IQ_SOURCE.brazilLynnApprox}.
+                A média de referência nos testes é 100 — descubra o seu QI individual no BomQI.
               </p>
             </div>
           </div>
 
-          {/* Nota informativa */}
           <div className="mt-6 text-center">
             <p className="text-sm text-muted-foreground">
-              <strong>Nota:</strong> Os dados são baseados em estudos científicos internacionais. 
-              A média global de QI é 100. Seu resultado individual pode variar significativamente.
+              <strong>Nota:</strong> {NATIONAL_IQ_SOURCE.updatedLabel}. Médias nacionais têm limitações de amostragem;
+              seu resultado individual pode variar bastante.
             </p>
           </div>
         </Card>
@@ -464,18 +444,17 @@ const Index = () => {
       </section>
 
       {/* Distribuição de QI - Curva de Sino */}
-      <section className="container mx-auto px-4 py-16 bg-muted/20 rounded-3xl my-16">
+      <section className="container mx-auto my-8 rounded-3xl bg-muted/30 px-4 py-16 md:py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
-              <Brain className="w-5 h-5" />
-              <span className="text-sm font-semibold">Ciência do QI</span>
-            </div>
-            <h2 className="text-4xl font-bold mb-4">
-              Distribuição de QI na População
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+              Ciência do QI
+            </p>
+            <h2 className="mb-3 text-3xl md:text-4xl text-foreground">
+              Distribuição de QI na população
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Entenda como o QI é distribuído na população mundial e descubra em qual faixa você se encontra
+            <p className="text-lg text-muted-foreground">
+              Entenda a curva normal e em qual faixa você pode se encontrar
             </p>
           </div>
 
@@ -758,14 +737,12 @@ const Index = () => {
       </section>
 
       {/* O que você desbloqueia */}
-      <section className="container mx-auto px-4 py-16 bg-muted/30 rounded-3xl my-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
+      <section className="container mx-auto my-8 rounded-3xl bg-primary/[0.04] px-4 py-16 md:py-20">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <h2 className="mb-3 text-3xl md:text-4xl text-foreground">
             O que você desbloqueia no resultado completo
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Se você é inteligente, prove.
-          </p>
+          <p className="text-lg text-muted-foreground">QI exato, percentil e leitura clara do seu desempenho</p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
@@ -832,51 +809,68 @@ const Index = () => {
       </section>
 
       {/* Depoimentos */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">O que as pessoas estão dizendo</h2>
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <h2 className="text-3xl md:text-4xl text-foreground">O que as pessoas estão dizendo</h2>
         </div>
         <SocialProofCarousel />
       </section>
 
       {/* Guias populares — links internos SEO */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Guias mais buscados</h2>
-        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          <Link to="/blog/teste-qi-gratuito-e-confiavel" className="block p-5 rounded-lg border border-border hover:border-primary/40 hover:shadow-md transition-all">
-            <p className="font-semibold mb-1">Teste confiável e acessível</p>
+      <section className="container mx-auto px-4 pb-8 md:pb-12">
+        <div className="mx-auto mb-8 max-w-2xl text-center">
+          <h2 className="mb-2 text-3xl md:text-4xl text-foreground">Guias mais buscados</h2>
+          <p className="text-muted-foreground">Leituras rápidas para entender QI e testes online</p>
+        </div>
+        <div className="mx-auto grid max-w-4xl gap-4 md:grid-cols-3">
+          <Link
+            to="/blog/teste-qi-gratuito-e-confiavel"
+            className="rounded-2xl border border-border/70 bg-background p-6 transition-all hover:-translate-y-0.5 hover:shadow-elegant"
+          >
+            <BookOpen className="mb-3 h-5 w-5 text-primary" />
+            <p className="font-display mb-1 text-lg text-foreground">Teste confiável</p>
             <p className="text-sm text-muted-foreground">Como escolher um teste sério</p>
           </Link>
-          <Link to="/blog/como-saber-meu-qi" className="block p-5 rounded-lg border border-border hover:border-primary/40 hover:shadow-md transition-all">
-            <p className="font-semibold mb-1">Como saber meu QI</p>
+          <Link
+            to="/blog/como-saber-meu-qi"
+            className="rounded-2xl border border-border/70 bg-background p-6 transition-all hover:-translate-y-0.5 hover:shadow-elegant"
+          >
+            <Target className="mb-3 h-5 w-5 text-primary" />
+            <p className="font-display mb-1 text-lg text-foreground">Como saber meu QI</p>
             <p className="text-sm text-muted-foreground">6 métodos práticos em 2026</p>
           </Link>
-          <Link to="/blog/teste-qi-com-resultado-imediato" className="block p-5 rounded-lg border border-border hover:border-primary/40 hover:shadow-md transition-all">
-            <p className="font-semibold mb-1">Resultado imediato</p>
+          <Link
+            to="/blog/teste-qi-com-resultado-imediato"
+            className="rounded-2xl border border-border/70 bg-background p-6 transition-all hover:-translate-y-0.5 hover:shadow-elegant"
+          >
+            <Zap className="mb-3 h-5 w-5 text-primary" />
+            <p className="font-display mb-1 text-lg text-foreground">Resultado imediato</p>
             <p className="text-sm text-muted-foreground">Score na hora após o teste</p>
           </Link>
         </div>
       </section>
 
       {/* CTA Final */}
-      <section className="container mx-auto px-4 py-16">
-        <Card className="p-12 text-center shadow-elegant bg-gradient-primary text-primary-foreground">
-          <TrendingUp className="w-16 h-16 mx-auto mb-6" />
-          <h2 className="text-4xl font-bold mb-4">
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-[hsl(222_40%_14%)] px-8 py-14 text-center text-white shadow-elegant md:px-12">
+          <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary/25 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
+          <TrendingUp className="relative mx-auto mb-5 h-10 w-10 text-primary" />
+          <h2 className="relative mb-3 text-3xl md:text-4xl">
             Prepare-se. Vamos testar esse cérebro.
           </h2>
-          <p className="text-xl mb-8 opacity-90">
-            3 minutos para descobrir algo que você nunca soube sobre você mesmo
+          <p className="relative mx-auto mb-8 max-w-xl text-lg text-white/75">
+            3 minutos para descobrir algo que você ainda não sabia sobre você mesmo
           </p>
           <Button
             onClick={() => handleStartQuiz()}
             size="lg"
-            variant="secondary"
-            className="text-lg px-8"
+            className="relative rounded-xl bg-primary px-8 text-base font-semibold text-primary-foreground hover:brightness-105"
           >
-            Começar o Teste Agora
+            Começar o teste agora
+            <ArrowRight className="ml-1.5 h-5 w-5" />
           </Button>
-        </Card>
+        </div>
       </section>
 
       {/* Footer */}
@@ -905,6 +899,7 @@ const Index = () => {
         </DialogContent>
       </Dialog>
       <Footer />
+      <MobileStickyTestCta onStart={handleStartQuiz} />
     </div>
   );
 };

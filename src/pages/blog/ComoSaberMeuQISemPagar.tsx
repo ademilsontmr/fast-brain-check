@@ -15,7 +15,7 @@ const ComoSaberMeuQISemPagar = () => {
   const navigate = useNavigate();
   
     const articleUrl = "https://bomqi.com.br/blog/como-saber-meu-qi-sem-pagar";
-  const articleTitle = "Como Saber Meu QI Sem Pagar? Opções Grátis e Confiáveis 2025";
+  const articleTitle = "Como Saber Meu QI Sem Pagar? Opções Grátis e Confiáveis 2026";
   const articleDescription = "Descubra como saber seu QI sem pagar. Lista completa de testes de QI grátis online, opções confiáveis, limitações e como interpretar resultados.";
   
   useSEO({
@@ -31,7 +31,7 @@ const ComoSaberMeuQISemPagar = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "como-saber-meu-qi-sem-pagar",
-      publishDate: "2024-01-01",
+      publishDate: "2026-08-08",
     })
   );
 
@@ -58,7 +58,7 @@ const ComoSaberMeuQISemPagar = () => {
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Novembro de 2025</time>
+          <time>8 de Agosto de 2026</time>
           
         </div>
 
@@ -246,7 +246,7 @@ const ComoSaberMeuQISemPagar = () => {
         {/* FAQ Section */}
         <ArticleFAQ faqs={[
           {
-                    "question": "Como Saber Meu QI Sem Pagar? Opções Grátis e Confiáveis 2025?",
+                    "question": "Como Saber Meu QI Sem Pagar? Opções Grátis e Confiáveis 2026?",
                     "answer": "Sim. Evidências científicas mostram que é possível através de métodos específicos abordados neste artigo."
           },
           {

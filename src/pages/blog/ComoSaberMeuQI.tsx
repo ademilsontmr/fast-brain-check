@@ -1,4 +1,4 @@
-import { Lightbulb, ArrowRight, BookOpen, CheckCircle2, Lightbulb } from "lucide-react";
+import { Lightbulb, ArrowRight, BookOpen, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
@@ -25,6 +25,7 @@ const ComoSaberMeuQI = () => {
       url: articleUrl,
       slug: "como-saber-meu-qi",
       publishDate: "2026-06-26",
+      modifiedDate: "2026-10-19",
     })
   );
 
@@ -65,7 +66,11 @@ const ComoSaberMeuQI = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-3xl font-bold mt-12 mb-6">Guia completo</h2>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Como descobrir meu QI na prática</h2>
+          <p className="mb-6 text-muted-foreground">
+            “Como descobrir meu QI” e “como saber meu QI” são a mesma busca: escolher o método certo para o seu objetivo.
+            Abaixo, os 6 caminhos mais usados no Brasil em 2026.
+          </p>
           
           <h3 className="text-2xl font-bold mt-8 mb-4">Método 1: Teste online científico</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
@@ -123,9 +128,9 @@ const ComoSaberMeuQI = () => {
           </div>
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4">
-            <Link to="/blog/quanto-custa-teste-de-qi" className="text-primary hover:underline">Quanto custa um teste de QI</Link>,{" "}
-            <Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link>,{" "}
-            <Link to="/blog/como-saber-meu-qi-sem-pagar" className="text-primary hover:underline">como saber sem pagar</Link> e{" "}
+            <Link to="/blog/como-fazer-teste-de-qi" className="text-primary hover:underline">Como fazer teste de QI</Link>,{" "}
+            <Link to="/blog/quanto-custa-teste-de-qi" className="text-primary hover:underline">quanto custa</Link>,{" "}
+            <Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">teste gratuito e confiável</Link> e{" "}
             <Link to="/blog/como-medir-qi" className="text-primary hover:underline">como medir QI</Link>.
           </p>
         </div>

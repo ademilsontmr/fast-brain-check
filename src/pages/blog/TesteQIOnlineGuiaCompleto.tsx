@@ -15,7 +15,7 @@ const TesteQIOnlineGuiaCompleto = () => {
   const navigate = useNavigate();
   
     const articleUrl = "https://bomqi.com.br/blog/teste-qi-online-guia-completo";
-  const articleTitle = "Teste de QI Online: Guia Completo 2025";
+  const articleTitle = "Teste de QI Online: Guia Completo 2026";
   const articleDescription = "Entenda metodologias, precisão e como interpretar resultados dos testes de QI online para escolher a melhor avaliação para você.";
   
   useSEO({
@@ -31,7 +31,7 @@ const TesteQIOnlineGuiaCompleto = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "teste-qi-online-guia-completo",
-      publishDate: "2024-01-01",
+      publishDate: "2026-08-08",
     })
   );
 
@@ -53,12 +53,12 @@ const TesteQIOnlineGuiaCompleto = () => {
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Teste de QI Online: Guia Completo 2025 (Metodologias, Precisão e Como Interpretar)
+          Teste de QI Online: Guia Completo 2026 (Metodologias, Precisão e Como Interpretar)
         </h1>
 
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
-          <time>15 de Fevereiro de 2025</time>
+          <time>8 de Agosto de 2026</time>
           
         </div>
 

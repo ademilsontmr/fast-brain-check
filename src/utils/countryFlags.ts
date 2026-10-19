@@ -75,6 +75,19 @@ export const countryFlags: Record<string, string> = {
   "Uganda": "🇺🇬",
   "Zimbábue": "🇿🇼",
   "Malawi": "🇲🇼",
+  "Irã": "🇮🇷",
+  "Mongólia": "🇲🇳",
+  "Chipre": "🇨🇾",
+  "Sri Lanka": "🇱🇰",
+  "Belarus": "🇧🇾",
+  "Estados Unidos": "🇺🇸",
+  "Albânia": "🇦🇱",
+  "Geórgia": "🇬🇪",
+  "Armênia": "🇦🇲",
+  "Sérvia": "🇷🇸",
+  "Romênia": "🇷🇴",
+  "Turquia": "🇹🇷",
+  "Bulgária": "🇧🇬",
 };
 
 export const getCountryFlag = (country: string): string => {

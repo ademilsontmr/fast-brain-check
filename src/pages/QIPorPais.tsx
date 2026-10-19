@@ -4,96 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Brain, Globe, Search, TrendingUp, AlertCircle, ArrowRight } from "lucide-react";
+import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 import { getCountryFlag } from "@/utils/countryFlags";
+import {
+  BRAZIL_IQ,
+  COUNTRY_IQ_RANKING,
+  NATIONAL_IQ_SOURCE,
+} from "@/data/nationalIq";
 
-// Dados completos de QI por país (baseado em estudos científicos internacionais)
-const countriesData = [
-  { rank: 1, country: "Singapura", iq: 108 },
-  { rank: 2, country: "Hong Kong", iq: 108 },
-  { rank: 3, country: "Taiwan", iq: 106 },
-  { rank: 4, country: "Coreia do Sul", iq: 106 },
-  { rank: 5, country: "Japão", iq: 105 },
-  { rank: 6, country: "China", iq: 104 },
-  { rank: 7, country: "Eslovênia", iq: 103 },
-  { rank: 8, country: "Suíça", iq: 102 },
-  { rank: 9, country: "Holanda", iq: 102 },
-  { rank: 10, country: "Coreia do Norte", iq: 102 },
-  { rank: 11, country: "Macau", iq: 101 },
-  { rank: 12, country: "Islândia", iq: 101 },
-  { rank: 13, country: "Finlândia", iq: 101 },
-  { rank: 14, country: "Canadá", iq: 101 },
-  { rank: 15, country: "Bélgica", iq: 100 },
-  { rank: 16, country: "Alemanha", iq: 100 },
-  { rank: 17, country: "Reino Unido", iq: 100 },
-  { rank: 18, country: "Áustria", iq: 100 },
-  { rank: 19, country: "Nova Zelândia", iq: 100 },
-  { rank: 20, country: "Israel", iq: 100 },
-  { rank: 21, country: "Malta", iq: 99 },
-  { rank: 22, country: "Eslováquia", iq: 99 },
-  { rank: 23, country: "Noruega", iq: 99 },
-  { rank: 24, country: "Suécia", iq: 99 },
-  { rank: 25, country: "Luxemburgo", iq: 99 },
-  { rank: 26, country: "Dinamarca", iq: 99 },
-  { rank: 27, country: "República Tcheca", iq: 99 },
-  { rank: 28, country: "Estônia", iq: 99 },
-  { rank: 29, country: "Austrália", iq: 99 },
-  { rank: 30, country: "França", iq: 98 },
-  { rank: 31, country: "Itália", iq: 98 },
-  { rank: 32, country: "Hungria", iq: 98 },
-  { rank: 33, country: "Polônia", iq: 98 },
-  { rank: 34, country: "Espanha", iq: 97 },
-  { rank: 35, country: "Rússia", iq: 97 },
-  { rank: 36, country: "Portugal", iq: 95 },
-  { rank: 37, country: "Grécia", iq: 95 },
-  { rank: 38, country: "Croácia", iq: 95 },
-  { rank: 39, country: "Lituânia", iq: 94 },
-  { rank: 40, country: "Letônia", iq: 94 },
-  { rank: 41, country: "Irlanda", iq: 93 },
-  { rank: 42, country: "Argentina", iq: 93 },
-  { rank: 43, country: "Chile", iq: 93 },
-  { rank: 44, country: "Uruguai", iq: 92 },
-  { rank: 45, country: "Costa Rica", iq: 91 },
-  { rank: 46, country: "México", iq: 90 },
-  { rank: 47, country: "Colômbia", iq: 90 },
-  { rank: 48, country: "Venezuela", iq: 89 },
-  { rank: 49, country: "Equador", iq: 88 },
-  { rank: 50, country: "Peru", iq: 88 },
-  { rank: 51, country: "Brasil", iq: 87 },
-  { rank: 52, country: "Paraguai", iq: 87 },
-  { rank: 53, country: "Bolívia", iq: 87 },
-  { rank: 54, country: "Guatemala", iq: 86 },
-  { rank: 55, country: "El Salvador", iq: 86 },
-  { rank: 56, country: "Honduras", iq: 85 },
-  { rank: 57, country: "Nicarágua", iq: 84 },
-  { rank: 58, country: "Índia", iq: 82 },
-  { rank: 59, country: "Indonésia", iq: 81 },
-  { rank: 60, country: "Filipinas", iq: 81 },
-  { rank: 61, country: "Tailândia", iq: 80 },
-  { rank: 62, country: "Vietnã", iq: 80 },
-  { rank: 63, country: "Malásia", iq: 79 },
-  { rank: 64, country: "Mianmar", iq: 78 },
-  { rank: 65, country: "Camboja", iq: 75 },
-  { rank: 66, country: "Laos", iq: 75 },
-  { rank: 67, country: "África do Sul", iq: 72 },
-  { rank: 68, country: "Quênia", iq: 72 },
-  { rank: 69, country: "Gana", iq: 71 },
-  { rank: 70, country: "Nigéria", iq: 70 },
-  { rank: 71, country: "Tanzânia", iq: 69 },
-  { rank: 72, country: "Etiópia", iq: 68 },
-  { rank: 73, country: "Uganda", iq: 67 },
-  { rank: 74, country: "Zimbábue", iq: 66 },
-  { rank: 75, country: "Malawi", iq: 65 },
-];
+const countriesData = COUNTRY_IQ_RANKING;
 
 const QIPorPais = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
 
   useSEO({
-    title: "QI Médio por País 2025 | Ranking Mundial de Inteligência | BomQI",
-    description: "Descubra o QI médio de cada país do mundo. Veja onde o Brasil está no ranking global de inteligência e compare com outros países. Dados baseados em estudos científicos internacionais.",
+    title: "QI Médio por País 2026 | Ranking Mundial de Inteligência | BomQI",
+    description: `Ranking de QI médio por país atualizado (${NATIONAL_IQ_SOURCE.primary}). Brasil ~${BRAZIL_IQ.iq}. Compare médias e veja limitações dos dados.`,
     keywords: "QI por país, ranking QI mundial, QI médio Brasil, países mais inteligentes, QI por nação, inteligência por país",
   });
 
@@ -101,40 +30,25 @@ const QIPorPais = () => {
     country.country.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const brazilData = countriesData.find((c) => c.country === "Brasil");
+  const brazilData = BRAZIL_IQ;
 
   return (
     <div className="min-h-screen bg-gradient-hero">
       {/* Header */}
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div
-              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
-              onClick={() => navigate("/")}
-            >
-              <Brain className="w-8 h-8 text-primary" />
-              <div className="text-2xl font-bold">BomQI</div>
-            </div>
-            <Button onClick={() => navigate("/teste")}>
-              Fazer o Teste
-            </Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
             <Globe className="w-5 h-5" />
-            <span className="text-sm font-semibold">Dados Globais 2025</span>
+            <span className="text-sm font-semibold">{NATIONAL_IQ_SOURCE.updatedLabel}</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             QI Médio por País
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Descubra o ranking mundial de inteligência. Compare o QI médio do Brasil com outros países e veja onde seu país está posicionado globalmente.
+            Ranking baseado no {NATIONAL_IQ_SOURCE.primary} (amostra online global). Compare o Brasil com outros países — e lembre: média nacional não define o seu QI individual.
           </p>
         </div>
 
@@ -149,24 +63,25 @@ const QIPorPais = () => {
                 <div>
                   <div className="text-2xl font-bold">Brasil</div>
                   <div className="text-muted-foreground">
-                    Rank #{brazilData.rank} no mundo
+                    ≈ {NATIONAL_IQ_SOURCE.brazilRankIit}º no ranking IIT completo
                   </div>
                 </div>
               </div>
               <div className="text-center md:text-right">
                 <div className="text-4xl font-bold text-primary">
-                  {brazilData.iq}
+                  {NATIONAL_IQ_SOURCE.brazilIit}
                 </div>
-                <div className="text-sm text-muted-foreground">QI médio</div>
+                <div className="text-sm text-muted-foreground">QI médio (IIT 2025)</div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  {brazilData.iq < 100 ? "Abaixo da média global (100)" : "Acima da média global"}
+                  Abaixo da média de referência (100)
                 </div>
               </div>
             </div>
             <div className="mt-4 pt-4 border-t border-border">
               <p className="text-sm text-muted-foreground">
-                O Brasil está no rank #{brazilData.rank} mundialmente. A média global de QI é 100. 
-                Faça o teste e descubra se você está acima da média brasileira!
+                No IIT 2025 o Brasil aparece com cerca de <strong>{NATIONAL_IQ_SOURCE.brazilIit}</strong> pontos.
+                Compilações clássicas (Lynn &amp; Becker, 2019) estimavam cerca de {NATIONAL_IQ_SOURCE.brazilLynnApprox}.
+                A diferença vem da metodologia — faça o teste e veja o seu resultado individual.
               </p>
             </div>
           </Card>
@@ -273,24 +188,24 @@ const QIPorPais = () => {
           </h3>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p>
-              <strong>Média Global:</strong> O QI médio global é 100. Países acima de 100 estão acima da média mundial, 
-              enquanto países abaixo de 100 estão abaixo da média.
+              <strong>Fonte:</strong> {NATIONAL_IQ_SOURCE.primary}, amostra online de ~1,35 milhão de participantes
+              (via World Population Review). Compilação acadêmica de referência: {NATIONAL_IQ_SOURCE.secondary}.
             </p>
             <p>
-              <strong>Variações nos Dados:</strong> As médias de QI podem variar entre diferentes estudos devido a 
-              metodologias distintas, períodos de coleta de dados e fatores culturais.
+              <strong>Média de referência:</strong> Em testes padronizados, a média da população de calibração é 100
+              (desvio padrão 15). Médias nacionais variam em torno desse ponto.
             </p>
             <p>
-              <strong>Fatores Influenciadores:</strong> Diversos fatores podem influenciar as médias de QI de uma população, 
-              incluindo qualidade da educação, acesso a recursos, nutrição, ambiente socioeconômico e fatores genéticos.
+              <strong>Limitações:</strong> Testes online sofrem viés de quem decide fazer o teste; amostras por país
+              não são censos. Comparações internacionais são úteis como contexto, não como veredicto sobre pessoas.
             </p>
             <p>
-              <strong>Efeito Flynn:</strong> Ao longo do tempo, as pontuações de QI têm aumentado em muitas populações, 
-              fenômeno conhecido como Efeito Flynn. Isso significa que os dados podem mudar ao longo dos anos.
+              <strong>Educação (contexto):</strong> No PISA 2022 (OCDE), o Brasil marcou 379 em matemática, 410 em leitura
+              e 403 em ciências — abaixo da média OCDE (472 / 476 / 485). Isso ajuda a entender desempenho escolar,
+              que é correlacionado — mas não idêntico — a estimativas de QI nacional.
             </p>
             <p>
-              <strong>Resultado Individual:</strong> É importante lembrar que seu QI individual pode variar significativamente 
-              da média do seu país. Faça o teste para descobrir seu QI pessoal!
+              <strong>Seu resultado:</strong> A média do país não define o seu QI. Faça o teste BomQI para uma leitura individual.
             </p>
           </div>
         </Card>

@@ -14,7 +14,7 @@ import { generateArticleStructuredData } from "@/utils/articleStructuredData";
 const QIMedioBrasil = () => {
   const navigate = useNavigate();
   
-    const articleUrl = "https://bomqi.com.br/blog/qi-medio-brasil";
+    const articleUrl = "https://bomqi.com.br/blog/media-qi-brasil";
   const articleTitle = "QI Médio no Brasil: Qual é e Por Quê?";
   const articleDescription = "Qual o QI médio no Brasil? Descubra o QI médio brasileiro e os fatores que influenciam. Teste seu QI rapidamente!";
   
@@ -31,7 +31,8 @@ const QIMedioBrasil = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-medio-brasil",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 
@@ -64,9 +65,9 @@ const QIMedioBrasil = () => {
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            "Qual o QI médio no Brasil?" é uma pergunta importante sobre inteligência no país. <strong>QI médio no Brasil 
-            é aproximadamente 87</strong>, abaixo da média mundial (~100). Neste artigo, explicamos o QI médio brasileiro, 
-            os fatores que influenciam e por que está abaixo da média mundial.
+            "Qual o QI médio no Brasil?" depende da fonte. No <strong>International IQ Test (IIT) 2025</strong>,
+            a média brasileira fica em torno de <strong>95</strong>. Compilações clássicas (Lynn &amp; Becker, 2019)
+            estimavam cerca de <strong>83–87</strong>. Em ambos os casos, a referência dos testes padronizados é 100.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">QI Médio no Brasil</h2>
@@ -79,13 +80,14 @@ const QIMedioBrasil = () => {
                   QI Médio Brasileiro
                 </h3>
                 <p className="text-blue-800 dark:text-blue-200 mb-2">
-                  <strong>QI médio no Brasil: ~87</strong> (abaixo da média mundial de 100)
+                  <strong>IIT 2025:</strong> ~95 · <strong>Lynn &amp; Becker (2019):</strong> ~83–87
                 </p>
                 <p className="text-blue-800 dark:text-blue-200 mb-2">
-                  <strong>Posição:</strong> similar a outros países latino-americanos
+                  <strong>Contexto escolar:</strong> PISA 2022 (OCDE) — matemática 379, leitura 410, ciências 403
+                  (médias OCDE: 472 / 476 / 485)
                 </p>
                 <p className="text-blue-800 dark:text-blue-200 text-sm">
-                  <strong>Tendência:</strong> QI médio tem aumentado nas últimas décadas com melhorias em educação e desenvolvimento
+                  <strong>Importante:</strong> médias nacionais não definem o QI de cada pessoa; metodologia muda o número
                 </p>
               </div>
             </div>
@@ -132,11 +134,10 @@ const QIMedioBrasil = () => {
               QI Médio por Região
             </h3>
             <ul className="space-y-2 text-green-800 dark:text-green-200">
-              <li>• <strong>Ásia Oriental:</strong> ~105-108 (mais alto)</li>
-              <li>• <strong>Europa:</strong> ~98-101</li>
-              <li>• <strong>América do Norte:</strong> ~98-99</li>
-              <li>• <strong>América Latina:</strong> ~85-93 (Brasil: ~87)</li>
-              <li>• <strong>África:</strong> ~70-85 (mais baixo)</li>
+              <li>• <strong>Ásia Oriental (IIT 2025):</strong> ~106–108 (Hong Kong, Coreia, Japão, China)</li>
+              <li>• <strong>Europa / América do Norte:</strong> tipicamente próximo de 100</li>
+              <li>• <strong>América Latina:</strong> faixa ampla; Brasil ~95 (IIT) ou ~83–87 (Lynn)</li>
+              <li>• <strong>Variação:</strong> amostragem online vs. compilação acadêmica muda o ranking</li>
             </ul>
           </div>
 
@@ -185,9 +186,9 @@ const QIMedioBrasil = () => {
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           
           <p className="mb-4">
-            <strong>QI médio no Brasil é aproximadamente 87</strong>, abaixo da média mundial (~100), mas similar a outros 
-            países latino-americanos. Fatores como educação, nutrição, saúde pública e desenvolvimento econômico influenciam 
-            o QI médio.
+            No IIT 2025 o Brasil fica em torno de <strong>95</strong>; em Lynn &amp; Becker, cerca de <strong>83–87</strong>.
+            Em ambos os casos, fatores como educação, nutrição e desigualdade social influenciam a média — e o PISA 2022
+            confirma desafio educacional (matemática 379 vs. 472 da OCDE).
           </p>
 
           <p className="mb-4">

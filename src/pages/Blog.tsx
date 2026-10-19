@@ -1,24 +1,40 @@
 import { useState, useEffect, useMemo } from "react";
-import { Brain, ArrowRight, Lightbulb, GraduationCap, Target, Users, BookOpen, Award, Zap, BarChart3, Briefcase, Gamepad2, Sparkles, Cpu, Trophy, TrendingUp, Dna, Calculator, Globe, TrendingDown, FileText, Leaf, AlertTriangle, Star, DollarSign, ChevronLeft, ChevronRight, Ruler, Grid3x3, Clock, User, Laptop, Rocket, MapPin, Shield } from "lucide-react";
+import { Brain, ArrowRight, Lightbulb, GraduationCap, Target, Users, BookOpen, Award, Zap, BarChart3, Briefcase, Gamepad2, Sparkles, Cpu, Trophy, TrendingUp, Dna, Calculator, Globe, TrendingDown, FileText, Leaf, AlertTriangle, Star, DollarSign, ChevronLeft, ChevronRight, Ruler, Grid3x3, Clock, User, Laptop, Rocket, MapPin, Shield, Calendar, Search, X, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link, useNavigate } from "react-router-dom";
+import { Input } from "@/components/ui/input";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import Footer from "@/components/Footer";
+import SiteHeader from "@/components/SiteHeader";
 import { useSEO } from "@/hooks/use-seo";
 import useStructuredData from "@/hooks/use-structured-data";
+import { DEFAULT_OG_IMAGE } from "@/constants/site";
 
 const Blog = () => {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchQuery = (searchParams.get("q") ?? "").trim();
+  const [searchInput, setSearchInput] = useState(searchQuery);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const articlesPerPage = 12;
 
+  useEffect(() => {
+    setSearchInput(searchQuery);
+  }, [searchQuery]);
+
   useSEO({
-    title: "Blog BomQI",
-    description: "Artigos sobre inteligência, QI, desenvolvimento cognitivo e hábitos baseados em ciência para quem quer evoluir.",
+    title: searchQuery ? `Busca: ${searchQuery}` : "Blog",
+    description: searchQuery
+      ? `Resultados para "${searchQuery}" no blog BomQI sobre QI, inteligência e desenvolvimento cognitivo.`
+      : "Artigos sobre inteligência, QI, desenvolvimento cognitivo e hábitos baseados em ciência para quem quer evoluir.",
     keywords: "blog QI, artigos inteligência, desenvolvimento cognitivo, aumentar QI, neurociência, inteligência emocional, teste QI, hábitos inteligentes, ciência inteligência, melhorar cérebro",
+    // Buscas internas não devem indexar — canonical sempre no hub /blog
     url: "https://bomqi.com.br/blog",
+    canonical: "https://bomqi.com.br/blog",
+    noIndex: Boolean(searchQuery),
     type: "website",
+    image: DEFAULT_OG_IMAGE,
   });
 
   // Structured Data para CollectionPage e BreadcrumbList (Rich Results)
@@ -51,6 +67,11 @@ const Blog = () => {
   ]);
 
   const allArticles = [
+    { id: 276, title: "Qual Meu QI? Como Descobrir Agora em 2026", slug: "qual-meu-qi", description: "Qual meu QI? Descubra em minutos com teste online, faixas de score e quando vale psicólogo.", icon: HelpCircle, category: "Guia", publishedAt: "2026-10-19", gradient: "from-primary/20 to-violet-500/20", borderColor: "border-primary/30" },
+    { id: 275, title: "Qual a Idade Certa para Fazer Teste de QI? Guia por Faixa Etária (2026)", slug: "idade-certa-para-fazer-teste-qi", description: "Qual idade fazer teste de QI? WISC, WAIS e teste online para crianças, adolescentes e adultos.", icon: Calendar, category: "Guia", publishedAt: "2026-08-31", gradient: "from-cyan-500/20 to-blue-500/20", borderColor: "border-cyan-500/30" },
+    { id: 274, title: "QI 130: O Que Significa e Como Entrar na Mensa (2026)", slug: "qi-130-significa", description: "QI 130 significa superdotação? Percentil 98, Mensa Brasil e laudo escolar explicados.", icon: Award, category: "Guia", publishedAt: "2026-08-31", gradient: "from-amber-500/20 to-orange-500/20", borderColor: "border-amber-500/30" },
+    { id: 273, title: "QI 120 É Bom? O Que Significa Esse Resultado em 2026", slug: "qi-120-e-bom", description: "QI 120 é bom? Entenda percentil ~91, faixa superior e diferença para Mensa (130+).", icon: Sparkles, category: "Guia", publishedAt: "2026-08-31", gradient: "from-violet-500/20 to-indigo-500/20", borderColor: "border-violet-500/30" },
+    { id: 272, title: "Como Fazer Teste de QI: Passo a Passo (Agosto 2026)", slug: "como-fazer-teste-de-qi", description: "Como fazer teste de QI online ou com psicólogo: passos, tempo, resultado e erros que baixam a pontuação.", icon: FileText, category: "Guia", publishedAt: "2026-08-08", gradient: "from-primary/20 to-cyan-500/20", borderColor: "border-primary/30" },
     { id: 271, title: "Quanto Custa um Teste de QI no Brasil? Preços 2026", slug: "quanto-custa-teste-de-qi", description: "Compare preços de psicólogo, WAIS, WISC, Mensa e teste online. Veja o que vale a pena em 2026.", icon: DollarSign, category: "Guia", publishedAt: "2026-07-20", gradient: "from-emerald-500/20 to-teal-500/20", borderColor: "border-emerald-500/30" },
     { id: 270, title: "QI 100 Significa o Quê? Média Explicada em 2026", slug: "qi-100-significa", description: "QI 100 significa a média da população. Entenda percentil 50, faixas e mitos sobre o resultado.", icon: Target, category: "Guia", publishedAt: "2026-07-20", gradient: "from-blue-500/20 to-cyan-500/20", borderColor: "border-blue-500/30" },
     { id: 269, title: "QI 110 É Bom? O Que Significa Esse Resultado", slug: "qi-110-e-bom", description: "QI 110 é acima da média (~percentil 75). Veja o que muda na escola, no trabalho e vs Mensa.", icon: TrendingUp, category: "Guia", publishedAt: "2026-07-20", gradient: "from-teal-500/20 to-emerald-500/20", borderColor: "border-teal-500/30" },
@@ -65,8 +86,7 @@ const Blog = () => {
     { id: 260, title: "O Que É QI Médio? Média da População Explicada em 2026", slug: "o-que-e-qi-medio", description: "O que é QI médio e qual a média de QI da população? Escala, número 100 e faixas explicadas.", icon: BarChart3, category: "Guia", publishedAt: "2026-06-26", gradient: "from-violet-500/20 to-purple-500/20", borderColor: "border-violet-500/30" },
     { id: 259, title: "Teste de QI com Resultado Imediato: Rápido em 2026", slug: "teste-qi-com-resultado-imediato", description: "Teste de QI com resultado imediato após o questionário. Tempo, score e interpretação na hora.", icon: Clock, category: "Guia", publishedAt: "2026-06-26", gradient: "from-emerald-500/20 to-green-500/20", borderColor: "border-emerald-500/30" },
     { id: 258, title: "Teste de QI em Português: Adaptado ao Brasil", slug: "teste-qi-em-portugues", description: "Faça teste de QI em português adaptado ao Brasil. Por que idioma importa e como evitar testes mal traduzidos.", icon: Globe, category: "Guia", publishedAt: "2026-06-26", gradient: "from-blue-500/20 to-cyan-500/20", borderColor: "border-blue-500/30" },
-    { id: 257, title: "Teste de QI Gratuito Sem Cadastro: Faça Agora em 2026", slug: "teste-qi-gratuito-sem-cadastro", description: "Teste de QI gratuito sem cadastro complicado. Como funciona e o que esperar do resultado.", icon: Zap, category: "Guia", publishedAt: "2026-06-26", gradient: "from-yellow-500/20 to-orange-500/20", borderColor: "border-yellow-500/30" },
-    { id: 256, title: "Teste de QI Oficial: O Que É e Como Fazer em 2026", slug: "teste-qi-oficial", description: "Entenda o que é teste de QI oficial, diferença para online e onde fazer avaliação formal.", icon: Award, category: "Guia", publishedAt: "2026-06-26", gradient: "from-amber-500/20 to-yellow-500/20", borderColor: "border-amber-500/30" },
+        { id: 256, title: "Teste de QI Oficial: O Que É e Como Fazer em 2026", slug: "teste-qi-oficial", description: "Entenda o que é teste de QI oficial, diferença para online e onde fazer avaliação formal.", icon: Award, category: "Guia", publishedAt: "2026-06-26", gradient: "from-amber-500/20 to-yellow-500/20", borderColor: "border-amber-500/30" },
     { id: 255, title: "Como Saber Meu QI: 6 Métodos Práticos em 2026", slug: "como-saber-meu-qi", description: "Aprenda como saber seu QI: teste online, psicólogo, Mensa e mais. Compare custo e precisão.", icon: Lightbulb, category: "Guia", publishedAt: "2026-06-26", gradient: "from-indigo-500/20 to-purple-500/20", borderColor: "border-indigo-500/30" },
     { id: 254, title: "Teste de QI Gratuito e Confiável: Guia Completo 2026", slug: "teste-qi-gratuito-e-confiavel", description: "Encontre teste de QI gratuito e confiável. Critérios científicos e como fazer online em minutos.", icon: Shield, category: "Guia", publishedAt: "2026-06-26", gradient: "from-primary/20 to-accent/20", borderColor: "border-primary/30" },
     { id: 253, title: "Qual é o QI de Adriana Lima? Moda, Marca Pessoal e Carreira Global", slug: "qi-adriana-lima", description: "Estimativas sobre o QI de Adriana Lima, Victoria's Secret e gestão de imagem.", icon: Sparkles, category: "Curiosidades", publishedAt: "2026-05-30", gradient: "from-rose-400/20 to-pink-500/20", borderColor: "border-rose-400/30" },
@@ -534,18 +554,7 @@ const Blog = () => {
       gradient: "from-emerald-500/20 to-teal-500/20",
       borderColor: "border-emerald-500/30"
     },
-    {
-      id: 105,
-      title: "Como Descobrir Meu QI: 5 Formas Confiáveis em 2026",
-      slug: "como-descobrir-meu-qi",
-      description: "Descubra como saber seu QI de forma confiável. Comparamos os 5 melhores métodos: testes online, psicólogos, apps e mais.",
-      icon: Lightbulb,
-      category: "Guia",
-      publishedAt: "2026-01-20",
-      gradient: "from-indigo-500/20 to-purple-500/20",
-      borderColor: "border-indigo-500/30"
-    },
-    {
+        {
       id: 104,
       title: "Teste de QI para Crianças: Guia Completo para Pais",
       slug: "teste-qi-criancas",
@@ -589,7 +598,7 @@ const Blog = () => {
     },
     {
       id: 3,
-      title: "Teste de QI Online: Guia Completo 2025",
+      title: "Teste de QI Online: Guia Completo 2026",
       slug: "teste-qi-online-guia-completo",
       description: "Metodologias, precisão e como interpretar resultados. Tudo que você precisa saber sobre testes de QI online.",
       icon: BookOpen,
@@ -609,8 +618,8 @@ const Blog = () => {
     },
     {
       id: 5,
-      title: "Melhores Testes de QI Online em 2025",
-      slug: "melhores-testes-qi-online-2025",
+      title: "Melhores Testes de QI Online em 2026",
+      slug: "melhores-testes-qi-online-2026",
       description: "Análise completa comparando testes grátis vs pagos. Descubra qual é o melhor para você.",
       icon: Award,
       category: "Comparativo",
@@ -671,7 +680,7 @@ const Blog = () => {
       id: 11,
       title: "IA e Testes Cognitivos na Educação",
       slug: "ia-testes-cognitivos",
-      description: "O papel da Inteligência Artificial em testes, educação e trabalho. O que está mudando em 2025.",
+      description: "O papel da Inteligência Artificial em testes, educação e trabalho. O que está mudando em 2026.",
       icon: Cpu,
       category: "Tendências",
       gradient: "from-slate-500/20 to-gray-500/20",
@@ -777,17 +786,7 @@ const Blog = () => {
       gradient: "from-indigo-500/20 to-purple-500/20",
       borderColor: "border-indigo-500/30"
     },
-    {
-      id: 76,
-      title: "QI Médio no Brasil: Qual é e Por Quê?",
-      slug: "qi-medio-brasil",
-      description: "Qual o QI médio no Brasil? Descubra o QI médio brasileiro e os fatores que influenciam. Teste seu QI rapidamente!",
-      icon: Globe,
-      category: "Dados",
-      gradient: "from-green-500/20 to-emerald-500/20",
-      borderColor: "border-green-500/30"
-    },
-    {
+        {
       id: 77,
       title: "QI Alto: Características Reais, Além dos Mitos",
       slug: "qi-alto-caracteristicas",
@@ -906,16 +905,6 @@ const Blog = () => {
       category: "Aprendizado",
       gradient: "from-purple-500/20 to-pink-500/20",
       borderColor: "border-purple-500/30"
-    },
-    {
-      id: 89,
-      title: "QI e Genética: O Quanto Nasce e O Quanto Se Aprende - Evidências Científicas",
-      slug: "qi-e-genetica-quanto-nasce-aprende",
-      description: "QI e genética: o quanto nasce e o quanto se aprende? Descubra a relação entre genética e QI. Evidências científicas completas. Teste seu QI rapidamente!",
-      icon: Dna,
-      category: "Ciência",
-      gradient: "from-cyan-500/20 to-blue-500/20",
-      borderColor: "border-cyan-500/30"
     },
     {
       id: 90,
@@ -1177,17 +1166,7 @@ const Blog = () => {
       gradient: "from-green-500/20 to-emerald-500/20",
       borderColor: "border-green-500/30"
     },
-    {
-      id: 121,
-      title: "Nature vs Nurture: Genética e Ambiente no QI",
-      slug: "nature-vs-nurture-genetica-ambiente-qi",
-      description: "O debate nature vs nurture aplicado ao QI: quanto da inteligência é genética e quanto é moldada pelo ambiente?",
-      icon: Dna,
-      category: "Ciência",
-      gradient: "from-emerald-500/20 to-teal-500/20",
-      borderColor: "border-emerald-500/30"
-    },
-    {
+        {
       id: 122,
       title: "O Que Causa QI Alto? Fatores Genéticos e Ambientais",
       slug: "o-que-causa-qi-alto",
@@ -1247,17 +1226,7 @@ const Blog = () => {
       gradient: "from-green-500/20 to-teal-500/20",
       borderColor: "border-green-500/30"
     },
-    {
-      id: 128,
-      title: "QI e Genética: Quanto Nasce e Quanto se Aprende",
-      slug: "qi-e-genetica-quanto-nasce-quanto-aprende",
-      description: "A ciência responde: quanto do QI é determinado pela genética e quanto pode ser desenvolvido ao longo da vida?",
-      icon: Dna,
-      category: "Ciência",
-      gradient: "from-cyan-500/20 to-blue-500/20",
-      borderColor: "border-cyan-500/30"
-    },
-    {
+        {
       id: 129,
       title: "QI e Sucesso na Carreira: O Que os Dados Mostram",
       slug: "qi-e-sucesso-carreira",
@@ -1396,8 +1365,7 @@ const Blog = () => {
     { id: 175, title: "Religiosidade e QI: O Que a Ciência Diz", slug: "religiosidade-e-qi", description: "A relação entre religiosidade e QI segundo estudos científicos. Dados e análise imparcial.", icon: BookOpen, category: "Ciência", gradient: "from-indigo-500/20 to-violet-500/20", borderColor: "border-indigo-500/30" },
     { id: 176, title: "Sinais de QI Alto: Como Identificar Alta Inteligência", slug: "sinais-qi-alto", description: "Quais são os sinais de QI alto? Descubra as características que indicam alta inteligência.", icon: Star, category: "Conceitos", gradient: "from-yellow-500/20 to-amber-500/20", borderColor: "border-yellow-500/30" },
     { id: 177, title: "Teste de QI Confiável: Como Escolher o Melhor", slug: "teste-qi-confiavel", description: "Como identificar um teste de QI confiável e evitar testes fraudulentos ou imprecisos.", icon: Award, category: "Guia", gradient: "from-green-500/20 to-emerald-500/20", borderColor: "border-green-500/30" },
-    { id: 178, title: "Teste de QI Grátis: Os Melhores Disponíveis Online", slug: "teste-qi-gratis", description: "Os melhores testes de QI gratuitos disponíveis online. Quais são confiáveis e quais evitar.", icon: Trophy, category: "Guia", gradient: "from-primary/20 to-accent/20", borderColor: "border-primary/30" }
-  ];
+      ];
 
   // Extrair categorias únicas
   const categories = useMemo(() => {
@@ -1415,11 +1383,41 @@ const Blog = () => {
     });
   }, []);
 
-  // Filtrar artigos por categoria
+  // Filtrar artigos por categoria e busca
   const filteredArticles = useMemo(() => {
-    if (selectedCategory === "Todos") return sortedArticles;
-    return sortedArticles.filter(a => a.category === selectedCategory);
-  }, [selectedCategory, sortedArticles]);
+    let articles = sortedArticles;
+    if (selectedCategory !== "Todos") {
+      articles = articles.filter((a) => a.category === selectedCategory);
+    }
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      articles = articles.filter(
+        (a) =>
+          a.title.toLowerCase().includes(q) ||
+          a.description.toLowerCase().includes(q) ||
+          a.slug.toLowerCase().includes(q) ||
+          a.category.toLowerCase().includes(q)
+      );
+    }
+    return articles;
+  }, [selectedCategory, sortedArticles, searchQuery]);
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = searchInput.trim();
+    if (trimmed) {
+      setSearchParams({ q: trimmed });
+    } else {
+      setSearchParams({});
+    }
+    setCurrentPage(1);
+  };
+
+  const clearSearch = () => {
+    setSearchInput("");
+    setSearchParams({});
+    setCurrentPage(1);
+  };
 
   // Calcular paginação
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
@@ -1427,10 +1425,10 @@ const Blog = () => {
   const endIndex = startIndex + articlesPerPage;
   const currentArticles = filteredArticles.slice(startIndex, endIndex);
 
-  // Reset para página 1 quando mudar categoria
+  // Reset para página 1 quando mudar categoria ou busca
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedCategory]);
+  }, [selectedCategory, searchQuery]);
 
   // Scroll to top ao mudar página
   useEffect(() => {
@@ -1440,41 +1438,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">
       {/* Header */}
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Brain className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold">BomQI</span>
-            </Link>
-            
-            <nav className="hidden md:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
-              <button
-                onClick={() => navigate("/blog")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Blog
-              </button>
-              <button
-                onClick={() => navigate("/blog/qi-de-famosos")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                QI de Famosos
-              </button>
-              <button
-                onClick={() => navigate("/como-funciona")}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Como Funciona
-              </button>
-            </nav>
-            
-            <Button onClick={() => navigate("/teste")} size="lg">
-              Fazer o Teste
-            </Button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
@@ -1489,6 +1453,43 @@ const Blog = () => {
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Artigos científicos, dicas práticas e insights sobre inteligência, QI e desenvolvimento cognitivo
           </p>
+
+          <form onSubmit={handleSearchSubmit} className="max-w-xl mx-auto mt-8 flex gap-2">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Buscar artigos (ex: QI 120, Mensa, famosos...)"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                className="pl-10 h-12"
+                aria-label="Buscar artigos no blog"
+              />
+            </div>
+            <Button type="submit" size="lg" className="h-12 px-6">
+              Buscar
+            </Button>
+            {searchQuery && (
+              <Button type="button" variant="outline" size="lg" className="h-12" onClick={clearSearch} aria-label="Limpar busca">
+                <X className="h-4 w-4" />
+              </Button>
+            )}
+          </form>
+        </div>
+
+        {/* CTA Teste */}
+        <div className="max-w-4xl mx-auto mb-10 p-6 md:p-8 rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-primary/15 via-primary/10 to-violet-500/10 shadow-elegant">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <p className="text-sm font-semibold text-primary mb-1">Teste gratuito · ~3 minutos</p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Descubra seu QI agora</h2>
+              <p className="text-muted-foreground">Resultado imediato com análise detalhada. Mais de 50.000 pessoas já testaram.</p>
+            </div>
+            <Button size="lg" className="gap-2 font-semibold shadow-elegant shrink-0" onClick={() => navigate("/teste")}>
+              Fazer o Teste Grátis
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
 
         {/* Hub QI de Famosos */}

@@ -199,7 +199,7 @@ const TesteRaciocinioLogicoOnline = () => {
           <p className="text-muted-foreground mb-4">
             <Link to="/blog/melhor-teste-qi-2026" className="text-primary hover:underline">Melhor teste de QI 2026</Link>,{" "}
             <Link to="/blog/teste-qi-com-resultado-imediato" className="text-primary hover:underline">resultado imediato</Link>,{" "}
-            <Link to="/blog/como-descobrir-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link> e{" "}
+            <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link> e{" "}
             <Link to="/blog/pensamento-critico-vs-qi" className="text-primary hover:underline">pensamento crítico vs QI</Link>.
           </p>
         </div>

@@ -31,7 +31,8 @@ const ComoSePrepararTesteQI = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "como-se-preparar-teste-qi",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

@@ -31,7 +31,8 @@ const QIAltoCaracteristicas = () => {
       description: articleDescription,
       url: articleUrl,
       slug: "qi-alto-caracteristicas",
-      publishDate: "2024-01-01",
+      publishDate: "2025-06-15",
+      modifiedDate: "2026-10-19",
     })
   );
 

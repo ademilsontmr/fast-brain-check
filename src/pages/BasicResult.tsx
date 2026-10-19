@@ -6,6 +6,7 @@ import { Brain, Star, Sparkles, CheckCircle, Lock, Eye, EyeOff, Trophy, Users, T
 import { calculateIQ, getCelebrityComparison } from "@/types/quiz";
 import { useSEO } from "@/hooks/use-seo";
 import Footer from "@/components/Footer";
+import SiteHeader from "@/components/SiteHeader";
 
 const testimonials = [
   { text: "Fiquei chocada com a precisão. O resultado me descreveu perfeitamente.", author: "Mariana F.", city: "SP" },
@@ -53,19 +54,16 @@ const BasicResult = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
-      {/* Header */}
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-3 max-w-2xl flex items-center justify-between">
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/")}>
-            <Brain className="w-7 h-7 text-primary" />
-            <span className="text-xl font-bold">BomQI</span>
-          </div>
+      <SiteHeader
+        showNav={false}
+        showCta={false}
+        rightSlot={
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
             <Lock className="w-3.5 h-3.5" />
             <span>Resultado protegido</span>
           </div>
-        </div>
-      </header>
+        }
+      />
 
       <div className="container mx-auto px-4 py-8 max-w-lg">
 

@@ -21,7 +21,7 @@ export const allBlogArticles: BlogArticle[] = [
   },
   {
     slug: "teste-qi-online-guia-completo",
-    title: "Teste de QI Online: Guia Completo 2025",
+    title: "Teste de QI Online: Guia Completo 2026",
     description: "Metodologias, precisão e como interpretar resultados. Tudo que você precisa saber sobre testes de QI online.",
     category: "Guia",
   },
@@ -32,8 +32,8 @@ export const allBlogArticles: BlogArticle[] = [
     category: "Preparação",
   },
   {
-    slug: "melhores-testes-qi-online-2025",
-    title: "Melhores Testes de QI Online em 2025",
+    slug: "melhores-testes-qi-online-2026",
+    title: "Melhores Testes de QI Online em 2026",
     description: "Análise completa comparando testes grátis vs pagos. Descubra qual é o melhor para você.",
     category: "Comparativo",
   },
@@ -70,7 +70,7 @@ export const allBlogArticles: BlogArticle[] = [
   {
     slug: "ia-testes-cognitivos",
     title: "IA e Testes Cognitivos na Educação",
-    description: "O papel da Inteligência Artificial em testes, educação e trabalho. O que está mudando em 2025.",
+    description: "O papel da Inteligência Artificial em testes, educação e trabalho. O que está mudando em 2026.",
     category: "Tendências",
   },
   {
@@ -159,7 +159,7 @@ export const allBlogArticles: BlogArticle[] = [
   },
   {
     slug: "suplementos-que-melhoram-qi",
-    title: "Suplementos que Melhoram QI: Análise Científica Completa 2025",
+    title: "Suplementos que Melhoram QI: Análise Científica Completa 2026",
     description: "Descubra quais suplementos realmente melhoram QI baseado em evidências científicas. Análise completa de eficácia, dosagens, segurança e mitos sobre nootrópicos.",
     category: "Ciência",
   },
@@ -183,7 +183,7 @@ export const allBlogArticles: BlogArticle[] = [
   },
   {
     slug: "como-saber-meu-qi-sem-pagar",
-    title: "Como Saber Meu QI Sem Pagar? Opções Grátis e Confiáveis 2025",
+    title: "Como Saber Meu QI Sem Pagar? Opções Grátis e Confiáveis 2026",
     description: "Descubra como saber seu QI sem pagar. Lista completa de testes de QI grátis online, opções confiáveis, limitações e como interpretar resultados.",
     category: "Guia",
   },
@@ -204,12 +204,6 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Conexão Entre QI e Desempenho Acadêmico: Análise Científica Completa",
     description: "Descubra a relação entre QI e desempenho acadêmico. Correlação, poder preditivo, fatores que influenciam e como QI afeta sucesso escolar e universitário.",
     category: "Educação",
-  },
-  {
-    slug: "nature-vs-nurture-genetica-ambiente-qi",
-    title: "Nature vs Nurture: Genética e Ambiente no QI - Análise Científica Completa",
-    description: "Descubra como genética e ambiente influenciam QI. Análise completa do debate nature vs nurture, estudos com gêmeos, fatores ambientais e interação gene-ambiente.",
-    category: "Ciência",
   },
   {
     slug: "qi-e-sucesso-carreira",
@@ -276,12 +270,6 @@ export const allBlogArticles: BlogArticle[] = [
     title: "As Pessoas Mais Inteligentes que Você Nunca Ouviu Falar: Gênios Esquecidos",
     description: "Descubra pessoas com QI excepcional que você provavelmente nunca ouviu falar. William Sidis, Judit Polgár, Kim Ung-Yong e outros gênios com histórias fascinantes.",
     category: "Curiosidades",
-  },
-  {
-    slug: "qi-medio-brasil",
-    title: "QI Médio no Brasil: Qual é e Por Quê?",
-    description: "Qual o QI médio no Brasil? Descubra o QI médio brasileiro e os fatores que influenciam. Teste seu QI rapidamente!",
-    category: "Dados"
   },
   {
     slug: "qi-alto-caracteristicas",
@@ -354,12 +342,6 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Como Aprender Mais Rápido Usando Neurociência: Técnicas Científicas",
     description: "Como aprender mais rápido usando neurociência? Descubra técnicas baseadas em neurociência para acelerar aprendizado. Guia completo. Teste seu QI rapidamente!",
     category: "Aprendizado"
-  },
-  {
-    slug: "qi-e-genetica-quanto-nasce-aprende",
-    title: "QI e Genética: O Quanto Nasce e O Quanto Se Aprende - Evidências Científicas",
-    description: "QI e genética: o quanto nasce e o quanto se aprende? Descubra a relação entre genética e QI. Evidências científicas completas. Teste seu QI rapidamente!",
-    category: "Ciência"
   },
   {
     slug: "como-ficar-mais-inteligente",
@@ -618,12 +600,6 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Jogadores de Futebol com Maior QI",
     description: "Quais jogadores de futebol têm o maior QI estimado e como a inteligência impacta o desempenho em campo.",
     category: "Curiosidades"
-  },
-  {
-    slug: "qi-e-genetica-quanto-nasce-quanto-aprende",
-    title: "QI e Genética: Quanto Nasce e Quanto Aprende",
-    description: "A influência da genética e do ambiente no QI. O que a ciência diz sobre natureza versus nutrição cognitiva.",
-    category: "Ciência"
   },
   {
     slug: "qi-vs-experiencia-mercado",
@@ -1046,12 +1022,6 @@ export const allBlogArticles: BlogArticle[] = [
     category: "Guia"
   },
   {
-    slug: "teste-qi-gratuito-sem-cadastro",
-    title: "Teste de QI Gratuito Sem Cadastro",
-    description: "Como fazer teste de QI grátis sem cadastro complicado.",
-    category: "Guia"
-  },
-  {
     slug: "teste-qi-em-portugues",
     title: "Teste de QI em Português",
     description: "Teste de QI em português adaptado ao Brasil.",
@@ -1115,6 +1085,36 @@ export const allBlogArticles: BlogArticle[] = [
     slug: "teste-raciocinio-logico-online",
     title: "Teste de Raciocínio Lógico Online",
     description: "Guia completo: tipos de questões, diferença para QI e como fazer online.",
+    category: "Guia"
+  },
+  {
+    slug: "como-fazer-teste-de-qi",
+    title: "Como Fazer Teste de QI",
+    description: "Passo a passo para fazer teste de QI online ou com psicólogo em 2026.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-120-e-bom",
+    title: "QI 120 É Bom?",
+    description: "QI 120 é bom? Percentil ~91, faixa superior e o que muda na escola e carreira.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-130-significa",
+    title: "QI 130: O Que Significa",
+    description: "QI 130 significa superdotação, percentil 98 e como entrar na Mensa Brasil.",
+    category: "Guia"
+  },
+  {
+    slug: "idade-certa-para-fazer-teste-qi",
+    title: "Idade Certa para Fazer Teste de QI",
+    description: "Qual idade fazer teste de QI? Guia WISC, WAIS e teste online por faixa etária.",
+    category: "Guia"
+  },
+  {
+    slug: "qual-meu-qi",
+    title: "Qual Meu QI? Como Descobrir Agora",
+    description: "Qual meu QI? Descubra com teste online, veja faixas e quando vale psicólogo.",
     category: "Guia"
   }
 ];
