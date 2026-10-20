@@ -36,7 +36,13 @@ serve(async (req) => {
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
   );
 
-  const eventId = body.id || `abacate-${Date.now()}`;
+  const PAID_EVENTS = ['transparent.completed', 'billing.paid', 'pixQrCode.paid'];
+  const chargeId = body.data?.transparent?.id || body.data?.pixQrCode?.id || body.data?.id;
+  if (!PAID_EVENTS.includes(body.event) || !chargeId) {
+    return new Response(JSON.stringify({ received: true }));
+  }
+
+  const eventId = `${body.event}:${chargeId}`;
 
   // Idempotência
   const { data: existing } = await supabase
@@ -46,22 +52,17 @@ serve(async (req) => {
 
   await supabase.from('webhook_processing_log').insert({ event_id: eventId, gateway: 'abacate-pay' });
 
-  if (body.event === 'billing.paid' || body.event === 'pixQrCode.paid') {
-    const billingId = body.data?.pixQrCode?.id || body.data?.id;
-    if (billingId) {
-      const { data: payment } = await supabase
-        .from('payments')
-        .select('id, user_cpf, user_email, user_whatsapp')
-        .eq('gateway_payment_id', billingId)
-        .eq('status', 'pending')
-        .single();
+  const { data: payment } = await supabase
+    .from('payments')
+    .select('id, user_cpf, user_email, user_whatsapp')
+    .eq('gateway_payment_id', chargeId)
+    .eq('status', 'pending')
+    .maybeSingle();
 
-      if (payment) {
-        await supabase.from('payments')
-          .update({ status: 'approved', ...anonymize(payment.user_cpf, payment.user_email, payment.user_whatsapp) })
-          .eq('id', payment.id);
-      }
-    }
+  if (payment) {
+    await supabase.from('payments')
+      .update({ status: 'approved', ...anonymize(payment.user_cpf, payment.user_email, payment.user_whatsapp) })
+      .eq('id', payment.id);
   }
 
   return new Response(JSON.stringify({ received: true }));

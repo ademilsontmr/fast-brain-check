@@ -172,20 +172,23 @@ serve(async (req) => {
 
     if (insertError) throw new Error(insertError.message);
 
-    const abacateRes = await fetch('https://api.abacatepay.com/v1/pixQrCode/create', {
+    const abacateRes = await fetch('https://api.abacatepay.com/v2/transparents/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${Deno.env.get('ABACATE_PAY_API_KEY')}`,
       },
       body: JSON.stringify({
-        amount: Math.round(Number(product.price) * 100),
-        description: 'Teste de QI',
-        customer: {
-          name: userData.name,
-          email: userData.email,
-          taxId: userData.cpf.replace(/\D/g, ''),
-          cellphone: (userData.whatsapp || '').replace(/\D/g, ''),
+        method: 'PIX',
+        data: {
+          amount: Math.round(Number(product.price) * 100),
+          description: 'Teste de QI',
+          customer: {
+            name: userData.name,
+            email: userData.email,
+            taxId: userData.cpf.replace(/\D/g, ''),
+            cellphone: (userData.whatsapp || '').replace(/\D/g, ''),
+          },
         },
       }),
     });
