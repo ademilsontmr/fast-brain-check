@@ -21,6 +21,11 @@ export const SEO_REDIRECTS = [
   // Já existentes (mantidos)
   { from: "/blog/melhores-testes-qi-online-2025", to: "/blog/melhores-testes-qi-online-2026" },
   { from: "/blog/inteligencias-multiplas-monetizar", to: "/blog/inteligencia-multiplas-monetizar" },
+
+  // Variantes de head terms novos
+  { from: "/blog/teste-de-qi-infantil", to: "/blog/teste-qi-infantil" },
+  { from: "/blog/calculadora-de-qi", to: "/blog/calcular-qi" },
+  { from: "/blog/calculadora-qi", to: "/blog/calcular-qi" },
 ];
 
 export const REDIRECT_SLUGS = new Set(

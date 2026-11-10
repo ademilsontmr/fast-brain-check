@@ -4,66 +4,150 @@
     <loc>https://bomqi.com.br/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/sobre-o-teste</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/como-funciona</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/perguntas-frequentes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/qi-por-pais</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/contato</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/politica-privacidade</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/termos-uso</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
 
   <!-- Blog Articles -->
   <url>
-    <loc>https://bomqi.com.br/blog/atividades-que-aumentam-qi</loc>
+    <loc>https://bomqi.com.br/blog/calcular-qi</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
+    <priority>0.9</priority>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://bomqi.com.br/blog/como-andar-cavalo-melhora-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-bombeiros-melhoram-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-filhos-melhoram-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-idosos-melhoram-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-jovens-melhoram-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-medicos-melhoram-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-pedal-melhora-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/como-professores-melhoram-qi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/myiq-e-confiavel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-140-significa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-150-significa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/qi-de-famosos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/teste-qi-infantil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/teste-qi-online-gratuito</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://bomqi.com.br/blog/atividades-que-aumentam-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-10-19</lastmod>
@@ -99,12 +183,6 @@
     <lastmod>2026-10-19</lastmod>
   </url>
   <url>
-    <loc>https://bomqi.com.br/blog/como-bombeiros-melhoram-qi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
     <loc>https://bomqi.com.br/blog/como-ficar-mais-inteligente</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -123,49 +201,13 @@
     <lastmod>2026-10-19</lastmod>
   </url>
   <url>
-    <loc>https://bomqi.com.br/blog/como-filhos-melhoram-qi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://bomqi.com.br/blog/como-idosos-melhoram-qi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://bomqi.com.br/blog/como-jovens-melhoram-qi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
     <loc>https://bomqi.com.br/blog/como-manter-mente-afiada</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-10-19</lastmod>
   </url>
   <url>
-    <loc>https://bomqi.com.br/blog/como-medicos-melhoram-qi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
     <loc>https://bomqi.com.br/blog/como-melhorar-cerebro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://bomqi.com.br/blog/como-pedal-melhora-qi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://bomqi.com.br/blog/como-professores-melhoram-qi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-10-19</lastmod>
@@ -348,12 +390,6 @@
     <loc>https://bomqi.com.br/blog/qi-criatividade</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://bomqi.com.br/blog/qi-de-famosos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
     <lastmod>2026-10-19</lastmod>
   </url>
   <url>

@@ -1,4 +1,7 @@
 # Redirects 301 — consolidação SEO (fonte: scripts/seo-redirects.mjs)
+/blog/teste-de-qi-infantil /blog/teste-qi-infantil 301
+/blog/calculadora-de-qi /blog/calcular-qi 301
+/blog/calculadora-qi /blog/calcular-qi 301
 /blog/qi-medio-brasil /blog/media-qi-brasil 301
 /blog/nature-vs-nurture-genetica-ambiente-qi /blog/genetica-vs-ambiente-qi 301
 /blog/qi-e-genetica-quanto-nasce-aprende /blog/genetica-vs-ambiente-qi 301

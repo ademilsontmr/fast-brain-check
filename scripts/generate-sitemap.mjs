@@ -95,6 +95,12 @@ const highPriority = [
   'idade-certa-para-fazer-teste-qi',
   'melhores-testes-qi-online-2026',
   'qual-meu-qi',
+  'teste-qi-online-gratuito',
+  'teste-qi-infantil',
+  'myiq-e-confiavel',
+  'calcular-qi',
+  'qi-140-significa',
+  'qi-150-significa',
 ];
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>

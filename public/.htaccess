@@ -12,6 +12,9 @@
   RewriteRule ^blog/como-descobrir-meu-qi/?$ /blog/como-saber-meu-qi [R=301,L]
   RewriteRule ^blog/melhores-testes-qi-online-2025/?$ /blog/melhores-testes-qi-online-2026 [R=301,L]
   RewriteRule ^blog/inteligencias-multiplas-monetizar/?$ /blog/inteligencia-multiplas-monetizar [R=301,L]
+  RewriteRule ^blog/teste-de-qi-infantil/?$ /blog/teste-qi-infantil [R=301,L]
+  RewriteRule ^blog/calculadora-de-qi/?$ /blog/calcular-qi [R=301,L]
+  RewriteRule ^blog/calculadora-qi/?$ /blog/calcular-qi [R=301,L]
 
   # HTML prerenderizado do blog
   RewriteRule ^blog/([^/]+)/?$ blog/$1/index.html [L]

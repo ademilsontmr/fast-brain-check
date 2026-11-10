@@ -226,6 +226,12 @@ const QI130Significa = lazy(() => import("./pages/blog/QI130Significa"));
 const IdadeCertaTesteQI = lazy(() => import("./pages/blog/IdadeCertaTesteQI"));
 const QualMeuQI = lazy(() => import("./pages/blog/QualMeuQI"));
 const MelhoresTestesQIOnline2026 = lazy(() => import("./pages/blog/MelhoresTestesQIOnline2026"));
+const TesteQIOnlineGratuito = lazy(() => import("./pages/blog/TesteQIOnlineGratuito"));
+const TesteQIInfantil = lazy(() => import("./pages/blog/TesteQIInfantil"));
+const MyIQEConfiavel = lazy(() => import("./pages/blog/MyIQEConfiavel"));
+const CalcularQI = lazy(() => import("./pages/blog/CalcularQI"));
+const QI140Significa = lazy(() => import("./pages/blog/QI140Significa"));
+const QI150Significa = lazy(() => import("./pages/blog/QI150Significa"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -1653,6 +1659,66 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QualMeuQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-qi-online-gratuito"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteQIOnlineGratuito />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-qi-infantil"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteQIInfantil />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-de-qi-infantil"
+            element={<Navigate to="/blog/teste-qi-infantil" replace />}
+          />
+          <Route
+            path="/blog/myiq-e-confiavel"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <MyIQEConfiavel />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/calcular-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <CalcularQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/calculadora-qi"
+            element={<Navigate to="/blog/calcular-qi" replace />}
+          />
+          <Route
+            path="/blog/calculadora-de-qi"
+            element={<Navigate to="/blog/calcular-qi" replace />}
+          />
+          <Route
+            path="/blog/qi-140-significa"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QI140Significa />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/qi-150-significa"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <QI150Significa />
               </Suspense>
             }
           />

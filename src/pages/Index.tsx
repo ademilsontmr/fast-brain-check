@@ -295,13 +295,13 @@ const Index = () => {
               cta: "Ver índice →",
             },
             {
-              to: "/blog/teste-qi-gratuito-e-confiavel",
-              label: "Confiabilidade",
-              title: "Teste confiável",
-              excerpt: "Critérios para escolher um teste sério e interpretar o score.",
+              to: "/blog/teste-qi-online-gratuito",
+              label: "Grátis online",
+              title: "Teste QI online gratuito",
+              excerpt: "Compare MyIQ, Tua Saúde, Mensa e veja o que é grátis de verdade.",
               tint: "bg-[hsl(160_35%_94%)]",
               icon: CheckCircle,
-              cta: "Ler artigo →",
+              cta: "Ler comparativo →",
             },
             {
               to: "/como-funciona",

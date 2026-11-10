@@ -1116,6 +1116,42 @@ export const allBlogArticles: BlogArticle[] = [
     title: "Qual Meu QI? Como Descobrir Agora",
     description: "Qual meu QI? Descubra com teste online, veja faixas e quando vale psicólogo.",
     category: "Guia"
+  },
+  {
+    slug: "teste-qi-online-gratuito",
+    title: "Teste de QI Online Gratuito: Quais São Confiáveis",
+    description: "Compare MyIQ, Tua Saúde, Mensa e outros. Veja o que é grátis de verdade em 2026.",
+    category: "Guia"
+  },
+  {
+    slug: "teste-qi-infantil",
+    title: "Teste de QI Infantil: Quando Fazer e WISC",
+    description: "Teste de QI infantil: idade, WISC vs online e o que pais devem evitar.",
+    category: "Guia"
+  },
+  {
+    slug: "myiq-e-confiavel",
+    title: "MyIQ é Confiável? Análise Honesta",
+    description: "MyIQ é confiável? Assinatura, QI oficial e alternativas em português.",
+    category: "Guia"
+  },
+  {
+    slug: "calcular-qi",
+    title: "Calcular QI: Como Funciona a Escala",
+    description: "Como calcular QI de verdade: média 100, DP 15 e teste — sem fórmula mágica.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-140-significa",
+    title: "QI 140: O Que Significa",
+    description: "QI 140 ≈ percentil 99,5. Faixa muito superior, Mensa e mitos.",
+    category: "Guia"
+  },
+  {
+    slug: "qi-150-significa",
+    title: "QI 150: O Que Significa",
+    description: "QI 150 é extremo e raro. Por que online exagera e como confirmar.",
+    category: "Guia"
   }
 ];
 
