@@ -132,8 +132,8 @@ const Index = () => {
       <BelowMenuAdSense slot={ADSENSE_HOME_1_SLOT} />
 
       {/* Hero — composição centrada */}
-      <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 pt-16 pb-12 md:pt-24 md:pb-16">
+      <section className="relative overflow-hidden pt-8 pb-4 md:pt-10 md:pb-6">
+        <div className="container mx-auto px-4 pt-4 pb-12 md:pt-6 md:pb-16">
           <div className="mx-auto max-w-3xl text-center animate-fade-in">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/80 px-4 py-1.5 text-sm text-muted-foreground shadow-sm">
               <Brain className="h-4 w-4 text-primary" />
