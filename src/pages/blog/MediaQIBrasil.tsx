@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -99,7 +98,6 @@ const MediaQIBrasil = () => {
             No ranking IIT 2025 (World Population Review), Hong Kong, Coreia do Sul e China lideram (~106–108).
             O Brasil fica abaixo da referência 100, mas acima de muitas estimativas antigas que citavam só ~87.
           </p>
-          <ArticleMidAdSense />
           <div className="bg-muted/50 p-6 rounded-lg my-6">
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Hong Kong / Coreia do Sul / China (IIT 2025):</strong> ~106–108</li>

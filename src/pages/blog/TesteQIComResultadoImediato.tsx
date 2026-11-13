@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -96,7 +95,6 @@ const TesteQIComResultadoImediato = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <p className="font-semibold text-green-600 mb-2">Vantagens</p>
-          <ArticleMidAdSense />
                 <ul className="space-y-1 text-sm text-muted-foreground">
                   <li>✓ Feedback instantâneo</li>
                   <li>✓ Motivação imediata</li>

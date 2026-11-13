@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -226,7 +225,6 @@ const OQueEQI = () => {
             Os testes mais reconhecidos incluem:
           </p>
 
-          <ArticleMidAdSense />
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-6">
             <h3 className="text-lg font-bold mb-4">Principais Testes de QI</h3>
             <ul className="space-y-3">

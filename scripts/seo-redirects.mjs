@@ -11,9 +11,9 @@ export const SEO_REDIRECTS = [
   { from: "/blog/qi-e-genetica-quanto-nasce-aprende", to: "/blog/genetica-vs-ambiente-qi" },
   { from: "/blog/qi-e-genetica-quanto-nasce-quanto-aprende", to: "/blog/genetica-vs-ambiente-qi" },
 
-  // Cluster: teste QI gratuito
-  { from: "/blog/teste-qi-gratis", to: "/blog/teste-qi-gratuito-e-confiavel" },
-  { from: "/blog/teste-qi-gratuito-sem-cadastro", to: "/blog/teste-qi-gratuito-e-confiavel" },
+  // Cluster: teste QI gratuito (pillar = teste-de-qi-gratuito; confiável fica em artigo próprio)
+  { from: "/blog/teste-qi-gratis", to: "/blog/teste-de-qi-gratuito" },
+  { from: "/blog/teste-qi-gratuito-sem-cadastro", to: "/blog/teste-de-qi-sem-cadastro" },
 
   // Cluster: como saber / descobrir meu QI
   { from: "/blog/como-descobrir-meu-qi", to: "/blog/como-saber-meu-qi" },

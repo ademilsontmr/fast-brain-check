@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -136,7 +135,6 @@ const ComoSaberMeuQI = () => {
             <Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">teste gratuito e confiável</Link> e{" "}
             <Link to="/blog/como-medir-qi" className="text-primary hover:underline">como medir QI</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
         <ArticleFAQ faqs={[
           { question: "Como saber meu QI online?", answer: "Faça um teste online estruturado. Compare métodos e escolha um com metodologia clara." },

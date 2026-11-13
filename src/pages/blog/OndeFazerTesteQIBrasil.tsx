@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -68,7 +68,6 @@ const OndeFazerTesteQIBrasil = () => {
             <Link to="/blog/teste-mensa-brasil" className="text-primary hover:underline">teste Mensa Brasil</Link> e{" "}
             <Link to="/blog/como-medir-qi" className="text-primary hover:underline">como medir QI</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI</h3>
@@ -77,6 +76,37 @@ const OndeFazerTesteQIBrasil = () => {
             Fazer o Teste <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "Onde fazer teste de QI com laudo no Brasil?",
+              answer:
+                "Com psicólogo registrado (CRP), em consultório, clínica de neuropsicologia ou hospital universitário. Instrumentos comuns: WAIS, WISC, Raven.",
+            },
+            {
+              question: "Dá para fazer teste de QI pelo SUS?",
+              answer:
+                "Em alguns casos há encaminhamento para avaliação neuropsicológica, especialmente em crianças com suspeita de superdotação ou dificuldades específicas. Há fila e critérios.",
+            },
+            {
+              question: "Teste online vale para processo seletivo?",
+              answer:
+                "Quase nunca. Empresas e escolas que exigem QI costumam pedir avaliação presencial ou laudo específico.",
+            },
+            {
+              question: "Mensa Brasil conta como ‘onde fazer’?",
+              answer:
+                "Sim, para alto QI: processo de admissão com teste padronizado e percentil mínimo. Veja o guia Mensa Brasil.",
+            },
+            {
+              question: "BomQI é alternativa no Brasil?",
+              answer:
+                "É triagem online em português, com resultado pago após o teste — útil antes de investir em avaliação presencial, mas não substitui laudo.",
+            },
+          ]}
+        />
+
         <div className="mt-16">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-primary" />

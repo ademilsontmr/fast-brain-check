@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -130,7 +130,6 @@ const QIDeEinstein = () => {
             Surpreendentemente, não. Einstein tinha dificuldades com memória de curto prazo e frequentemente esquecia nomes, datas e números de telefone. Ele próprio disse: "Nunca memorizo algo que posso consultar em um livro."
           </p>
 
-          <ArticleMidAdSense />
           <Card className="p-6 mb-8">
             <h3 className="text-xl font-bold mb-4">Pontos Fortes e Fracos de Einstein</h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -198,7 +197,7 @@ const QIDeEinstein = () => {
                 Faça o teste científico e descubra como seu QI se compara ao de Einstein e outros gênios.
               </p>
               <Button onClick={() => navigate("/teste")} size="lg" className="shadow-lg">
-                Fazer Teste de QI Grátis
+                Fazer Teste de QI
               </Button>
             </div>
           </div>
@@ -211,6 +210,36 @@ const QIDeEinstein = () => {
             Você não precisa ter o QI de Einstein para ser bem-sucedido. Mas conhecer seu QI é o primeiro passo para entender seus pontos fortes e desenvolver seu potencial máximo.
           </p>
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "Einstein fez teste de QI de verdade?",
+              answer:
+                "Não há registro de teste formal. Os valores 160–190 são estimativas historiométricas, não medição clínica.",
+            },
+            {
+              question: "Por que o QI de Einstein varia entre 160 e 190?",
+              answer:
+                "Porque diferentes métodos retroativos e fontes geram intervalos. Ninguém tem o número exato.",
+            },
+            {
+              question: "Preciso de QI de Einstein para ser físico?",
+              answer:
+                "Não. Sucesso em ciência mistura treino, método, colaboração e contexto histórico — QI alto ajuda, mas não basta.",
+            },
+            {
+              question: "Posso comparar meu teste online com Einstein?",
+              answer:
+                "Só como curiosidade. Seu resultado mede hoje; o dele é estimativa histórica em outra metodologia.",
+            },
+            {
+              question: "Os rankings de QI de famosos são confiáveis?",
+              answer:
+                "Em geral, não. Muitos números circulam em sites sem fonte. Prefira artigos que expliquem a limitação da estimativa.",
+            },
+          ]}
+        />
 
         <SocialProofCarousel />
 

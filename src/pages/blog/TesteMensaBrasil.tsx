@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -76,15 +76,45 @@ const TesteMensaBrasil = () => {
               onde fazer teste de QI no Brasil
             </Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Teste seu QI antes da Mensa</h3>
-          <p className="text-muted-foreground mb-6">Estime sua pontuação com o teste gratuito do BomQI.</p>
+          <p className="text-muted-foreground mb-6">Estime sua pontuação com o teste pago do BomQI (não substitui o processo Mensa).</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
-            Fazer Teste Grátis <ArrowRight className="w-5 h-5" />
+            Fazer o Teste <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "Qual QI preciso para entrar na Mensa Brasil?",
+              answer:
+                "Em geral, desempenho no top 2% (cerca de QI 130 na escala 100/15) em teste supervisionado aceito pela Mensa.",
+            },
+            {
+              question: "A Mensa aceita teste feito online?",
+              answer:
+                "O processo oficial usa sessões autorizadas com instrumentos válidos. Resultado de quiz online não substitui a prova de admissão.",
+            },
+            {
+              question: "Quanto custa candidatura à Mensa?",
+              answer:
+                "Há taxa de inscrição para a prova; valores mudam — consulte sempre o site oficial da Mensa Brasil.",
+            },
+            {
+              question: "Se não passar, posso tentar de novo?",
+              answer:
+                "Sim, há regras de novo teste após intervalo. Falhar uma vez não significa QI ‘baixo’ — pode ter sido dia ruim ou teste inadequado.",
+            },
+            {
+              question: "Membro da Mensa recebe comprovante de QI?",
+              answer:
+                "A associação atesta admissão; não é o mesmo que laudo clínico de psicólogo para escola ou justiça.",
+            },
+          ]}
+        />
+
         <div className="mt-16">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-primary" />

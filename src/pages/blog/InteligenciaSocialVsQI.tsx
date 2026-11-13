@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -104,7 +103,6 @@ const InteligenciaSocialVsQI = () => {
             Liderar equipes, negociar, inspirar - tudo depende de inteligência social.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Vendas e Negociação Pagam Mais</h3>
           <p className="mb-4">
             Profissionais de vendas top (alta inteligência social) ganham <strong>3-5x mais</strong> que engenheiros 

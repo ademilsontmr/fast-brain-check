@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -88,7 +87,6 @@ const OQueEQiMedio = () => {
           <p className="text-muted-foreground mb-4">
             O QI médio <em>global</em> é 100 por definição. Já as <strong>médias por país</strong> variam em estudos comparativos — Singapura e Hong Kong aparecem entre os mais altos (~108), enquanto o Brasil fica em torno de <strong>87</strong> em algumas pesquisas. Essas diferenças refletem educação, nutrição e desenvolvimento, não &quot;inteligência inata&quot; de uma nação.
           </p>
-          <ArticleMidAdSense />
           <p className="text-muted-foreground mb-6">
             Veja o ranking completo em{" "}
             <Link to="/blog/qi-medio-por-pais" className="text-primary hover:underline">média de QI do mundo por país</Link> e{" "}

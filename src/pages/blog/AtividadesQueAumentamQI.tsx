@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -179,7 +178,6 @@ const AtividadesQueAumentamQI = () => {
           <p className="mb-4">
             <strong>Evidência:</strong> Alta | <strong>Efeito no QI:</strong> +2-5 pontos
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Desenvolve:</strong> Planejamento, antecipação, raciocínio estratégico</li>
             <li><strong>Melhora:</strong> Funções executivas, memória de trabalho, atenção</li>

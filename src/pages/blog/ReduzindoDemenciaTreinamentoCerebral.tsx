@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -96,7 +95,6 @@ const ReduzindoDemenciaTreinamentoCerebral = () => {
             em todo o mundo, a maioria das quais tem mais de 65 anos. À medida que nossa sociedade envelhece, 
             maior é o número de indivíduos que sofrem dessa doença.
           </p>
-          <ArticleMidAdSense />
           <p className="mb-4">
             Alzheimer causa problemas com:
           </p>

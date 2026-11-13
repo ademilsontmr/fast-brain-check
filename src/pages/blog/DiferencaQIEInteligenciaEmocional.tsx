@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -96,7 +95,6 @@ const DiferencaQIEInteligenciaEmocional = () => {
           <p className="mb-4">
             <strong>Inteligência Emocional (QE ou EQ)</strong> mede capacidade de entender e gerenciar emoções:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Foco:</strong> Emoções próprias e dos outros, relacionamentos, empatia</li>
             <li><strong>Componentes principais:</strong> Autoconsciência, autorregulação, empatia, habilidades sociais</li>

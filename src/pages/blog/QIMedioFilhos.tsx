@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -114,7 +113,6 @@ const QIMedioFilhos = () => {
             aplicáveis, mas avaliações de desenvolvimento podem indicar o potencial cognitivo.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Idade Escolar (6-12 anos)</h3>
           <p className="mb-4">
             O QI começa a se estabilizar nesta fase. Crianças nesta idade podem fazer testes padronizados 

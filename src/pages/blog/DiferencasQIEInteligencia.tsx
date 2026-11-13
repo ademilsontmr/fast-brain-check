@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -97,7 +96,6 @@ const DiferencasQIEInteligencia = () => {
             O QI é normalmente medido através de testes padronizados que se concentram em vários domínios 
             cognitivos:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Raciocínio lógico:</strong> Capacidade de pensar de forma estruturada e sequencial</li>
             <li><strong>Habilidades de resolução de problemas:</strong> Abordar desafios complexos efetivamente</li>

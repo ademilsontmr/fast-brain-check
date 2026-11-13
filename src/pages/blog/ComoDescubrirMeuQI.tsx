@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -222,7 +221,6 @@ const ComoDescubrirMeuQI = () => {
           <p className="text-lg mb-4">
             O mais importante é usar o resultado como ponto de partida para o desenvolvimento, não como um rótulo definitivo. QI pode mudar com aprendizado, hábitos saudáveis e estimulação cognitiva.
           </p>
-          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ faqs={[

@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -288,7 +287,6 @@ const QICriancasSinaisSuperdotacao = () => {
             superdotadas precisam de desafios adequados e suporte emocional para desenvolver seu potencial pleno.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             Quer entender melhor faixas de QI? Veja{" "}
             <Link to="/blog/superdotacao-o-que-e" className="text-primary hover:underline">o que é superdotação</Link>,{" "}

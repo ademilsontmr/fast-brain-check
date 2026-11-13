@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -110,7 +109,6 @@ const ComoFazerTesteDeQI = () => {
             Se travar, escolha a melhor opção e siga — voltar demais costuma piorar o desempenho sob pressão.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">4. Veja o resultado e interprete</h3>
           <p className="text-muted-foreground mb-4">
             O número sozinho diz pouco. Use:

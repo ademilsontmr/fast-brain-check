@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -68,7 +67,6 @@ const TesteQIGratuitoSemCadastro = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2 text-green-900 dark:text-green-100">Sem cadastro não significa sem dados</h3>
                 <p className="text-green-800 dark:text-green-200 mb-3 text-sm">Muitos testes pedem nome e e-mail só no final para liberar o resultado completo. O ideal é coletar apenas o necessário e deixar claro a política de privacidade.</p>
-          <ArticleMidAdSense />
                 <ul className="text-green-800 dark:text-green-200 space-y-1 text-sm">
                   <li>✓ Início imediato do questionário</li>
                   <li>✓ Dados mínimos para resultado</li>

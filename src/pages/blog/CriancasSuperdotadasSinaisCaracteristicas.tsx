@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -169,7 +168,6 @@ const CriancasSuperdotadasSinaisCaracteristicas = () => {
           <p className="mb-4">
             A forma mais confiável é teste de QI profissional:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>WISC (Wechsler Intelligence Scale for Children):</strong> Para crianças 6-16 anos</li>
             <li><strong>WPPSI:</strong> Para crianças 2.5-7 anos</li>

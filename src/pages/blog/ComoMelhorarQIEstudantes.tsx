@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -122,7 +121,6 @@ const ComoMelhorarQIEstudantes = () => {
             técnicas de estudo eficazes, hábitos saudáveis e atividades estimulantes. A chave 
             é consistência e paciência - o cérebro se desenvolve gradualmente.
           </p>
-          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

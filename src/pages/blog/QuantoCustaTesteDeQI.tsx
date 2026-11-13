@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -131,7 +130,6 @@ const QuantoCustaTesteDeQI = () => {
             <Link to="/blog/teste-qi-online-guia-completo" className="text-primary hover:underline">teste de QI online</Link>{" "}
             é o formato com melhor custo-benefício. Você responde questões de raciocínio em poucos minutos e recebe um score interpretável.
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
             <li><strong>Vantagem:</strong> preço baixo, imediato, sem agendamento</li>
             <li><strong>Limite:</strong> não substitui laudo clínico para escola, Justiça ou Mensa</li>

@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import useStructuredData from "@/hooks/use-structured-data";
 import ArticleFAQAdSense from "@/components/ArticleFAQAdSense";
+import ArticleInContentMidAd from "@/components/ArticleInContentMidAd";
 
 interface FAQItem {
   question: string;
@@ -36,6 +37,7 @@ const ArticleFAQ = ({ faqs }: ArticleFAQProps) => {
 
   return (
     <>
+      <ArticleInContentMidAd />
       <ArticleFAQAdSense />
       <div className="mt-16 mb-12">
         <div className="flex items-center gap-3 mb-6">

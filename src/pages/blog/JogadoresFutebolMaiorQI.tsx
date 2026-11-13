@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -270,7 +269,6 @@ const JogadoresFutebolMaiorQI = () => {
             Em situações de alta pressão, essa diferença de 0.3 segundos pode significar um gol ou uma chance perdida.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">2. Memória Tática</h3>
           <p className="mb-4">
             Jogadores inteligentes memorizam padrões de jogo adversários. Xavi, por exemplo, conseguia lembrar de 

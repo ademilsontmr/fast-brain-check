@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import { useSEO } from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -96,7 +95,6 @@ const QISucessoProfissional = () => {
             significativamente as probabilidades.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">QI Mínimo por Profissão</h3>
           <p className="mb-4">
             Pesquisas identificaram QI médio por categoria profissional:

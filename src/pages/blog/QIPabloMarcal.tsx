@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -136,7 +135,6 @@ const QIPabloMarcal = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-empresarial-vs-qi-academico" className="text-primary hover:underline">QI empresarial vs acadêmico</Link>,  <Link to="/blog/qi-lula" className="text-primary hover:underline">QI do Lula</Link>,  <Link to="/blog/qi-bolsonaro" className="text-primary hover:underline">QI do Bolsonaro</Link>.</p>
         </div>

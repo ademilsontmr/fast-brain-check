@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -182,7 +181,6 @@ const ComoInterpretarResultadoQI = () => {
             a população geral.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             É importante lembrar que <strong>QI não define seu potencial completamente</strong>. QI mede habilidades 
             cognitivas específicas, mas não captura todas as formas de inteligência ou fatores importantes para o sucesso.

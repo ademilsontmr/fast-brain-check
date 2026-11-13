@@ -8,6 +8,48 @@ export interface BlogArticle {
 
 export const allBlogArticles: BlogArticle[] = [
   {
+    slug: "teste-de-qi",
+    title: "Teste de QI: Guia Hub",
+    description: "Mapa de guias do teste de QI por intenção — grátis, rápido, oficial, celular.",
+    category: "Guia",
+  },
+  {
+    slug: "teste-de-qi-gratuito",
+    title: "Teste de QI Gratuito",
+    description: "Opções grátis no mercado (BomQI é pago) — sem confundir com guia de confiabilidade.",
+    category: "Guia",
+  },
+  {
+    slug: "teste-de-qi-gratuito-rapido",
+    title: "Teste de QI Gratuito Rápido",
+    description: "Teste gratuito e rápido: tempo, limites e CTA.",
+    category: "Guia",
+  },
+  {
+    slug: "teste-do-qi",
+    title: "Teste do QI",
+    description: "Sinônimo de busca — ponte para o hub teste de QI.",
+    category: "Guia",
+  },
+  {
+    slug: "teste-saude-mental-ou-qi",
+    title: "Teste de Saúde Mental ou QI?",
+    description: "Diferença entre triagem emocional e teste cognitivo.",
+    category: "Guia",
+  },
+  {
+    slug: "teste-de-qi-no-celular",
+    title: "Teste de QI no Celular",
+    description: "Como fazer teste de QI no mobile com boa experiência.",
+    category: "Guia",
+  },
+  {
+    slug: "teste-de-qi-sem-cadastro",
+    title: "Teste de QI Sem Cadastro",
+    description: "O que significa sem cadastro e quais dados sites pedem.",
+    category: "Guia",
+  },
+  {
     slug: "melhor-teste-qi-2026",
     title: "Melhor Teste de QI de 2026: Análise Completa",
     description: "Descubra o melhor teste de QI de 2026. Análise detalhada comparando precisão, metodologia, feedback e custo-benefício.",

@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -125,7 +124,6 @@ const QI140Significa = () => {
             <Link to="/blog/tabela-escala-qi" className="text-primary hover:underline">tabela escala</Link> e{" "}
             <Link to="/blog/calcular-qi" className="text-primary hover:underline">calcular QI</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ

@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -122,7 +121,6 @@ const ComoMelhorarQIAdolescentes = () => {
             durante a adolescência podem ter impactos duradouros no desenvolvimento cognitivo.
           </p>
 
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">1. Leitura Regular e Variada</h2>
           <p className="mb-4">
             A leitura é uma das atividades mais eficazes para melhorar o QI de adolescentes. Ler regularmente 

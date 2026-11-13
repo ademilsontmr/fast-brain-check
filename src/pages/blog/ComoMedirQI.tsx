@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -72,15 +72,45 @@ const ComoMedirQI = () => {
             Para critérios de confiabilidade, leia nosso guia sobre{" "}
             <Link to="/blog/teste-qi-confiavel" className="text-primary hover:underline">teste de QI confiável</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Meça seu QI agora</h3>
-          <p className="text-muted-foreground mb-6">Teste rápido e gratuito no BomQI — resultado em minutos.</p>
+          <p className="text-muted-foreground mb-6">Teste rápido e pago no BomQI — prévia do nível e resultado completo após desbloqueio.</p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Iniciar Teste <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "Qual a forma mais confiável de medir QI?",
+              answer:
+                "Avaliação com psicólogo usando WAIS (adultos) ou WISC (crianças), com laudo. Testes online servem para estimativa, não para diagnóstico clínico.",
+            },
+            {
+              question: "Teste online mede QI igual ao WAIS?",
+              answer:
+                "Não. Online costuma focar em raciocínio fluido e velocidade; o WAIS cobre verbal, memória, processamento e executivo em contexto controlado.",
+            },
+            {
+              question: "Preciso de encaminhamento médico para medir QI?",
+              answer:
+                "Para laudo escolar ou clínico, muitas vezes sim. Para curiosidade, você pode começar por triagem online e depois decidir por avaliação presencial.",
+            },
+            {
+              question: "O BomQI substitui avaliação profissional?",
+              answer:
+                "Não. O BomQI oferece estimativa educacional; não emite laudo nem substitui psicólogo.",
+            },
+            {
+              question: "Ansiedade afeta o resultado na hora de medir?",
+              answer:
+                "Sim. Sono, estresse e distrações alteram o desempenho momentâneo. Prefira ambiente calmo e repita em outro dia se o score parecer atípico.",
+            },
+          ]}
+        />
+
         <div className="mt-16">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-primary" />

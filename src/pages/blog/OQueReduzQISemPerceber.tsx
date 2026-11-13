@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -284,7 +283,6 @@ const OQueReduzQISemPerceber = () => {
             Identificar e corrigir esses fatores ocultos é essencial para manter e melhorar capacidades cognitivas.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI atual e identificar áreas para melhoria? Faça nosso teste científico validado 
             e receba uma análise completa de suas capacidades cognitivas.

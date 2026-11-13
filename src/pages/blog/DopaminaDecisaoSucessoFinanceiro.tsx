@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -219,7 +218,6 @@ const DopaminaDecisaoSucessoFinanceiro = () => {
             não com consumo. E você pode fazer o mesmo começando hoje.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI atual e entender seu controle de impulsos? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -150,7 +149,6 @@ const QI150Significa = () => {
             <Link to="/blog/pessoas-famosas-com-qi-alto" className="text-primary hover:underline">famosos com QI alto</Link> e{" "}
             <Link to="/blog/superdotacao-o-que-e" className="text-primary hover:underline">superdotação</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ

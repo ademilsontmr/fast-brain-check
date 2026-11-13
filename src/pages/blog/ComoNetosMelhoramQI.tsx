@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -118,7 +117,6 @@ const ComoNetosMelhoramQI = () => {
           <p className="mb-4">
             <strong>1. Estimulação Intelectual e Conversas:</strong>
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Conversas ricas e variadas desenvolvem vocabulário e compreensão</li>
             <li>Histórias e narrativas desenvolvem habilidades de linguagem e memória</li>

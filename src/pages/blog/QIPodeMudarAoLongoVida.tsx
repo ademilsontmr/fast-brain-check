@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -181,7 +180,6 @@ const QIPodeMudarAoLongoVida = () => {
             educação, treinamento cognitivo e outros fatores.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             É importante entender que <strong>mudanças de QI são possíveis</strong>, especialmente com investimento em 
             educação, treinamento cognitivo e manutenção de boa saúde física e mental.

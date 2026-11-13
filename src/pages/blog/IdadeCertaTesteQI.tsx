@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -87,7 +86,6 @@ const IdadeCertaTesteQI = () => {
             Testes formais de QI completo <strong>não são recomendados</strong> rotineiramente. O desenvolvimento cognitivo muda muito rápido. Se há suspeita de atraso ou superdotação extrema, procure neuropediatra ou psicólogo infantil — não quizzes online.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">6 a 15 anos (escolar)</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
             <li><strong>Instrumento:</strong> WISC (Wechsler Intelligence Scale for Children)</li>

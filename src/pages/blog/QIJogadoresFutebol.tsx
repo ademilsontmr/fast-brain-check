@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -218,7 +217,6 @@ const QIJogadoresFutebol = () => {
             Jogadores com QI 130+ processam informações 0.3-0.5 segundos mais rápido. Em um esporte onde a bola viaja a 100 km/h, essa diferença é decisiva. Estudos mostram que eles tomam a decisão correta em 78% das situações de alta pressão, contra 52% da média.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">2. Visão de Jogo e Antecipação</h3>
           <p className="mb-4">
             Jogadores inteligentes "leem" o jogo 2-3 segundos antes. Xavi conseguia mapear mentalmente a posição de todos os 22 jogadores com 95% de precisão. Essa capacidade permite passes impossíveis e posicionamento perfeito.

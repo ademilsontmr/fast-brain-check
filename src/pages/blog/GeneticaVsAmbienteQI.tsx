@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -97,7 +96,6 @@ const GeneticaVsAmbienteQI = () => {
             Mas o mais revelador: quando criados separadamente, a correlação cai para cerca de <strong>0.72</strong>.
           </p>
           
-          <ArticleMidAdSense />
           <div className="bg-muted/50 p-6 rounded-lg my-6">
             <p className="font-semibold mb-3">Implicação:</p>
             <p className="mb-4">

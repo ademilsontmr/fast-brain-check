@@ -233,6 +233,13 @@ const MyIQEConfiavel = lazy(() => import("./pages/blog/MyIQEConfiavel"));
 const CalcularQI = lazy(() => import("./pages/blog/CalcularQI"));
 const QI140Significa = lazy(() => import("./pages/blog/QI140Significa"));
 const QI150Significa = lazy(() => import("./pages/blog/QI150Significa"));
+const TesteDeQI = lazy(() => import("./pages/blog/TesteDeQI"));
+const TesteDeQIGratuito = lazy(() => import("./pages/blog/TesteDeQIGratuito"));
+const TesteDeQIGratuitoRapido = lazy(() => import("./pages/blog/TesteDeQIGratuitoRapido"));
+const TesteDoQI = lazy(() => import("./pages/blog/TesteDoQI"));
+const TesteSaudeMentalOuQI = lazy(() => import("./pages/blog/TesteSaudeMentalOuQI"));
+const TesteDeQINoCelular = lazy(() => import("./pages/blog/TesteDeQINoCelular"));
+const TesteDeQISemCadastro = lazy(() => import("./pages/blog/TesteDeQISemCadastro"));
 
 // Páginas estáticas (não precisam de lazy loading)
 import ComoFunciona from "./pages/ComoFunciona";
@@ -936,7 +943,7 @@ const App = () => (
           />
           <Route
             path="/blog/teste-qi-gratis"
-            element={<Navigate to="/blog/teste-qi-gratuito-e-confiavel" replace />}
+            element={<Navigate to="/blog/teste-de-qi-gratuito" replace />}
           />
           <Route
             path="/blog/qi-baixo"
@@ -1589,7 +1596,10 @@ const App = () => (
           <Route path="/blog/teste-qi-gratuito-e-confiavel" element={<Suspense fallback={<ArticleLoading />}><TesteQIGratuitoEConfiavel /></Suspense>} />
           <Route path="/blog/como-saber-meu-qi" element={<Suspense fallback={<ArticleLoading />}><ComoSaberMeuQI /></Suspense>} />
           <Route path="/blog/teste-qi-oficial" element={<Suspense fallback={<ArticleLoading />}><TesteQIOficial /></Suspense>} />
-          <Route path="/blog/teste-qi-gratuito-sem-cadastro" element={<Navigate to="/blog/teste-qi-gratuito-e-confiavel" replace />} />
+          <Route
+            path="/blog/teste-qi-gratuito-sem-cadastro"
+            element={<Navigate to="/blog/teste-de-qi-sem-cadastro" replace />}
+          />
           <Route path="/blog/teste-qi-em-portugues" element={<Suspense fallback={<ArticleLoading />}><TesteQIEmPortugues /></Suspense>} />
           <Route path="/blog/teste-qi-com-resultado-imediato" element={<Suspense fallback={<ArticleLoading />}><TesteQIComResultadoImediato /></Suspense>} />
           <Route path="/blog/o-que-e-qi-medio" element={<Suspense fallback={<ArticleLoading />}><OQueEQiMedio /></Suspense>} />
@@ -1721,6 +1731,62 @@ const App = () => (
             element={
               <Suspense fallback={<ArticleLoading />}>
                 <QI150Significa />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-de-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteDeQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-de-qi-gratuito"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteDeQIGratuito />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-de-qi-gratuito-rapido"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteDeQIGratuitoRapido />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-do-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteDoQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-saude-mental-ou-qi"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteSaudeMentalOuQI />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-de-qi-no-celular"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteDeQINoCelular />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog/teste-de-qi-sem-cadastro"
+            element={
+              <Suspense fallback={<ArticleLoading />}>
+                <TesteDeQISemCadastro />
               </Suspense>
             }
           />

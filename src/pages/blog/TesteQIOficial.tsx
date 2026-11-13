@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -131,7 +130,6 @@ const TesteQIOficial = () => {
             <Link to="/blog/onde-fazer-teste-qi-brasil" className="text-primary hover:underline">onde fazer teste no Brasil</Link> e{" "}
             <Link to="/blog/o-que-e-teste-qi" className="text-primary hover:underline">o que é teste de QI</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
         <ArticleFAQ faqs={[
           { question: "Teste de QI online pode ser oficial?", answer: "Não no sentido clínico. Pode ser metodologicamente sério, mas oficial implica aplicação profissional e laudo." },

@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -87,7 +86,7 @@ const TesteQIOnlineGratuito = () => {
                   <li>✓ MyIQ: funil forte, score/certificado via assinatura</li>
                   <li>✓ MyIQTested / Tua Saúde: modelo mais transparente no “grátis”</li>
                   <li>✓ Mensa: desafio gratuito, não substitui admissão oficial</li>
-                  <li>✓ BomQI: teste online em PT, prévia clara, resultado completo acessível</li>
+                  <li>✓ BomQI: teste online em PT, <strong>pago</strong> (prévia do nível; completo via PIX)</li>
                 </ul>
                 <Button size="sm" className="mt-4 gap-2" onClick={() => navigate("/teste")}>
                   Fazer teste no BomQI <ArrowRight className="w-4 h-4" />
@@ -128,7 +127,6 @@ const TesteQIOnlineGratuito = () => {
             verdade, e em quem confiar</em>.
           </p>
 
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">
             Comparativo: sites campeões em português
           </h2>
@@ -180,7 +178,7 @@ const TesteQIOnlineGratuito = () => {
                 <tr className="align-top">
                   <td className="py-3 pr-3 font-medium text-foreground">BomQI</td>
                   <td className="py-3 pr-3">Teste online PT · prévia + resultado completo</td>
-                  <td className="py-3 pr-3">Prévia gratuita; completo acessível (PIX)</td>
+                  <td className="py-3 pr-3">Não grátis: prévia do nível; completo pago (PIX)</td>
                   <td className="py-3">BR: clareza de preço e interpretação do score</td>
                 </tr>
               </tbody>

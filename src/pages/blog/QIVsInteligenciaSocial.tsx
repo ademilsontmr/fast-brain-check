@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -126,7 +125,6 @@ const QIVsInteligenciaSocial = () => {
             Eles inspiram, motivam e coordenam equipes.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Vendas e Negociação Pagam Mais</h3>
           <p className="mb-4">
             Profissões de alta renda (vendas, consultoria, empreendedorismo) dependem mais de <strong>persuasão e relacionamento</strong> 

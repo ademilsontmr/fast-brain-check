@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -80,7 +79,6 @@ const ComoFilhosMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">O desenvolvimento cognitivo dos filhos depende de um ambiente estimulante, amoroso e equilibrado. Mais importante que números de QI é criar crianças curiosas, criativas e emocionalmente saudáveis.</p>
-          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

@@ -6,7 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import useStructuredData from "@/hooks/use-structured-data";
@@ -204,7 +203,6 @@ const QIDeFamosos = () => {
               o que é QI médio
             </Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ faqs={[

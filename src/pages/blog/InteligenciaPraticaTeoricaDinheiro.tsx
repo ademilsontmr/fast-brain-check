@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -234,7 +233,6 @@ const InteligenciaPraticaTeoricaDinheiro = () => {
             o tipo de inteligência que você mais precisa.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI e entender seu potencial? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

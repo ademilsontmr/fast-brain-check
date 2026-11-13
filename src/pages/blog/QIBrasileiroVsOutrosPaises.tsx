@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -156,7 +155,6 @@ const QIBrasileiroVsOutrosPaises = () => {
           <p className="mb-4">
             A diferença de 10-20 pontos entre Brasil e países desenvolvidos é explicada principalmente por:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Investimento em educação:</strong> Países desenvolvidos investem 2-3x mais per capita</li>
             <li><strong>Qualidade da educação:</strong> Sistemas educacionais mais eficientes e bem estruturados</li>

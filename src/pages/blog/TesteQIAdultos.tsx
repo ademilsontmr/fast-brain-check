@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -66,7 +65,7 @@ const TesteQIAdultos = () => {
                 <ul className="text-green-800 dark:text-green-200 space-y-1 text-sm">
                   <li>✓ WAIS: referência clínica para adultos</li>
                   <li>✓ Raven: útil quando há barreira de idioma ou leitura</li>
-                  <li>✓ Online BomQI: triagem grátis, não substitui WAIS</li>
+                  <li>✓ Online BomQI: teste pago com prévia, não substitui WAIS</li>
                 </ul>
               </div>
             </div>
@@ -86,7 +85,6 @@ const TesteQIAdultos = () => {
             <Link to="/blog/teste-qi-online-guia-completo" className="text-primary hover:underline">guia de teste online</Link>.
           </p>
 
-          <ArticleMidAdSense />
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Comparativo rápido</h2>
           <Card className="p-6 my-8 overflow-x-auto">

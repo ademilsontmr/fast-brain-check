@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -80,7 +79,6 @@ const ComoMedicosMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">Médicos podem manter e aprimorar suas capacidades cognitivas através de educação continuada, técnicas de memorização e cuidados com a saúde. O investimento cognitivo se traduz em melhor cuidado aos pacientes.</p>
-          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

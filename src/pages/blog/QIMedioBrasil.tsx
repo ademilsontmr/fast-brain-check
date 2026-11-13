@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -178,7 +177,6 @@ const QIMedioBrasil = () => {
           <p className="mb-4">
             <strong>QI médio no Brasil tem aumentado</strong> nas últimas décadas com melhorias em:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Educação:</strong> expansão do acesso à educação</li>
             <li><strong>Nutrição:</strong> programas de combate à desnutrição</li>

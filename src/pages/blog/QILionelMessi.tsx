@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -129,7 +128,6 @@ const QILionelMessi = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/qi-medio-mundial" className="text-primary hover:underline">QI médio mundial</Link>.
           </p>
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-cristiano-ronaldo" className="text-primary hover:underline">QI do Cristiano Ronaldo</Link>, <Link to="/blog/qi-ronaldinho" className="text-primary hover:underline">QI do Ronaldinho</Link>, <Link to="/blog/qi-de-famosos" className="text-primary hover:underline">Índice QI de Famosos</Link>.</p>
         </div>

@@ -9,6 +9,8 @@ import SiteHeader from "@/components/SiteHeader";
 import { useSEO } from "@/hooks/use-seo";
 import useStructuredData from "@/hooks/use-structured-data";
 import { DEFAULT_OG_IMAGE } from "@/constants/site";
+import BelowMenuAdSense from "@/components/BelowMenuAdSense";
+import { ADSENSE_BLOG_LIST_SLOT } from "@/constants/adsense";
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -67,6 +69,13 @@ const Blog = () => {
   ]);
 
   const allArticles = [
+    { id: 289, title: "Teste de QI Sem Cadastro: O Que Significa na Prática (2026)", slug: "teste-de-qi-sem-cadastro", description: "Teste de QI sem cadastro: dados pedidos, e-mail no final e privacidade.", icon: Shield, category: "Guia", publishedAt: "2026-11-13", gradient: "from-slate-500/20 to-gray-500/20", borderColor: "border-slate-500/30" },
+    { id: 288, title: "Teste de QI no Celular: Android e iPhone", slug: "teste-de-qi-no-celular", description: "Como fazer teste de QI no celular com foco e boa conexão, sem confundir com app de treino.", icon: Laptop, category: "Guia", publishedAt: "2026-11-13", gradient: "from-sky-500/20 to-blue-500/20", borderColor: "border-sky-500/30" },
+    { id: 287, title: "Teste de Saúde Mental ou Teste de QI?", slug: "teste-saude-mental-ou-qi", description: "Diferença entre teste de saúde mental e teste de QI — quando fazer cada um.", icon: Brain, category: "Guia", publishedAt: "2026-11-13", gradient: "from-rose-500/20 to-pink-500/20", borderColor: "border-rose-500/30" },
+    { id: 286, title: "Teste do QI: O Que Significa Essa Busca?", slug: "teste-do-qi", description: "‘Teste do QI’ vs ‘teste de QI’: mesma intenção, para onde ir sem repetir guias.", icon: HelpCircle, category: "Guia", publishedAt: "2026-11-13", gradient: "from-violet-500/20 to-purple-500/20", borderColor: "border-violet-500/30" },
+    { id: 285, title: "Teste de QI Gratuito Rápido: Resultado em Minutos", slug: "teste-de-qi-gratuito-rapido", description: "Teste de QI gratuito rápido: tempo real, limites de testes de 3–5 min.", icon: Zap, category: "Guia", publishedAt: "2026-11-13", gradient: "from-yellow-500/20 to-amber-500/20", borderColor: "border-yellow-500/30" },
+    { id: 284, title: "Teste de QI Gratuito: Onde Fazer em 2026", slug: "teste-de-qi-gratuito", description: "Opções grátis no mercado e limites — o BomQI é pago; links para confiabilidade.", icon: Gift, category: "Guia", publishedAt: "2026-11-13", gradient: "from-emerald-500/20 to-teal-500/20", borderColor: "border-emerald-500/30" },
+    { id: 283, title: "Teste de QI: Guia Hub por Intenção (2026)", slug: "teste-de-qi", description: "Hub do teste de QI: mapa de guias (grátis, rápido, oficial, celular) sem conteúdo duplicado.", icon: BookOpen, category: "Guia", publishedAt: "2026-11-13", gradient: "from-primary/20 to-cyan-500/20", borderColor: "border-primary/30" },
     { id: 282, title: "QI 150: O Que Significa? Raridade e Mitos (2026)", slug: "qi-150-significa", description: "QI 150 é extremo (~percentil 99,9). Por que testes online exageram e como confirmar.", icon: Gem, category: "Guia", publishedAt: "2026-11-10", gradient: "from-violet-500/20 to-fuchsia-500/20", borderColor: "border-violet-500/30" },
     { id: 281, title: "QI 140: O Que Significa Esse Resultado? (2026)", slug: "qi-140-significa", description: "QI 140 ≈ top 0,5%. Faixa muito superior, Mensa e mitos de gênio.", icon: Crown, category: "Guia", publishedAt: "2026-11-10", gradient: "from-amber-500/20 to-yellow-500/20", borderColor: "border-amber-500/30" },
     { id: 280, title: "Calcular QI: Como Funciona a Escala e o Teste Online (2026)", slug: "calcular-qi", description: "Como calcular QI de verdade: média 100, DP 15 e teste — sem fórmula mágica.", icon: Calculator, category: "Guia", publishedAt: "2026-11-10", gradient: "from-indigo-500/20 to-blue-500/20", borderColor: "border-indigo-500/30" },
@@ -1445,6 +1454,7 @@ const Blog = () => {
     <div className="min-h-screen bg-gradient-hero flex flex-col">
       {/* Header */}
       <SiteHeader />
+      <BelowMenuAdSense slot={ADSENSE_BLOG_LIST_SLOT} />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">

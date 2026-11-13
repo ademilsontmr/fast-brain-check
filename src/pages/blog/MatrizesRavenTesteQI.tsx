@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -68,7 +68,6 @@ const MatrizesRavenTesteQI = () => {
             Para uma triagem inicial online, combine com nosso guia{" "}
             <Link to="/blog/como-medir-qi" className="text-primary hover:underline">como medir QI</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI</h3>
@@ -77,6 +76,32 @@ const MatrizesRavenTesteQI = () => {
             Fazer o Teste <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "O que são Matrizes de Raven?",
+              answer:
+                "Teste não verbal de raciocínio fluido em que você completa padrões visuais. É usado em pesquisa, triagem e, com psicólogo, em avaliação cognitiva.",
+            },
+            {
+              question: "Raven substitui o WAIS?",
+              answer:
+                "Não. Raven mede sobretudo raciocínio abstrato visual; o WAIS é uma bateria ampla. Muitas avaliações combinam instrumentos.",
+            },
+            {
+              question: "Existe Raven online confiável?",
+              answer:
+                "A versão autorizada para laudo exige aplicação padronizada. Sites que imitam matrizes podem dar estimativa, não equivalência clínica.",
+            },
+            {
+              question: "Crianças fazem o mesmo teste que adultos?",
+              answer:
+                "Há versões coloridas e progressivas por idade. O psicólogo escolhe a escala adequada à faixa etária.",
+            },
+          ]}
+        />
+
         <div className="mt-16">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-primary" />

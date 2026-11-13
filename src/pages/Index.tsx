@@ -26,6 +26,13 @@ import { getCountryFlag } from "@/utils/countryFlags";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
 import useStructuredData from "@/hooks/use-structured-data";
 import { useSEO } from "@/hooks/use-seo";
+import BelowMenuAdSense from "@/components/BelowMenuAdSense";
+import ContentBandAdSense from "@/components/ContentBandAdSense";
+import {
+  ADSENSE_HOME_1_SLOT,
+  ADSENSE_HOME_2_SLOT,
+  ADSENSE_HOME_3_SLOT,
+} from "@/constants/adsense";
 import {
   BRAZIL_IQ,
   getTopCountries,
@@ -122,6 +129,7 @@ const Index = () => {
   return (
     <div className="home-guide min-h-screen">
       <SiteHeader onStartTest={handleStartQuiz} />
+      <BelowMenuAdSense slot={ADSENSE_HOME_1_SLOT} />
 
       {/* Hero — composição centrada */}
       <section className="relative overflow-hidden">
@@ -194,6 +202,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <ContentBandAdSense slot={ADSENSE_HOME_2_SLOT} />
 
       {/* Como funciona — passos limpos */}
       <section className="container mx-auto px-4 py-16 md:py-20">
@@ -815,6 +825,8 @@ const Index = () => {
         </div>
         <SocialProofCarousel />
       </section>
+
+      <ContentBandAdSense slot={ADSENSE_HOME_3_SLOT} />
 
       {/* Guias populares — links internos SEO */}
       <section className="container mx-auto px-4 pb-8 md:pb-12">

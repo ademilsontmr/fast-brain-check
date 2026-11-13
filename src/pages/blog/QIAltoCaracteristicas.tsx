@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -194,7 +193,6 @@ const QIAltoCaracteristicas = () => {
             não garante sucesso e vem com desafios únicos.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             É importante entender que <strong>QI alto é uma ferramenta, não uma garantia</strong>. Sucesso, felicidade e 
             realização dependem de múltiplos fatores, incluindo inteligência emocional, habilidades sociais, esforço e 

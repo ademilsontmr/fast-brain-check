@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -252,7 +251,6 @@ const InteligenciasMultiplasMonetizar = () => {
             Em 6 meses você estará ganhando dinheiro fazendo o que faz naturalmente.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI e entender melhor suas capacidades? Faça nosso teste científico validado.
           </p>

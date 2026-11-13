@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -138,7 +137,6 @@ const QIMedioPorIdade = () => {
             Os primeiros anos são críticos para o desenvolvimento cognitivo. O cérebro está em 
             desenvolvimento acelerado:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Neuroplasticidade máxima:</strong> O cérebro forma novas conexões rapidamente</li>
             <li><strong>Desenvolvimento de linguagem:</strong> Base para raciocínio abstrato futuro</li>

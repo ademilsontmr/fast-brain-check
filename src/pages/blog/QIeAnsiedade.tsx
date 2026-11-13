@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -147,7 +146,6 @@ const QIeAnsiedade = () => {
             Muitas pessoas inteligentes obtêm resultados abaixo de seu potencial devido 
             à ansiedade de performance, especialmente em:
           </p>
-          <ArticleMidAdSense />
           <ul className="mb-4">
             <li>• Testes de QI formais</li>
             <li>• Provas e exames</li>

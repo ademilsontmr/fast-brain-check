@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -260,7 +259,6 @@ const ComoAumentarQIRapidamente = () => {
             dessas estratégias. O importante é manter hábitos saudáveis a longo prazo para resultados duradouros.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI atual e acompanhar seu progresso? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

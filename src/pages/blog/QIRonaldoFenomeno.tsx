@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -146,7 +145,6 @@ const QIRonaldoFenomeno = () => {
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
 
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-pele" className="text-primary hover:underline">QI do Pelé</Link>,  <Link to="/blog/qi-neymar" className="text-primary hover:underline">QI do Neymar</Link>,  <Link to="/blog/jogadores-futebol-maior-qi" className="text-primary hover:underline">jogadores com maior QI</Link>.</p>
         </div>
@@ -161,7 +159,7 @@ const QIRonaldoFenomeno = () => {
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI de verdade</h3>
           <p className="text-muted-foreground mb-6">
-            Pare de comparar com estimativas de famosos. Faça o teste gratuito do BomQI e veja onde você está na escala real.
+            Pare de comparar com estimativas de famosos. Faça o teste no BomQI e veja onde você está na escala após o desbloqueio.
           </p>
           <Button size="lg" className="gap-2" onClick={() => navigate("/teste")}>
             Fazer o Teste Agora <ArrowRight className="w-5 h-5" />

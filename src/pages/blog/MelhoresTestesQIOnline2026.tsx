@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -245,7 +244,6 @@ const MelhoresTestesQIOnline2026 = () => {
           <p className="mb-4">
             Considere investir em um teste pago se:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Você precisa de resultados precisos para fins profissionais</li>
             <li>Quer entender suas áreas fortes e fracas em detalhes</li>
@@ -265,7 +263,7 @@ const MelhoresTestesQIOnline2026 = () => {
             <li>Decidir se vale a pena pagar pelo relatório completo</li>
           </ul>
           <p className="mb-4">
-            <strong>BomQI</strong> oferece exatamente isso: teste completo com resultado básico gratuito 
+            <strong>BomQI</strong> oferece teste estruturado em português: prévia do nível e resultado completo pago (não é gratuito) 
             e opção de resultado detalhado por um preço acessível.
           </p>
 

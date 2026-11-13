@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -263,7 +262,6 @@ const QIEGeneticaQuantoNasceQuantoAprende = () => {
             através de educação, treinamento cognitivo, hábitos saudáveis e ambiente enriquecedor.
           </p>
 
-          <ArticleMidAdSense />
           <p className="mb-4">
             <strong>O importante é maximizar o potencial através de ambiente enriquecedor e hábitos saudáveis</strong>, 
             independentemente da genética. Quer descobrir seu QI atual? Faça nosso teste científico validado e receba 

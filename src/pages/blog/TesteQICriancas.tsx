@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -194,7 +194,7 @@ const TesteQICriancas = () => {
                 Para adolescentes acima de 16 anos, nosso teste científico oferece uma estimativa rápida e confiável do QI.
               </p>
               <Button onClick={() => navigate("/teste")} size="lg" className="shadow-lg">
-                Fazer Teste de QI Grátis
+                Fazer Teste de QI
               </Button>
             </div>
           </div>
@@ -206,8 +206,37 @@ const TesteQICriancas = () => {
           <p className="text-lg mb-4">
             Lembre-se: QI é apenas uma dimensão da inteligência. Criatividade, inteligência emocional, habilidades sociais e persistência são igualmente importantes para o sucesso na vida.
           </p>
-          <ArticleMidAdSense />
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "Qual a idade mínima para teste de QI infantil?",
+              answer:
+                "Teste formal costuma a partir dos 4–6 anos (WPPSI). Antes disso, há escalas de desenvolvimento, não QI completo.",
+            },
+            {
+              question: "Teste de QI online serve para criança pequena?",
+              answer:
+                "Não para diagnóstico escolar. Crianças precisam de WISC/WPPSI com psicólogo. Online pode orientar só adolescentes mais velhos, com cautela.",
+            },
+            {
+              question: "QI 130 em criança significa superdotação?",
+              answer:
+                "É um indicador forte, mas laudo multidisciplinar (escola, psicólogo, contexto) define encaminhamento, não só um número.",
+            },
+            {
+              question: "Quanto custa teste de QI infantil no Brasil?",
+              answer:
+                "Com psicólogo, em geral entre centenas e alguns milhares de reais, conforme cidade e bateria aplicada.",
+            },
+            {
+              question: "Devo contar o resultado para a criança?",
+              answer:
+                "Psicólogos orientam linguagem adequada à idade. Evite rótulos (‘gênio’ ou ‘burro’) — foque esforço, estratégias e apoio.",
+            },
+          ]}
+        />
 
         <SocialProofCarousel />
 

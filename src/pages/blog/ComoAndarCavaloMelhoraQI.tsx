@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -79,7 +78,6 @@ const ComoAndarCavaloMelhoraQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">A equitação oferece benefícios cognitivos únicos através da combinação de exercício físico, desafios mentais e conexão emocional com o animal. É uma atividade que estimula o cérebro de formas que poucas outras conseguem.</p>
-          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

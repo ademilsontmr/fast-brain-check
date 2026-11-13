@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -141,7 +140,6 @@ const TesteDeInteligenciaOnline = () => {
             <Link to="/blog/melhor-teste-qi-2026" className="text-primary hover:underline">melhor teste de QI 2026</Link> e{" "}
             <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ faqs={[

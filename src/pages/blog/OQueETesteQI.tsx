@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -96,7 +95,6 @@ const OQueETesteQI = () => {
             cognitivas e habilidades de resolução de problemas. Esses testes avaliam vários aspectos da 
             inteligência, incluindo raciocínio lógico, consciência espacial e compreensão verbal.
           </p>
-          <ArticleMidAdSense />
           <p className="mb-4">
             Os testes de QI normalmente consistem em perguntas e quebra-cabeças de múltipla escolha que 
             avaliam diferentes capacidades mentais. Os resultados são frequentemente expressos como uma 

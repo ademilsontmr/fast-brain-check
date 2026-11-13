@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -144,11 +143,10 @@ const TesteQIGratis = () => {
           
           <h3 className="text-2xl font-bold mt-8 mb-4">1. BomQI - Teste Rápido e Preciso</h3>
           <p className="mb-4">
-            O BomQI oferece um teste de QI gratuito em apenas 3 minutos. Com 30 questões 
+            O BomQI oferece um teste de QI pago em cerca de 3 minutos (com prévia do nível). Com 30 questões 
             cuidadosamente elaboradas, você recebe uma estimativa confiável do seu QI baseada 
             em metodologias científicas validadas.
           </p>
-          <ArticleMidAdSense />
           <p className="mb-4">
             <strong>Características:</strong>
           </p>
@@ -238,7 +236,7 @@ const TesteQIGratis = () => {
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">
             Testes de QI gratuitos são uma excelente porta de entrada para conhecer suas 
-            capacidades cognitivas. O BomQI oferece uma das melhores opções gratuitas 
+            capacidades cognitivas. O BomQI oferece uma opção paga e transparente no Brasil 
             disponíveis, com metodologia científica e resultados confiáveis.
           </p>
           <p className="mb-4">

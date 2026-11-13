@@ -54,6 +54,13 @@ const articleEntries = [...new Set(liveSlugs)].map((slug) => ({
 articleEntries.sort((a, b) => b.lastmod.localeCompare(a.lastmod) || a.slug.localeCompare(b.slug));
 
 const highPriority = [
+  'teste-de-qi',
+  'teste-de-qi-gratuito',
+  'teste-de-qi-gratuito-rapido',
+  'teste-do-qi',
+  'teste-de-qi-sem-cadastro',
+  'teste-de-qi-no-celular',
+  'teste-saude-mental-ou-qi',
   'media-qi-brasil',
   'genetica-vs-ambiente-qi',
   'teste-qi-criancas',

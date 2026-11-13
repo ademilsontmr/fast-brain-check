@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -147,7 +146,6 @@ const QIMedioMundial = () => {
           <p className="mb-4">
             <strong>QI médio no Brasil:</strong> ~95 no IIT 2025 (ou ~83–87 em Lynn &amp; Becker), abaixo da referência 100:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Posição:</strong> abaixo da média mundial (~100)</li>
             <li><strong>Comparação:</strong> similar a outros países latino-americanos</li>

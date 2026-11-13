@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -125,7 +124,6 @@ const OQueEConsideradoQIAlto = () => {
             no top 9% da população. No entanto, há nuances importantes:
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">QI Acima da Média (110-119)</h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Percentil:</strong> 75-90 (top 10-25% da população)</li>

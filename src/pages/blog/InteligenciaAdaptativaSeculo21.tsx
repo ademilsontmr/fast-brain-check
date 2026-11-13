@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -104,7 +103,6 @@ const InteligenciaAdaptativaSeculo21 = () => {
             <strong>Capacidade de se adaptar a contextos novos</strong> - algo que IA ainda não faz bem.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Carreiras Não-Lineares</h3>
           <p className="mb-4">
             Profissional médio terá <strong>7-10 carreiras diferentes</strong> na vida. Não dá para depender de uma especialização. 

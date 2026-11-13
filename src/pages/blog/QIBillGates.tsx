@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -129,7 +128,6 @@ const QIBillGates = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/qi-medio-mundial" className="text-primary hover:underline">QI médio mundial</Link>.
           </p>
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-steve-jobs" className="text-primary hover:underline">QI do Steve Jobs</Link>, <Link to="/blog/qi-elon-musk" className="text-primary hover:underline">QI do Elon Musk</Link>, <Link to="/blog/qi-de-einstein" className="text-primary hover:underline">QI de Einstein</Link>.</p>
         </div>

@@ -1,8 +1,18 @@
 import { Brain } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import ArticleInterAdSense from "@/components/ArticleInterAdSense";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  const isBlogArticle = pathname.startsWith("/blog/") && pathname !== "/blog";
+
   return (
+    <>
+      {isBlogArticle && (
+        <div className="container mx-auto max-w-4xl px-4">
+          <ArticleInterAdSense />
+        </div>
+      )}
     <footer className="bg-slate-50 border-t border-slate-200 mt-16">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
@@ -92,6 +102,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

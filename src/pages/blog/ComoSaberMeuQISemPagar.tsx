@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -115,7 +114,6 @@ const ComoSaberMeuQISemPagar = () => {
           <p className="mb-4">
             A Mensa oferece teste de admissão:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Custo:</strong> Geralmente há taxa, mas pode haver eventos grátis</li>
             <li><strong>Requisito:</strong> QI mínimo de 130 (top 2%)</li>

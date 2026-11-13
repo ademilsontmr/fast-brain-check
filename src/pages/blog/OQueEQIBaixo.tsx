@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -178,7 +177,6 @@ const OQueEQIBaixo = () => {
           <p className="mb-4">
             <strong>Pessoas com QI baixo podem se beneficiar de:</strong>
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Educação:</strong> educação especializada e adaptada</li>
             <li><strong>Terapia:</strong> terapia e intervenção precoce</li>

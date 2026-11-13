@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -90,7 +89,6 @@ const QICriatividade = () => {
           <p className="mb-4">
             Pesquisas de E. Paul Torrance e outros mostram:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>QI abaixo de ~120:</strong> QI e criatividade estão fortemente correlacionados</li>
             <li><strong>QI acima de ~120:</strong> A correlação diminui significativamente</li>

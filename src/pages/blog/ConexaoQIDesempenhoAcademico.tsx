@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -95,7 +94,6 @@ const ConexaoQIDesempenhoAcademico = () => {
             inicialmente criados para identificar alunos que precisavam de apoio educacional adicional.
           </p>
 
-          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Distribuição de QI</h3>
           <p className="mb-4">
             As pontuações de QI são distribuídas em uma curva de sino (distribuição normal):

@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -70,7 +70,6 @@ const QIFaixasPontuacao = () => {
             <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">percentil de QI</Link> e{" "}
             <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado</Link>.
           </p>
-          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI</h3>
@@ -79,6 +78,37 @@ const QIFaixasPontuacao = () => {
             Fazer o Teste <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "QI 120 é considerado alto?",
+              answer:
+                "Sim: na escala média 100 e DP 15, QI 120 é classificado como superior e fica acima de cerca de 91% da população.",
+            },
+            {
+              question: "QI 130 é o mínimo para Mensa?",
+              answer:
+                "Em termos populares, sim — equivale ao top 2% em testes padronizados. A Mensa usa percentil, não só o número isolado.",
+            },
+            {
+              question: "QI 140 significa gênio?",
+              answer:
+                "Significa desempenho extremamente raro estatisticamente, mas não é rótulo clínico de ‘gênio’. Contexto e outras habilidades importam.",
+            },
+            {
+              question: "Duas pessoas com QI 120 são iguais?",
+              answer:
+                "Não necessariamente. A mesma pontuação pode vir de perfis cognitivos diferentes (verbal vs visual).",
+            },
+            {
+              question: "Margem de erro: quantos pontos ignorar?",
+              answer:
+                "Diferenças de 3–5 pontos entre testes ou repetições costumam cair na variância normal do instrumento.",
+            },
+          ]}
+        />
+
         <div className="mt-16">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-primary" />

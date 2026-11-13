@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -83,7 +82,6 @@ const QIMedioEstudantes = () => {
             <Link to="/blog/qi-medio-adolescentes" className="text-primary hover:underline">adolescentes</Link>.
           </p>
 
-          <ArticleMidAdSense />
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Tabela orientativa (amostras, não oficiais)</h2>
           <Card className="p-6 my-8 overflow-x-auto">

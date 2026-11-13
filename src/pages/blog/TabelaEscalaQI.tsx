@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
+import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -83,7 +83,6 @@ const TabelaEscalaQI = () => {
             <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">o que é percentil de QI</Link> e{" "}
             <Link to="/blog/qi-100-significa" className="text-primary hover:underline">o que QI 100 significa</Link>.
           </p>
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">QI médio e referências</h2>
           <ul className="list-disc pl-6 mb-4 space-y-2 text-muted-foreground">
             <li>QI médio mundial e brasileiro: aproximadamente 100 na escala padronizada</li>
@@ -99,6 +98,37 @@ const TabelaEscalaQI = () => {
             Fazer o Teste Agora <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
+
+        <ArticleFAQ
+          faqs={[
+            {
+              question: "Por que a média do QI é 100?",
+              answer:
+                "Por definição estatística: os testes são normatizados para que a amostra de referência tenha média 100 e desvio padrão 15.",
+            },
+            {
+              question: "O que significa ‘percentil’ na tabela?",
+              answer:
+                "É a porcentagem de pessoas da norma com quem você se igualou ou superou. QI 130 ≈ percentil 98.",
+            },
+            {
+              question: "Toda tabela de QI é igual?",
+              answer:
+                "A escala Wechsler (15 DP) é a mais comum no Brasil, mas alguns testes usam desvio 16 ou escalas stanine. Compare sempre o manual do teste.",
+            },
+            {
+              question: "QI abaixo de 70 na tabela indica o quê?",
+              answer:
+                "Desempenho muito abaixo da média na norma — só interpretação clínica completa (e contexto) pode explicar causas e suporte.",
+            },
+            {
+              question: "Posso usar esta tabela com resultado online?",
+              answer:
+                "Como referência educacional, sim. Laudo clínico usa normas e subtestes que a tabela resumida não substitui.",
+            },
+          ]}
+        />
+
         <div className="mt-16">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-6 h-6 text-primary" />

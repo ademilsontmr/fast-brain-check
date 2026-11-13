@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -94,7 +93,6 @@ const EscalaInteligenciaWechslerWAIS = () => {
           <p className="mb-4">
             O WAIS passou por várias revisões ao longo dos anos para manter sua relevância e precisão:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>WAIS (1955):</strong> Versão original</li>
             <li><strong>WAIS-R (1981):</strong> Revisão com normas atualizadas</li>

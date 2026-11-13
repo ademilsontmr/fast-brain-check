@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -84,7 +83,6 @@ const QIeTDAH = () => {
             <Link to="/blog/qi-e-sono" className="text-primary hover:underline">QI e sono</Link> (privação piora TDAH).
           </p>
 
-          <ArticleMidAdSense />
 
           <h2 className="text-3xl font-bold mt-12 mb-6">QI alto com TDAH: perfil comum</h2>
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">

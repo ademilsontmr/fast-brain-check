@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import { useSEO } from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -136,7 +135,6 @@ const MelhorTesteQI2026 = () => {
             BomQI utiliza algoritmos de IA que ajustam a dificuldade das questões em tempo real baseado nas 
             respostas anteriores. Isso permite:
           </p>
-          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Precisão maior com menos questões</li>
             <li>Experiência personalizada para cada usuário</li>

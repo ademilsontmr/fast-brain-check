@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -102,7 +101,6 @@ const CalcularQI = () => {
             <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">percentil</Link>.
           </p>
 
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Calculadora de QI online: o que é válido</h2>
           <Card className="p-6 my-8">
             <ul className="space-y-3 text-sm text-muted-foreground">

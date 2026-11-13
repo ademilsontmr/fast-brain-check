@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -87,7 +86,6 @@ const QIMedioEngenheiros = () => {
             <Link to="/blog/qi-medio-estudantes" className="text-primary hover:underline">estudantes universitários</Link>.
           </p>
 
-          <ArticleMidAdSense />
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Habilidades cognitivas centrais na engenharia</h2>
           <h3 className="text-2xl font-bold mt-8 mb-4">Raciocínio quantitativo e abstração</h3>

@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
 import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
-import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -135,7 +134,6 @@ const QIRobertoCarlos = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
-          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-tom-jobim" className="text-primary hover:underline">QI Tom Jobim</Link>,  <Link to="/blog/qi-zeze-di-camargo" className="text-primary hover:underline">QI Zeze Di Camargo</Link>,  <Link to="/blog/qi-ivete-sangalo" className="text-primary hover:underline">QI Ivete Sangalo</Link>.</p>
         </div>
