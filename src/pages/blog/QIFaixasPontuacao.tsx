@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -46,6 +48,7 @@ const QIFaixasPontuacao = () => {
           <TrendingUp className="w-24 h-24 text-primary" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Entender <strong>QI 120, 130 e 140</strong> ajuda a contextualizar resultados. Na escala com média 100 e DP 15,
             cada faixa corresponde a um percentil diferente na população.
@@ -67,6 +70,7 @@ const QIFaixasPontuacao = () => {
             <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">percentil de QI</Link> e{" "}
             <Link to="/blog/como-interpretar-resultado-qi" className="text-primary hover:underline">como interpretar resultado</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI</h3>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -47,6 +49,7 @@ const ComoAdvogadosMelhoramQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A advocacia exige habilidades cognitivas excepcionais: raciocínio lógico, memória, 
             argumentação e análise crítica. Descubra como advogados podem aprimorar essas 
@@ -118,6 +121,7 @@ const ComoAdvogadosMelhoramQI = () => {
             práticas deliberadas, exercícios mentais e hábitos saudáveis. O investimento no 
             desenvolvimento cognitivo se traduz em melhor desempenho profissional.
           </p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

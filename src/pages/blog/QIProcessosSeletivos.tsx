@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const QIProcessosSeletivos = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Testes de QI e avaliações cognitivas se tornaram ferramentas comuns em processos seletivos, 
             especialmente para posições que exigem raciocínio complexo. Entenda como empresas usam essas 
@@ -95,6 +98,7 @@ const QIProcessosSeletivos = () => {
             Avaliam capacidade de identificar padrões, resolver problemas e pensar logicamente. 
             Comuns em seleções para:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-1">
             <li>Engenharia e tecnologia</li>
             <li>Consultoria estratégica</li>

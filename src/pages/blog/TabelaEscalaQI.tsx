@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -47,6 +49,7 @@ const TabelaEscalaQI = () => {
           <BarChart3 className="w-24 h-24 text-primary" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A <strong>tabela de QI</strong> padroniza resultados com média 100 e desvio padrão 15. Use esta escala para entender
             onde sua pontuação se situa na população e o que cada faixa representa na prática.
@@ -80,6 +83,7 @@ const TabelaEscalaQI = () => {
             <Link to="/blog/percentil-qi-o-que-significa" className="text-primary hover:underline">o que é percentil de QI</Link> e{" "}
             <Link to="/blog/qi-100-significa" className="text-primary hover:underline">o que QI 100 significa</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">QI médio e referências</h2>
           <ul className="list-disc pl-6 mb-4 space-y-2 text-muted-foreground">
             <li>QI médio mundial e brasileiro: aproximadamente 100 na escala padronizada</li>

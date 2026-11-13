@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const QIMedioPorProfissao = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Diferentes profissões atraem e exigem diferentes níveis de inteligência. Mas qual é o 
             QI médio por profissão? Neste artigo, exploramos dados científicos sobre QI médio em 
@@ -205,6 +208,7 @@ const QIMedioPorProfissao = () => {
             Algumas profissões exigem habilidades cognitivas específicas que pessoas com QI mais 
             alto desenvolvem melhor:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Raciocínio abstrato complexo:</strong> Matemáticos, físicos, engenheiros</li>
             <li><strong>Análise crítica profunda:</strong> Advogados, juízes, pesquisadores</li>

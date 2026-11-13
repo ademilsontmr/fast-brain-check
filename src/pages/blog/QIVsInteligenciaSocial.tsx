@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -61,6 +63,7 @@ const QIVsInteligenciaSocial = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Estudos mostram que <strong>inteligência social prediz sucesso melhor que QI</strong> em 70% das profissões. 
             Neste artigo, descubra por que pessoas com QI 110 e alta inteligência social ganham mais que gênios com QI 150, 
@@ -123,6 +126,7 @@ const QIVsInteligenciaSocial = () => {
             Eles inspiram, motivam e coordenam equipes.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Vendas e Negociação Pagam Mais</h3>
           <p className="mb-4">
             Profissões de alta renda (vendas, consultoria, empreendedorismo) dependem mais de <strong>persuasão e relacionamento</strong> 

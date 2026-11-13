@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const ImpactoNutricaoDietaFuncaoCognitivaQI = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A função cognitiva abrange habilidades mentais essenciais, incluindo memória, atenção, 
             resolução de problemas e tomada de decisões. O QI (Quociente de Inteligência) é uma medida 
@@ -92,6 +95,7 @@ const ImpactoNutricaoDietaFuncaoCognitivaQI = () => {
             Os ácidos graxos ômega-3, particularmente o <strong>ácido docosahexaenóico (DHA)</strong>, 
             são cruciais para a estrutura e função cerebral:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Formam parte significativa das membranas das células cerebrais</li>
             <li>Facilitam a neurotransmissão eficiente</li>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const ComoNetosMelhoramQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A relação entre avós e netos é especial e pode ter benefícios significativos para desenvolvimento 
             cognitivo. Netos podem melhorar o QI através de interação com avós, que oferecem experiência, 
@@ -115,6 +118,7 @@ const ComoNetosMelhoramQI = () => {
           <p className="mb-4">
             <strong>1. Estimulação Intelectual e Conversas:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Conversas ricas e variadas desenvolvem vocabulário e compreensão</li>
             <li>Histórias e narrativas desenvolvem habilidades de linguagem e memória</li>

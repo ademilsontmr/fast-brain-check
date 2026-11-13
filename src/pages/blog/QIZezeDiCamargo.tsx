@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIZezeDiCamargo = () => {
           <Star className="w-24 h-24 text-green-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Zezé Di Camargo, ao lado de Luciano, domina o sertanejo há décadas com hits e shows lotados. Sobre o <strong>QI de Zezé Di Camargo</strong>, interessam sua memória musical, carisma de palco e empreendedorismo artístico.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
@@ -132,6 +135,7 @@ const QIZezeDiCamargo = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-anitta" className="text-primary hover:underline">QI da Anitta</Link>,  <Link to="/blog/qi-ivete-sangalo" className="text-primary hover:underline">QI da Ivete Sangalo</Link>,  <Link to="/blog/qi-gal-costa" className="text-primary hover:underline">QI de Gal Costa</Link>.</p>
         </div>

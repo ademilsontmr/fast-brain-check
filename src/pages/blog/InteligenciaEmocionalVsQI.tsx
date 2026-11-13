@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -61,6 +63,7 @@ const InteligenciaEmocionalVsQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Estudos mostram que <strong>inteligência emocional prediz 58% do sucesso profissional</strong>, enquanto QI prediz apenas 20%. 
             Neste artigo, descubra por que controlar emoções e entender pessoas pode ser mais valioso que raciocínio lógico, 
@@ -101,6 +104,7 @@ const InteligenciaEmocionalVsQI = () => {
             QI contribui apenas 20%.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Relacionamentos Geram Oportunidades</h3>
           <p className="mb-4">
             85% das oportunidades vêm de networking. <strong>IE alta = relacionamentos melhores = mais oportunidades</strong>. 

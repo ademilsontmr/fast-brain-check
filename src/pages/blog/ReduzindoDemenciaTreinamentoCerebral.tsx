@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const ReduzindoDemenciaTreinamentoCerebral = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A vida é feita de circunstâncias imprevisíveis, algumas agradáveis e emocionantes, outras amargas 
             e cheias de dor. A doença é, sem dúvida, a principal fonte de desconforto e falta de qualidade 
@@ -93,6 +96,7 @@ const ReduzindoDemenciaTreinamentoCerebral = () => {
             em todo o mundo, a maioria das quais tem mais de 65 anos. À medida que nossa sociedade envelhece, 
             maior é o número de indivíduos que sofrem dessa doença.
           </p>
+          <ArticleMidAdSense />
           <p className="mb-4">
             Alzheimer causa problemas com:
           </p>

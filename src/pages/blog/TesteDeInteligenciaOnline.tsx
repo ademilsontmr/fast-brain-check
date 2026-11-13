@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const TesteDeInteligenciaOnline = () => {
           <Laptop className="w-24 h-24 text-cyan-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O <strong>teste de inteligência online</strong> é a forma mais acessível de estimar seu QI hoje — seja buscando &quot;teste de iq&quot;, &quot;teste de QI&quot; ou &quot;teste de inteligência&quot;. Neste guia, explicamos como escolher um teste sério, o que esperar do resultado e quando vale ir além do online.
           </p>
@@ -138,6 +141,7 @@ const TesteDeInteligenciaOnline = () => {
             <Link to="/blog/melhor-teste-qi-2026" className="text-primary hover:underline">melhor teste de QI 2026</Link> e{" "}
             <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como descobrir meu QI</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ faqs={[

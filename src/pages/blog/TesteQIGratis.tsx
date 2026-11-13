@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -110,6 +112,7 @@ const TesteQIGratis = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Você quer descobrir seu QI mas não quer pagar por isso? Existem várias opções gratuitas 
             e confiáveis disponíveis online. Neste guia completo, você vai descobrir os melhores 
@@ -145,6 +148,7 @@ const TesteQIGratis = () => {
             cuidadosamente elaboradas, você recebe uma estimativa confiável do seu QI baseada 
             em metodologias científicas validadas.
           </p>
+          <ArticleMidAdSense />
           <p className="mb-4">
             <strong>Características:</strong>
           </p>

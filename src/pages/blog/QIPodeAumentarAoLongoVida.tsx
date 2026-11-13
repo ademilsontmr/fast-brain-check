@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -64,6 +66,7 @@ const QIPodeAumentarAoLongoVida = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "O QI pode aumentar ao longo da vida?" é uma pergunta fundamental sobre desenvolvimento cognitivo. 
             <strong> Sim, QI pode aumentar ao longo da vida</strong>, especialmente através de educação, treinamento 
@@ -263,6 +266,7 @@ const QIPodeAumentarAoLongoVida = () => {
             mantendo-se possível em todas as idades.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI atual e acompanhar seu progresso? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

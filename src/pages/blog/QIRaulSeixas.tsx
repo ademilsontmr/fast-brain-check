@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIRaulSeixas = () => {
           <Star className="w-24 h-24 text-purple-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Raul Santos Seixas, o Maluco Beleza, misturou rock, misticismo e crítica social nas letras. Sobre o <strong>QI de Raul Seixas</strong>, o mais relevante é sua imaginação simbólica e capacidade de sintetizar ideias complexas em música — dimensões que testes escolares não medem.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
@@ -132,6 +135,7 @@ const QIRaulSeixas = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-rita-lee" className="text-primary hover:underline">QI Rita Lee</Link>,  <Link to="/blog/qi-jorge-ben-jor" className="text-primary hover:underline">QI Jorge Ben Jor</Link>,  <Link to="/blog/qi-tom-jobim" className="text-primary hover:underline">QI Tom Jobim</Link>.</p>
         </div>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const QIAoLongoVida = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O QI é fixo ou muda ao longo da vida? A resposta é complexa: algumas habilidades cognitivas 
             melhoram, outras declinam, e o timing varia. Entenda como a inteligência evolui da infância 
@@ -103,6 +106,7 @@ const QIAoLongoVida = () => {
           <p className="mb-4">
             Período de <strong>consolidação e especialização</strong>:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>QI estabiliza relativamente:</strong> Crianças mantêm posição relativa no grupo</li>
             <li><strong>Habilidades específicas:</strong> Leitura, matemática, raciocínio lógico se desenvolvem</li>

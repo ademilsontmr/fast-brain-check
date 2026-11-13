@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -75,6 +77,7 @@ const QIeAutismo = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A relação entre QI e autismo é complexa e frequentemente mal compreendida. O Transtorno 
             do Espectro Autista (TEA) apresenta uma grande variabilidade de perfis cognitivos, 
@@ -108,6 +111,7 @@ const QIeAutismo = () => {
             tradicionais não capturem adequadamente suas capacidades.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Pontos Fortes Comuns</h3>
           <ul className="mb-4">
             <li>• Atenção a detalhes</li>

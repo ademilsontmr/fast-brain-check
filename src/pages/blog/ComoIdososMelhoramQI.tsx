@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -37,6 +39,7 @@ const ComoIdososMelhoramQI = () => {
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><Heart className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Nunca é tarde para melhorar a função cognitiva. Pesquisas mostram que idosos podem não apenas manter, mas também aprimorar suas capacidades mentais com as estratégias certas.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Neuroplasticidade na Terceira Idade</h2>
@@ -87,6 +90,7 @@ const ComoIdososMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">Idosos podem manter e até melhorar suas capacidades cognitivas com atividades estimulantes, exercício físico, alimentação saudável e vida social ativa. O segredo é manter o cérebro desafiado e engajado.</p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

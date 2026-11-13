@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const TesteQIGratuitoSemCadastro = () => {
           <Zap className="w-24 h-24 text-yellow-500" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Muita gente busca <strong>teste de QI sem cadastro</strong> complicado — e com razão: ninguém quer criar conta em dez sites só para ver um número. Veja como equilibrar praticidade, confiabilidade e transparência de preço.</p>
           <div className="bg-amber-50 dark:bg-amber-950/20 border-2 border-amber-200 dark:border-amber-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
@@ -65,6 +68,7 @@ const TesteQIGratuitoSemCadastro = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2 text-green-900 dark:text-green-100">Sem cadastro não significa sem dados</h3>
                 <p className="text-green-800 dark:text-green-200 mb-3 text-sm">Muitos testes pedem nome e e-mail só no final para liberar o resultado completo. O ideal é coletar apenas o necessário e deixar claro a política de privacidade.</p>
+          <ArticleMidAdSense />
                 <ul className="text-green-800 dark:text-green-200 space-y-1 text-sm">
                   <li>✓ Início imediato do questionário</li>
                   <li>✓ Dados mínimos para resultado</li>

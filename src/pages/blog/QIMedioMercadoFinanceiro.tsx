@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -75,6 +77,7 @@ const QIMedioMercadoFinanceiro = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O mercado financeiro atrai profissionais com alta capacidade analítica e raciocínio 
             quantitativo. Mas qual é realmente o QI médio neste setor e como a inteligência 
@@ -113,6 +116,7 @@ const QIMedioMercadoFinanceiro = () => {
             de informações exigem habilidades cognitivas acima da média.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Habilidades Cognitivas Valorizadas</h2>
           
           <div className="grid md:grid-cols-2 gap-6 mb-8">

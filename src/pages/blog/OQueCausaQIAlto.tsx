@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const OQueCausaQIAlto = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O Quociente de Inteligência (QI) há muito fascina pesquisadores, educadores e o público. 
             Altos escores de QI geralmente se correlacionam com proezas acadêmicas, sucesso profissional 
@@ -95,6 +98,7 @@ const OQueCausaQIAlto = () => {
             culturais, potencialmente subestimando a inteligência daqueles de diferentes origens.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Independentemente dessas críticas, as pontuações de QI continuam sendo uma métrica proeminente 
             em avaliações psicológicas e educacionais. Eles são amplamente utilizados em ambientes acadêmicos 

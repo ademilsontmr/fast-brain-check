@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIDonaldTrump = () => {
           <Users className="w-24 h-24 text-amber-700" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Donald Trump, empresário e ex-presidente dos EUA, é alvo frequente de debates sobre inteligência. Sobre o <strong>QI de Donald Trump</strong>, o tema é politizado: ele já citou resultados de testes cognitivos de triagem, mas não um QI formal público.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-amber-50 dark:bg-amber-950/20 border-2 border-amber-200 dark:border-amber-800 rounded-lg p-6 my-8">
@@ -126,6 +129,7 @@ const QIDonaldTrump = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/qi-medio-mundial" className="text-primary hover:underline">QI médio mundial</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-bolsonaro" className="text-primary hover:underline">QI do Bolsonaro</Link>, <Link to="/blog/qi-lula" className="text-primary hover:underline">QI do Lula</Link>, <Link to="/blog/qi-de-famosos" className="text-primary hover:underline">Índice QI de Famosos</Link>.</p>
         </div>

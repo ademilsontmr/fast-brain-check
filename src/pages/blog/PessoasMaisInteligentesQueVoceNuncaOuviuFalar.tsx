@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const PessoasMaisInteligentesQueVoceNuncaOuviuFalar = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Tentar chegar a uma lista das pessoas mais inteligentes que já pisaram no planeta é qualquer coisa, 
             menos uma tarefa fácil de realizar. A inteligência é altamente subjetiva, assim como as habilidades que 
@@ -112,6 +115,7 @@ const PessoasMaisInteligentesQueVoceNuncaOuviuFalar = () => {
             conseguindo empregos medíocres e entrando em problemas com a lei em várias ocasiões. Sua história serve 
             como um lembrete de que inteligência excepcional não garante felicidade ou sucesso na vida.
           </p>
+          <ArticleMidAdSense />
           <p className="mb-4">
             A pressão da mídia e das expectativas sociais, combinada com sua personalidade introvertida, pode ter 
             contribuído para suas dificuldades. William morreu em 1944, aos 46 anos, de hemorragia cerebral.

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -59,6 +61,7 @@ const QI150Significa = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>QI 150</strong> é extremamente raro na escala com média 100 e DP 15 — da ordem de{" "}
             <strong>1 em milhares</strong> de pessoas (percentil ~99,9). Muitos testes virais entregam
@@ -147,6 +150,7 @@ const QI150Significa = () => {
             <Link to="/blog/pessoas-famosas-com-qi-alto" className="text-primary hover:underline">famosos com QI alto</Link> e{" "}
             <Link to="/blog/superdotacao-o-que-e" className="text-primary hover:underline">superdotação</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ

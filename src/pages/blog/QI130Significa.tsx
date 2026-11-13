@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -53,6 +55,7 @@ const QI130Significa = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>QI 130</strong> é um dos números mais buscados no Google Brasil — e com razão. Com média 100 e desvio padrão 15, um score de 130 cai na faixa <strong>muito superior</strong>, perto do <strong>percentil 98</strong>: você supera cerca de 98 em cada 100 pessoas. É o território da <strong>superdotação</strong> e do corte típico da <strong>Mensa</strong>.
           </p>
@@ -87,6 +90,7 @@ const QI130Significa = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">faixas de pontuação</Link>.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">QI 130 e Mensa Brasil</h2>
           <p className="text-muted-foreground mb-4">
             A Mensa não usa necessariamente o número “130” no laudo — ela aplica <strong>teste seletivo próprio</strong> e aprova quem fica no top 2%. Na prática, isso corresponde a QI 130+ em escalas padronizadas.

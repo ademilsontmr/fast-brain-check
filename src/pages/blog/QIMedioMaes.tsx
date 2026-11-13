@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -75,6 +77,7 @@ const QIMedioMaes = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A relação entre maternidade e inteligência é fascinante. Estudos mostram que o QI materno 
             tem forte correlação com o desenvolvimento cognitivo dos filhos, e a própria maternidade 
@@ -107,6 +110,7 @@ const QIMedioMaes = () => {
             de neuroimagem mostram alterações na estrutura cerebral que podem durar anos.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Mudanças Cerebrais na Gravidez</h3>
           <ul className="mb-4">
             <li>• Redução de massa cinzenta em áreas específicas (reorganização, não perda)</li>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -65,6 +67,7 @@ const QICriancasSinaisSuperdotacao = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "Como identificar QI de crianças e sinais de superdotação infantil?" é uma pergunta importante para pais 
             e educadores. <strong>QI de crianças é medido com testes específicos (WISC) e superdotação infantil é 
@@ -285,6 +288,7 @@ const QICriancasSinaisSuperdotacao = () => {
             superdotadas precisam de desafios adequados e suporte emocional para desenvolver seu potencial pleno.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer entender melhor faixas de QI? Veja{" "}
             <Link to="/blog/superdotacao-o-que-e" className="text-primary hover:underline">o que é superdotação</Link>,{" "}

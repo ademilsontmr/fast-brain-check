@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -61,6 +63,7 @@ const InteligenciaFluidaCristalizadaGanharDinheiro = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Existem <strong>dois tipos fundamentais de inteligência</strong>: fluida (raciocínio rápido) e cristalizada (conhecimento acumulado). 
             Cada uma gera dinheiro de formas diferentes. Neste artigo, você aprenderá como maximizar ambas ao longo da vida para 
@@ -193,6 +196,7 @@ const InteligenciaFluidaCristalizadaGanharDinheiro = () => {
             vem de saber qual inteligência usar em cada momento da vida.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI atual e entender seu tipo de inteligência? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

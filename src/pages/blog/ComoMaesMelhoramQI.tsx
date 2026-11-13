@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const ComoMaesMelhoramQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Ser mãe é uma das experiências mais transformadoras da vida, e isso inclui mudanças significativas 
             no cérebro. A ciência mostra que a maternidade pode melhorar várias funções cognitivas, incluindo 
@@ -119,6 +122,7 @@ const ComoMaesMelhoramQI = () => {
             memória episódica e processamento emocional.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">2. Exercícios Físicos Regulares</h2>
           <p className="mb-4">
             A atividade física é crucial para mães que querem manter e melhorar a função cognitiva. Exercícios 

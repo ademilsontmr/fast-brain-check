@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -53,6 +55,7 @@ const QI100Significa = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>QI 100 significa</strong> exatamente a <strong>média</strong> da população na escala mais usada (média 100, desvio padrão 15). Não é “baixo”, não é “gênio”: é o centro da curva. Cerca de metade das pessoas fica abaixo de 100 e metade acima — o famoso <strong>percentil 50</strong>.
           </p>
@@ -80,6 +83,7 @@ const QI100Significa = () => {
             Quando alguém pergunta “QI 100 é bom?”, a resposta técnica é: <strong>é normal</strong>. A maioria das atividades escolares, profissionais e sociais do dia a dia foi desenhada para pessoas nessa região da curva.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">QI 100 no dia a dia: o que esperar</h2>
           <h3 className="text-2xl font-bold mt-8 mb-4">Aprendizado e trabalho</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">

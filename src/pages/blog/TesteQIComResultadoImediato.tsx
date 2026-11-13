@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const TesteQIComResultadoImediato = () => {
           <Clock className="w-24 h-24 text-emerald-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Quem busca <strong>teste de QI com resultado imediato</strong> quer feedback na hora — sem esperar e-mail, laudo ou dias de processamento. Entenda o que é possível entregar instantaneamente e o que exige tempo profissional.</p>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
@@ -93,6 +96,7 @@ const TesteQIComResultadoImediato = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <p className="font-semibold text-green-600 mb-2">Vantagens</p>
+          <ArticleMidAdSense />
                 <ul className="space-y-1 text-sm text-muted-foreground">
                   <li>✓ Feedback instantâneo</li>
                   <li>✓ Motivação imediata</li>

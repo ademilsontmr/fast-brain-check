@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const TesteQIEmPortugues = () => {
           <Globe className="w-24 h-24 text-blue-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Um <strong>teste de QI em português</strong> bem adaptado evita o principal problema dos testes traduzidos às pressas: perguntas ambíguas que penalizam quem fala português nativo. Também captura buscas por <strong>teste de IQ</strong> — grafia comum no Brasil.</p>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
@@ -93,6 +96,7 @@ const TesteQIEmPortugues = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <p className="font-semibold text-green-600 mb-2">Vantagens</p>
+          <ArticleMidAdSense />
                 <ul className="space-y-1 text-sm text-muted-foreground">
                   <li>✓ Compreensão total das perguntas</li>
                   <li>✓ Menos ansiedade linguística</li>

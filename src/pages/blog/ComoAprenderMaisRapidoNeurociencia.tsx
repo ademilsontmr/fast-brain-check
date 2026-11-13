@@ -5,6 +5,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -65,6 +67,7 @@ const ComoAprenderMaisRapidoNeurociencia = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "Como aprender mais rápido usando neurociência?" é uma pergunta importante para quem busca otimizar
             o aprendizado. <strong>Aprender mais rápido usando neurociência é possível através de técnicas baseadas
@@ -372,6 +375,7 @@ const ComoAprenderMaisRapidoNeurociencia = () => {
             princípios da neurociência e adaptar estratégias ao seu estilo de aprendizado individual.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI e melhorar suas capacidades de aprendizado? Faça nosso teste científico validado
             e receba uma análise completa de suas capacidades cognitivas.

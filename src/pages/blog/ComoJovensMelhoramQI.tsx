@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -37,6 +39,7 @@ const ComoJovensMelhoramQI = () => {
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><Users className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">A juventude é o período ideal para desenvolver capacidades cognitivas. O cérebro jovem possui alta plasticidade, permitindo ganhos significativos em inteligência com as estratégias certas.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Por Que a Juventude é Crucial</h2>
@@ -77,6 +80,7 @@ const ComoJovensMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">Jovens têm uma janela de oportunidade única para desenvolver suas capacidades cognitivas. Investir em atividades estimulantes, hábitos saudáveis e aprendizado contínuo pode ter impacto duradouro no QI e sucesso futuro.</p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

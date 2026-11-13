@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -64,6 +66,7 @@ const QIMedioBrasil = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "Qual o QI médio no Brasil?" depende da fonte. No <strong>International IQ Test (IIT) 2025</strong>,
             a média brasileira fica em torno de <strong>95</strong>. Compilações clássicas (Lynn &amp; Becker, 2019)
@@ -175,6 +178,7 @@ const QIMedioBrasil = () => {
           <p className="mb-4">
             <strong>QI médio no Brasil tem aumentado</strong> nas últimas décadas com melhorias em:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Educação:</strong> expansão do acesso à educação</li>
             <li><strong>Nutrição:</strong> programas de combate à desnutrição</li>

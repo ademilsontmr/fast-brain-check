@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -134,6 +136,7 @@ const SinaisQIAlto = () => {
                 </div>
 
                 <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
                     <p className="text-xl text-muted-foreground mb-8">
                         Pessoas com QI alto frequentemente apresentam características comportamentais e cognitivas
                         distintas. Embora cada indivíduo seja único, a ciência (psicometria e neurociência) identificou padrões comuns que indicam
@@ -180,6 +183,7 @@ const SinaisQIAlto = () => {
                                     checkedItems.length > 5 ? "Você tem vários traços comuns em pessoas inteligentes." :
                                         "Continue lendo para entender melhor cada sinal."}
                             </p>
+          <ArticleMidAdSense />
                         </div>
                     </div>
 

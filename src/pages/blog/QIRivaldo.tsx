@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIRivaldo = () => {
           <Trophy className="w-24 h-24 text-green-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Rivaldo Vítor Borba Ferreira, Bola de Ouro 1999 e campeão mundial, encantou com técnica refinada e visão de jogo. Sobre o <strong>QI do Rivaldo</strong>, destacam-se coordenação motora, criatividade ofensiva e capacidade de decidir sob pressão.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
@@ -132,6 +135,7 @@ const QIRivaldo = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-ronaldinho" className="text-primary hover:underline">QI do Ronaldinho</Link>,  <Link to="/blog/qi-kaka" className="text-primary hover:underline">QI do Kaká</Link>,  <Link to="/blog/qi-romario" className="text-primary hover:underline">QI do Romário</Link>.</p>
         </div>

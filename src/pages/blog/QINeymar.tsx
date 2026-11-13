@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QINeymar = () => {
           <Trophy className="w-24 h-24 text-green-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Neymar Jr. combina dribles, visão de jogo e criatividade ofensiva em nível mundial. Sobre o <strong>QI do Neymar</strong>, circulam números na internet sem autoria clara — tratamos aqui o que a ciência e a observação esportiva permitem dizer.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
@@ -143,6 +146,7 @@ const QINeymar = () => {
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-pele" className="text-primary hover:underline">QI do Pelé</Link>,  <Link to="/blog/qi-ronaldo-fenomeno" className="text-primary hover:underline">QI do Ronaldo</Link>,  <Link to="/blog/qi-jogadores-futebol" className="text-primary hover:underline">QI dos jogadores de futebol</Link>.</p>
         </div>

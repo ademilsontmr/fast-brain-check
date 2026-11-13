@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -53,6 +55,7 @@ const QuantoCustaTesteDeQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>Quanto custa um teste de QI</strong> no Brasil depende do tipo de avaliação: teste online estruturado, bateria com psicólogo (WAIS/WISC) ou processo Mensa. Em 2026, os valores vão de poucos reais (online) a mais de R$2.000 (clínica completa). Este guia compara preço, precisão e quando cada opção faz sentido.
           </p>
@@ -128,6 +131,7 @@ const QuantoCustaTesteDeQI = () => {
             <Link to="/blog/teste-qi-online-guia-completo" className="text-primary hover:underline">teste de QI online</Link>{" "}
             é o formato com melhor custo-benefício. Você responde questões de raciocínio em poucos minutos e recebe um score interpretável.
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
             <li><strong>Vantagem:</strong> preço baixo, imediato, sem agendamento</li>
             <li><strong>Limite:</strong> não substitui laudo clínico para escola, Justiça ou Mensa</li>

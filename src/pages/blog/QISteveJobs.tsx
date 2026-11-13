@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -46,6 +48,7 @@ const QISteveJobs = () => {
           <Laptop className="w-24 h-24 text-primary" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>Steve Jobs</strong> nunca fez um teste de QI público. Estimativas da mídia situam sua inteligência
             entre 160 e 180, mas isso é especulação — não medição científica.
@@ -60,6 +63,7 @@ const QISteveJobs = () => {
             Curiosidade sobre QI de famosos é comum. Para um dado real sobre você, faça um teste validado. Veja também{" "}
             <Link to="/blog/qi-elon-musk" className="text-primary hover:underline">QI do Elon Musk</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI</h3>

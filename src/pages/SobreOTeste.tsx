@@ -3,6 +3,8 @@ import { Brain, Award, Users, Shield, Target, Sparkles, TrendingUp } from "lucid
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SiteHeader from "@/components/SiteHeader";
+import BelowMenuAdSense from "@/components/BelowMenuAdSense";
+import { ADSENSE_SOBRE_TESTE_SLOT } from "@/constants/adsense";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 
@@ -19,6 +21,7 @@ const SobreOTeste = () => {
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">
       <SiteHeader />
+      <BelowMenuAdSense slot={ADSENSE_SOBRE_TESTE_SLOT} />
 
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
         <div className="text-center mb-12">

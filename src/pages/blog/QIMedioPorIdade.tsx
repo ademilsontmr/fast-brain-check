@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const QIMedioPorIdade = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O QI não é estático ao longo da vida. Ele evolui, atinge um pico e depois pode declinar. 
             Neste artigo, exploramos como o QI médio varia por idade, desde a primeira infância até 
@@ -135,6 +138,7 @@ const QIMedioPorIdade = () => {
             Os primeiros anos são críticos para o desenvolvimento cognitivo. O cérebro está em 
             desenvolvimento acelerado:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Neuroplasticidade máxima:</strong> O cérebro forma novas conexões rapidamente</li>
             <li><strong>Desenvolvimento de linguagem:</strong> Base para raciocínio abstrato futuro</li>

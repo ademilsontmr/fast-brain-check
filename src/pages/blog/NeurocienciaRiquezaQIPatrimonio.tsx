@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -50,6 +52,7 @@ const NeurocienciaRiquezaQIPatrimonio = () => {
           <Brain className="w-24 h-24 text-emerald-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A relação entre <strong>QI, neurociência e riqueza</strong> é mais complexa do que parece. QI alto pode facilitar aprendizado e resolução de problemas, mas patrimônio depende também de disciplina, risco calculado e hábitos cognitivos ao longo do tempo.
           </p>
@@ -65,6 +68,7 @@ const NeurocienciaRiquezaQIPatrimonio = () => {
             <Link to="/blog/como-ficar-rico-relacao-qi" className="text-primary hover:underline">como ficar rico e relação com QI</Link> e{" "}
             <Link to="/blog/dopamina-decisao-sucesso-financeiro" className="text-primary hover:underline">dopamina e decisão financeira</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
         <ArticleFAQ faqs={[
           { question: "QI alto garante riqueza?", answer: "Não. QI pode ajudar em aprendizado e análise, mas patrimônio depende de hábitos, oportunidades e comportamento financeiro." },

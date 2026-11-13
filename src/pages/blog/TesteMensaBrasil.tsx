@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -47,6 +49,7 @@ const TesteMensaBrasil = () => {
           <Award className="w-24 h-24 text-amber-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A <strong>Mensa</strong> é a maior sociedade de alto QI do mundo. No Brasil, a admissão exige pontuação no
             top 2% da população — em escala padronizada, geralmente QI 130 ou superior em teste supervisionado.
@@ -73,6 +76,7 @@ const TesteMensaBrasil = () => {
               onde fazer teste de QI no Brasil
             </Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Teste seu QI antes da Mensa</h3>

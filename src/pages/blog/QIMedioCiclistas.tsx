@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -75,6 +77,7 @@ const QIMedioCiclistas = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O ciclismo é uma das atividades físicas mais completas, beneficiando não apenas o corpo, 
             mas também o cérebro. Descubra como pedalar pode impactar positivamente sua cognição 
@@ -110,6 +113,7 @@ const QIMedioCiclistas = () => {
             levando mais oxigênio e nutrientes para as células cerebrais.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Produção de BDNF</h3>
           <p className="mb-4">
             O exercício aeróbico estimula a produção de BDNF (Fator Neurotrófico Derivado do Cérebro), 

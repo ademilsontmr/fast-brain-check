@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const OQueEQiMedio = () => {
           <BarChart3 className="w-24 h-24 text-violet-500" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>O que é QI médio?</strong> É o valor central da distribuição de inteligência em uma população — definido como <strong>100 pontos</strong> na escala mais usada. Cerca de <strong>68% das pessoas</strong> ficam entre 85 e 115. Neste guia, explicamos a média de QI da população, as faixas e como interpretar seu resultado.
           </p>
@@ -85,6 +88,7 @@ const OQueEQiMedio = () => {
           <p className="text-muted-foreground mb-4">
             O QI médio <em>global</em> é 100 por definição. Já as <strong>médias por país</strong> variam em estudos comparativos — Singapura e Hong Kong aparecem entre os mais altos (~108), enquanto o Brasil fica em torno de <strong>87</strong> em algumas pesquisas. Essas diferenças refletem educação, nutrição e desenvolvimento, não &quot;inteligência inata&quot; de uma nação.
           </p>
+          <ArticleMidAdSense />
           <p className="text-muted-foreground mb-6">
             Veja o ranking completo em{" "}
             <Link to="/blog/qi-medio-por-pais" className="text-primary hover:underline">média de QI do mundo por país</Link> e{" "}

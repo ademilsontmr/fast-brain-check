@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -61,6 +63,7 @@ const InteligenciaPraticaTeoricaDinheiro = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Você pode ter QI 140 e ganhar menos que alguém com QI 110. Por quê? <strong>Inteligência prática vs teórica</strong>. 
             Neste artigo, descubra qual tipo gera mais dinheiro, como identificar o seu e estratégias para desenvolver ambos 
@@ -231,6 +234,7 @@ const InteligenciaPraticaTeoricaDinheiro = () => {
             o tipo de inteligência que você mais precisa.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI e entender seu potencial? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

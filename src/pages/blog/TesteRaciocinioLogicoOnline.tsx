@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -53,6 +55,7 @@ const TesteRaciocinioLogicoOnline = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Um <strong>teste de raciocínio lógico online</strong> avalia sua capacidade de identificar padrões, regras e relações — o núcleo do pensamento analítico. É um dos formatos mais buscados no Brasil e está no centro da maioria dos{" "}
             <Link to="/blog/teste-de-inteligencia-online" className="text-primary hover:underline">testes de inteligência online</Link>{" "}
@@ -91,6 +94,7 @@ const TesteRaciocinioLogicoOnline = () => {
             são o exemplo clássico: quase sem palavras, foco puro em padrão.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Raciocínio lógico vs teste de QI</h2>
           <Card className="p-6 my-8">
             <div className="grid md:grid-cols-2 gap-6">

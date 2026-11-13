@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const PessoasFamosasComQIAlto = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Muitas pessoas famosas têm QI alto, mas nem todos os números divulgados são verificados. 
             Neste artigo, listamos pessoas famosas com QI alto baseado em testes verificados, estimativas 
@@ -314,6 +317,7 @@ const PessoasFamosasComQIAlto = () => {
           <p className="mb-4">
             Observar pessoas famosas com QI alto nos ensina:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>QI alto ajuda, mas não garante sucesso:</strong> Trabalho duro é essencial</li>
             <li><strong>Diversidade de realizações:</strong> QI alto pode se manifestar em muitas áreas</li>

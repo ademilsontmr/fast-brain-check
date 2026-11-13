@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIGiseleBundchen = () => {
           <Star className="w-24 h-24 text-green-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Gisele Bündchen, de Horizontina (RS) ao topo da moda mundial, construiu império além da passarela. Sobre o <strong>QI de Gisele Bündchen</strong>, o mais relevante é entender múltiplas inteligências: espacial, interpessoal e empreendedora.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
@@ -143,6 +146,7 @@ const QIGiseleBundchen = () => {
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/diferenca-qi-qe-qg" className="text-primary hover:underline">diferença QI, QE e QG</Link>,  <Link to="/blog/qi-empresarial-vs-qi-academico" className="text-primary hover:underline">QI empresarial vs acadêmico</Link>,  <Link to="/blog/qi-anitta" className="text-primary hover:underline">QI da Anitta</Link>.</p>
         </div>

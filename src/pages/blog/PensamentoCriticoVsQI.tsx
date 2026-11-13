@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -61,6 +63,7 @@ const PensamentoCriticoVsQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Pessoas com <strong>QI 140 tomam decisões ruins</strong> todos os dias. Por quê? Falta de pensamento crítico. 
             Neste artigo, descubra por que a capacidade de analisar, questionar e decidir pode ser mais valiosa que 
@@ -101,6 +104,7 @@ const PensamentoCriticoVsQI = () => {
             expertise. Médico brilhante perde dinheiro em investimentos. Engenheiro genial falha em negócios.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Racionalização vs Racionalidade</h3>
           <p className="mb-4">
             QI alto permite <strong>racionalizar decisões ruins</strong> de forma convincente. Pessoa inteligente 

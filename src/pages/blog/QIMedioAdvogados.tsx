@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const QIMedioAdvogados = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A advocacia é uma profissão que exige habilidades cognitivas avançadas, incluindo raciocínio lógico, 
             análise crítica, memória, e comunicação. O QI médio de advogados é geralmente acima da média populacional, 
@@ -120,6 +123,7 @@ const QIMedioAdvogados = () => {
             advocacia requer educação superior e habilidades cognitivas avançadas.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Habilidades Cognitivas Essenciais para Advogados</h2>
           <p className="mb-4">
             A advocacia exige um conjunto específico de habilidades cognitivas:

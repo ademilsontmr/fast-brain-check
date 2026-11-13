@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const ComoAumentarInteligencia = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A inteligência não é fixa. Pesquisas científicas demonstram que é possível aumentar 
             significativamente sua inteligência através de métodos específicos. Neste guia completo, 
@@ -97,6 +100,7 @@ const ComoAumentarInteligencia = () => {
             A memória de trabalho é fortemente correlacionada com QI. Treiná-la pode aumentar 
             inteligência fluida:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>N-back training:</strong> Exercícios que exigem lembrar informações de N passos atrás</li>
             <li><strong>Dual n-back:</strong> Versão mais desafiadora que treina múltiplas modalidades</li>

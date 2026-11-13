@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -64,6 +66,7 @@ const QualMeuQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Se você digitou <strong>qual meu QI</strong> (ou “qual é o meu QI”), a resposta curta é:{" "}
             <strong>só um teste padronizado mostra o número</strong>. A forma mais rápida em 2026 é um{" "}
@@ -122,6 +125,7 @@ const QualMeuQI = () => {
             .
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">2. Avaliação com psicólogo (padrão ouro)</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
             <li>WAIS-IV (adultos) ou WISC-V (crianças)</li>

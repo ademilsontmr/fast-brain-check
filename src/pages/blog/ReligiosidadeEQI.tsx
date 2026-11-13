@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -75,6 +77,7 @@ const ReligiosidadeEQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A relação entre religiosidade e inteligência é um tema que gera debates intensos. 
             Neste artigo, exploramos o que a ciência realmente diz sobre esta conexão, 
@@ -111,6 +114,7 @@ const ReligiosidadeEQI = () => {
             brilhantes são religiosos.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Hipótese Sociocultural</h3>
           <p className="mb-4">
             Fatores como educação, urbanização e acesso a informação podem influenciar 

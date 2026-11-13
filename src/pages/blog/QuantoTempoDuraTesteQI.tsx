@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -46,6 +48,7 @@ const QuantoTempoDuraTesteQI = () => {
           <Clock className="w-24 h-24 text-primary" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A <strong>duração do teste de QI</strong> varia muito: de 15 minutos em triagens online até 2 horas em baterias
             completas como a WAIS aplicada por psicólogo.
@@ -62,6 +65,7 @@ const QuantoTempoDuraTesteQI = () => {
             Idade, fadiga, ansiedade e pausas alteram o desempenho. Descanse bem e evite interrupções. Veja{" "}
             <Link to="/blog/como-se-preparar-teste-qi" className="text-primary hover:underline">como se preparar para o teste</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
         <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
           <h3 className="text-2xl font-bold mb-4">Descubra seu QI</h3>

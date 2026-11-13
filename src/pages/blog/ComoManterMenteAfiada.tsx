@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const ComoManterMenteAfiada = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Nosso cérebro é uma obra de arte maravilhosa e, como todas as formas de matéria complexa, 
             precisamos entendê-lo para cuidar melhor dele. Ele guarda inúmeros segredos para os quais a 
@@ -90,6 +93,7 @@ const ComoManterMenteAfiada = () => {
             Numerosos estudos mostraram que a menor forma de movimento pode ajudar muito a melhorar a memória 
             e as habilidades cognitivas:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Melhora da memória:</strong> Exercício regular fortalece memória e habilidades de aprendizado</li>
             <li><strong>Função cognitiva:</strong> Melhora atenção, concentração e velocidade de processamento</li>

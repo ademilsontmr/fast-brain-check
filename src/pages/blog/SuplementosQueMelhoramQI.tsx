@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -69,6 +71,7 @@ const SuplementosQueMelhoramQI = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O mercado de suplementos "nootrópicos" (que melhoram cognição) cresce rapidamente, 
             mas a maioria tem pouca evidência científica. Neste artigo, analisamos quais 
@@ -110,6 +113,7 @@ const SuplementosQueMelhoramQI = () => {
           <p className="mb-4">
             <strong>Evidência:</strong> Forte | <strong>Efeito:</strong> Melhora memória de trabalho (+1-3 pontos)
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>O que é:</strong> Composto que fornece energia para células</li>
             <li><strong>Como funciona:</strong> Aumenta ATP (energia) no cérebro</li>

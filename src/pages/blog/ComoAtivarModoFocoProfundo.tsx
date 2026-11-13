@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -64,6 +66,7 @@ const ComoAtivarModoFocoProfundo = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "Como ativar o modo foco profundo?" é uma pergunta importante para quem busca máxima produtividade e 
             performance cognitiva. <strong>Modo foco profundo é um estado de concentração intensa onde você trabalha 
@@ -319,6 +322,7 @@ const ComoAtivarModoFocoProfundo = () => {
             curtas e aumente gradualmente. O importante é a consistência e encontrar o que funciona melhor para você.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI e melhorar sua capacidade de foco? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

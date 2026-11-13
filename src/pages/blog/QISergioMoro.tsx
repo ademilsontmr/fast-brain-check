@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QISergioMoro = () => {
           <Users className="w-24 h-24 text-slate-700" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Sérgio Fernando Moro, ex-juiz da Lava Jato e ex-ministro, tornou-se figura central da política brasileira. Sobre o <strong>QI de Sérgio Moro</strong>, o mais relevante é seu raciocínio jurídico e capacidade analítica — dimensões parcialmente relacionadas ao QI, mas distintas de testes escolares.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
@@ -132,6 +135,7 @@ const QISergioMoro = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-lula" className="text-primary hover:underline">QI Lula</Link>,  <Link to="/blog/qi-bolsonaro" className="text-primary hover:underline">QI Bolsonaro</Link>,  <Link to="/blog/qi-fernando-henrique-cardoso" className="text-primary hover:underline">QI Fernando Henrique Cardoso</Link>.</p>
         </div>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const ComoReligiosidadeInfluenciaQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A relação entre religiosidade e QI é um tópico complexo e frequentemente debatido. Estudos científicos 
             mostram correlações interessantes, mas a relação não é simples. Descubra como religiosidade influencia 
@@ -116,6 +119,7 @@ const ComoReligiosidadeInfluenciaQI = () => {
           <p className="mb-4">
             <strong>Dados dos estudos:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Correlação negativa pequena a moderada (r ≈ -0.20 a -0.30)</li>
             <li>Diferença média de aproximadamente 5-10 pontos de QI</li>

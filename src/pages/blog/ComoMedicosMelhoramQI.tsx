@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -37,6 +39,7 @@ const ComoMedicosMelhoramQI = () => {
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><Stethoscope className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">A medicina exige capacidades cognitivas excepcionais: raciocínio diagnóstico, memória vasta, tomada de decisão sob pressão. Descubra como médicos podem aprimorar essas habilidades.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Habilidades Cognitivas na Medicina</h2>
@@ -77,6 +80,7 @@ const ComoMedicosMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">Médicos podem manter e aprimorar suas capacidades cognitivas através de educação continuada, técnicas de memorização e cuidados com a saúde. O investimento cognitivo se traduz em melhor cuidado aos pacientes.</p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

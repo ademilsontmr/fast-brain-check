@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const InteligenciaVsSabedoria = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Você conhece alguém extremamente inteligente que sempre toma decisões ruins? Ou alguém com 
             educação modesta mas com uma capacidade incrível de dar conselhos certeiros? A diferença 
@@ -92,6 +95,7 @@ const InteligenciaVsSabedoria = () => {
             com facilidade e conseguem identificar padrões complexos.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">O Que É Sabedoria?</h2>
           <p className="mb-4">
             Sabedoria é a capacidade de <strong>aplicar conhecimento e experiência para tomar 

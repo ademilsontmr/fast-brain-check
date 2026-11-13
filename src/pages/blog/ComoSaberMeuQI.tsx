@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -50,6 +52,7 @@ const ComoSaberMeuQI = () => {
           <Lightbulb className="w-24 h-24 text-indigo-500" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8"><strong>Como saber meu QI</strong> é uma das buscas mais comuns no Google Brasil — e a resposta depende do seu objetivo: curiosidade, autoconhecimento ou avaliação formal para clínica ou escola.</p>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
@@ -133,6 +136,7 @@ const ComoSaberMeuQI = () => {
             <Link to="/blog/teste-qi-gratuito-e-confiavel" className="text-primary hover:underline">teste gratuito e confiável</Link> e{" "}
             <Link to="/blog/como-medir-qi" className="text-primary hover:underline">como medir QI</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
         <ArticleFAQ faqs={[
           { question: "Como saber meu QI online?", answer: "Faça um teste online estruturado. Compare métodos e escolha um com metodologia clara." },

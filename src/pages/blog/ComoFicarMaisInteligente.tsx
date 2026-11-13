@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -64,6 +66,7 @@ const ComoFicarMaisInteligente = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "Como ficar mais inteligente?" é uma pergunta que muitas pessoas fazem ao buscar melhorar suas 
             capacidades cognitivas. <strong>Ficar mais inteligente é possível através de estratégias científicas 
@@ -318,6 +321,7 @@ const ComoFicarMaisInteligente = () => {
             criar hábitos sustentáveis e focar em progresso contínuo ao longo do tempo.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI atual e acompanhar seu progresso? Faça nosso teste científico validado e receba 
             uma análise completa de suas capacidades cognitivas.

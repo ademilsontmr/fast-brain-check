@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const ComoSePrepararTesteQI = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Você marcou um teste de QI e quer dar o seu melhor? Embora não seja possível aumentar 
             seu QI real em semanas, você pode otimizar significativamente seu desempenho através de 
@@ -83,6 +86,7 @@ const ComoSePrepararTesteQI = () => {
           <p className="mb-4">
             <strong>O que você PODE otimizar:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Familiaridade com o formato do teste</li>
             <li>Velocidade de processamento através de prática</li>

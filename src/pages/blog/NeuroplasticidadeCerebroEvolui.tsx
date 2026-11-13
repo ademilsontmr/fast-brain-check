@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const NeuroplasticidadeCerebroEvolui = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Durante décadas, acreditou-se que o cérebro adulto era fixo e imutável. A neurociência moderna 
             desmentiu isso completamente. O cérebro é plástico — capaz de se reorganizar, formar novas 
@@ -90,6 +93,7 @@ const NeuroplasticidadeCerebroEvolui = () => {
             se conectam juntos" (Hebb's Law).
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">2. Neurogênese</h3>
           <p className="mb-4">
             Formação de novos neurônios. Até recentemente, acreditava-se que isso só acontecia na infância. 

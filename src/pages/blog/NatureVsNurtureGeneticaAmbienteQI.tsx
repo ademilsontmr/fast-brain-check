@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const NatureVsNurtureGeneticaAmbienteQI = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O QI (Quociente de Inteligência) tem sido objeto de fascínio e controvérsia em psicologia, 
             neurociência e educação. Como medida de habilidades cognitivas e potencial, escores de QI 
@@ -93,6 +96,7 @@ const NatureVsNurtureGeneticaAmbienteQI = () => {
             Testes modernos de QI evoluíram significativamente.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Testes Modernos de QI</h3>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>WAIS (Wechsler Adult Intelligence Scale):</strong> Para adultos</li>

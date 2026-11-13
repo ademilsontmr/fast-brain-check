@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -61,6 +63,7 @@ const InteligenciaSocialVsQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Estudos mostram que <strong>85% das promoções</strong> vão para pessoas com alta inteligência social, não necessariamente 
             o QI mais alto. Neste artigo, descubra por que habilidades sociais podem ser mais valiosas que inteligência cognitiva 
@@ -101,6 +104,7 @@ const InteligenciaSocialVsQI = () => {
             Liderar equipes, negociar, inspirar - tudo depende de inteligência social.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">3. Vendas e Negociação Pagam Mais</h3>
           <p className="mb-4">
             Profissionais de vendas top (alta inteligência social) ganham <strong>3-5x mais</strong> que engenheiros 

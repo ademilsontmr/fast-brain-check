@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QILionelMessi = () => {
           <Trophy className="w-24 h-24 text-sky-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Lionel Messi, oito vezes Bola de Ouro e campeão mundial, combina dribles curtos com leitura de espaço rara. Sobre o <strong>QI do Messi</strong>, o mais relevante é sua cognição espacial e tomada de decisão em frações de segundo — habilidades que testes escolares não capturam.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-blue-50 dark:bg-blue-950/20 border-2 border-blue-200 dark:border-blue-800 rounded-lg p-6 my-8">
@@ -126,6 +129,7 @@ const QILionelMessi = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/qi-medio-mundial" className="text-primary hover:underline">QI médio mundial</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-cristiano-ronaldo" className="text-primary hover:underline">QI do Cristiano Ronaldo</Link>, <Link to="/blog/qi-ronaldinho" className="text-primary hover:underline">QI do Ronaldinho</Link>, <Link to="/blog/qi-de-famosos" className="text-primary hover:underline">Índice QI de Famosos</Link>.</p>
         </div>

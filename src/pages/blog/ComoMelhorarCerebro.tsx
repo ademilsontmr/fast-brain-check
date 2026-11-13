@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const ComoMelhorarCerebro = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Seu cérebro é o órgão mais complexo do corpo e, como qualquer músculo, pode ser 
             fortalecido e otimizado. Neste guia completo, exploramos métodos científicos para 
@@ -91,6 +94,7 @@ const ComoMelhorarCerebro = () => {
             <strong>Boa notícia:</strong> Neuroplasticidade continua ao longo da vida, não apenas na infância.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">1. Exercício Físico: O Melhor Amigo do Cérebro</h2>
           
           <h3 className="text-2xl font-bold mt-8 mb-4">Exercício Aeróbico</h3>

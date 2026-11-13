@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -110,6 +112,7 @@ const QIeAnsiedade = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A ansiedade é um dos maiores inimigos da performance cognitiva. Mesmo pessoas 
             com QI elevado podem ter seu desempenho drasticamente reduzido quando estão 
@@ -144,6 +147,7 @@ const QIeAnsiedade = () => {
             Muitas pessoas inteligentes obtêm resultados abaixo de seu potencial devido 
             à ansiedade de performance, especialmente em:
           </p>
+          <ArticleMidAdSense />
           <ul className="mb-4">
             <li>• Testes de QI formais</li>
             <li>• Provas e exames</li>

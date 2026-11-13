@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -69,6 +71,7 @@ const TesteQIOnlineGuiaCompleto = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Testes de QI online se tornaram uma forma popular e acessível de avaliar inteligência. 
             Mas como saber se um teste é confiável? Quais metodologias são usadas? E como interpretar 
@@ -95,6 +98,7 @@ const TesteQIOnlineGuiaCompleto = () => {
             Considerados os mais "puros" para medir inteligência fluida (Gf), esses testes apresentam 
             sequências de padrões visuais onde você deve identificar a lógica e completar a sequência.
           </p>
+          <ArticleMidAdSense />
           <div className="bg-muted/50 p-6 rounded-lg my-6">
             <p className="font-semibold mb-2">Vantagens:</p>
             <ul className="list-disc pl-6 space-y-1">

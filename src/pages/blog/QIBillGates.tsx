@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIBillGates = () => {
           <Cpu className="w-24 h-24 text-indigo-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Bill Gates cofundou a Microsoft e liderou a revolução do software pessoal. Sobre o <strong>QI de Bill Gates</strong>, circulam estimativas altas ligadas ao SAT e ao perfil analítico — mas sem laudo público recente.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-indigo-50 dark:bg-indigo-950/20 border-2 border-indigo-200 dark:border-indigo-800 rounded-lg p-6 my-8">
@@ -126,6 +129,7 @@ const QIBillGates = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/qi-medio-mundial" className="text-primary hover:underline">QI médio mundial</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-steve-jobs" className="text-primary hover:underline">QI do Steve Jobs</Link>, <Link to="/blog/qi-elon-musk" className="text-primary hover:underline">QI do Elon Musk</Link>, <Link to="/blog/qi-de-einstein" className="text-primary hover:underline">QI de Einstein</Link>.</p>
         </div>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -37,6 +39,7 @@ const ComoBombeirosMelhoramQI = () => {
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><Flame className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Bombeiros precisam de capacidades cognitivas excepcionais: tomada de decisão rápida, avaliação de riscos e coordenação sob pressão. Descubra como aprimorar essas habilidades essenciais.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Habilidades Cognitivas Críticas</h2>
@@ -76,6 +79,7 @@ const ComoBombeirosMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">Bombeiros podem aprimorar suas capacidades cognitivas através de treinamento específico, exercício físico e hábitos saudáveis. Essas melhorias se traduzem em melhor desempenho em situações de emergência.</p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

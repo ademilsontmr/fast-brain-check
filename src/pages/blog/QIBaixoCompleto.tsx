@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -110,6 +112,7 @@ const QIBaixoCompleto = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Ter um QI considerado baixo não é uma sentença definitiva. A inteligência é 
             mais complexa do que um único número, e existem muitas formas de desenvolver 
@@ -148,6 +151,7 @@ const QIBaixoCompleto = () => {
             ambientais e esforço pessoal.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Fatores Ambientais</h3>
           <ul className="mb-4">
             <li>• <strong>Nutrição inadequada:</strong> Especialmente na infância</li>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const ComoProfissionaisSaudeMelhoramQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Profissionais de saúde enfrentam desafios cognitivos únicos que podem melhorar o QI através de 
             aprendizado contínuo, resolução de problemas complexos, e desenvolvimento de habilidades mentais 
@@ -115,6 +118,7 @@ const ComoProfissionaisSaudeMelhoramQI = () => {
           <p className="mb-4">
             <strong>1. Aprendizado Contínuo e Educação:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Educação médica e de saúde é contínua e exigente</li>
             <li>Necessidade constante de atualização de conhecimentos</li>

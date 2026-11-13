@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -60,6 +62,7 @@ const TesteQIInfantil = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A busca por <strong>teste de QI infantil</strong> cresceu no Brasil. Pais querem saber se o filho
             é superdotado, se precisa de adaptação escolar ou só “como ele se compara”. A resposta curta:
@@ -161,6 +164,7 @@ const TesteQIInfantil = () => {
             .
           </p>
 
+          <ArticleMidAdSense />
           <div className="bg-blue-50 dark:bg-blue-950/20 border-2 border-blue-200 dark:border-blue-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
               <Lightbulb className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />

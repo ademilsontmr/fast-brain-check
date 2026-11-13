@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIMachadoDeAssis = () => {
           <BookOpen className="w-24 h-24 text-green-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Joaquim Maria Machado de Assis, fundador da ABL e autor de <em>Dom Casmurro</em> e <em>Memórias Póstumas de Brás Cubas</em>, é o maior nome da literatura brasileira. Discutir o <strong>QI de Machado de Assis</strong> implica reconhecer inteligência verbal, ironia e profundidade psicológica que testes padronizados não capturam por completo.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
@@ -143,6 +146,7 @@ const QIMachadoDeAssis = () => {
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-paulo-coelho" className="text-primary hover:underline">QI do Paulo Coelho</Link>,  <Link to="/blog/qi-de-einstein" className="text-primary hover:underline">QI de Einstein</Link>,  <Link to="/blog/pessoas-famosas-com-qi-alto" className="text-primary hover:underline">famosos com QI alto</Link>.</p>
         </div>

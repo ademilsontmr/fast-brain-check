@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -54,6 +56,7 @@ const TesteQICriancas = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Muitos pais se perguntam: <strong>meu filho é superdotado? Quando devo fazer um teste de QI?</strong> Este guia completo responde todas as dúvidas sobre testes de QI infantis — quando são indicados, como funcionam e o que fazer com os resultados.
           </p>
@@ -203,6 +206,7 @@ const TesteQICriancas = () => {
           <p className="text-lg mb-4">
             Lembre-se: QI é apenas uma dimensão da inteligência. Criatividade, inteligência emocional, habilidades sociais e persistência são igualmente importantes para o sucesso na vida.
           </p>
+          <ArticleMidAdSense />
         </div>
 
         <SocialProofCarousel />

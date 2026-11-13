@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const QuantoInteligenciaEHerdada = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             As origens da inteligência humana intrigaram cientistas e filósofos por séculos. Essa 
             característica complexa, que abrange nossa capacidade de aprender, raciocinar e compreender, 
@@ -97,6 +100,7 @@ const QuantoInteligenciaEHerdada = () => {
           <p className="mb-4">
             Vários fatores podem explicar a crescente herdabilidade da inteligência ao longo do tempo:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Autonomia crescente:</strong> Indivíduos ganham mais autonomia na formação de seus ambientes para se alinharem com suas predisposições genéticas à medida que amadurecem</li>
             <li><strong>Efeitos cumulativos:</strong> Os efeitos cumulativos de pequenas influências genéticas podem se tornar mais aparentes com o tempo</li>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -47,6 +49,7 @@ const ComoMelhorarQIEstudantes = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Estudantes têm uma oportunidade única de desenvolver suas capacidades cognitivas. 
             O cérebro jovem é altamente plástico, o que significa que as estratégias certas 
@@ -119,6 +122,7 @@ const ComoMelhorarQIEstudantes = () => {
             técnicas de estudo eficazes, hábitos saudáveis e atividades estimulantes. A chave 
             é consistência e paciência - o cérebro se desenvolve gradualmente.
           </p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const QIMedioProfessores = () => {
                 </div>
 
                 <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
                     <p className="text-xl text-muted-foreground mb-8">
                         Professores são os arquitetos do conhecimento, moldando mentes e inspirando gerações.
                         A profissão exige não apenas domínio do conteúdo, mas também inteligência emocional,
@@ -121,6 +124,7 @@ const QIMedioProfessores = () => {
                         complexidade do conteúdo que ensinam.
                     </p>
 
+          <ArticleMidAdSense />
                     <h2 className="text-3xl font-bold mt-12 mb-6">Habilidades Cognitivas Essenciais</h2>
                     <p className="mb-4">
                         A profissão de professor exige um conjunto diversificado de habilidades cognitivas:

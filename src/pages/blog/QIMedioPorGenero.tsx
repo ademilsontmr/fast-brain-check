@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const QIMedioPorGenero = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A questão de diferenças de QI entre gêneros é um tópico complexo e frequentemente mal compreendido. 
             Estudos científicos mostram que, em média, não há diferença significativa no QI geral entre 
@@ -116,6 +119,7 @@ const QIMedioPorGenero = () => {
           <p className="mb-4">
             <strong>Evidências científicas:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Meta-análises de estudos mostram diferença média próxima de zero</li>
             <li>Distribuições de QI são essencialmente idênticas entre gêneros</li>

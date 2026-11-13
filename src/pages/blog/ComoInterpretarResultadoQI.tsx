@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -65,6 +67,7 @@ const ComoInterpretarResultadoQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "Como interpretar meu resultado de QI?" é uma pergunta comum após fazer um teste. <strong>Interpretar 
             resultado de QI requer entender a escala, percentis e o que a pontuação realmente significa</strong>. 
@@ -179,6 +182,7 @@ const ComoInterpretarResultadoQI = () => {
             a população geral.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             É importante lembrar que <strong>QI não define seu potencial completamente</strong>. QI mede habilidades 
             cognitivas específicas, mas não captura todas as formas de inteligência ou fatores importantes para o sucesso.

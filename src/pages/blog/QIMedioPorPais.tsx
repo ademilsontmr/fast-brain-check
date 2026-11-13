@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -73,6 +75,7 @@ const QIMedioPorPais = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A <strong>média de QI do mundo</strong> é 100 por definição estatística — mas o QI médio <em>por país</em> varia bastante.
             Neste guia atualizado para 2026, você vê o ranking mundial, onde o Brasil se posiciona e o que esses números realmente significam.
@@ -135,6 +138,7 @@ const QIMedioPorPais = () => {
             não genéticas:
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">1. Qualidade da Educação</h3>
           <p className="mb-4">
             Países com sistemas educacionais mais robustos e investimento em educação pública tendem 

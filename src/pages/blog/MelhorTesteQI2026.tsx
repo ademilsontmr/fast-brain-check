@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import { useSEO } from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const MelhorTesteQI2026 = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Com a evolução constante de metodologias e tecnologias, identificar o melhor teste de QI em 2026 
             requer análise criteriosa. Testamos e avaliamos os principais testes disponíveis considerando 
@@ -133,6 +136,7 @@ const MelhorTesteQI2026 = () => {
             BomQI utiliza algoritmos de IA que ajustam a dificuldade das questões em tempo real baseado nas 
             respostas anteriores. Isso permite:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Precisão maior com menos questões</li>
             <li>Experiência personalizada para cada usuário</li>

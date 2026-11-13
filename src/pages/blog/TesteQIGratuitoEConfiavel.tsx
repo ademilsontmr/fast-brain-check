@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -50,6 +52,7 @@ const TesteQIGratuitoEConfiavel = () => {
           <Shield className="w-24 h-24 text-primary" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Buscar um <strong>teste de QI gratuito e confiável</strong> é comum — mas é importante entender a diferença: muitos sites prometem “grátis” e entregam resultado impreciso ou escondem o score atrás de paywall confuso. Neste guia, explicamos o que dá para esperar de testes gratuitos e quando um teste pago acessível faz mais sentido.</p>
           <div className="bg-amber-50 dark:bg-amber-950/20 border-2 border-amber-200 dark:border-amber-800 rounded-lg p-6 my-8">
             <div className="flex items-start gap-3">
@@ -102,6 +105,7 @@ const TesteQIGratuitoEConfiavel = () => {
             sem criar conta em vários sites — inclusive no BomQI. O ponto crítico não é o cadastro:
             é se o resultado completo é transparente, metodologicamente sério e sem paywall enganoso.
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-6 space-y-2 text-muted-foreground">
             <li>Sem cadastro no início: bom sinal de baixa fricção</li>
             <li>Resultado só com e-mail spam: sinal de alerta</li>

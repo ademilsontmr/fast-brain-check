@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -37,6 +39,7 @@ const ComoProfessoresMelhoramQI = () => {
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><GraduationCap className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Professores têm uma vantagem única: ensinar é uma das melhores formas de aprender. Descubra como educadores podem aprimorar suas próprias capacidades cognitivas enquanto desenvolvem as de seus alunos.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">O Efeito de Ensinar</h2>
@@ -78,6 +81,7 @@ const ComoProfessoresMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">Professores estão em posição privilegiada para desenvolver suas capacidades cognitivas. O ato de ensinar, combinado com aprendizado contínuo e hábitos saudáveis, pode manter e melhorar o QI ao longo da carreira.</p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

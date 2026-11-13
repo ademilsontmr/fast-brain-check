@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -59,6 +61,7 @@ const QI140Significa = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>QI 140</strong> está bem acima da média 100 (DP 15): na curva normal, isso fica perto do{" "}
             <strong>percentil 99,5</strong> — cerca de 1 em 200 pessoas. É faixa{" "}
@@ -122,6 +125,7 @@ const QI140Significa = () => {
             <Link to="/blog/tabela-escala-qi" className="text-primary hover:underline">tabela escala</Link> e{" "}
             <Link to="/blog/calcular-qi" className="text-primary hover:underline">calcular QI</Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ

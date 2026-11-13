@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -37,6 +39,7 @@ const ComoFilhosMelhoramQI = () => {
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><Users className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Pais têm papel fundamental no desenvolvimento cognitivo dos filhos. Descubra estratégias baseadas em ciência para estimular a inteligência das crianças em cada fase.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Primeira Infância (0-5 anos)</h2>
@@ -77,6 +80,7 @@ const ComoFilhosMelhoramQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">O desenvolvimento cognitivo dos filhos depende de um ambiente estimulante, amoroso e equilibrado. Mais importante que números de QI é criar crianças curiosas, criativas e emocionalmente saudáveis.</p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

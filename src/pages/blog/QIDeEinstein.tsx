@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
 import SocialProofCarousel from "@/components/SocialProofCarousel";
@@ -54,6 +56,7 @@ const QIDeEinstein = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Albert Einstein é sinônimo de gênio. Mas <strong>qual era o QI de Einstein exatamente?</strong> A resposta surpreende muita gente — e a comparação com outros gênios da história revela algo ainda mais fascinante sobre inteligência.
           </p>
@@ -127,6 +130,7 @@ const QIDeEinstein = () => {
             Surpreendentemente, não. Einstein tinha dificuldades com memória de curto prazo e frequentemente esquecia nomes, datas e números de telefone. Ele próprio disse: "Nunca memorizo algo que posso consultar em um livro."
           </p>
 
+          <ArticleMidAdSense />
           <Card className="p-6 mb-8">
             <h3 className="text-xl font-bold mb-4">Pontos Fortes e Fracos de Einstein</h3>
             <div className="grid md:grid-cols-2 gap-4">

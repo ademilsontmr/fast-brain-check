@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -49,6 +51,7 @@ const QIGusttavoLima = () => {
           <Star className="w-24 h-24 text-amber-600" />
         </div>
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">Gusttavo Lima, o Embaixador, domina charts e arenas com sertanejo universitário. Sobre o <strong>QI do Gusttavo Lima</strong>, o mais relevante é sua inteligência de mercado e conexão com o público — dimensões que testes escolares não medem.</p>
           <h2 className="text-3xl font-bold mt-12 mb-6">Estimativa de QI: o que circula</h2>
           <div className="bg-green-50 dark:bg-green-950/20 border-2 border-green-200 dark:border-green-800 rounded-lg p-6 my-8">
@@ -132,6 +135,7 @@ const QIGusttavoLima = () => {
             <Link to="/blog/qi-faixas-pontuacao-significado" className="text-primary hover:underline">significado das faixas</Link> e{" "}
             <Link to="/blog/media-qi-brasil" className="text-primary hover:underline">média de QI no Brasil</Link>.
           </p>
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Leia também</h2>
           <p className="text-muted-foreground mb-4"><Link to="/blog/qi-zeze-di-camargo" className="text-primary hover:underline">QI Zeze Di Camargo</Link>,  <Link to="/blog/qi-luciano-huck" className="text-primary hover:underline">QI Luciano Huck</Link>,  <Link to="/blog/qi-anitta" className="text-primary hover:underline">QI Anitta</Link>.</p>
         </div>

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const QIMedioPais = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A paternidade é uma experiência transformadora que envolve múltiplas responsabilidades e desafios. 
             O QI médio de pais é aproximadamente 100, mas a paternidade pode influenciar desenvolvimento cognitivo 
@@ -119,6 +122,7 @@ const QIMedioPais = () => {
             distribuição.
           </p>
 
+          <ArticleMidAdSense />
           <h2 className="text-3xl font-bold mt-12 mb-6">Paternidade e Desenvolvimento Cognitivo</h2>
           <p className="mb-4">
             A paternidade pode ter impactos positivos no desenvolvimento cognitivo dos pais. Estudos sugerem 

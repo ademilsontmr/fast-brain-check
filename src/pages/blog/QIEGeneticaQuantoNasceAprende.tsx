@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -64,6 +66,7 @@ const QIEGeneticaQuantoNasceAprende = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "QI e genética: o quanto nasce e o quanto se aprende?" é uma das questões mais importantes sobre 
             inteligência. <strong>QI é influenciado tanto por genética quanto por ambiente</strong>, com estudos 
@@ -267,6 +270,7 @@ const QIEGeneticaQuantoNasceAprende = () => {
             maximizar desenvolvimento cognitivo, independentemente da genética.
           </p>
 
+          <ArticleMidAdSense />
           <p className="mb-4">
             Quer descobrir seu QI atual e entender melhor suas capacidades cognitivas? Faça nosso teste científico 
             validado e receba uma análise completa.

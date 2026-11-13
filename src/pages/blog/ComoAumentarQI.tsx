@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -115,6 +117,7 @@ const ComoAumentarQI = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Muitas pessoas acreditam que o QI é algo fixo e imutável. A ciência moderna, no entanto,
             mostra que existem formas comprovadas de melhorar sua inteligência fluida e capacidade cognitiva.
@@ -169,6 +172,7 @@ const ComoAumentarQI = () => {
             malabarismo. Essas atividades exigem que você mantenha múltiplas informações em mente simultaneamente.
           </p>
 
+          <ArticleMidAdSense />
           <div className="bg-green-50 border border-green-200 rounded-lg p-5 my-6">
             <h4 className="font-bold mb-2 flex items-center gap-2">
               <Target className="w-4 h-4 text-green-600" />

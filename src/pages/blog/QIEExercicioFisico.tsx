@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -110,6 +112,7 @@ const QIeExercicioFisico = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A conexão entre exercício físico e inteligência é mais forte do que você imagina. 
             Pesquisas científicas mostram que a atividade física regular não apenas fortalece 
@@ -146,6 +149,7 @@ const QIeExercicioFisico = () => {
             habilidades mais correlacionadas com o QI.
           </p>
 
+          <ArticleMidAdSense />
           <h3 className="text-2xl font-bold mt-8 mb-4">Velocidade de Processamento</h3>
           <p className="mb-4">
             O exercício regular melhora a velocidade com que processamos informações. 

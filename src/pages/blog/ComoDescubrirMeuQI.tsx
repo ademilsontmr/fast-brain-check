@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -57,6 +59,7 @@ const ComoDescubrirMeuQI = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             <strong>"Como descobrir meu QI?"</strong> é uma das perguntas mais buscadas sobre inteligência no Brasil.             Neste guia, comparamos os 5 métodos mais confiáveis — do teste com psicólogo ao teste online pago acessível — para você escolher o melhor para sua situação. Veja também{" "}
             <Link to="/blog/como-saber-meu-qi" className="text-primary hover:underline">como saber meu QI</Link> e{" "}
@@ -219,6 +222,7 @@ const ComoDescubrirMeuQI = () => {
           <p className="text-lg mb-4">
             O mais importante é usar o resultado como ponto de partida para o desenvolvimento, não como um rótulo definitivo. QI pode mudar com aprendizado, hábitos saudáveis e estimulação cognitiva.
           </p>
+          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ faqs={[

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -61,6 +63,7 @@ const QIVsExperienciaMercado = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Recém-formado com QI 140 vs profissional com 10 anos de experiência e QI 110. <strong>Quem ganha mais?</strong> 
             Pesquisa com 10.000 contratações revela que a resposta muda com a idade e área. Neste artigo, descubra quando 
@@ -106,6 +109,7 @@ const QIVsExperienciaMercado = () => {
           <p className="mb-4">
             <strong>Empate (50% vs 50%)</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Experiência começa a pesar tanto quanto QI</li>
             <li>Mercado valoriza track record de resultados</li>

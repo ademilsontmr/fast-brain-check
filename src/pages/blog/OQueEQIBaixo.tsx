@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -64,6 +66,7 @@ const OQueEQIBaixo = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             "O que é QI baixo?" é uma pergunta importante sobre inteligência. <strong>QI baixo é geralmente definido como 
             QI abaixo de 70-85</strong>, mas o significado e as implicações variam. Neste artigo, explicamos o que é QI 
@@ -175,6 +178,7 @@ const OQueEQIBaixo = () => {
           <p className="mb-4">
             <strong>Pessoas com QI baixo podem se beneficiar de:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Educação:</strong> educação especializada e adaptada</li>
             <li><strong>Terapia:</strong> terapia e intervenção precoce</li>

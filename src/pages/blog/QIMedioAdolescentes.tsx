@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const QIMedioAdolescentes = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             A adolescência é um período crucial para o desenvolvimento cognitivo. O QI médio de adolescentes 
             é aproximadamente 100, mas essa fase da vida apresenta mudanças significativas na inteligência 
@@ -117,6 +120,7 @@ const QIMedioAdolescentes = () => {
           <p className="mb-4">
             <strong>Distribuição:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>QI abaixo de 70: aproximadamente 2,5% dos adolescentes</li>
             <li>QI entre 70-85: aproximadamente 13,5%</li>

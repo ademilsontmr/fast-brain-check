@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import useStructuredData from "@/hooks/use-structured-data";
@@ -115,6 +117,7 @@ const QIDeFamosos = () => {
             <span className="text-sm font-semibold">{famososArticles.length} personalidades</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{articleTitle}</h1>
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Índice completo de artigos sobre o QI de celebridades brasileiras e internacionais — futebol, música, TV, política e ciência.
           </p>
@@ -201,6 +204,7 @@ const QIDeFamosos = () => {
               o que é QI médio
             </Link>.
           </p>
+          <ArticleMidAdSense />
         </div>
 
         <ArticleFAQ faqs={[

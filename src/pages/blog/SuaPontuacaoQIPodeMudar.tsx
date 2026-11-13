@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -70,6 +72,7 @@ const SuaPontuacaoQIPodeMudar = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Ninguém gosta de ser rotulado. O mesmo princípio é válido para a inteligência. É parte do nosso DNA 
             continuamente tentar melhorar a nós mesmos e vamos encarar - ninguém gosta de ser chamado de burro. Tem 
@@ -92,6 +95,7 @@ const SuaPontuacaoQIPodeMudar = () => {
             intelectual de uma pessoa.
           </p>
 
+          <ArticleMidAdSense />
           <div className="bg-primary/10 p-6 rounded-lg my-6 border-l-4 border-primary">
             <h4 className="text-lg font-bold mb-3">Resposta Direta</h4>
             <p>

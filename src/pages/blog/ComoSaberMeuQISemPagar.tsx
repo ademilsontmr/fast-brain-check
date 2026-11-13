@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -69,6 +71,7 @@ const ComoSaberMeuQISemPagar = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Quer saber seu QI mas não quer pagar? Existem várias opções grátis, mas é importante 
             entender suas limitações. Neste guia completo, listamos as melhores opções grátis 
@@ -112,6 +115,7 @@ const ComoSaberMeuQISemPagar = () => {
           <p className="mb-4">
             A Mensa oferece teste de admissão:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Custo:</strong> Geralmente há taxa, mas pode haver eventos grátis</li>
             <li><strong>Requisito:</strong> QI mínimo de 130 (top 2%)</li>

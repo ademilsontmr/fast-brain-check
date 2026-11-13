@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -37,6 +39,7 @@ const ComoPedalMelhoraQI = () => {
         <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-12 flex items-center justify-center"><Bike className="w-24 h-24 text-primary" /></div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">O ciclismo é uma das atividades físicas mais completas para o cérebro. Pedalar regularmente não apenas melhora a saúde cardiovascular, mas também potencializa significativamente as funções cognitivas.</p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Mecanismos Neurológicos</h2>
@@ -78,6 +81,7 @@ const ComoPedalMelhoraQI = () => {
 
           <h2 className="text-3xl font-bold mt-12 mb-6">Conclusão</h2>
           <p className="mb-4">O pedal é uma forma acessível e prazerosa de melhorar a função cognitiva. Seja na bike ergométrica ou nas ruas, pedalar regularmente traz benefícios comprovados para o cérebro e a inteligência.</p>
+          <ArticleMidAdSense />
         </div>
         {/* FAQ Section */}
         <ArticleFAQ faqs={[

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -101,6 +103,7 @@ const QIMedioTrabalhadores = () => {
         </div>
 
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             O QI médio de trabalhadores varia significativamente dependendo do tipo de trabalho, nível 
             educacional, e setor. Trabalho pode influenciar desenvolvimento cognitivo, e diferentes profissões 
@@ -117,6 +120,7 @@ const QIMedioTrabalhadores = () => {
           <p className="mb-4">
             <strong>Variações por tipo de trabalho:</strong>
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Trabalhos que exigem educação superior:</strong> QI médio geralmente 110-120</li>
             <li><strong>Trabalhos técnicos e especializados:</strong> QI médio geralmente 100-110</li>

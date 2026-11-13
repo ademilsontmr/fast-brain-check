@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Brain, Globe, Search, TrendingUp, AlertCircle, ArrowRight } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
+import BelowMenuAdSense from "@/components/BelowMenuAdSense";
+import { ADSENSE_QI_POR_PAIS_SLOT } from "@/constants/adsense";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 import { getCountryFlag } from "@/utils/countryFlags";
@@ -36,6 +38,7 @@ const QIPorPais = () => {
     <div className="min-h-screen bg-gradient-hero">
       {/* Header */}
       <SiteHeader />
+      <BelowMenuAdSense slot={ADSENSE_QI_POR_PAIS_SLOT} />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 import ArticleHeader from "@/components/ArticleHeader";
+import ArticleLeadAdSense from "@/components/ArticleLeadAdSense";
+import ArticleMidAdSense from "@/components/ArticleMidAdSense";
 import ArticleFAQ from "@/components/ArticleFAQ";
 import useSEO from "@/hooks/use-seo";
 import { getRelatedArticles } from "@/utils/blogArticles";
@@ -69,6 +71,7 @@ const MelhoresTestesQIOnline2026 = () => {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
+          <ArticleLeadAdSense />
           <p className="text-xl text-muted-foreground mb-8">
             Com centenas de testes de QI online disponíveis, como escolher um confiável? Analisamos 
             os principais testes disponíveis em 2026, comparando precisão, metodologia, custo e 
@@ -242,6 +245,7 @@ const MelhoresTestesQIOnline2026 = () => {
           <p className="mb-4">
             Considere investir em um teste pago se:
           </p>
+          <ArticleMidAdSense />
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Você precisa de resultados precisos para fins profissionais</li>
             <li>Quer entender suas áreas fortes e fracas em detalhes</li>
